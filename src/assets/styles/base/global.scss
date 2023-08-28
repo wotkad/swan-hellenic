@@ -6,28 +6,24 @@
 textarea,
 input,
 button {
-  @apply font-sans font-normal
 }
 
 html,
 body {
-  @apply h-full font-sans text-slate-900
+  height: 100%;
 }
 
 .render {
-  @apply fixed top-0 left-0 z-[99999] h-full w-full bg-white
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
 }
 
 .wrapper {
   @apply container mx-auto
-}
-
-.page-wrapper {
-  @apply w-full pt-[calc(var(--header-height)+24px)] lg:pt-[calc(var(--header-height)+56px)]
-}
-
-.page-container {
-  @apply flex min-h-screen w-full flex-col items-start justify-between
 }
 
 @media (prefers-reduced-motion: reduce) {
