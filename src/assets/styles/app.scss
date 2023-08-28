@@ -1,0 +1,41 @@
+// @import "./utils/reset"; // Если "@tailwind base" подключён ниже, то этот импорт не нужен.
+
+/*
+  Tailwind
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Базовые стили
+*/
+@import "./base/variables";
+@import "./base/global";
+
+/*
+  Утилиты
+*/
+@import "./utils/keyframes";
+@import "./utils/mixins";
+
+/*
+  Шрифты и типография
+*/
+@import "./base/fonts";
+@import "./base/typography";
+
+/*
+  Миксины
+*/
+@import "./mixins/title";
+@import "./mixins/article";
+
+/*
+  Компоненты
+*/
+@import "./components/header";
+@import "./components/footer";
+@import "./components/hero";
+@import "./components/blog";
+@import "./components/not-found";

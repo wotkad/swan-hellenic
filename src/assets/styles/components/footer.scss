@@ -1,0 +1,45 @@
+.footer {
+  &__wrapper {
+    @apply flex flex-col py-6
+  }
+  &__left {
+    img {
+      @apply w-6
+    }
+    @apply mb-6 flex items-center justify-between
+  }
+  &__powered {
+    a {
+      i {
+        @apply ml-1 text-sm
+      }
+      @apply ml-1 inline-block font-bold transition-colors duration-300 will-change-[color] hover:text-blue-500
+    }
+    @apply flex items-center justify-end text-sm
+  }
+  &__right {
+    ul {
+      li {
+        a {
+          @apply text-xs transition-colors duration-300 will-change-[color] hover:text-blue-500
+        }
+        &:last-child {
+          @apply ml-4
+        }
+        @apply inline-flex
+      }
+      @apply flex items-center justify-end
+    }
+    @apply flex items-center justify-between
+  }
+  &__copy {
+    span {
+      &:last-child {
+        @apply mr-0
+      }
+      @apply mr-1 inline-block text-xs
+    }
+    @apply inline-block
+  }
+  @apply w-full border-t border-gray-300
+}

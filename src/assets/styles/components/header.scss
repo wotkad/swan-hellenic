@@ -1,0 +1,9 @@
+.header {
+  &__link {
+    &.active {
+      @apply text-blue-500
+    }
+    @apply mr-4 transition-colors duration-300 will-change-[color]
+  }
+  @apply fixed top-0 left-0 z-50 w-full border-b border-gray-300 bg-white py-4
+}
