@@ -1,9 +1,114 @@
 .header {
-  &__link {
-    &.active {
-      @apply text-blue-500
-    }
-    @apply mr-4 transition-colors duration-300 will-change-[color]
+  background-color: $fathom;
+  &__top {
+    padding: 25px 0;
+    border-bottom: 1px solid $green-400;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  @apply fixed top-0 left-0 z-50 w-full border-b border-gray-300 bg-white py-4
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__search {
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $green-300;
+    }
+  }
+  &__bottom {
+    padding: 20px 0;
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__phone {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $green-300;
+    }
+    svg {
+      min-width: 24px;
+    }
+    span {
+      color: $white;
+      @include sans-sm-medium;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  &__link {
+    display: flex;
+    transition: background-color 0.3s;
+    align-items: center;
+    span {
+      color: $white;
+      text-transform: uppercase;
+      display: inline-block;
+      @include sans-sm-medium;
+    }
+  }
+  &__submenu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    .header__link {
+      padding: 10px 20px;
+      border-radius: 100px;
+      &:hover {
+        background-color: $green-300;
+      }
+      span {
+        @include sans-base-medium;
+      }
+    }
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    svg {
+      min-width: 24px;
+    }
+  }
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    svg {
+      min-width: 16px;
+    }
+  }
+  &__lang {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    &:hover {
+      background-color: $green-300;
+    }
+    span {
+      margin-left: 8px;
+      margin-right: 2px;
+      display: inline-block;
+      color: $white;
+      @include sans-sm-medium;
+    }
+  }
 }

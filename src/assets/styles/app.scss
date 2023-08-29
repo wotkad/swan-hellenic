@@ -1,16 +1,16 @@
 @import "./utils/reset";
 
 /*
-  Базовые стили
-*/
-@import "./base/variables";
-@import "./base/global";
-
-/*
   Утилиты
 */
 @import "./utils/keyframes";
 @import "./utils/mixins";
+
+/*
+  Базовые стили
+*/
+@import "./base/variables";
+@import "./base/global";
 
 /*
   Шрифты и типография

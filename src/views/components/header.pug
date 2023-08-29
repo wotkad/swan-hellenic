@@ -1,5 +1,50 @@
 header.header
   .wrapper
-    nav.header__menu
-      a.header__link(href="/") Home page
-      a.header__link(href="/404/") 404
+    .header__top
+      .header__contact
+        a(href="tel:+7 (800) 555-35-35").header__phone
+          <svg width="25px" height="25px" viewBox="0 0 25 25"><use xlink:href="#svg-phone"></use></svg>
+          span +7 (800) 555-35-35
+      a(href="/").header__logo
+        <svg width="166px" height="40px" viewBox="0 0 166 40"><use xlink:href="#svg-logo"></use></svg>
+      .header__submenu
+        button(type="button").header__search
+          <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
+        a.header__link(href="#")
+          span Contact us
+        button(type="button").header__lang
+          <svg width="18px" height="18px" viewBox="0 0 18 18"><use xlink:href="#svg-en-uk"></use></svg>
+          span EN
+          <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+    .header__bottom
+      nav.header__menu
+        a.header__link(href="/")
+          .header__icon
+            <svg width="24px" height="25px" viewBox="0 0 24 25"><use xlink:href="#svg-ship"></use></svg>
+          span Find your cruise
+          .header__arrow
+            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        a.header__link(href="/")
+          span Destinations
+          .header__arrow
+            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        a.header__link(href="/")
+          span Ships
+          .header__arrow
+            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        a.header__link(href="/")
+          span Why swan
+          .header__arrow
+            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        a.header__link(href="/")
+          span Plan your trip
+          .header__arrow
+            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        a.header__link(href="/")
+          span Partnerships
+          .header__arrow
+            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        a.header__link(href="/")
+          span About us
+          .header__arrow
+            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>

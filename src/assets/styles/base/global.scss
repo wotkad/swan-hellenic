@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+.svg-icons {
+  display: none;
+}
+
 .render {
   position: fixed;
   top: 0;
@@ -25,7 +29,18 @@ body {
 }
 
 .wrapper {
-  @apply container mx-auto
+  max-width: calc(#{$screen-mobile} + #{$container-padding});
+  margin: 0 auto;
+  padding: 0 #{$container-padding};
+  @include screen(tablet) {
+    max-width: calc(#{$screen-tablet} + #{$container-padding});
+  }
+  @include screen(laptop) {
+    max-width: calc(#{$screen-laptop} + #{$container-padding});
+  }
+  @include screen(desktop) {
+    max-width: calc(#{$screen-desktop} + #{$container-padding});
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -8,3 +8,15 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Medium.eot");
+  src: local("DM Sans Medium"), local("DMSans-Medium"),
+    url("../fonts/DMSans-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/DMSans-Medium.woff2") format("woff2"),
+    url("../fonts/DMSans-Medium.woff") format("woff"),
+    url("../fonts/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
