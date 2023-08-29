@@ -12,15 +12,15 @@ html(lang="ru")
     meta(content="#004155" name="theme-color")
 
     block basicSeo
-      meta(content="Страница сайта" name="description")
-      meta(content="Страница сайта" name="keywords")
+      meta(content="Site page" name="description")
+      meta(content="Site page" name="keywords")
       meta(content="wotkad" name="author")
 
     meta(content="summary" name="twitter:card")
     meta(content="" name="twitter:description")
     meta(content="" name="twitter:image")
 
-    meta(content="Страница сайта" property="og:title")
+    meta(content="Site page" property="og:title")
     meta(content="" property="og:description")
     meta(content="" property="og:image")
 
@@ -55,7 +55,7 @@ html(lang="ru")
     )
 
     block title
-      title Swan Hellenic | Страница без названия
+      title Swan Hellenic | Untitled page
 
     block manifestBrowserconfigFiles
       link(href="./manifest.json" rel="manifest" crossorigin)
@@ -66,7 +66,7 @@ html(lang="ru")
       if (window.addEventListener) window.addEventListener("load", autorun, false);
       else window.onload = autorun;
     noscript.
-      Похоже у вас отключён Javascript, поэтому вы видете это сообщение.
+      It looks like you have Javascript disabled, which is why you're seeing this message.
 
   body
     .render
