@@ -1,11 +1,11 @@
-/*
-  Font Awesome 6
-*/
-@import "../../fonts/fontawesome/styles/brands";
-// @import "../../fonts/fontawesome/styles/duotone";
-@import "../../fonts/fontawesome/styles/fontawesome";
-// @import "../../fonts/fontawesome/styles/light";
-@import "../../fonts/fontawesome/styles/regular";
-// @import "../../fonts/fontawesome/styles/solid";
-// @import "../../fonts/fontawesome/styles/thin";
-// @import "../../fonts/fontawesome/styles/v4-shims";
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.eot");
+  src: local("DM Sans Regular"), local("DMSans-Regular"),
+    url("../fonts/DMSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/DMSans-Regular.woff2") format("woff2"),
+    url("../fonts/DMSans-Regular.woff") format("woff"),
+    url("../fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

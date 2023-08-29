@@ -1,0 +1,103 @@
+@mixin chap-xl {
+  font-size: 90px;
+  line-height: 100px;
+  font-weight: 500;
+}
+
+@mixin chap-lg {
+  font-size: 74px;
+  line-height: 60px;
+  font-weight: 500;
+}
+
+@mixin chap-md {
+  font-size: 70px;
+  line-height: 60px;
+  font-weight: 500;
+}
+
+@mixin chap-base {
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: 500;
+}
+
+@mixin chap-sm {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+@mixin chap-xl {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+@mixin sans-3xl {
+  font-size: 32px;
+  line-height: 52px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+@mixin sans-2xl {
+  font-size: 24px;
+  line-height: 44px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
+@mixin sans-xl {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
+@mixin sans-lg-medium {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+@mixin sans-lg {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
+@mixin sans-md {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+}
+
+@mixin sans-base-medium {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+@mixin sans-sm-medium {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+@mixin sans-sm {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin sans-xl {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
