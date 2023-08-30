@@ -28,6 +28,11 @@ body {
   background-color: $white;
 }
 
+svg {
+  stroke: $white;
+  fill: transparent;
+}
+
 .wrapper {
   max-width: calc(#{$screen-mobile} + #{$container-padding});
   margin: 0 auto;

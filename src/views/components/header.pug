@@ -10,8 +10,8 @@ header.header
       .header__submenu
         button(type="button").header__search
           <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
-        a.header__link(href="#")
-          span Contact us
+        a.header__item(href="#")
+          span.header__item__text Contact us
         .header__lang
           button(type="button").header__toggle
             <svg width="18px" height="18px" viewBox="0 0 18 18"><use xlink:href="#svg-en-uk"></use></svg>
@@ -26,33 +26,285 @@ header.header
               <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
     .header__bottom
       nav.header__menu
-        a.header__link(href="/")
-          .header__icon
-            <svg width="24px" height="25px" viewBox="0 0 24 25"><use xlink:href="#svg-ship"></use></svg>
-          span Find your cruise
-          .header__arrow
-            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
-        a.header__link(href="/")
-          span Destinations
-          .header__arrow
-            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
-        a.header__link(href="/")
-          span Ships
-          .header__arrow
-            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
-        a.header__link(href="/")
-          span Why swan
-          .header__arrow
-            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
-        a.header__link(href="/")
-          span Plan your trip
-          .header__arrow
-            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
-        a.header__link(href="/")
-          span Partnerships
-          .header__arrow
-            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
-        a.header__link(href="/")
-          span About us
-          .header__arrow
-            <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        .header__item
+          a(href="/").header__link
+            .header__icon
+              <svg width="24px" height="25px" viewBox="0 0 24 25"><use xlink:href="#svg-ship"></use></svg>
+            span.header__item__text Find your cruise
+            .header__arrow
+              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header-dropdown.header-dropdown-find-your-cruise
+            .wrapper
+              .header-dropdown__wrapper
+                .header-dropdown__grid
+                  .header-dropdown__nav
+                    .header-dropdown__nav__col
+                      a(href="#" data-id="1").header-dropdown__nav__link.active
+                        span Destinations
+                        <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                      a(href="#" data-id="2").header-dropdown__nav__link
+                        span Ships
+                        <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                      a(href="#" data-id="3").header-dropdown__nav__link
+                        span Departures
+                        <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                    .header-dropdown__nav__col
+                      .header-dropdown__nav__list.active(data-id="1")
+                        a(href="#").header-dropdown__nav__link
+                          span Africa
+                        a(href="#").header-dropdown__nav__link
+                          span Antarctica
+                        a(href="#").header-dropdown__nav__link
+                          span Artic
+                        a(href="#").header-dropdown__nav__link
+                          span Australia & NZ
+                        a(href="#").header-dropdown__nav__link
+                          span Europe
+                        a(href="#").header-dropdown__nav__link
+                          span Japan
+                        a(href="#").header-dropdown__nav__link
+                          span Mediterranean
+                        a(href="#").header-dropdown__nav__link
+                          span Ocean Voyages
+                        a(href="#").header-dropdown__nav__link
+                          span Pacific Islands
+                        a(href="#").header-dropdown__nav__link
+                          span South America
+                      .header-dropdown__nav__list(data-id="2")
+                        a(href="#").header-dropdown__nav__link
+                          span Africa
+                        a(href="#").header-dropdown__nav__link
+                          span Antarctica
+                        a(href="#").header-dropdown__nav__link
+                          span Artic
+                        a(href="#").header-dropdown__nav__link
+                          span Australia & NZ
+                        a(href="#").header-dropdown__nav__link
+                          span Europe
+                        a(href="#").header-dropdown__nav__link
+                          span Japan
+                        a(href="#").header-dropdown__nav__link
+                          span Mediterranean
+                        a(href="#").header-dropdown__nav__link
+                          span Ocean Voyages
+                        a(href="#").header-dropdown__nav__link
+                          span Pacific Islands
+                        a(href="#").header-dropdown__nav__link
+                          span South America
+                      .header-dropdown__nav__list(data-id="3")
+                        a(href="#").header-dropdown__nav__link
+                          span Africa
+                        a(href="#").header-dropdown__nav__link
+                          span Antarctica
+                        a(href="#").header-dropdown__nav__link
+                          span Artic
+                        a(href="#").header-dropdown__nav__link
+                          span Australia & NZ
+                        a(href="#").header-dropdown__nav__link
+                          span Europe
+                        a(href="#").header-dropdown__nav__link
+                          span Japan
+                        a(href="#").header-dropdown__nav__link
+                          span Mediterranean
+                        a(href="#").header-dropdown__nav__link
+                          span Ocean Voyages
+                        a(href="#").header-dropdown__nav__link
+                          span Pacific Islands
+                        a(href="#").header-dropdown__nav__link
+                          span South America
+                  //- .header-dropdown__cards
+                  //-   a(href="#").header-dropdown__card
+                  //-     img(src="/assets/images/header-dropdown1-card1.png", alt="header-dropdown1-card1")
+                  //-     h3 Antarctic Peninsula, South Georgia & Atlantic Islands
+                  //-   a(href="#").header-dropdown__card
+                  //-     img(src="/assets/images/header-dropdown1-card2.png", alt="header-dropdown1-card2")
+                  //-     h3 Norway explored
+                  //-   a(href="#").header-dropdown__card
+                  //-     img(src="/assets/images/header-dropdown1-card3.png", alt="header-dropdown1-card3")
+                  //-     h3 Unspoilt Wilds of Southwest Africa
+                  //-   a(href="#").header-dropdown__card
+                  //-     img(src="/assets/images/header-dropdown1-card4.png", alt="header-dropdown1-card4")
+                  //-     h3 Pacific Islands: New Caledonia, Vanuatu & Solomon Islands
+                  //- .header-dropdown__links
+                  //-   h3 More cruises
+                  //-   a.header-dropdown__link(href="#") Antarctic Peninsula, South Georgia & Atlantic Islands
+                  //-   a.header-dropdown__link(href="#") Norway explored
+                  //-   a.header-dropdown__link(href="#") Unspoilt Wilds of Southwest Africa
+                  //-   a.header-dropdown__link(href="#") Pacific Islands: New Caledonia, Vanuatu & Solomon Islands
+                  //-   a.header-dropdown__link.header-dropdown__link-more(href="#") All cruises
+        .header__item
+          a(href="/").header__link
+            span.header__item__text Destinations
+            .header__arrow
+              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header-dropdown.header-dropdown-destinations
+            .wrapper
+              .header-dropdown__wrapper
+                .header-dropdown__grid
+                  .header-dropdown__cards
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown2-card1.png", alt="header-dropdown2-card1")
+                      h3 Artic
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown2-card2.png", alt="header-dropdown2-card2")
+                      h3 Japan
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown2-card3.png", alt="header-dropdown2-card3")
+                      h3 Australia & NZ
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown2-card4.png", alt="header-dropdown2-card4")
+                      h3 Anntarctic
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown2-card5.png", alt="header-dropdown2-card5")
+                      h3 Anntarctic
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown2-card6.png", alt="header-dropdown2-card6")
+                      h3 South America
+                  .header-dropdown__links
+                    h3 More destinations
+                    a.header-dropdown__link(href="#") Africa
+                    a.header-dropdown__link(href="#") Grand Voyages
+                    a.header-dropdown__link(href="#") Pacific Islands
+                    a.header-dropdown__link(href="#") Medeterranean
+        .header__item
+          a(href="/").header__link
+            span.header__item__text Ships
+            .header__arrow
+              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header-dropdown.header-dropdown-ships
+            .wrapper
+              .header-dropdown__wrapper
+                .header-dropdown__grid
+                  .header-dropdown__cards
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown3-card1.png", alt="header-dropdown3-card1")
+                      h3 Diana
+                      p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown3-card2.png", alt="header-dropdown3-card2")
+                      h3 Minerva
+                      p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown3-card3.png", alt="header-dropdown3-card3")
+                      h3 Vega
+                      p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
+        .header__item
+          a(href="/").header__link
+            span.header__item__text Why swan
+            .header__arrow
+              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header-dropdown.header-dropdown-why-swan
+            .wrapper
+              .header-dropdown__wrapper
+                .header-dropdown__grid
+                  .header-dropdown__cards
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown4-card1.png", alt="header-dropdown4-card1")
+                      h3 Our difference
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown4-card2.png", alt="header-dropdown4-card2")
+                      h3 Experience onboard
+                  .header-dropdown__links
+                    h3 Cultural Expeditions
+                    a.header-dropdown__link(href="#") Our expedition team
+                      p The Old World Through a New Lens: Photographing Europe with David Cothran.
+                    a.header-dropdown__link(href="#") Our guest lecturers
+                      p The Old World Through a New Lens: Photographing Europe with David Cothran.
+                  .header-dropdown__links
+                    h3 What to expect
+                    a(href="#").header-dropdown__link Culture
+                    a(href="#").header-dropdown__link History
+                    a(href="#").header-dropdown__link Nature
+                    a(href="#").header-dropdown__link Weather
+                    a(href="#").header-dropdown__link Wildlife
+        .header__item
+          a(href="/").header__link
+            span.header__item__text Plan your trip
+            .header__arrow
+              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header-dropdown.header-dropdown-plan-your-trip
+            .wrapper
+              .header-dropdown__wrapper
+                .header-dropdown__grid
+                  .header-dropdown__cards
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown5-card1.png", alt="header-dropdown5-card1")
+                      h3 Our Story
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown5-card2.png", alt="header-dropdown5-card2")
+                      h3 Our team
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown5-card3.png", alt="header-dropdown5-card3")
+                      h3 Sustainabillity
+                  .header-dropdown__links
+                    h3 See more
+                    a(href="#").header-dropdown__link F.A.Q
+                    a(href="#").header-dropdown__link Find a Travel Agency
+                    a(href="#").header-dropdown__link Brochures
+                    a(href="#").header-dropdown__link Promotions
+                    a(href="#").header-dropdown__link Mobile App
+                    a(href="#").header-dropdown__link Terms & conditions
+                  .header-dropdown__links
+                    h3 Download mobil app
+                    .header-dropdown__downloads
+                      a(href="#" target="_blank").header-dropdown__link.header-dropdown__link-download
+                        <svg width="37px" height="35px" viewBox="0 0 37 35"><use xlink:href="#svg-android"></use></svg>
+                        span download for
+                        p Android
+                      a(href="#" target="_blank").header-dropdown__link.header-dropdown__link-download
+                        <svg width="35px" height="35px" viewBox="0 0 35 35"><use xlink:href="#svg-app-store"></use></svg>
+                        span download for
+                        p iOS
+        .header__item
+          a(href="/").header__link
+            span.header__item__text Partnerships
+            .header__arrow
+              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header-dropdown.header-dropdown-partnerships
+            .wrapper
+              .header-dropdown__wrapper
+                .header-dropdown__grid
+                  .header-dropdown__cards
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown4-card1.png", alt="header-dropdown4-card1")
+                      h3 Our difference
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown4-card2.png", alt="header-dropdown4-card2")
+                      h3 Experience onboard
+                  .header-dropdown__links
+                    h3 See more
+                    a(href="#").header-dropdown__link Partner 3
+                    a(href="#").header-dropdown__link Partner 4
+                    a(href="#").header-dropdown__link Partner 5
+                    a(href="#").header-dropdown__link Partner 6
+                    a(href="#").header-dropdown__link.header-dropdown__link-more View all
+        .header__item
+          a(href="/").header__link
+            span.header__item__text About us
+            .header__arrow
+              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header-dropdown.header-dropdown-about-us
+            .wrapper
+              .header-dropdown__wrapper
+                .header-dropdown__grid
+                  .header-dropdown__cards
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown7-card1.png", alt="header-dropdown7-card1")
+                      h3 Our Story
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown7-card2.png", alt="header-dropdown7-card2")
+                      h3 Our team
+                    a(href="#").header-dropdown__card
+                      img(src="/assets/images/header-dropdown7-card2.png", alt="header-dropdown7-card2")
+                      h3 Sustainabillity
+                  .header-dropdown__links
+                    h3 More about us
+                    a(href="#").header-dropdown__link Our awards
+                    a(href="#").header-dropdown__link Blog
+                    a(href="#").header-dropdown__link Press center
+                    a(href="#").header-dropdown__link Careers
+                  .header-dropdown__links
+                    h3 Contact us
+                    a(href="tel:+44 (0) 207 846 0271").header-dropdown__link +44 (0) 207 846 0271
+                    a(href="mailto:enquiries@swanhellenic.com").header-dropdown__link enquiries@swanhellenic.com
+                    a(href="#").header-dropdown__link.header-dropdown__link-more View all Contacts
