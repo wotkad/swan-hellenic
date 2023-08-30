@@ -12,10 +12,18 @@ header.header
           <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
         a.header__link(href="#")
           span Contact us
-        button(type="button").header__lang
-          <svg width="18px" height="18px" viewBox="0 0 18 18"><use xlink:href="#svg-en-uk"></use></svg>
-          span EN
-          <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+        .header__lang
+          button(type="button").header__toggle
+            <svg width="18px" height="18px" viewBox="0 0 18 18"><use xlink:href="#svg-en-uk"></use></svg>
+            span EN
+            <svg class="header__lang__arrow" width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+          .header__languages
+            a(href="#") Russian (RU)
+              <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+            a(href="#").current English (UK)
+              <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+            a(href="#") English (US)
+              <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
     .header__bottom
       nav.header__menu
         a.header__link(href="/")

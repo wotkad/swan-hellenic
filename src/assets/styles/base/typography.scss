@@ -28,7 +28,7 @@
   font-weight: 500;
 }
 
-@mixin chap-xl {
+@mixin chap-xs {
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
@@ -96,7 +96,13 @@
   font-weight: 400;
 }
 
-@mixin sans-xl {
+@mixin sans-xs {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@mixin sans-2xs {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;

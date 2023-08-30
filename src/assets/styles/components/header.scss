@@ -19,9 +19,6 @@
       background-color: $green-300;
     }
   }
-  &__bottom {
-    padding: 20px 0;
-  }
   &__contact {
     display: flex;
     align-items: center;
@@ -55,11 +52,17 @@
     display: flex;
     transition: background-color 0.3s;
     align-items: center;
+    padding: 20px 0;
     span {
       color: $white;
       text-transform: uppercase;
       display: inline-block;
       @include sans-sm-medium;
+    }
+    &:hover {
+      .header__arrow {
+        transform: rotate(180deg);
+      }
     }
   }
   &__submenu {
@@ -90,18 +93,31 @@
     width: 16px;
     height: 16px;
     margin-left: 2px;
+    transition: transform 0.3s;
     svg {
       min-width: 16px;
     }
   }
   &__lang {
+    position: relative;
+  }
+  &__toggle {
     display: flex;
     align-items: center;
     border-radius: 100px;
     transition: background-color 0.3s;
     padding: 10px 20px;
+    &.active {
+      background-color: $green-300;
+      .header__lang__arrow {
+        transform: rotate(180deg);
+      }
+    }
     &:hover {
       background-color: $green-300;
+      .header__lang__arrow {
+        transform: rotate(180deg);
+      }
     }
     span {
       margin-left: 8px;
@@ -109,6 +125,43 @@
       display: inline-block;
       color: $white;
       @include sans-sm-medium;
+    }
+    svg {
+      transition: transform 0.3s;
+    }
+  }
+  &__languages {
+    display: none;
+    position: absolute;
+    padding: 4px 0;
+    top: 52px;
+    width: 100%;
+    left: 0;
+    background-color: $white;
+    border-radius: 4px;
+    min-width: 150px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    a {
+      color: $text;
+      padding: 8px 40px 8px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s;
+      @include sans-xs;
+      &:hover {
+        background-color: $white-100;
+      }
+      svg {
+        display: none;
+        position: absolute;
+        right: 20px;
+      }
+      &.current {
+        svg {
+          display: block;
+        }
+      }
     }
   }
 }
