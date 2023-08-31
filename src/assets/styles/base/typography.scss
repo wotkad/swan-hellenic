@@ -90,6 +90,13 @@
   letter-spacing: -0.1px;
 }
 
+@mixin sans-base-small {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
 @mixin sans-sm-medium {
   font-size: 14px;
   line-height: 22px;

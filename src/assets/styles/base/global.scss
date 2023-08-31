@@ -13,7 +13,7 @@ html,
 body {
   font-family: "DM Sans", "Open Sans";
   height: 100%;
-  height: 2000px;
+  background-color: $fathom;
 }
 
 h1,
@@ -27,6 +27,14 @@ h6 {
 
 .svg-icons {
   display: none;
+}
+
+main {
+  transition: padding 0.3s;
+  padding-top: 154px;
+  &.scrolled {
+    padding-top: 64px;
+  }
 }
 
 .render {
@@ -52,9 +60,6 @@ svg {
   }
   @include screen(laptop) {
     max-width: calc(#{$screen-laptop} + #{$container-padding});
-  }
-  @include screen(desktop) {
-    max-width: calc(#{$screen-desktop} + #{$container-padding});
   }
 }
 

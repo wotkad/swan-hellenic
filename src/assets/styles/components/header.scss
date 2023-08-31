@@ -280,10 +280,14 @@
     left: 0;
     background-color: $fathom;
     width: 100%;
-    padding: 24px 0 40px;
+    padding: 24px 0 0;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s, opacity 0.3s;
+    &__wrapper {
+      border-bottom: 1px solid $green-300;
+      padding-bottom: 40px;
+    }
     &__results {
       grid-column-start: 8;
       grid-column-end: 24;
