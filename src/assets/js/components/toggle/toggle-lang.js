@@ -21,7 +21,8 @@ function toggleLang() {
     }
   });
   document.addEventListener('keydown', function(e) {
-    if( e.key == 'Escape' ){
+    if (e.key == 'Escape') {
+      button.removeClass('active');
       menu.fadeOut(300);
     }
   });

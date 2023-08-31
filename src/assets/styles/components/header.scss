@@ -1,11 +1,37 @@
 .header {
   position: relative;
   background-color: $fathom;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s;
+  &.scrolled {
+    transform: translateY(-96px);
+  }
   &__top {
     padding: 25px 0;
     border-bottom: 1px solid $green-400;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .header__logo {
+      position: relative;
+      &__inner {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s;
+        left: 0;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
   }
   &__logo {
     display: flex;
@@ -59,25 +85,53 @@
     transition: background-color 0.3s;
     &__text {
       color: $white;
+      transition: color 0.3s;
       text-transform: uppercase;
       display: inline-block;
       @include sans-sm-medium;
     }
+    .header__link {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 2px;
+        background-color: $shice;
+        transition: width 0.3s;
+        width: 0;
+        border-radius: 100px;
+        bottom: 12px;
+      }
+    }
     &:hover {
       .header {
+        &__icon {
+          svg {
+            fill: $shice;
+            stroke: $shice;
+          }
+        }
         &__arrow {
           transform: rotate(180deg);
+          svg {
+            stroke: $shice;
+          }
         }
         &-dropdown {
           visibility: visible;
           opacity: 1;
         }
-      }
-    }
-    &:nth-child(1) {
-      .header-dropdown {
-        opacity: 1;
-        visibility: visible;
+        &__item {
+          &__text {
+            color: $shice;
+          }
+        }
+        &__link {
+          &:before {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -91,6 +145,9 @@
       border-radius: 100px;
       &:hover {
         background-color: $green-300;
+        .header__item__text {
+          color: $white;
+        }
       }
       span {
         @include sans-base-medium;
@@ -102,6 +159,8 @@
     height: 24px;
     margin-right: 8px;
     svg {
+      fill: $white;
+      transition: stroke 0.3s, fill 0.3s;
       min-width: 24px;
     }
   }
@@ -111,6 +170,7 @@
     margin-left: 2px;
     transition: transform 0.3s;
     svg {
+      transition: stroke 0.3s;
       min-width: 16px;
     }
   }
@@ -191,11 +251,55 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s, opacity 0.3s;
+    &__results {
+      grid-column-start: 8;
+      grid-column-end: 24;
+      grid-row-start: 1;
+    }
+    &__result {
+      display: grid;
+      grid-template-columns: repeat(16, minmax(0, 1fr));
+      gap: 40px;
+      grid-auto-rows: max-content;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      opacity: 0;
+      transition: opacity 0.3s, z-index 0.3s;
+      z-index: -1;
+      &.active {
+        opacity: 1;
+        z-index: 200;
+      }
+    }
     &__nav {
       display: grid;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-column-end: 8;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      grid-column: span 8 / span 8;
+      &__period {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        &__title {
+          color: $green-200;
+          @include sans-sm-medium;
+        }
+        &__years {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        &__year {
+          color: $white;
+          @include sans-sm;
+        }
+      }
       &__col {
+        display: grid;
+        align-items: flex-start;
+        grid-auto-rows: max-content;
         border-right: 1px solid $green-100;
         &:nth-child(2) {
           .header-dropdown__nav__link {
@@ -204,12 +308,31 @@
         }
       }
       &__list {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        opacity: 0;
+        transition: opacity 0.3s, z-index 0.3s;
+        z-index: -1;
         &.active {
-          display: block;
+          opacity: 1;
+          z-index: 200;
         }
-        display: none;
-        transition: visibility 0.3s, opacity 0.3s;
-        grid-column: span 1 / span 1;
+      }
+      &__step2 {
+        grid-row-start: 1;
+        grid-column-start: 2;
+      }
+      &__years {
+        border-right: none;
+        grid-row-start: 1;
+        grid-column-start: 5;
+        grid-column-end: 24;
+        background-color: $fathom;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 8px 0;
       }
       &__link {
         grid-column: span 1 / span 1;
@@ -233,14 +356,12 @@
           background-color: $green-300;
           svg {
             opacity: 1;
-            visibility: visible;
           }
         }
         &:hover {
           background-color: $green-300;
           svg {
             opacity: 1;
-            visibility: visible;
           }
         }
       }
