@@ -6,14 +6,23 @@
 textarea,
 input,
 button {
-  font-family: "DM Sans";
+  font-family: "DM Sans", "Open Sans";
 }
 
 html,
 body {
-  font-family: "DM Sans";
+  font-family: "DM Sans", "Open Sans";
   height: 100%;
   height: 2000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Chap-Medium", "Arsenal-Regular";
 }
 
 .svg-icons {

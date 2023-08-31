@@ -8,8 +8,12 @@ header.header
       a(href="/").header__logo
         <svg width="166px" height="40px" viewBox="0 0 166 40"><use xlink:href="#svg-logo"></use></svg>
       .header__submenu
-        button(type="button").header__search
+        button(type="button" aria-label="search").header__search
           <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
+        form(action="#").search__form
+          input(type="text" name="search" required)
+          button(type="submit" aria-label="search").search__button
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
         a.header__item(href="#")
           span.header__item__text Contact us
         .header__lang
@@ -116,18 +120,18 @@ header.header
                       .header-dropdown__cards
                         a(href="#").header-dropdown__card
                           img(src="/assets/images/header-dropdown1-card1.png", alt="header-dropdown1-card1")
-                          h3 Antarctic Peninsula, South Georgia & Atlantic Islands
+                          .header-dropdown__card__title Antarctic Peninsula, South Georgia & Atlantic Islands
                         a(href="#").header-dropdown__card
                           img(src="/assets/images/header-dropdown1-card2.png", alt="header-dropdown1-card2")
-                          h3 Norway explored
+                          .header-dropdown__card__title Norway explored
                         a(href="#").header-dropdown__card
                           img(src="/assets/images/header-dropdown1-card3.png", alt="header-dropdown1-card3")
-                          h3 Unspoilt Wilds of Southwest Africa
+                          .header-dropdown__card__title Unspoilt Wilds of Southwest Africa
                         a(href="#").header-dropdown__card
                           img(src="/assets/images/header-dropdown1-card4.png", alt="header-dropdown1-card4")
-                          h3 Pacific Islands: New Caledonia, Vanuatu & Solomon Islands
+                          .header-dropdown__card__title Pacific Islands: New Caledonia, Vanuatu & Solomon Islands
                       .header-dropdown__links
-                        h3 More cruises
+                        .header-dropdown__links__title More cruises
                         a.header-dropdown__link(href="#") Antarctic Peninsula, South Georgia & Atlantic Islands
                         a.header-dropdown__link(href="#") Norway explored
                         a.header-dropdown__link(href="#") Unspoilt Wilds of Southwest Africa
@@ -145,24 +149,24 @@ header.header
                   .header-dropdown__cards
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown2-card1.png", alt="header-dropdown2-card1")
-                      h3 Artic
+                      .header-dropdown__card__title Artic
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown2-card2.png", alt="header-dropdown2-card2")
-                      h3 Japan
+                      .header-dropdown__card__title Japan
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown2-card3.png", alt="header-dropdown2-card3")
-                      h3 Australia & NZ
+                      .header-dropdown__card__title Australia & NZ
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown2-card4.png", alt="header-dropdown2-card4")
-                      h3 Anntarctic
+                      .header-dropdown__card__title Anntarctic
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown2-card5.png", alt="header-dropdown2-card5")
-                      h3 Anntarctic
+                      .header-dropdown__card__title Anntarctic
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown2-card6.png", alt="header-dropdown2-card6")
-                      h3 South America
+                      .header-dropdown__card__title South America
                   .header-dropdown__links
-                    h3 More destinations
+                    .header-dropdown__links__title More destinations
                     a.header-dropdown__link(href="#") Africa
                     a.header-dropdown__link(href="#") Grand Voyages
                     a.header-dropdown__link(href="#") Pacific Islands
@@ -179,15 +183,15 @@ header.header
                   .header-dropdown__cards
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown3-card1.png", alt="header-dropdown3-card1")
-                      h3 Diana
+                      .header-dropdown__card__title Diana
                       p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown3-card2.png", alt="header-dropdown3-card2")
-                      h3 Minerva
+                      .header-dropdown__card__title Minerva
                       p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown3-card3.png", alt="header-dropdown3-card3")
-                      h3 Vega
+                      .header-dropdown__card__title Vega
                       p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
         .header__item
           a(href="/").header__link
@@ -201,18 +205,18 @@ header.header
                   .header-dropdown__cards
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown4-card1.png", alt="header-dropdown4-card1")
-                      h3 Our difference
+                      .header-dropdown__card__title Our difference
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown4-card2.png", alt="header-dropdown4-card2")
-                      h3 Experience onboard
+                      .header-dropdown__card__title Experience onboard
                   .header-dropdown__links
-                    h3 Cultural Expeditions
+                    .header-dropdown__links__title Cultural Expeditions
                     a.header-dropdown__link(href="#") Our expedition team
                       p The Old World Through a New Lens: Photographing Europe with David Cothran.
                     a.header-dropdown__link(href="#") Our guest lecturers
                       p The Old World Through a New Lens: Photographing Europe with David Cothran.
                   .header-dropdown__links
-                    h3 What to expect
+                    .header-dropdown__links__title What to expect
                     a(href="#").header-dropdown__link Culture
                     a(href="#").header-dropdown__link History
                     a(href="#").header-dropdown__link Nature
@@ -230,15 +234,15 @@ header.header
                   .header-dropdown__cards
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown5-card1.png", alt="header-dropdown5-card1")
-                      h3 Our Story
+                      .header-dropdown__card__title Our Story
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown5-card2.png", alt="header-dropdown5-card2")
-                      h3 Our team
+                      .header-dropdown__card__title Our team
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown5-card3.png", alt="header-dropdown5-card3")
-                      h3 Sustainabillity
+                      .header-dropdown__card__title Sustainabillity
                   .header-dropdown__links
-                    h3 See more
+                    .header-dropdown__links__title See more
                     a(href="#").header-dropdown__link F.A.Q
                     a(href="#").header-dropdown__link Find a Travel Agency
                     a(href="#").header-dropdown__link Brochures
@@ -246,7 +250,7 @@ header.header
                     a(href="#").header-dropdown__link Mobile App
                     a(href="#").header-dropdown__link Terms & conditions
                   .header-dropdown__links
-                    h3 Download mobil app
+                    .header-dropdown__links__title Download mobil app
                     .header-dropdown__downloads
                       a(href="#" target="_blank").header-dropdown__link.header-dropdown__link-download
                         <svg width="37px" height="35px" viewBox="0 0 37 35"><use xlink:href="#svg-android"></use></svg>
@@ -268,12 +272,12 @@ header.header
                   .header-dropdown__cards
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown4-card1.png", alt="header-dropdown4-card1")
-                      h3 Our difference
+                      .header-dropdown__card__title Our difference
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown4-card2.png", alt="header-dropdown4-card2")
-                      h3 Experience onboard
+                      .header-dropdown__card__title Experience onboard
                   .header-dropdown__links
-                    h3 See more
+                    .header-dropdown__links__title See more
                     a(href="#").header-dropdown__link Partner 3
                     a(href="#").header-dropdown__link Partner 4
                     a(href="#").header-dropdown__link Partner 5
@@ -291,21 +295,21 @@ header.header
                   .header-dropdown__cards
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown7-card1.png", alt="header-dropdown7-card1")
-                      h3 Our Story
+                      .header-dropdown__card__title Our Story
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown7-card2.png", alt="header-dropdown7-card2")
-                      h3 Our team
+                      .header-dropdown__card__title Our team
                     a(href="#").header-dropdown__card
                       img(src="/assets/images/header-dropdown7-card2.png", alt="header-dropdown7-card2")
-                      h3 Sustainabillity
+                      .header-dropdown__card__title Sustainabillity
                   .header-dropdown__links
-                    h3 More about us
+                    .header-dropdown__links__title More about us
                     a(href="#").header-dropdown__link Our awards
                     a(href="#").header-dropdown__link Blog
                     a(href="#").header-dropdown__link Press center
                     a(href="#").header-dropdown__link Careers
                   .header-dropdown__links
-                    h3 Contact us
+                    .header-dropdown__links__title Contact us
                     a(href="tel:+44 (0) 207 846 0271").header-dropdown__link +44 (0) 207 846 0271
                     a(href="mailto:enquiries@swanhellenic.com").header-dropdown__link enquiries@swanhellenic.com
                     a(href="#").header-dropdown__link.header-dropdown__link-more View all Contacts

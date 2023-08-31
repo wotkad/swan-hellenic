@@ -11,10 +11,11 @@
     transform: translateY(-96px);
   }
   &__top {
-    padding: 25px 0;
-    border-bottom: 1px solid $green-400;
+    padding: 22px 0;
+    border-bottom: 1px solid $green-500;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    position: relative;
   }
   &__bottom {
     display: flex;
@@ -43,7 +44,10 @@
     border-radius: 50%;
     transition: background-color 0.3s;
     &:hover {
-      background-color: $green-300;
+      background-color: $green-400;
+    }
+    svg {
+      stroke: $white;
     }
   }
   &__contact {
@@ -59,7 +63,7 @@
     border-radius: 100px;
     transition: background-color 0.3s;
     &:hover {
-      background-color: $green-300;
+      background-color: $green-400;
     }
     svg {
       min-width: 24px;
@@ -140,11 +144,40 @@
     align-items: center;
     justify-content: flex-end;
     gap: 16px;
+    .search__form {
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s, z-index 0.3s;
+      position: absolute;
+      left: 50%;
+      transform: translateX(calc(-50% + 12px));
+      width: calc(50% + 44px);
+      top: 22px;
+      display: flex;
+      align-items: center;
+      input {
+        padding: 8px 16px;
+        border-radius: 4px;
+        width: 100%;
+        @include sans-base;
+      }
+      &.active {
+        opacity: 1;
+        z-index: 20;
+      }
+    }
+    .search__button {
+      position: absolute;
+      right: 10px;
+      svg {
+        stroke: $fathom;
+      }
+    }
     .header__item {
       padding: 10px 20px;
       border-radius: 100px;
       &:hover {
-        background-color: $green-300;
+        background-color: $green-400;
         .header__item__text {
           color: $white;
         }
@@ -185,13 +218,13 @@
     transition: background-color 0.3s;
     padding: 10px 20px;
     &.active {
-      background-color: $green-300;
+      background-color: $green-400;
       .header__lang__arrow {
         transform: rotate(180deg);
       }
     }
     &:hover {
-      background-color: $green-300;
+      background-color: $green-400;
       .header__lang__arrow {
         transform: rotate(180deg);
       }
@@ -242,7 +275,7 @@
     }
   }
   &-dropdown {
-    top: 160px;
+    top: 154px;
     position: absolute;
     left: 0;
     background-color: $fathom;
@@ -353,13 +386,13 @@
           right: 10px;
         }
         &.active {
-          background-color: $green-300;
+          background-color: $green-400;
           svg {
             opacity: 1;
           }
         }
         &:hover {
-          background-color: $green-300;
+          background-color: $green-400;
           svg {
             opacity: 1;
           }
@@ -509,10 +542,17 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      h3 {
+      &__title {
         color: $white;
+        transition: color 0.3s, border-color 0.3s;
         margin-top: 12px;
         @include sans-base;
+      }
+      &:hover {
+        .header-dropdown__card__title {
+          color: $shice;
+          border-color: $shice;
+        }
       }
       p {
         color: $white-200;
@@ -524,7 +564,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 4px;
-      h3 {
+      &__title {
         text-transform: uppercase;
         color: $green-200;
         margin-bottom: 8px;
@@ -541,6 +581,11 @@
     }
     &__link {
       color: $white;
+      transition: color 0.3s, border-color 0.3s;
+      &:hover {
+        color: $shice;
+        border-color: $shice;
+      }
       @include sans-base;
       svg {
         margin-bottom: 8px;
@@ -554,10 +599,14 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        background-color: $green-300;
+        background-color: $green-400;
         padding: 12px;
         border-radius: 12px;
         min-width: 97px;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: $green-300;
+        }
         span {
           text-transform: lowercase;
         }
@@ -571,6 +620,11 @@
         text-transform: uppercase;
         margin-top: 20px;
         @include sans-base-medium;
+        transition: color 0.3s, border-color 0.3s;
+        &:hover {
+          color: $shice;
+          border-color: $shice;
+        }
       }
     }
   }

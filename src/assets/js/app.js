@@ -17,6 +17,7 @@ import "./base/common/get-current-year";
 import "./base/common/get-header-height";
 
 import "./components/toggle/toggle-lang";
+import "./components/toggle/toggle-search";
 
 import "./components/hover/hover-menu";
 

@@ -10,6 +10,7 @@ function scrollHeader() {
   $(window).on('scroll', function() {
     $('.header__languages').fadeOut(300);
     $('.header__toggle').removeClass('active');
+    $('.search__form').removeClass('active');
     if (window.pageYOffset > 0) {
       header.addClass('scrolled');
       logo.addClass('active');
