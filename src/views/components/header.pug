@@ -3,10 +3,18 @@ header.header
     .header__top
       .header__contact
         a(href="tel:+7 (800) 555-35-35").header__phone
-          <svg width="25px" height="25px" viewBox="0 0 25 25"><use xlink:href="#svg-phone"></use></svg>
+          <svg width="24px" height="24px" viewBox="0 0 25 25"><use xlink:href="#svg-phone"></use></svg>
           span +7 (800) 555-35-35
+      button(type="button" aria-label="search").header__search.header__search-mob
+        <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
       a(href="/").header__logo
-        <svg width="166px" height="40px" viewBox="0 0 166 40"><use xlink:href="#svg-logo"></use></svg>
+        <svg class="header__logo-pc" width="166px" height="40px" viewBox="0 0 166 40"><use xlink:href="#svg-logo"></use></svg>
+        <svg class="header__logo-mob" width="65px" height="40px" viewBox="0 0 65 44"><use xlink:href="#svg-logo-mobile"></use></svg>
+      button(type="button").header__burger
+        svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+          rect(x="2" y="8" width="20" height="2" rx="1" fill="white")
+          rect(x="2" y="14" width="20" height="2" rx="1" fill="white")
+      include ./mob-menu
       .header__submenu
         button(type="button" aria-label="search").header__search
           <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
@@ -59,34 +67,34 @@ header.header
                       .header-dropdown__nav__list.active(data-id="1")
                         a(href="#" data-id="1").header-dropdown__nav__link.active
                           span Africa
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="2").header-dropdown__nav__link
                           span Antarctica
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="3").header-dropdown__nav__link
                           span Artic
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="4").header-dropdown__nav__link
                           span Australia & NZ
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="5").header-dropdown__nav__link
                           span Europe
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="6").header-dropdown__nav__link
                           span Japan
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="7").header-dropdown__nav__link
                           span Mediterranean
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="8").header-dropdown__nav__link
                           span Ocean Voyages
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="9").header-dropdown__nav__link
                           span Pacific Islands
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="10").header-dropdown__nav__link
                           span South America
                       .header-dropdown__nav__list(data-id="2")
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="2-1").header-dropdown__nav__link
                           span SH Minerva
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="2-2").header-dropdown__nav__link
                           span SH Vega
-                        a(href="#").header-dropdown__nav__link
+                        a(href="#" data-id="2-3").header-dropdown__nav__link
                           span SH Vega
                   .header-dropdown__nav__list.header-dropdown__nav__years(data-id="3")
                     .header-dropdown__nav__period
-                      h4.header-dropdown__nav__period__title 2023
+                      .header-dropdown__nav__period__title 2023
                       .header-dropdown__nav__period__years
                         a(href="#").header-dropdown__nav__period__year January
                         a(href="#").header-dropdown__nav__period__year February
@@ -101,7 +109,7 @@ header.header
                         a(href="#").header-dropdown__nav__period__year November
                         a(href="#").header-dropdown__nav__period__year December
                     .header-dropdown__nav__perion
-                      h4.header-dropdown__nav__period__title 2024
+                      .header-dropdown__nav__period__title 2024
                       .header-dropdown__nav__period__years
                         a(href="#").header-dropdown__nav__period__year January
                         a(href="#").header-dropdown__nav__period__year February
@@ -117,26 +125,31 @@ header.header
                         a(href="#").header-dropdown__nav__period__year December
                   .header-dropdown__results
                     .header-dropdown__result(data-id="1").active
-                      .header-dropdown__cards
-                        a(href="#").header-dropdown__card
-                          img(src="/assets/images/header-dropdown1-card1.png", alt="header-dropdown1-card1")
-                          .header-dropdown__card__title Antarctic Peninsula, South Georgia & Atlantic Islands
-                        a(href="#").header-dropdown__card
-                          img(src="/assets/images/header-dropdown1-card2.png", alt="header-dropdown1-card2")
-                          .header-dropdown__card__title Norway explored
-                        a(href="#").header-dropdown__card
-                          img(src="/assets/images/header-dropdown1-card3.png", alt="header-dropdown1-card3")
-                          .header-dropdown__card__title Unspoilt Wilds of Southwest Africa
-                        a(href="#").header-dropdown__card
-                          img(src="/assets/images/header-dropdown1-card4.png", alt="header-dropdown1-card4")
-                          .header-dropdown__card__title Pacific Islands: New Caledonia, Vanuatu & Solomon Islands
-                      .header-dropdown__links
-                        .header-dropdown__links__title More cruises
-                        a.header-dropdown__link(href="#") Antarctic Peninsula, South Georgia & Atlantic Islands
-                        a.header-dropdown__link(href="#") Norway explored
-                        a.header-dropdown__link(href="#") Unspoilt Wilds of Southwest Africa
-                        a.header-dropdown__link(href="#") Pacific Islands: New Caledonia, Vanuatu & Solomon Islands
-                        a.header-dropdown__link.header-dropdown__link-more(href="#") All cruises
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="2")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="3")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="4")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="5")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="6")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="7")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="8")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="9")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="10")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="2-1")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="2-2")
+                      include ./header-dropdown
+                    .header-dropdown__result(data-id="2-3")
+                      include ./header-dropdown
         .header__item
           a(href="/").header__link
             span.header__item__text Destinations

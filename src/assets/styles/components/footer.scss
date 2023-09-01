@@ -1,29 +1,88 @@
 .footer {
   background-color: $fathom;
   &__top {
-    padding: 64px 0 80px;
+    padding: 32px 0 48px;
+    gap: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 80px;
     border-bottom: 1px solid $green-300;
+    @include screen(tablet) {
+      padding: 64px 0 80px;
+      gap: 80px;
+    }
   }
   &__bottom {
-    padding: 80px 0 90px;
+    padding: 48px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    gap: 32px;
+    @include screen(tablet) {
+      padding: 80px 0 90px;
+      gap: 48px;
+    }
   }
-  &__grid {
+  &__block {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    @include screen(tablet) {
+      flex-direction: row;
+    }
     &-two {
       max-width: 728px;
       margin: 0 auto;
+      gap: 48px;
+      @include screen(tablet) {
+        gap: 0;
+      }
       .footer__item {
         align-items: center;
+      }
+    }
+    &-four {
+      gap: 12px;
+      @include screen(tablet) {
+        gap: 0;
+      }
+      .footer {
+        &__item {
+          gap: 0;
+          @include screen(tablet) {
+            gap: 20px;
+          }
+        }
+        &__subtitle {
+          cursor: pointer;
+          color: $white;
+          text-transform: none;
+          padding: 8px 0;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          svg {
+            transition: transform 0.3s;
+          }
+          &.active {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+          @include sans-xl;
+          @include screen(tablet) {
+            width: auto;
+            display: inline-block;
+            cursor: default;
+            text-transform: uppercase;
+            padding: 0;
+            color: $green-200;
+            @include sans-base-medium;
+          }
+        }
       }
     }
   }
@@ -34,19 +93,43 @@
     gap: 20px;
   }
   &__links {
+    overflow: hidden;
+    height: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    @include screen(tablet) {
+      height: auto;
+    }
   }
   &__subtitle {
+    cursor: default;
     color: $green-200;
+    text-transform: uppercase;
     @include sans-base-medium;
+    @include screen(tablet) {
+      svg {
+        display: none;
+      }
+    }
   }
   &__link {
     color: $white;
     transition: color 0.3s;
     @include sans-base-small;
+    &:first-child {
+      margin-top: 12px;
+      @include screen(tablet) {
+        margin-top: 0;
+      }
+    }
+    &:last-child {
+      margin-bottom: 8px;
+      @include screen(tablet) {
+        margin-bottom: 0;
+      }
+    }
     &:hover {
       color: $shice;
     }
@@ -78,6 +161,11 @@
     display: flex;
     align-items: center;
     gap: 24px;
+    max-width: 264px;
+    margin: 0 auto;
+    @include screen(tablet) {
+      max-width: 100%;
+    }
   }
   &__logo {
     svg {
@@ -94,17 +182,24 @@
     &__row {
       display: flex;
       align-items: center;
-      gap: 64px;
+      flex-direction: column;
+      gap: 8px;
+      @include screen(tablet) {
+        gap: 64px;
+        flex-direction: row;
+      }
     }
     &__links {
       a {
         color: $white;
         transition: color 0.3s;
+        @include sans-xs;
         &:hover {
           color: $shice;
         }
       }
       span {
+        margin: 0 2px;
         color: $white;
       }
     }
@@ -116,6 +211,7 @@
     &__text {
       text-align: center;
       color: $white;
+      @include sans-xs;
       .currentYear {
         margin: 0 4px;
       }

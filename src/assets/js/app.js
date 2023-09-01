@@ -18,6 +18,8 @@ import "./base/common/get-header-height";
 
 import "./components/toggle/toggle-lang";
 import "./components/toggle/toggle-search";
+import "./components/toggle/toggle-footer-links";
+import "./components/toggle/toggle-mob-menu";
 
 import "./components/hover/hover-menu";
 

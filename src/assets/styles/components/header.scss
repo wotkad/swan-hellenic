@@ -8,19 +8,30 @@
   z-index: 1000;
   transition: transform 0.3s;
   &.scrolled {
-    transform: translateY(-96px);
+    @include screen(laptop) {
+      transform: translateY(-90px);
+    }
   }
   &__top {
-    padding: 22px 0;
-    border-bottom: 1px solid $green-500;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 12px 0;
     position: relative;
-  }
-  &__bottom {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    @include screen(laptop) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-bottom: 1px solid $green-500;
+      padding: 22px 0;
+    }
+  }
+  &__bottom {
+    display: none;
+    align-items: center;
     justify-content: center;
+    @include screen(laptop) {
+      display: flex;
+    }
     .header__logo {
       position: relative;
       &__inner {
@@ -34,10 +45,55 @@
       }
     }
   }
+  &__burger {
+    width: 44px;
+    height: 44px;
+    max-width: 44px;
+    max-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    border-radius: 50%;
+    margin-right: -10px;
+    svg {
+      rect {
+        transition: transform 0.3s;
+      }
+    }
+    &.active {
+      background-color: $green-400;
+      svg {
+        rect {
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(5px, -9px);
+          }
+          &:nth-child(2) {
+            transform: rotate(-45deg) translate(-12px, 2px);
+          }
+        }
+      }
+    }
+    @include screen(laptop) {
+      display: none;
+    }
+  }
   &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    &-pc {
+      display: none;
+      @include screen(laptop) {
+        display: flex;
+      }
+    }
+    &-mob {
+      display: flex;
+      @include screen(laptop) {
+        display: none;
+      }
+    }
   }
   &__search {
     padding: 10px;
@@ -49,11 +105,20 @@
     svg {
       stroke: $white;
     }
+    &-mob {
+      display: block;
+      @include screen(laptop) {
+        display: none;
+      }
+    }
   }
   &__contact {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-start;
+    @include screen(laptop) {
+      display: flex;
+    }
   }
   &__phone {
     padding: 10px 20px;
@@ -140,10 +205,13 @@
     }
   }
   &__submenu {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-end;
     gap: 16px;
+    @include screen(laptop) {
+      display: flex;
+    }
     .search__form {
       opacity: 0;
       z-index: -1;
@@ -193,6 +261,7 @@
     margin-right: 8px;
     svg {
       fill: $white;
+      stroke: transparent;
       transition: stroke 0.3s, fill 0.3s;
       min-width: 24px;
     }
@@ -260,7 +329,7 @@
       transition: background-color 0.3s;
       @include sans-xs;
       &:hover {
-        background-color: $white-100;
+        background-color: $white-300;
       }
       svg {
         display: none;
@@ -289,6 +358,7 @@
       padding-bottom: 40px;
     }
     &__results {
+      display: grid;
       grid-column-start: 8;
       grid-column-end: 24;
       grid-row-start: 1;
@@ -550,6 +620,7 @@
         color: $white;
         transition: color 0.3s, border-color 0.3s;
         margin-top: 12px;
+        @include line-clamp-2;
         @include sans-base;
       }
       &:hover {
@@ -560,6 +631,7 @@
       }
       p {
         color: $white-200;
+        @include line-clamp-3;
         @include sans-sm;
       }
     }
@@ -586,6 +658,9 @@
     &__link {
       color: $white;
       transition: color 0.3s, border-color 0.3s;
+      p {
+        @include line-clamp-3;
+      }
       &:hover {
         color: $shice;
         border-color: $shice;

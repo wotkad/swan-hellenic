@@ -7,7 +7,17 @@ function scrollHeader() {
   let container = $('.wrapper');
   let logo = $('.header__bottom .header__logo__inner');
   let main = $('main');
-  gsap.to(logo, 0, {x: -(container.width() - menu.width()) / 2});
+  let containerWidth = container.width();
+  let menuWidth = menu.width();
+
+  $(window).on('resize', function() {
+    containerWidth = container.width();
+    menuWidth = menu.width();
+    gsap.to(logo, 0, {x: -(containerWidth - menuWidth) / 2});
+  });
+
+  gsap.to(logo, 0, {x: -(containerWidth - menuWidth) / 2});
+
   $(window).on('scroll', function() {
     $('.header__languages').fadeOut(300);
     $('.header__toggle').removeClass('active');
@@ -16,7 +26,7 @@ function scrollHeader() {
       header.addClass('scrolled');
       logo.addClass('active');
       main.addClass('scrolled');
-      gsap.to(items, 0.3, {x: (container.width() - menu.width()) / 2});
+      gsap.to(items, 0.3, {x: (containerWidth - menuWidth) / 2});
     } else {
       header.removeClass('scrolled');
       logo.removeClass('active');

@@ -15,7 +15,7 @@ function toggleLang() {
     });
   });
   $(document).mouseup( function(e) {
-    if (!menu.is(e.target)) {
+    if (!menu.is(e.target) && !button.is(e.target)) {
       menu.fadeOut(300);
       button.removeClass('active');
     }
