@@ -1,54 +1,272 @@
 .mob-menu
   .wrapper
     .mob-menu__wrapper
-      .mob-menu__list
-        .mob-menu__item(data-id="cruises")
-          a(href="#").mob-menu__link
-            .header__icon
-              <svg width="24px" height="25px" viewBox="0 0 24 25"><use xlink:href="#svg-ship"></use></svg>
-            span Cruises
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-        .mob-menu__item
-          a(href="#").mob-menu__link
-            span Destinations
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-        .mob-menu__item
-          a(href="#").mob-menu__link
-            span Ships
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-        .mob-menu__item
-          a(href="#").mob-menu__link
-            span Why swan
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-        .mob-menu__item
-          a(href="#").mob-menu__link
-            span Play your trip
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-        .mob-menu__item
-          a(href="#").mob-menu__link
-            span Partnerships
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-        .mob-menu__item
-          a(href="#").mob-menu__link
-            span About us
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-        button(type="button").mob-menu__item.mob-menu__item-lang
-          .mob-menu__link
-            .header__icon
-              <svg width="18px" height="18px" viewBox="0 0 18 18"><use xlink:href="#svg-en-uk"></use></svg>
-            span EN
-          .header__arrow
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+      .mob-menu__block(data-id="menu")
+        .mob-menu__list
+          .mob-menu__item.mob-menu__stepper(data-id="cruises")
+            a(href="#").mob-menu__link
+              .header__icon
+                <svg width="24px" height="25px" viewBox="0 0 24 25"><use xlink:href="#svg-ship"></use></svg>
+              span Cruises
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item.mob-menu__stepper(data-id="destinations")
+            a(href="#").mob-menu__link
+              span Destinations
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item.mob-menu__stepper(data-id="ships")
+            a(href="#").mob-menu__link
+              span Ships
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item.mob-menu__stepper(data-id="why-swan")
+            a(href="#").mob-menu__link
+              span Why swan
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item.mob-menu__stepper(data-id="plan-your-trip")
+            a(href="#").mob-menu__link
+              span Play your trip
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item.mob-menu__stepper(data-id="partnerships")
+            a(href="#").mob-menu__link
+              span Partnerships
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item.mob-menu__stepper(data-id="about-us")
+            a(href="#").mob-menu__link
+              span About us
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item.mob-menu__item-lang.mob-menu__stepper(data-id="lang")
+            .mob-menu__link
+              .header__icon
+                <svg width="18px" height="18px" viewBox="0 0 18 18"><use xlink:href="#svg-en-uk"></use></svg>
+              span EN
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
         .mob-menu__contacts
           a(href="#").mob-menu__contact
             span Contact us
           a(href="tel:8 800 555 35 35").mob-menu__contact
             <svg width="24px" height="24px" viewBox="0 0 25 25"><use xlink:href="#svg-phone"></use></svg>
             span 8 800 555 35 35
+      .mob-menu__block(data-id="cruises")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Cruises
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Destinations
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Ships
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Departures
+            .header__arrow
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+      .mob-menu__block(data-id="destinations")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Destinations
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Artic
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Anntarctic
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Australia & NZ
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Japan
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Europe
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Medeterranean
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Africa
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span South America
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Grand Voyages
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Pacific Islands
+      .mob-menu__block(data-id="ships")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Ships
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Diana
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Minerva
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Vega
+      .mob-menu__block(data-id="why-swan")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Why swan
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Our difference
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Experience onboard
+          .mob-menu__group
+            .mob-menu__group__title Cultural Expeditions
+            .mob-menu__item
+              a(href="#").mob-menu__link
+                span Our expedition team
+            .mob-menu__item
+              a(href="#").mob-menu__link
+                span Our guest lecturers
+          .mob-menu__group
+            .mob-menu__group__title What to expect
+            .mob-menu__item
+              a(href="#").mob-menu__link
+                span Culture
+            .mob-menu__item
+              a(href="#").mob-menu__link
+                span History
+            .mob-menu__item
+              a(href="#").mob-menu__link
+                span Nature
+            .mob-menu__item
+              a(href="#").mob-menu__link
+                span Weather
+            .mob-menu__item
+              a(href="#").mob-menu__link
+                span Wildlife
+      .mob-menu__block(data-id="plan-your-trip")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Plan your trip
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Type of travel
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span What’s included
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Ship safety
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span F.A.Q
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Find a travel agency
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Brochures
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Promotions
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Mobile App
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Terms & conditions
+      .mob-menu__block(data-id="partnerships")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Partnerships
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span JRE
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span SETI
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Partner 3
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Partner 4
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Partner 5
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Partner 6
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Partner 7
+      .mob-menu__block(data-id="about-us")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title About us
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Our Story
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Our team
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Sustainabillity
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Our awards
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Blog
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Press center
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Careers
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Contact us
+      .mob-menu__block.mob-menu__block-lang(data-id="lang")
+        .mob-menu__heading
+          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Language
+        .mob-menu__list
+          .mob-menu__item.select-language(data-id="ru")
+            a(href="#").mob-menu__link
+              span Russian (RU)
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-check"></use></svg>
+          .mob-menu__item.select-language.current(data-id="uk")
+            a(href="#").mob-menu__link
+              span English (UK)
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-check"></use></svg>
+          .mob-menu__item.select-language(data-id="us")
+            a(href="#").mob-menu__link
+              span English (US)
+              <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-check"></use></svg>

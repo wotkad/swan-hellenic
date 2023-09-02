@@ -30,12 +30,18 @@ header.header
             span EN
             <svg class="header__lang__arrow" width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
           .header__languages
-            a(href="#") Russian (RU)
-              <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
-            a(href="#").current English (UK)
-              <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
-            a(href="#") English (US)
-              <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+            .header__languages__item.select-language(data-id="ru")
+              a(href="#").header__language
+                span Russian (RU)
+                <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+            .header__languages__item.select-language.current(data-id="uk")
+              a(href="#").header__language.current
+                span English (UK)
+                <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+            .header__languages__item.select-language(data-id="us")
+              a(href="#").header__language
+                span English (US)
+                <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
     .header__bottom
       .header__logo
         a(href="/").header__logo__inner

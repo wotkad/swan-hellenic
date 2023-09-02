@@ -320,27 +320,32 @@
     border-radius: 4px;
     min-width: 150px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-    a {
-      color: $text;
-      padding: 8px 40px 8px 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s;
-      @include sans-xs;
-      &:hover {
-        background-color: $white-300;
-      }
-      svg {
-        display: none;
-        position: absolute;
-        right: 20px;
-      }
+    &__item {
       &.current {
         svg {
-          display: block;
+          opacity: 1;
+          visibility: visible;
         }
       }
+    }
+  }
+  &__language {
+    color: $text;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    transition: background-color 0.3s;
+    @include sans-xs;
+    &:hover {
+      background-color: $white-300;
+    }
+    svg {
+      opacity: 0;
+      visibility: hidden;
+      right: 20px;
+      transition: opacity 0.3, visibility 0.3s;
     }
   }
   &-dropdown {
