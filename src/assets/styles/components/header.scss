@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: transform 0.3s;
+  transition: transform $transition-default;
   &.scrolled {
     @include screen(laptop) {
       transform: translateY(-90px);
@@ -37,7 +37,7 @@
       &__inner {
         position: absolute;
         opacity: 0;
-        transition: opacity 0.3s;
+        transition: opacity $transition-default;
         left: 0;
         &.active {
           opacity: 1;
@@ -58,7 +58,7 @@
     margin-right: -10px;
     svg {
       rect {
-        transition: transform 0.3s;
+        transition: transform $transition-default;
       }
     }
     &.active {
@@ -98,7 +98,7 @@
   &__search {
     padding: 10px;
     border-radius: 50%;
-    transition: background-color 0.3s;
+    transition: background-color $transition-default;
     &:hover {
       background-color: $green-400;
     }
@@ -126,7 +126,7 @@
     align-items: center;
     gap: 8px;
     border-radius: 100px;
-    transition: background-color 0.3s;
+    transition: background-color $transition-default;
     &:hover {
       background-color: $green-400;
     }
@@ -146,15 +146,15 @@
   }
   &__link {
     display: flex;
-    transition: background-color 0.3s;
+    transition: background-color $transition-default;
     align-items: center;
     padding: 20px 0;
   }
   &__item {
-    transition: background-color 0.3s;
+    transition: background-color $transition-default;
     &__text {
       color: $white;
-      transition: color 0.3s;
+      transition: color $transition-default;
       text-transform: uppercase;
       display: inline-block;
       @include sans-sm-medium;
@@ -167,7 +167,7 @@
         left: 0;
         height: 2px;
         background-color: $shice;
-        transition: width 0.3s;
+        transition: width $transition-default;
         width: 0;
         border-radius: 100px;
         bottom: 12px;
@@ -215,7 +215,7 @@
     .search__form {
       opacity: 0;
       z-index: -1;
-      transition: opacity 0.3s, z-index 0.3s;
+      transition: opacity $transition-default, z-index $transition-default;
       position: absolute;
       left: 50%;
       transform: translateX(calc(-50% + 12px));
@@ -262,7 +262,7 @@
     svg {
       fill: $white;
       stroke: transparent;
-      transition: stroke 0.3s, fill 0.3s;
+      transition: stroke $transition-default, fill $transition-default;
       min-width: 24px;
     }
   }
@@ -270,9 +270,9 @@
     width: 16px;
     height: 16px;
     margin-left: 2px;
-    transition: transform 0.3s;
+    transition: transform $transition-default;
     svg {
-      transition: stroke 0.3s;
+      transition: stroke $transition-default;
       min-width: 16px;
     }
   }
@@ -284,7 +284,7 @@
     display: flex;
     align-items: center;
     border-radius: 100px;
-    transition: background-color 0.3s;
+    transition: background-color $transition-default;
     padding: 10px 20px;
     &.active {
       background-color: $green-400;
@@ -306,7 +306,7 @@
       @include sans-sm-medium;
     }
     svg {
-      transition: transform 0.3s;
+      transition: transform $transition-default;
     }
   }
   &__languages {
@@ -336,7 +336,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    transition: background-color 0.3s;
+    transition: background-color $transition-default;
     @include sans-xs;
     &:hover {
       background-color: $white-300;
@@ -345,7 +345,7 @@
       opacity: 0;
       visibility: hidden;
       right: 20px;
-      transition: opacity 0.3, visibility 0.3s;
+      transition: opacity 0.3, visibility $transition-default;
     }
   }
   &-dropdown {
@@ -357,7 +357,7 @@
     padding: 24px 0 0;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.3s, opacity 0.3s;
+    transition: visibility $transition-default, opacity $transition-default;
     &__wrapper {
       border-bottom: 1px solid $green-300;
       padding-bottom: 40px;
@@ -376,7 +376,7 @@
       grid-row-start: 1;
       grid-column-start: 1;
       opacity: 0;
-      transition: opacity 0.3s, z-index 0.3s;
+      transition: opacity $transition-default, z-index $transition-default;
       z-index: -1;
       &.active {
         opacity: 1;
@@ -423,7 +423,7 @@
         grid-row-start: 1;
         grid-column-start: 1;
         opacity: 0;
-        transition: opacity 0.3s, z-index 0.3s;
+        transition: opacity $transition-default, z-index $transition-default;
         z-index: -1;
         &.active {
           opacity: 1;
@@ -455,11 +455,11 @@
         width: 100%;
         border-radius: 4px 0 0 4px;
         color: $white;
-        transition: background-color 0.3s;
+        transition: background-color $transition-default;
         position: relative;
         @include sans-base;
         svg {
-          transition: opacity 0.3s;
+          transition: opacity $transition-default;
           opacity: 0;
           position: absolute;
           right: 10px;
@@ -623,7 +623,7 @@
       align-items: flex-start;
       &__title {
         color: $white;
-        transition: color 0.3s, border-color 0.3s;
+        transition: color $transition-default, border-color $transition-default;
         margin-top: 12px;
         @include line-clamp-2;
         @include sans-base;
@@ -662,7 +662,7 @@
     }
     &__link {
       color: $white;
-      transition: color 0.3s, border-color 0.3s;
+      transition: color $transition-default, border-color $transition-default;
       p {
         @include line-clamp-3;
       }
@@ -687,7 +687,7 @@
         padding: 12px;
         border-radius: 12px;
         min-width: 97px;
-        transition: background-color 0.3s;
+        transition: background-color $transition-default;
         &:hover {
           background-color: $green-300;
         }
@@ -704,7 +704,7 @@
         text-transform: uppercase;
         margin-top: 20px;
         @include sans-base-medium;
-        transition: color 0.3s, border-color 0.3s;
+        transition: color $transition-default, border-color $transition-default;
         &:hover {
           color: $shice;
           border-color: $shice;

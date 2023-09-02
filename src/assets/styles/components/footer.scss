@@ -67,7 +67,7 @@
           justify-content: space-between;
           width: 100%;
           svg {
-            transition: transform 0.3s;
+            transition: transform $transition-default;
           }
           &.active {
             svg {
@@ -118,7 +118,7 @@
   }
   &__link {
     color: $white;
-    transition: color 0.3s;
+    transition: color $transition-default;
     @include sans-base-small;
     &:first-child {
       margin-top: 12px;
@@ -194,7 +194,7 @@
     &__links {
       a {
         color: $white;
-        transition: color 0.3s;
+        transition: color $transition-default;
         @include sans-xs;
         &:hover {
           color: $shice;
@@ -219,7 +219,7 @@
       }
       a {
         color: $white;
-        transition: color 0.3s;
+        transition: color $transition-default;
         &:hover {
           color: $shice;
         }

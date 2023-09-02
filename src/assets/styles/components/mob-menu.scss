@@ -8,7 +8,8 @@
   opacity: 0;
   z-index: -1;
   visibility: hidden;
-  transition: opacity 0.3s, z-index 0.3s, visibility 0.3s;
+  transition: opacity $transition-default, z-index $transition-default,
+    visibility $transition-default;
   &.active {
     opacity: 1;
     z-index: 40;
@@ -26,7 +27,8 @@
   }
   &__button {
     border: 1px solid transparent;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color $transition-default,
+      border-color $transition-default;
     padding: 8px 16px;
     background-color: $green-400;
     color: $white;
@@ -79,7 +81,8 @@
     visibility: hidden;
     grid-row-start: 1;
     grid-column-start: 1;
-    transition: opacity 0.3s, visibility 0.3s, z-index 0.3s;
+    transition: opacity $transition-default, visibility $transition-default,
+      z-index $transition-default;
     &.current {
       opacity: 1;
       visibility: visible;
@@ -139,7 +142,8 @@
     background-color: $fathom;
     grid-row-start: 1;
     grid-column-start: 1;
-    transition: opacity 0.3s, z-index 0.3s, visibility 0.3s;
+    transition: opacity $transition-default, z-index $transition-default,
+      visibility $transition-default;
     &.active {
       z-index: 2;
       opacity: 1;
@@ -156,7 +160,7 @@
             opacity: 0;
             visibility: hidden;
             right: 20px;
-            transition: opacity 0.3, visibility 0.3s;
+            transition: opacity 0.3, visibility $transition-default;
           }
           &.current {
             svg {
