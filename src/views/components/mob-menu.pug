@@ -55,28 +55,84 @@
             span 8 800 555 35 35
       .mob-menu__block(data-id="cruises")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Cruises
         .mob-menu__list
-          .mob-menu__item
+          .mob-menu__item.mob-menu__stepper(data-id="cruises-destinations")
             a(href="#").mob-menu__link
               span Destinations
             .header__arrow
               <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-          .mob-menu__item
+          .mob-menu__item.mob-menu__stepper(data-id="cruises-ships")
             a(href="#").mob-menu__link
               span Ships
             .header__arrow
               <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-          .mob-menu__item
+          .mob-menu__item.mob-menu__stepper(data-id="cruises-departures")
             a(href="#").mob-menu__link
               span Departures
             .header__arrow
               <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+      .mob-menu__block(data-id="cruises-destinations")
+        .mob-menu__heading
+          button(type="button" data-id="cruises" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Destinations
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Africa
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Antarctica
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Artic
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Australia & NZ
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Europe
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Japan
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Mediterranean
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Ocean Voyages
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Pacific Islands
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span South America
+      .mob-menu__block(data-id="cruises-ships")
+        .mob-menu__heading
+          button(type="button" data-id="cruises" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Ships
+        .mob-menu__list
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Diana
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Minerva
+          .mob-menu__item
+            a(href="#").mob-menu__link
+              span Vega
+      .mob-menu__block(data-id="cruises-departures")
+        .mob-menu__heading
+          button(type="button" data-id="cruises" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
+            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
+          .mob-menu__heading__title Departures
       .mob-menu__block(data-id="destinations")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Destinations
         .mob-menu__list
@@ -112,7 +168,7 @@
               span Pacific Islands
       .mob-menu__block(data-id="ships")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Ships
         .mob-menu__list
@@ -127,7 +183,7 @@
               span Vega
       .mob-menu__block(data-id="why-swan")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Why swan
         .mob-menu__list
@@ -164,7 +220,7 @@
                 span Wildlife
       .mob-menu__block(data-id="plan-your-trip")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Plan your trip
         .mob-menu__list
@@ -197,7 +253,7 @@
               span Terms & conditions
       .mob-menu__block(data-id="partnerships")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Partnerships
         .mob-menu__list
@@ -224,7 +280,7 @@
               span Partner 7
       .mob-menu__block(data-id="about-us")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title About us
         .mob-menu__list
@@ -254,7 +310,7 @@
               span Contact us
       .mob-menu__block.mob-menu__block-lang(data-id="lang")
         .mob-menu__heading
-          button(type="button" data-id="menu").mob-menu__heading__back.mob-menu__stepper
+          button(type="button" data-id="menu" aria-label="button-back").mob-menu__heading__back.mob-menu__stepper
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Language
         .mob-menu__list
