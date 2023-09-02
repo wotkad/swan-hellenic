@@ -18,6 +18,25 @@
     padding: 0 0 42px;
     display: grid;
   }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  &__button {
+    border: 1px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px 16px;
+    background-color: $green-400;
+    color: $white;
+    border-radius: 100px;
+    @include sans-base;
+    &.current {
+      background-color: $green-300;
+      border-color: $white;
+    }
+  }
   &__item {
     display: flex;
     align-items: center;
@@ -47,6 +66,24 @@
     overflow-y: auto;
     &::-webkit-scrollbar {
       width: 0;
+    }
+  }
+  &__years {
+    display: grid;
+    margin-top: 12px;
+  }
+  &__year {
+    max-height: calc(100% - 100px);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    transition: opacity 0.3s, visibility 0.3s, z-index 0.3s;
+    &.current {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
     }
   }
   &__link {
