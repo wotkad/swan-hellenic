@@ -5,10 +5,10 @@ function toggleMobMenuYear() {
     $(button[i]).on('click', function () {
       let id = button[i].getAttribute('data-id');
       let block = $('.mob-menu__year[data-id="' + id + '"]');
-      container.removeClass('current');
-      button.removeClass('current');
-      $(block).attr('data-id', $(this).attr('data-id')).addClass('current');
-      $(this).addClass('current');
+      container.removeClass('active');
+      button.removeClass('active');
+      $(block).attr('data-id', $(this).attr('data-id')).addClass('active');
+      $(this).addClass('active');
     });
   }
 }

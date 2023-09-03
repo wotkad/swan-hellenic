@@ -34,7 +34,7 @@
     color: $white;
     border-radius: 100px;
     @include sans-base;
-    &.current {
+    &.active {
       background-color: $green-300;
       border-color: $white;
     }
@@ -83,7 +83,7 @@
     grid-column-start: 1;
     transition: opacity $transition-default, visibility $transition-default,
       z-index $transition-default;
-    &.current {
+    &.active {
       opacity: 1;
       visibility: visible;
       z-index: 2;
@@ -162,7 +162,7 @@
             right: 20px;
             transition: opacity 0.3, visibility $transition-default;
           }
-          &.current {
+          &.active {
             svg {
               opacity: 1;
               visibility: visible;

@@ -12,6 +12,7 @@ export default function toggleMobMenu() {
       $('.mob-menu__block[data-id="menu"]').addClass('active');
     } else {
       $('.mob-menu__block').removeClass('active');
+      $('.mob-menu__year').removeClass('active');
       enablePageScroll();
     }
   });
@@ -20,6 +21,7 @@ export default function toggleMobMenu() {
       button.removeClass('active')
       menu.removeClass('active');
       $('.mob-menu__block').removeClass('active');
+      $('.mob-menu__year').removeClass('active');
       enablePageScroll();
     }
   });

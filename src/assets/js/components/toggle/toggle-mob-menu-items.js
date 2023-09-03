@@ -7,6 +7,11 @@ function toggleMobMenuItems() {
       let block = $('.mob-menu__block[data-id="' + id + '"]');
       container.removeClass('active');
       button.removeClass('active');
+      if (id == 'cruises-departures') {
+        if ($('.mob-menu__year').attr('data-id') == '2023') {
+          $('.mob-menu__year').addClass('active');
+        }
+      }
       $(block).attr('data-id', $(this).attr('data-id')).addClass('active');
       $(this).addClass('active');
     });

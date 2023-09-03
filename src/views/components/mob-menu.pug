@@ -131,11 +131,11 @@
             <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-left"></use></svg>
           .mob-menu__heading__title Departures
         .mob-menu__buttons
-          button.mob-menu__button(type="button" data-id="2023").current 2023
+          button.mob-menu__button(type="button" data-id="2023").active 2023
           button.mob-menu__button(type="button" data-id="2024") 2024
           button.mob-menu__button(type="button" data-id="2025") 2025
         .mob-menu__years
-          .mob-menu__list.mob-menu__year.current(data-id="2023")
+          .mob-menu__list.mob-menu__year(data-id="2023")
             .mob-menu__item
               a(href="#").mob-menu__link
                 span January
@@ -434,7 +434,7 @@
             a(href="#").mob-menu__link
               span Russian (RU)
               <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-check"></use></svg>
-          .mob-menu__item.select-language.current(data-id="uk")
+          .mob-menu__item.select-language.active(data-id="uk")
             a(href="#").mob-menu__link
               span English (UK)
               <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-check"></use></svg>
