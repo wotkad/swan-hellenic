@@ -66,14 +66,14 @@ svg {
 }
 
 .wrapper {
-  max-width: calc(#{$screen-mobile} + #{$container-padding});
+  max-width: calc(#{$screen-mobile} + #{$container-padding * 2});
   margin: 0 auto;
   padding: 0 #{$container-padding};
   @include screen(tablet) {
-    max-width: calc(#{$screen-tablet} + #{$container-padding});
+    max-width: calc(#{$screen-tablet} + #{$container-padding * 2});
   }
   @include screen(laptop) {
-    max-width: calc(#{$screen-laptop} + #{$container-padding});
+    max-width: calc(#{$screen-laptop} + #{$container-padding * 2});
   }
 }
 
