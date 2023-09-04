@@ -1,36 +1,23 @@
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
+
 function toggleMobSearch() {
-  $('.mob-search input[type="radio"]').on('change', function() {
-    $('.mob-search__button-clear').addClass('active');
+  let button = $('.header__search-mob');
+  let burger = $(".header__burger");
+  let menu = $('.mob-search');
+  let list = document.querySelectorAll('.mob-search__blocks');
+  button.on("click", function() {
+    if (!burger.hasClass('active')) {
+      burger.addClass('active')
+      disablePageScroll(list);
+      menu.addClass('active');
+    }
   });
-
-  $('.mob-search input[name="location"]').on('change', function() {
-    let selectedValue = $(this).val();
-    $('.mob-search__block-location').addClass('active');
-    $('.mob-search__block-location .mob-search__title span').text(selectedValue);
-  });
-
-  $('.mob-search input[name="year"], input[name="month"]').on('change', function() {
-    let selectedYear = $('input[name="year"]:checked').val();
-    let selectedMonth = $('input[name="month"]:checked').val() || '';
-    $('.mob-search__labels-months').addClass('active');
-    $('.mob-search__block-years').addClass('active');
-    $('.mob-search__block-years .mob-search__title span').text(selectedYear + '/' + selectedMonth);
-  });
-
-  $('.mob-search input[name="ship"]').on('change', function() {
-    let selectedValue = $(this).val();
-    $('.mob-search__block-ships').addClass('active');
-    $('.mob-search__block-ships .mob-search__title span').text(selectedValue);
-  });
-
-  $('.mob-search__button-clear').on('click', function() {
-    $(this).removeClass('active');
-    $('.mob-search input[type="radio"]').prop('checked', false);
-    $('.mob-search__labels-months').hide();
-    $('.mob-search__block').removeClass('active');
-    $('.mob-search__block-location .mob-search__title span').text('Destination');
-    $('.mob-search__block-years .mob-search__title span').text('Year & month');
-    $('.mob-search__block-ships .mob-search__title span').text('Ship');
+  burger.on("click", function() {
+    if (menu.hasClass('active')) {
+      burger.removeClass('active');
+      menu.removeClass('active');
+      enablePageScroll();
+    }
   });
 }
 toggleMobSearch();
