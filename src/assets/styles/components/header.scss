@@ -105,12 +105,6 @@
     svg {
       stroke: $white;
     }
-    &-mob {
-      display: block;
-      @include screen(laptop) {
-        display: none;
-      }
-    }
   }
   &__contact {
     display: none;
@@ -205,24 +199,38 @@
     }
   }
   &__submenu {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: flex-end;
+    order: -1;
     gap: 16px;
     @include screen(laptop) {
-      display: flex;
+      order: inherit;
+    }
+    .header__item,
+    .header__lang {
+      display: none;
+      @include screen(laptop) {
+        display: block;
+      }
     }
     .search__form {
       opacity: 0;
-      z-index: -1;
       transition: opacity $transition-default, z-index $transition-default;
       position: absolute;
-      left: 50%;
-      transform: translateX(calc(-50% + 12px));
-      width: calc(50% + 44px);
-      top: 22px;
+      width: 100%;
+      top: 12px;
+      left: 0;
+      z-index: -1;
       display: flex;
       align-items: center;
+      @include screen(laptop) {
+        top: 22px;
+        transform: translateX(calc(-50% + 12px));
+        width: calc(50% + 44px);
+        left: 50%;
+        z-index: -1;
+      }
       input {
         padding: 8px 16px;
         border-radius: 4px;
@@ -231,7 +239,7 @@
       }
       &.active {
         opacity: 1;
-        z-index: 20;
+        z-index: 50;
       }
     }
     .search__button {

@@ -17,7 +17,6 @@ function toggleLang() {
       $(block).attr('data-id', $(this).attr('data-id')).addClass('active');
       $(this).addClass('active');
       menu.fadeOut(300);
-
       $(".header__burger").removeClass('active')
       $(".mob-menu").removeClass('active');
       $('.mob-menu__block').removeClass('active');

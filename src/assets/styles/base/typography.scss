@@ -116,6 +116,18 @@
   font-weight: 400;
 }
 
+@mixin sans-xs-v2-bold {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+@mixin sans-xs-v2 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
 @mixin sans-xs {
   font-size: 14px;
   line-height: 18px;
@@ -124,6 +136,12 @@
 
 @mixin sans-2xs {
   font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@mixin sans-3xs {
+  font-size: 10px;
   line-height: 18px;
   font-weight: 400;
 }

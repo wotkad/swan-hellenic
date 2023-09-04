@@ -9,5 +9,10 @@ function toggleSearch() {
       search.removeClass('active');
     }
   });
+  $(document).mouseup(function(e) {
+    if (!search.is(e.target) && !$('.search__form input').is(e.target) && !$('.search__button').is(e.target)) {
+      search.removeClass('active');
+    }
+  });
 }
 toggleSearch();

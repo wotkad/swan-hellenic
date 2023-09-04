@@ -23,13 +23,15 @@
 */
 @import "./mixins/breadcrumbs";
 @import "./mixins/heading";
+@import "./mixins/card";
 
 /*
   Компоненты
 */
 @import "./components/header";
 @import "./components/mob-menu";
-@import "./components/mob-search";
 @import "./components/footer";
+@import "./components/grid";
+@import "./components/sidebar";
 @import "./components/hero";
 @import "./components/not-found";

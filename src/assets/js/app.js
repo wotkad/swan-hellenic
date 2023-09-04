@@ -22,8 +22,6 @@ import "./components/toggle/toggle-footer-links";
 import "./components/toggle/toggle-mob-menu";
 import "./components/toggle/toggle-mob-menu-items";
 import "./components/toggle/toggle-mob-menu-year";
-import "./components/toggle/toggle-mob-search";
-import "./components/toggle/toggle-mob-search-items";
 
 import "./components/hover/hover-menu";
 

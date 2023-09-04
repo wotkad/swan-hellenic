@@ -1,5 +1,6 @@
 include ../mixins/breadcrumbs
 include ../mixins/heading
+include ../mixins/card
 section.gapper.section.section-white
   .wrapper
     .section__wrapper
@@ -14,3 +15,7 @@ section.gapper.section.section-white
       +heading(
         'Cruises'
       )
+      .grid.grid-cruises
+        .sidebar.sidebar-cruises
+        .grid.grid__gap.grid__gap-cruises.grid__two
+          +card()

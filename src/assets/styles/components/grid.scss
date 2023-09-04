@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  &__gap {
+    gap: 40px;
+    &-bottom {
+      row-gap: 54px;
+    }
+  }
+  &__two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  &-cruises {
+    grid-template-columns: 350px 1fr;
+    gap: 122px;
+    margin-top: 124px;
+  }
+}

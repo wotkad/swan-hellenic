@@ -1,0 +1,195 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  grid-column: span 1 / span 1;
+  &-sale {
+    .card__price {
+      color: $red-400;
+    }
+  }
+  &-disabled {
+    .card__button {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+  &__image {
+    position: relative;
+    max-height: 360px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__logos {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+  &__status {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    background-color: $untold;
+    padding: 12px 20px;
+    border-radius: 4px;
+    p {
+      color: $white;
+      @include sans-xs-v2;
+      span {
+        @include sans-xs-v2-bold;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__title {
+    @include line-clamp-2;
+    @include sans-lg-medium;
+  }
+  &__uid {
+    color: $white-400;
+    @include sans-md;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__location,
+  &__ship,
+  &__length {
+    display: flex;
+    align-items: center;
+    span {
+      @include sans-sm;
+    }
+  }
+  &__location {
+    position: relative;
+    .card__icon {
+      svg {
+        fill: $untold;
+        stroke: $untold;
+      }
+    }
+  }
+  &__ship {
+    .card__icon {
+      svg {
+        fill: $untold;
+        stroke: transparent;
+      }
+    }
+  }
+  &__length {
+    position: relative;
+    .card__icon {
+      svg {
+        fill: $untold;
+        stroke: transparent;
+      }
+    }
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__period {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: $green-200;
+  }
+  &__icon {
+    margin-right: 6px;
+  }
+  &__map {
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(233, 172, 96, 0.3);
+    border-radius: 4px;
+    svg {
+      max-width: 16px;
+      max-height: 16px;
+      stroke: transparent;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+  }
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__button {
+    background-color: $untold;
+    padding: 17px 40px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    color: $white;
+    @include sans-base-medium;
+  }
+  &__oldprice {
+    color: $green-200;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    @include sans-base-medium;
+  }
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    @include sans-3xl;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+  &__perperson {
+    color: $text;
+    @include sans-3xs;
+  }
+  &__label {
+    color: $green-200;
+    text-transform: uppercase;
+    @include sans-2xs;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 24px;
+  }
+}
