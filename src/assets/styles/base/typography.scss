@@ -1,6 +1,12 @@
-@mixin chap-xl {
+@mixin chap-2xl {
   font-size: 90px;
   line-height: 100px;
+  font-weight: 500;
+}
+
+@mixin chap-xl {
+  font-size: 80px;
+  line-height: 80px;
   font-weight: 500;
 }
 

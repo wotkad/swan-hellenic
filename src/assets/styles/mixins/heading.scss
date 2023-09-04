@@ -1,0 +1,8 @@
+.heading {
+  margin-top: 36px;
+  &__title {
+    text-transform: uppercase;
+    color: $fathom;
+    @include chap-xl;
+  }
+}

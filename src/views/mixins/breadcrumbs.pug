@@ -1,0 +1,7 @@
+mixin breadcrumbs(links)
+  .breadcrumbs
+    a(href="/") Home
+    span /
+    for link in links
+      a(href=""+link.href)= link.title
+      span /

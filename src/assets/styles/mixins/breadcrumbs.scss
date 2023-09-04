@@ -1,0 +1,22 @@
+.breadcrumbs {
+  a,
+  span {
+    text-transform: uppercase;
+    color: $green-200;
+    @include sans-base-medium;
+  }
+  a {
+    transition: color 0.3s, border-color 0.3s;
+    border-bottom: 1px solid $green-200;
+    &:hover {
+      color: $fathom;
+      border-color: $fathom;
+    }
+  }
+  span {
+    margin: 0 4px;
+    &:last-child {
+      display: none;
+    }
+  }
+}

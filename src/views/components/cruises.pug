@@ -1,0 +1,16 @@
+include ../mixins/breadcrumbs
+include ../mixins/heading
+section.gapper.section.section-white
+  .wrapper
+    .section__wrapper
+      +breadcrumbs(
+        [
+          {
+            href: '/cruises',
+            title: 'Cruises'
+          }
+        ]
+      )
+      +heading(
+        'Cruises'
+      )

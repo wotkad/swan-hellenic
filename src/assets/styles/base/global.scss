@@ -65,6 +65,16 @@ svg {
   fill: transparent;
 }
 
+.gapper {
+  padding: 100px 0 144px;
+}
+
+.section {
+  &-white {
+    background-color: $white;
+  }
+}
+
 .wrapper {
   max-width: calc(#{$screen-mobile} + #{$container-padding * 2});
   margin: 0 auto;
