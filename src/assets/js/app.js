@@ -26,3 +26,5 @@ import "./components/toggle/toggle-mob-menu-year";
 import "./components/hover/hover-menu";
 
 import "./components/scroll/scroll-header";
+
+import "./components/mousemove/card-cursor";

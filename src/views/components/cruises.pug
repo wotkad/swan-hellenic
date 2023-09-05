@@ -13,9 +13,17 @@ section.gapper.section.section-white
         ]
       )
       +heading(
-        'Cruises'
+        'Cruises',
+        ''
       )
       .grid.grid-cruises
         .sidebar.sidebar-cruises
-        .grid.grid__gap.grid__gap-cruises.grid__two
-          +card()
+        .grid.grid__gap.grid__gap-bottom.grid__two
+          +card('with status', 'with logos', '')
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'disabled')
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', '')
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', '')
+          +card('with status', 'with logos', 'sale')
