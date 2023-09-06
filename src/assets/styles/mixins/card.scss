@@ -3,6 +3,29 @@
   flex-direction: column;
   gap: 24px;
   grid-column: span 1 / span 1;
+  &__button {
+    background-color: $untold-400;
+    padding: 17px 40px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    color: $white;
+    transition: background-color 0.3s;
+    @include sans-base-medium;
+    &:hover {
+      background-color: $untold-100;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    margin-top: 6px;
+    @include sans-3xl;
+    line-height: 28px;
+    @include screen(laptop) {
+      margin-top: 10px;
+    }
+  }
   &-sale {
     .card__price {
       color: $red-400;
@@ -62,19 +85,43 @@
       max-height: 24px;
     }
   }
-  &__status {
+  &__icon {
+    margin-right: 6px;
+  }
+  &__map {
     position: absolute;
-    top: 16px;
-    left: 16px;
-    z-index: 2;
-    background-color: $untold-400;
-    padding: 12px 20px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(233, 172, 96, 0.3);
     border-radius: 4px;
-    p {
-      color: $white;
-      @include sans-xs-v2;
-      span {
-        @include sans-xs-v2-bold;
+    svg {
+      max-width: 16px;
+      max-height: 16px;
+      stroke: transparent;
+    }
+  }
+  &__length {
+    position: relative;
+    .card__icon {
+      svg {
+        fill: $untold-400;
+        stroke: transparent;
+      }
+    }
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__ship {
+    .card__icon {
+      svg {
+        fill: $untold-400;
+        stroke: transparent;
       }
     }
   }
@@ -114,25 +161,20 @@
       }
     }
   }
-  &__ship {
-    .card__icon {
-      svg {
-        fill: $untold-400;
-        stroke: transparent;
+  &__status {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    background-color: $untold-400;
+    padding: 12px 20px;
+    border-radius: 4px;
+    p {
+      color: $white;
+      @include sans-xs-v2;
+      span {
+        @include sans-xs-v2-bold;
       }
-    }
-  }
-  &__length {
-    position: relative;
-    .card__icon {
-      svg {
-        fill: $untold-400;
-        stroke: transparent;
-      }
-    }
-    span {
-      display: flex;
-      align-items: center;
     }
   }
   &__period {
@@ -140,25 +182,6 @@
     left: 50%;
     transform: translate(-50%);
     color: $green-200;
-  }
-  &__icon {
-    margin-right: 6px;
-  }
-  &__map {
-    position: absolute;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(233, 172, 96, 0.3);
-    border-radius: 4px;
-    svg {
-      max-width: 16px;
-      max-height: 16px;
-      stroke: transparent;
-    }
   }
   &__footer {
     display: flex;
@@ -174,34 +197,11 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  &__button {
-    background-color: $untold-400;
-    padding: 17px 40px;
-    border-radius: 100px;
-    text-transform: uppercase;
-    color: $white;
-    transition: background-color 0.3s;
-    @include sans-base-medium;
-    &:hover {
-      background-color: $untold-100;
-    }
-  }
   &__oldprice {
     color: $green-200;
     text-transform: uppercase;
     text-decoration: line-through;
     @include sans-base-medium;
-  }
-  &__price {
-    display: flex;
-    align-items: flex-end;
-    gap: 4px;
-    margin-top: 6px;
-    @include sans-3xl;
-    line-height: 28px;
-    @include screen(laptop) {
-      margin-top: 10px;
-    }
   }
   &__perperson {
     color: $text;

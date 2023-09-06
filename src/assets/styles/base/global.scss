@@ -6,12 +6,12 @@
 textarea,
 input,
 button {
-  font-family: "DM Sans", "Open Sans";
+  font-family: "DM Sans", "Open Sans", sans-serif;
 }
 
 html,
 body {
-  font-family: "DM Sans", "Open Sans";
+  font-family: "DM Sans", "Open Sans", sans-serif;
   height: 100%;
   background-color: $fathom;
   color: $text;
@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Chap-Medium", "Arsenal-Regular";
+  font-family: "Chap-Medium", "Arsenal-Regular", sans-serif;
 }
 
 .svg-icons {

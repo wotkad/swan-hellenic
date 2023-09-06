@@ -4,19 +4,8 @@ include ../mixins/card
 section.gapper.section.section-white
   .wrapper
     .section__wrapper
-      +breadcrumbs(
-        [
-          {
-            href: '/cruises',
-            title: 'Cruises'
-          }
-        ]
-      )
-      +heading(
-        'Cruises',
-        '',
-        'cruises'
-      )
+      +breadcrumbs([ { href: '/cruises', title: 'Cruises' } ])
+      +heading('Cruises', '', 'cruises')
       .grid.grid-cruises
         include ./sidebar/sidebar-cruises
         .grid.grid__gap.grid__gap-bottom.grid-two
@@ -28,5 +17,5 @@ section.gapper.section.section-white
           +card('with status', 'with logos', 'sale')
           +card('with status', 'with logos', '')
           +card('with status', 'with logos', 'sale')
-        button(type="button").cruises__button.cruises__button-more Load more
+        button.cruises__button.cruises__button-more(type="button") Load more
 include ./popup/popup-map

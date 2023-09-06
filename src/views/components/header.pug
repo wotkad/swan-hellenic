@@ -2,133 +2,157 @@ header.header
   .wrapper
     .header__top
       .header__contact
-        a(href="tel:+7 (800) 555-35-35").header__phone
-          <svg width="24px" height="24px" viewBox="0 0 25 25"><use xlink:href="#svg-phone"></use></svg>
+        a.header__phone(href="tel:+7 (800) 555-35-35")
+          svg(width="24px" height="24px" viewBox="0 0 25 25")
+            use(xlink:href="#svg-phone")
           span +7 (800) 555-35-35
-      a(href="/").header__logo
-        <svg class="header__logo-pc" width="166px" height="40px" viewBox="0 0 166 40"><use xlink:href="#svg-logo"></use></svg>
-        <svg class="header__logo-mob" width="65px" height="40px" viewBox="0 0 65 44"><use xlink:href="#svg-logo-mobile"></use></svg>
-      button(type="button").header__burger
-        svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-          rect(x="2" y="8" width="20" height="2" rx="1" fill="white")
-          rect(x="2" y="14" width="20" height="2" rx="1" fill="white")
+      a.header__logo(href="/")
+        svg(class="header__logo-pc" width="166px" height="40px" viewBox="0 0 166 40")
+          use(xlink:href="#svg-logo")
+        svg(class="header__logo-mob" width="65px" height="40px" viewBox="0 0 65 44")
+          use(xlink:href="#svg-logo-mobile")
+      button.header__burger(type="button")
+        svg(
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        )
+          rect(fill="white" rx="1" x="2" y="8" width="20" height="2")
+          rect(fill="white" rx="1" x="2" y="14" width="20" height="2")
       include ./mob-menu
       .header__submenu
-        button(type="button" aria-label="search").header__search
-          <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
-        form(action="#").search__form
+        button.header__search(type="button" aria-label="search")
+          svg(width="24px" height="24px" viewBox="0 0 24 24")
+            use(xlink:href="#svg-search")
+        form.search__form(action="#")
           input(type="text" name="search" required)
-          button(type="submit" aria-label="search").search__button
-            <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-search"></use></svg>
+          button.search__button(type="submit" aria-label="search")
+            svg(width="24px" height="24px" viewBox="0 0 24 24")
+              use(xlink:href="#svg-search")
         a.header__item(href="#")
           span.header__item__text Contact us
         .header__lang
-          button(type="button").header__toggle
-            <svg width="18px" height="18px" viewBox="0 0 18 18"><use xlink:href="#svg-en-uk"></use></svg>
+          button.header__toggle(type="button")
+            svg(width="18px" height="18px" viewBox="0 0 18 18")
+              use(xlink:href="#svg-en-uk")
             span EN
-            <svg class="header__lang__arrow" width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+            svg(class="header__lang__arrow" width="16px" height="17px" viewBox="0 0 16 17")
+              use(xlink:href="#svg-arrow-down-small")
           .header__languages
             .header__languages__item.select-language(data-id="ru")
-              a(href="#").header__language
+              a.header__language(href="#")
                 span Russian (RU)
-                <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+                svg(width="12px" height="12px" viewBox="0 0 12 12")
+                  use(xlink:href="#svg-check-small-green")
             .header__languages__item.select-language.active(data-id="uk")
-              a(href="#").header__language.active
+              a.header__language.active(href="#")
                 span English (UK)
-                <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+                svg(width="12px" height="12px" viewBox="0 0 12 12")
+                  use(xlink:href="#svg-check-small-green")
             .header__languages__item.select-language(data-id="us")
-              a(href="#").header__language
+              a.header__language(href="#")
                 span English (US)
-                <svg width="12px" height="12px" viewBox="0 0 12 12"><use xlink:href="#svg-check-small-green"></use></svg>
+                svg(width="12px" height="12px" viewBox="0 0 12 12")
+                  use(xlink:href="#svg-check-small-green")
     .header__bottom
       .header__logo
-        a(href="/").header__logo__inner
-          <svg width="166px" height="40px" viewBox="0 0 166 40"><use xlink:href="#svg-logo"></use></svg>
+        a.header__logo__inner(href="/")
+          svg(width="166px" height="40px" viewBox="0 0 166 40")
+            use(xlink:href="#svg-logo")
       nav.header__menu
         .header__item
-          a(href="/").header__link
+          a.header__link(href="/")
             .header__icon
-              <svg width="24px" height="25px" viewBox="0 0 24 25"><use xlink:href="#svg-ship"></use></svg>
+              svg(width="24px" height="25px" viewBox="0 0 24 25")
+                use(xlink:href="#svg-ship")
             span.header__item__text Find your cruise
             .header__arrow
-              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+              svg(width="16px" height="17px" viewBox="0 0 16 17")
+                use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-find-your-cruise
             .wrapper
               .header-dropdown__wrapper
                 .header-dropdown__grid
                   .header-dropdown__nav
                     .header-dropdown__nav__col.header-dropdown__nav__step1
-                      a(href="#" data-id="1").header-dropdown__nav__link.active
+                      a.header-dropdown__nav__link.active(href="#" data-id="1")
                         span Destinations
-                        <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-                      a(href="#" data-id="2").header-dropdown__nav__link
+                        svg(width="24px" height="24px" viewBox="0 0 24 24")
+                          use(xlink:href="#svg-arrow-right")
+                      a.header-dropdown__nav__link(href="#" data-id="2")
                         span Ships
-                        <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-                      a(href="#" data-id="3").header-dropdown__nav__link
+                        svg(width="24px" height="24px" viewBox="0 0 24 24")
+                          use(xlink:href="#svg-arrow-right")
+                      a.header-dropdown__nav__link(href="#" data-id="3")
                         span Departures
-                        <svg width="24px" height="24px" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                        svg(width="24px" height="24px" viewBox="0 0 24 24")
+                          use(xlink:href="#svg-arrow-right")
                     .header-dropdown__nav__col.header-dropdown__nav__step2
                       .header-dropdown__nav__list.active(data-id="1")
-                        a(href="#" data-id="1").header-dropdown__nav__link.active
+                        a.header-dropdown__nav__link.active(href="#" data-id="1")
                           span Africa
-                        a(href="#" data-id="2").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="2")
                           span Antarctica
-                        a(href="#" data-id="3").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="3")
                           span Artic
-                        a(href="#" data-id="4").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="4")
                           span Australia & NZ
-                        a(href="#" data-id="5").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="5")
                           span Europe
-                        a(href="#" data-id="6").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="6")
                           span Japan
-                        a(href="#" data-id="7").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="7")
                           span Mediterranean
-                        a(href="#" data-id="8").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="8")
                           span Ocean Voyages
-                        a(href="#" data-id="9").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="9")
                           span Pacific Islands
-                        a(href="#" data-id="10").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="10")
                           span South America
                       .header-dropdown__nav__list(data-id="2")
-                        a(href="#" data-id="2-1").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="2-1")
                           span SH Minerva
-                        a(href="#" data-id="2-2").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="2-2")
                           span SH Vega
-                        a(href="#" data-id="2-3").header-dropdown__nav__link
+                        a.header-dropdown__nav__link(href="#" data-id="2-3")
                           span SH Vega
-                  .header-dropdown__nav__list.header-dropdown__nav__years(data-id="3")
+                  .header-dropdown__nav__list.header-dropdown__nav__years(
+                    data-id="3"
+                  )
                     .header-dropdown__nav__period
                       .header-dropdown__nav__period__title 2023
                       .header-dropdown__nav__period__years
-                        a(href="#").header-dropdown__nav__period__year January
-                        a(href="#").header-dropdown__nav__period__year February
-                        a(href="#").header-dropdown__nav__period__year March
-                        a(href="#").header-dropdown__nav__period__year April
-                        a(href="#").header-dropdown__nav__period__year May
-                        a(href="#").header-dropdown__nav__period__year June
-                        a(href="#").header-dropdown__nav__period__year July
-                        a(href="#").header-dropdown__nav__period__year August
-                        a(href="#").header-dropdown__nav__period__year September
-                        a(href="#").header-dropdown__nav__period__year October
-                        a(href="#").header-dropdown__nav__period__year November
-                        a(href="#").header-dropdown__nav__period__year December
+                        a.header-dropdown__nav__period__year(href="#") January
+                        a.header-dropdown__nav__period__year(href="#") February
+                        a.header-dropdown__nav__period__year(href="#") March
+                        a.header-dropdown__nav__period__year(href="#") April
+                        a.header-dropdown__nav__period__year(href="#") May
+                        a.header-dropdown__nav__period__year(href="#") June
+                        a.header-dropdown__nav__period__year(href="#") July
+                        a.header-dropdown__nav__period__year(href="#") August
+                        a.header-dropdown__nav__period__year(href="#") September
+                        a.header-dropdown__nav__period__year(href="#") October
+                        a.header-dropdown__nav__period__year(href="#") November
+                        a.header-dropdown__nav__period__year(href="#") December
                     .header-dropdown__nav__perion
                       .header-dropdown__nav__period__title 2024
                       .header-dropdown__nav__period__years
-                        a(href="#").header-dropdown__nav__period__year January
-                        a(href="#").header-dropdown__nav__period__year February
-                        a(href="#").header-dropdown__nav__period__year March
-                        a(href="#").header-dropdown__nav__period__year April
-                        a(href="#").header-dropdown__nav__period__year May
-                        a(href="#").header-dropdown__nav__period__year June
-                        a(href="#").header-dropdown__nav__period__year July
-                        a(href="#").header-dropdown__nav__period__year August
-                        a(href="#").header-dropdown__nav__period__year September
-                        a(href="#").header-dropdown__nav__period__year October
-                        a(href="#").header-dropdown__nav__period__year November
-                        a(href="#").header-dropdown__nav__period__year December
+                        a.header-dropdown__nav__period__year(href="#") January
+                        a.header-dropdown__nav__period__year(href="#") February
+                        a.header-dropdown__nav__period__year(href="#") March
+                        a.header-dropdown__nav__period__year(href="#") April
+                        a.header-dropdown__nav__period__year(href="#") May
+                        a.header-dropdown__nav__period__year(href="#") June
+                        a.header-dropdown__nav__period__year(href="#") July
+                        a.header-dropdown__nav__period__year(href="#") August
+                        a.header-dropdown__nav__period__year(href="#") September
+                        a.header-dropdown__nav__period__year(href="#") October
+                        a.header-dropdown__nav__period__year(href="#") November
+                        a.header-dropdown__nav__period__year(href="#") December
                   .header-dropdown__results
-                    .header-dropdown__result(data-id="1").active
+                    .header-dropdown__result.active(data-id="1")
                       include ./header-dropdown
                     .header-dropdown__result(data-id="2")
                       include ./header-dropdown
@@ -155,32 +179,51 @@ header.header
                     .header-dropdown__result(data-id="2-3")
                       include ./header-dropdown
         .header__item
-          a(href="/").header__link
+          a.header__link(href="/")
             span.header__item__text Destinations
             .header__arrow
-              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+              svg(width="16px" height="17px" viewBox="0 0 16 17")
+                use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-destinations
             .wrapper
               .header-dropdown__wrapper
                 .header-dropdown__grid
                   .header-dropdown__cards
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown2-card1.png", alt="header-dropdown2-card1")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown2-card1.png"
+                        alt="header-dropdown2-card1"
+                      )
                       .header-dropdown__card__title Artic
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown2-card2.png", alt="header-dropdown2-card2")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown2-card2.png"
+                        alt="header-dropdown2-card2"
+                      )
                       .header-dropdown__card__title Japan
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown2-card3.png", alt="header-dropdown2-card3")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown2-card3.png"
+                        alt="header-dropdown2-card3"
+                      )
                       .header-dropdown__card__title Australia & NZ
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown2-card4.png", alt="header-dropdown2-card4")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown2-card4.png"
+                        alt="header-dropdown2-card4"
+                      )
                       .header-dropdown__card__title Anntarctic
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown2-card5.png", alt="header-dropdown2-card5")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown2-card5.png"
+                        alt="header-dropdown2-card5"
+                      )
                       .header-dropdown__card__title Anntarctic
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown2-card6.png", alt="header-dropdown2-card6")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown2-card6.png"
+                        alt="header-dropdown2-card6"
+                      )
                       .header-dropdown__card__title South America
                   .header-dropdown__links
                     .header-dropdown__links__title More destinations
@@ -189,42 +232,59 @@ header.header
                     a.header-dropdown__link(href="#") Pacific Islands
                     a.header-dropdown__link(href="#") Medeterranean
         .header__item
-          a(href="/").header__link
+          a.header__link(href="/")
             span.header__item__text Ships
             .header__arrow
-              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+              svg(width="16px" height="17px" viewBox="0 0 16 17")
+                use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-ships
             .wrapper
               .header-dropdown__wrapper
                 .header-dropdown__grid
                   .header-dropdown__cards
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown3-card1.png", alt="header-dropdown3-card1")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown3-card1.png"
+                        alt="header-dropdown3-card1"
+                      )
                       .header-dropdown__card__title Diana
                       p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown3-card2.png", alt="header-dropdown3-card2")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown3-card2.png"
+                        alt="header-dropdown3-card2"
+                      )
                       .header-dropdown__card__title Minerva
                       p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown3-card3.png", alt="header-dropdown3-card3")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown3-card3.png"
+                        alt="header-dropdown3-card3"
+                      )
                       .header-dropdown__card__title Vega
                       p Our 5 star elegant Scandi-design boutique ship offers you an intimate setting from which you will be fully immersed in all the sights and scenery of your voyage.
         .header__item
-          a(href="/").header__link
+          a.header__link(href="/")
             span.header__item__text Why swan
             .header__arrow
-              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+              svg(width="16px" height="17px" viewBox="0 0 16 17")
+                use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-why-swan
             .wrapper
               .header-dropdown__wrapper
                 .header-dropdown__grid
                   .header-dropdown__cards
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown4-card1.png", alt="header-dropdown4-card1")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown4-card1.png"
+                        alt="header-dropdown4-card1"
+                      )
                       .header-dropdown__card__title Our difference
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown4-card2.png", alt="header-dropdown4-card2")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown4-card2.png"
+                        alt="header-dropdown4-card2"
+                      )
                       .header-dropdown__card__title Experience onboard
                   .header-dropdown__links
                     .header-dropdown__links__title Cultural Expeditions
@@ -234,99 +294,128 @@ header.header
                       p The Old World Through a New Lens: Photographing Europe with David Cothran.
                   .header-dropdown__links
                     .header-dropdown__links__title What to expect
-                    a(href="#").header-dropdown__link Culture
-                    a(href="#").header-dropdown__link History
-                    a(href="#").header-dropdown__link Nature
-                    a(href="#").header-dropdown__link Weather
-                    a(href="#").header-dropdown__link Wildlife
+                    a.header-dropdown__link(href="#") Culture
+                    a.header-dropdown__link(href="#") History
+                    a.header-dropdown__link(href="#") Nature
+                    a.header-dropdown__link(href="#") Weather
+                    a.header-dropdown__link(href="#") Wildlife
         .header__item
-          a(href="/").header__link
+          a.header__link(href="/")
             span.header__item__text Plan your trip
             .header__arrow
-              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+              svg(width="16px" height="17px" viewBox="0 0 16 17")
+                use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-plan-your-trip
             .wrapper
               .header-dropdown__wrapper
                 .header-dropdown__grid
                   .header-dropdown__cards
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown5-card1.png", alt="header-dropdown5-card1")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown5-card1.png"
+                        alt="header-dropdown5-card1"
+                      )
                       .header-dropdown__card__title Our Story
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown5-card2.png", alt="header-dropdown5-card2")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown5-card2.png"
+                        alt="header-dropdown5-card2"
+                      )
                       .header-dropdown__card__title Our team
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown5-card3.png", alt="header-dropdown5-card3")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown5-card3.png"
+                        alt="header-dropdown5-card3"
+                      )
                       .header-dropdown__card__title Sustainabillity
                   .header-dropdown__links
                     .header-dropdown__links__title See more
-                    a(href="#").header-dropdown__link F.A.Q
-                    a(href="#").header-dropdown__link Find a Travel Agency
-                    a(href="#").header-dropdown__link Brochures
-                    a(href="#").header-dropdown__link Promotions
-                    a(href="#").header-dropdown__link Mobile App
-                    a(href="#").header-dropdown__link Terms & conditions
+                    a.header-dropdown__link(href="#") F.A.Q
+                    a.header-dropdown__link(href="#") Find a Travel Agency
+                    a.header-dropdown__link(href="#") Brochures
+                    a.header-dropdown__link(href="#") Promotions
+                    a.header-dropdown__link(href="#") Mobile App
+                    a.header-dropdown__link(href="#") Terms & conditions
                   .header-dropdown__links
                     .header-dropdown__links__title Download mobil app
                     .header-dropdown__downloads
-                      a(href="#" target="_blank").header-dropdown__link.header-dropdown__link-download
-                        <svg width="37px" height="35px" viewBox="0 0 37 35"><use xlink:href="#svg-android"></use></svg>
+                      a.header-dropdown__link.header-dropdown__link-download(href="#" target="_blank")
+                        svg(width="37px" height="35px" viewBox="0 0 37 35")
+                          use(xlink:href="#svg-android")
                         span download for
                         p Android
-                      a(href="#" target="_blank").header-dropdown__link.header-dropdown__link-download
-                        <svg width="35px" height="35px" viewBox="0 0 35 35"><use xlink:href="#svg-app-store"></use></svg>
+                      a.header-dropdown__link.header-dropdown__link-download(href="#" target="_blank")
+                        svg(width="35px" height="35px" viewBox="0 0 35 35")
+                          use(xlink:href="#svg-app-store")
                         span download for
                         p iOS
         .header__item
-          a(href="/").header__link
+          a.header__link(href="/")
             span.header__item__text Partnerships
             .header__arrow
-              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+              svg(width="16px" height="17px" viewBox="0 0 16 17")
+                use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-partnerships
             .wrapper
               .header-dropdown__wrapper
                 .header-dropdown__grid
                   .header-dropdown__cards
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown4-card1.png", alt="header-dropdown4-card1")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown4-card1.png"
+                        alt="header-dropdown4-card1"
+                      )
                       .header-dropdown__card__title Our difference
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown4-card2.png", alt="header-dropdown4-card2")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown4-card2.png"
+                        alt="header-dropdown4-card2"
+                      )
                       .header-dropdown__card__title Experience onboard
                   .header-dropdown__links
                     .header-dropdown__links__title See more
-                    a(href="#").header-dropdown__link Partner 3
-                    a(href="#").header-dropdown__link Partner 4
-                    a(href="#").header-dropdown__link Partner 5
-                    a(href="#").header-dropdown__link Partner 6
-                    a(href="#").header-dropdown__link.header-dropdown__link-more View all
+                    a.header-dropdown__link(href="#") Partner 3
+                    a.header-dropdown__link(href="#") Partner 4
+                    a.header-dropdown__link(href="#") Partner 5
+                    a.header-dropdown__link(href="#") Partner 6
+                    a.header-dropdown__link.header-dropdown__link-more(href="#") View all
         .header__item
-          a(href="/").header__link
+          a.header__link(href="/")
             span.header__item__text About us
             .header__arrow
-              <svg width="16px" height="17px" viewBox="0 0 16 17"><use xlink:href="#svg-arrow-down-small"></use></svg>
+              svg(width="16px" height="17px" viewBox="0 0 16 17")
+                use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-about-us
             .wrapper
               .header-dropdown__wrapper
                 .header-dropdown__grid
                   .header-dropdown__cards
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown7-card1.png", alt="header-dropdown7-card1")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown7-card1.png"
+                        alt="header-dropdown7-card1"
+                      )
                       .header-dropdown__card__title Our Story
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown7-card2.png", alt="header-dropdown7-card2")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown7-card2.png"
+                        alt="header-dropdown7-card2"
+                      )
                       .header-dropdown__card__title Our team
-                    a(href="#").header-dropdown__card
-                      img(src="/assets/images/header-dropdown7-card2.png", alt="header-dropdown7-card2")
+                    a.header-dropdown__card(href="#")
+                      img(
+                        src="/assets/images/header-dropdown7-card2.png"
+                        alt="header-dropdown7-card2"
+                      )
                       .header-dropdown__card__title Sustainabillity
                   .header-dropdown__links
                     .header-dropdown__links__title More about us
-                    a(href="#").header-dropdown__link Our awards
-                    a(href="#").header-dropdown__link Blog
-                    a(href="#").header-dropdown__link Press center
-                    a(href="#").header-dropdown__link Careers
+                    a.header-dropdown__link(href="#") Our awards
+                    a.header-dropdown__link(href="#") Blog
+                    a.header-dropdown__link(href="#") Press center
+                    a.header-dropdown__link(href="#") Careers
                   .header-dropdown__links
                     .header-dropdown__links__title Contact us
-                    a(href="tel:+44 (0) 207 846 0271").header-dropdown__link +44 (0) 207 846 0271
-                    a(href="mailto:enquiries@swanhellenic.com").header-dropdown__link enquiries@swanhellenic.com
-                    a(href="#").header-dropdown__link.header-dropdown__link-more View all Contacts
+                    a.header-dropdown__link(href="tel:+44 (0) 207 846 0271") +44 (0) 207 846 0271
+                    a.header-dropdown__link(href="mailto:enquiries@swanhellenic.com") enquiries@swanhellenic.com
+                    a.header-dropdown__link.header-dropdown__link-more(href="#") View all Contacts
