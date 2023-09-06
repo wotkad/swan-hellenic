@@ -1,0 +1,46 @@
+.headline {
+  &__title {
+    text-transform: uppercase;
+    color: $fathom;
+    @include chap-base;
+    @include screen(laptop) {
+      @include chap-2lg;
+    }
+  }
+  &__description {
+    @include sans-sm-medium;
+    color: $text;
+    margin-top: 16px;
+    @include screen(laptop) {
+      @include sans-lg-medium;
+      margin-top: 24px;
+    }
+  }
+  &-white {
+    @include chap-base;
+    color: $white;
+    @include screen(laptop) {
+      @include chap-lg;
+    }
+  }
+  &-centered {
+    text-align: center;
+  }
+  &-note {
+    display: flex;
+    gap: 24px;
+    flex-direction: column-reverse;
+    @include screen(laptop) {
+      gap: 40px;
+    }
+    .headline__description {
+      text-transform: uppercase;
+      margin-top: 0;
+      color: $green-200;
+      @include sans-sm-med;
+      @include screen(laptop) {
+        @include sans-base-medium;
+      }
+    }
+  }
+}

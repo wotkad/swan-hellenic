@@ -1,0 +1,28 @@
+.button {
+  @include button-border;
+  transition: $transition-default;
+  span {
+    color: $fathom;
+    transition: $transition-default;
+    @include sans-base-medium;
+  }
+  &-green {
+    border-color: $white;
+    background-color: $fathom;
+    span {
+      color: $white;
+    }
+    &:hover {
+      background-color: $white;
+      span {
+        color: $fathom;
+      }
+    }
+  }
+  &:hover {
+    background-color: $fathom;
+    span {
+      color: $white;
+    }
+  }
+}

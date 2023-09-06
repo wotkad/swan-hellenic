@@ -1,0 +1,25 @@
+.news-block {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  @include screen(tablet) {
+    margin-bottom: 34px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 0;
+    @include screen(tablet) {
+      gap: 40px;
+    }
+  }
+  .splide {
+    width: calc(100% + 16px);
+    &__track {
+      overflow: visible;
+    }
+  }
+  &.is-initialized:not(.is-active) .splide__list {
+    @include screen(tablet) {
+      display: grid;
+    }
+  }
+}

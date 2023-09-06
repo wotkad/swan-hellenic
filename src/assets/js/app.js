@@ -25,6 +25,8 @@ import "./components/toggle/toggle-mob-menu-year";
 import "./components/toggle/toggle-sidebar-items";
 import "./components/toggle/toggle-popup-map";
 
+import "./components/slider/news";
+
 import "./components/hover/hover-menu";
 
 import "./components/scroll/scroll-header";
