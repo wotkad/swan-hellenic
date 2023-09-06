@@ -7,6 +7,7 @@ function toggleSidebarItems() {
   const $typeButton = $(".sidebar__select-type");
   const $selectItem = $(".sidebar__select__item");
   const $filterInput = $('.sidebar__filter input');
+  const $labelsYears = $('.sidebar__labels-years input[name="year"]');
 
   $headerButton.on('click', function (e) {
     if ($headerButton.is(e.target) || $(".sidebar__select__value span").is(e.target) || $(".sidebar__select__header svg").is(e.target) || $(".sidebar__select__header use").is(e.target)) {
@@ -19,7 +20,16 @@ function toggleSidebarItems() {
     $clearButton.removeClass("sidebar__button-hidden");
   });
 
+  function updateClearButtonVisibility() {
+    $clearButton.toggleClass("sidebar__button-hidden", $filterInput.filter(':checked').length === 0);
+  }
+
+  function updateSelectMonthsVisibility() {
+    $selectMonths.toggle($labelsYears.is(':checked'));
+  }
+
   $clearButton.on('click', function () {
+    updateClearButtonVisibility();
     $filterInput.prop('checked', false);
     $selectMonths.hide();
     $(this).addClass('sidebar__button-hidden');
@@ -86,12 +96,8 @@ function toggleSidebarItems() {
     $clearButton.removeClass("sidebar__button-hidden");
     $sidebarList.removeClass('active');
     $headerButton.removeClass('active');
+    updateClearButtonVisibility();
   });
-
-  $('.sidebar__labels-years input[name="year"]').on('change', function () {
-    $selectMonths.show();
-  });
-
 
   $(document).on('mouseup', function(e) {
     if (!$typeButton.is(e.target) && !$(".sidebar__select-type span").is(e.target) && !$(".sidebar__select-type svg").is(e.target)  && !$(".sidebar__select-type use").is(e.target)) {
@@ -106,6 +112,9 @@ function toggleSidebarItems() {
       $sidebarList.removeClass('active');
     }
   });
+
+  $filterInput.on('input', updateClearButtonVisibility);
+  $labelsYears.on('change', updateSelectMonthsVisibility);
 
 }
 toggleSidebarItems();
