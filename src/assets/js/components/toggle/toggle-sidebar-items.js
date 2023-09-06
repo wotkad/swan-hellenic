@@ -21,7 +21,7 @@ function toggleSidebarItems() {
   });
 
   function updateClearButtonVisibility() {
-    $clearButton.toggleClass("sidebar__button-hidden", $filterInput.filter(':checked').length === 0);
+    $clearButton.removeClass("sidebar__button-hidden", $filterInput.filter(':checked').length === 0);
   }
 
   function updateSelectMonthsVisibility() {

@@ -1,0 +1,104 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: opacity $transition-default, z-index $transition-default,
+    visibility $transition-default;
+  display: flex;
+  align-items: flex-end;
+  @include screen(tablet) {
+    display: block;
+  }
+  &.active {
+    opacity: 1;
+    z-index: 2000;
+    visibility: visible;
+  }
+  &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: opacity $transition-default, z-index $transition-default,
+      visibility $transition-default;
+    &.active {
+      opacity: 1;
+      z-index: 2;
+      visibility: visible;
+    }
+  }
+  &__wrapper {
+    z-index: 3;
+    position: relative;
+    bottom: -100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 40px;
+    height: 100vh;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    @include screen(tablet) {
+      bottom: 0;
+      right: -100%;
+      align-items: center;
+      max-height: 100vh;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    width: 72px;
+    height: 72px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    @include screen(tablet) {
+      display: flex;
+    }
+  }
+  &__icon {
+    border: 2px solid $white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    svg {
+      fill: $white;
+    }
+  }
+  &__container {
+    background-color: $white;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-height: calc(100vh - 100px);
+    max-width: 100%;
+    border-radius: 14px 14px 0 0;
+    @include screen(tablet) {
+      border-radius: 10px 0 0 10px;
+      padding: 60px;
+      gap: 60px;
+      max-height: 100%;
+      height: 100vh;
+      max-width: 80%;
+    }
+    @include screen(laptop) {
+      max-width: 60%;
+    }
+  }
+}
