@@ -1,12 +1,12 @@
 mixin card(status, logos, type)
   - className = "";
-  - button_text = "Book now"
+  - buttonText = "Book now"
   case type
     when type = "sale"
       - className = "card-sale"
     when disabled = "disabled"
       - className = "card-disabled"
-      - button_text = "Sold out"
+      - buttonText = "Sold out"
   .card(class=""+className)
     .card__image
       a(href="#").card__bubble Explore
@@ -50,4 +50,4 @@ mixin card(status, logos, type)
           .card__oldprice € 15.095
           .card__price € 15.095
             .card__perperson per person
-        button(type="submit").card__button= button_text
+        button(type="submit").card__button= buttonText
