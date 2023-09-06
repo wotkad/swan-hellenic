@@ -16,7 +16,8 @@
       }
       &__tip {
         position: absolute;
-        transition: opacity 0.3s, z-index 0.3s, visibility 0.3s;
+        transition: opacity $transition-default, z-index $transition-default,
+          visibility $transition-default;
         opacity: 0;
         z-index: -1;
         visibility: hidden;
@@ -30,7 +31,7 @@
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
         @include sans-xs;
         a {
-          transition: color 0.3s;
+          transition: color $transition-default;
           &:hover {
             color: $fathom;
           }
@@ -128,7 +129,7 @@
         &__arrow {
           position: absolute;
           right: 20px;
-          transition: transform 0.3s;
+          transition: transform $transition-default;
           z-index: 4;
         }
         &__list {
@@ -144,7 +145,8 @@
           visibility: hidden;
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
           background-color: $white;
-          transition: opacity 0.3s, z-index 0.3s, visibility 0.3s;
+          transition: opacity $transition-default, z-index $transition-default,
+            visibility $transition-default;
           &.active {
             opacity: 1;
             z-index: 6;
@@ -153,7 +155,7 @@
         }
         &__item {
           padding: 6px 20px;
-          transition: background-color 0.3s;
+          transition: background-color $transition-default;
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -245,7 +247,8 @@
           background-color: rgba(146, 199, 208, 0.3);
           padding: 8px;
           color: $fathom;
-          transition: color 0.3s, background-color 0.3s;
+          transition: color $transition-default,
+            background-color $transition-default;
           display: inline-block;
           @include sans-base;
           &:hover {

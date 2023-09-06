@@ -25,6 +25,42 @@
       gap: 48px;
     }
   }
+  &__social {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $white;
+    svg {
+      stroke: transparent;
+      fill: $text;
+    }
+  }
+  &__subtitle {
+    cursor: default;
+    color: $green-200;
+    text-transform: uppercase;
+    @include sans-base-medium;
+    @include screen(tablet) {
+      svg {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  &__logo {
+    svg {
+      stroke: transparent;
+      stroke-width: 0;
+    }
+  }
   &__block {
     width: 100%;
     display: flex;
@@ -88,12 +124,6 @@
       }
     }
   }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
   &__links {
     overflow: hidden;
     height: 0;
@@ -103,17 +133,6 @@
     gap: 12px;
     @include screen(tablet) {
       height: auto;
-    }
-  }
-  &__subtitle {
-    cursor: default;
-    color: $green-200;
-    text-transform: uppercase;
-    @include sans-base-medium;
-    @include screen(tablet) {
-      svg {
-        display: none;
-      }
     }
   }
   &__link {
@@ -146,19 +165,6 @@
     align-items: center;
     gap: 7px;
   }
-  &__social {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: $white;
-    svg {
-      stroke: transparent;
-      fill: $text;
-    }
-  }
   &__logos {
     display: flex;
     align-items: center;
@@ -167,12 +173,6 @@
     margin: 0 auto;
     @include screen(tablet) {
       max-width: 100%;
-    }
-  }
-  &__logo {
-    svg {
-      stroke: transparent;
-      stroke-width: 0;
     }
   }
   &__copy {
@@ -192,17 +192,17 @@
       }
     }
     &__links {
-      a {
-        color: $white;
-        transition: color $transition-default;
-        @include sans-xs;
-        &:hover {
-          color: $shice;
-        }
-      }
       span {
         margin: 0 2px;
         color: $white;
+      }
+    }
+    &__link {
+      color: $white;
+      transition: color $transition-default;
+      @include sans-xs;
+      &:hover {
+        color: $shice;
       }
     }
     &__year {

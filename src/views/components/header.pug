@@ -12,7 +12,7 @@ header.header
         svg(class="header__logo-mob" width="65px" height="40px" viewBox="0 0 65 44")
           use(xlink:href="#svg-logo-mobile")
       button.header__burger(type="button")
-        svg(
+        svg.header__burger__svg(
           fill="none"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +29,9 @@ header.header
         form.search__form(action="#")
           input(type="text" name="search" required)
           button.search__button(type="submit" aria-label="search")
-            svg(width="24px" height="24px" viewBox="0 0 24 24")
+            svg.search__button__icon(width="24px" height="24px" viewBox="0 0 24 24")
               use(xlink:href="#svg-search")
-        a.header__item(href="#")
+        a.header__item.header__item-contact(href="#")
           span.header__item__text Contact us
         .header__lang
           button.header__toggle(type="button")
@@ -79,15 +79,15 @@ header.header
                     .header-dropdown__nav__col.header-dropdown__nav__step1
                       a.header-dropdown__nav__link.active(href="#" data-id="1")
                         span Destinations
-                        svg(width="24px" height="24px" viewBox="0 0 24 24")
+                        svg.header-dropdown__nav__arrow(width="24px" height="24px" viewBox="0 0 24 24")
                           use(xlink:href="#svg-arrow-right")
                       a.header-dropdown__nav__link(href="#" data-id="2")
                         span Ships
-                        svg(width="24px" height="24px" viewBox="0 0 24 24")
+                        svg.header-dropdown__nav__arrow(width="24px" height="24px" viewBox="0 0 24 24")
                           use(xlink:href="#svg-arrow-right")
                       a.header-dropdown__nav__link(href="#" data-id="3")
                         span Departures
-                        svg(width="24px" height="24px" viewBox="0 0 24 24")
+                        svg.header-dropdown__nav__arrow(width="24px" height="24px" viewBox="0 0 24 24")
                           use(xlink:href="#svg-arrow-right")
                     .header-dropdown__nav__col.header-dropdown__nav__step2
                       .header-dropdown__nav__list.active(data-id="1")

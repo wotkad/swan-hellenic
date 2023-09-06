@@ -11,7 +11,7 @@
     }
   }
   a {
-    transition: color 0.3s, border-color 0.3s;
+    transition: color $transition-default, border-color $transition-default;
     border-bottom: 1px solid $green-200;
     &:hover {
       color: $fathom;
