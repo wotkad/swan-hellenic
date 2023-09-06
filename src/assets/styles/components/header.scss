@@ -97,9 +97,7 @@
     svg {
       fill: $white;
       stroke: transparent;
-      transition:
-        stroke $transition-default,
-        fill $transition-default;
+      transition: stroke $transition-default, fill $transition-default;
       min-width: 24px;
     }
   }
@@ -129,9 +127,7 @@
       opacity: 0;
       visibility: hidden;
       right: 20px;
-      transition:
-        opacity 0.3,
-        visibility $transition-default;
+      transition: opacity 0.3, visibility $transition-default;
     }
   }
   &__toggle {
@@ -196,9 +192,7 @@
     padding: 24px 0 0;
     visibility: hidden;
     opacity: 0;
-    transition:
-      visibility $transition-default,
-      opacity $transition-default;
+    transition: visibility $transition-default, opacity $transition-default;
     &__wrapper {
       border-bottom: 1px solid $green-300;
       padding-bottom: 40px;
@@ -217,9 +211,7 @@
       grid-row-start: 1;
       grid-column-start: 1;
       opacity: 0;
-      transition:
-        opacity $transition-default,
-        z-index $transition-default;
+      transition: opacity $transition-default, z-index $transition-default;
       z-index: -1;
       &.active {
         opacity: 1;
@@ -297,9 +289,7 @@
         grid-row-start: 1;
         grid-column-start: 1;
         opacity: 0;
-        transition:
-          opacity $transition-default,
-          z-index $transition-default;
+        transition: opacity $transition-default, z-index $transition-default;
         z-index: -1;
         &.active {
           opacity: 1;
@@ -344,9 +334,7 @@
       align-items: flex-start;
       &__title {
         color: $white;
-        transition:
-          color $transition-default,
-          border-color $transition-default;
+        transition: color $transition-default, border-color $transition-default;
         margin-top: 12px;
         @include line-clamp-2;
         @include sans-base;
@@ -385,9 +373,7 @@
     }
     &__link {
       color: $white;
-      transition:
-        color $transition-default,
-        border-color $transition-default;
+      transition: color $transition-default, border-color $transition-default;
       @include sans-base;
       p {
         @include line-clamp-3;
@@ -429,9 +415,7 @@
         text-transform: uppercase;
         margin-top: 20px;
         @include sans-base-medium;
-        transition:
-          color $transition-default,
-          border-color $transition-default;
+        transition: color $transition-default, border-color $transition-default;
         &:hover {
           color: $shice;
           border-color: $shice;
@@ -705,9 +689,7 @@
     }
     .search__form {
       opacity: 0;
-      transition:
-        opacity $transition-default,
-        z-index $transition-default;
+      transition: opacity $transition-default, z-index $transition-default;
       position: absolute;
       width: 100%;
       top: 12px;

@@ -1,7 +1,7 @@
-mixin button(className, name, isDefault, isLink)
+mixin button(className, name, isDefault, href)
   if isDefault
-    button.button(class=""+className)
+    button.button(class="" + className)
       span= name
-  if isLink
-    a.button(href="" + isLink)(class=""+className)
+  if href
+    a.button(href="" + href)(class="" + className)
       span= name

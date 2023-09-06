@@ -7,9 +7,7 @@
   opacity: 0;
   z-index: -1;
   visibility: hidden;
-  transition:
-    opacity $transition-default,
-    z-index $transition-default,
+  transition: opacity $transition-default, z-index $transition-default,
     visibility $transition-default;
   display: flex;
   align-items: flex-end;
@@ -31,9 +29,7 @@
     opacity: 0;
     z-index: -1;
     visibility: hidden;
-    transition:
-      opacity $transition-default,
-      z-index $transition-default,
+    transition: opacity $transition-default, z-index $transition-default,
       visibility $transition-default;
     &.active {
       opacity: 1;
