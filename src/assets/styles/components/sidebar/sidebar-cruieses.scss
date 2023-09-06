@@ -1,5 +1,9 @@
 .sidebar {
   &-cruises {
+    display: none;
+    @include screen(laptop) {
+      display: block;
+    }
     .sidebar {
       &__title {
         color: $green-200;

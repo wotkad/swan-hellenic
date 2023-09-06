@@ -67,7 +67,10 @@ svg {
 }
 
 .gapper {
-  padding: 100px 0 144px;
+  padding: 40px 0 50px;
+  @include screen(tablet) {
+    padding: 100px 0 144px;
+  }
 }
 
 .section {

@@ -17,6 +17,7 @@
   &__image {
     position: relative;
     max-height: 360px;
+    min-height: 360px;
     overflow: hidden;
     img {
       width: 100%;
@@ -30,11 +31,14 @@
     position: absolute;
     border-radius: 50%;
     color: $white;
-    display: flex;
+    display: none;
     opacity: 0;
     align-items: center;
     justify-content: center;
     @include sans-base-medium;
+    @include screen(laptop) {
+      display: flex;
+    }
   }
   &__logos {
     position: absolute;
@@ -160,8 +164,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 12px;
     width: 100%;
+    @include screen(laptop) {
+      gap: 12px;
+    }
   }
   &__prices {
     display: flex;
@@ -190,13 +196,24 @@
     display: flex;
     align-items: flex-end;
     gap: 4px;
+    margin-top: 6px;
     @include sans-3xl;
     line-height: 28px;
-    margin-top: 10px;
+    @include screen(laptop) {
+      margin-top: 10px;
+    }
   }
   &__perperson {
     color: $text;
+    max-width: 42px;
+    margin-bottom: -2px;
     @include sans-3xs;
+    line-height: 16px;
+    @include screen(tablet) {
+      max-width: 100%;
+      margin-bottom: 0;
+      @include sans-3xs;
+    }
   }
   &__label {
     color: $green-200;

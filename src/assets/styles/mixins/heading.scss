@@ -1,8 +1,23 @@
 .heading {
-  margin-top: 36px;
+  margin-top: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include screen(tablet) {
+    margin-top: 36px;
+  }
   &__title {
     text-transform: uppercase;
     color: $fathom;
-    @include chap-xl;
+    @include chap-base;
+    @include screen(tablet) {
+      @include chap-xl;
+    }
+  }
+  &__icon {
+    margin-top: 4px;
+    @include screen(laptop) {
+      display: none;
+    }
   }
 }

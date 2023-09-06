@@ -1,0 +1,22 @@
+.cruises {
+  &__button {
+    border: 1px solid $fathom;
+    padding: 17px;
+    max-width: 343px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    color: $fathom;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include sans-base-medium;
+    @include screen(laptop) {
+      display: none;
+    }
+  }
+}

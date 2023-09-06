@@ -3,15 +3,25 @@
   &__gap {
     gap: 40px;
     &-bottom {
-      row-gap: 54px;
+      row-gap: 80px;
+      @include screen(laptop) {
+        row-gap: 54px;
+      }
     }
   }
   &-two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+    @include screen(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
   &-cruises {
-    grid-template-columns: 350px 1fr;
-    gap: 122px;
-    margin-top: 124px;
+    grid-template-columns: 1fr;
+    margin-top: 42px;
+    @include screen(laptop) {
+      margin-top: 124px;
+      gap: 122px;
+      grid-template-columns: 350px 1fr;
+    }
   }
 }
