@@ -45,3 +45,19 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@mixin button-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $fathom;
+  color: $fathom;
+  border-radius: 100px;
+  padding: 17px;
+  max-width: 217px;
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+}

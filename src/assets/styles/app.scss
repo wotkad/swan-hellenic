@@ -24,6 +24,9 @@
 @import "./mixins/breadcrumbs";
 @import "./mixins/heading";
 @import "./mixins/card";
+@import "./mixins/article";
+@import "./mixins/headline";
+@import "./mixins/button";
 
 /*
   Компоненты
@@ -35,6 +38,8 @@
 @import "./components/hero";
 @import "./components/not-found";
 @import "./components/cruises";
+
+@import "./components/news-block";
 
 @import "./components/sidebar/sidebar-cruieses";
 

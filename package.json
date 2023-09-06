@@ -78,6 +78,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "gsap": "^3.9.1",
     "jquery": "^3.6.0",
     "scroll-lock": "^2.1.5",

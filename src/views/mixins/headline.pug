@@ -1,0 +1,9 @@
+// if white: +headline('', '', 'headline-white')
+// if centered: +headline('', '', 'headline-centered')
+// if note: +headline('', '', 'headline-note')
+
+mixin headline(title, description, className)
+  .headline(class=""+className)
+    h2.headline__title= title
+    if description
+      p.headline__description= description

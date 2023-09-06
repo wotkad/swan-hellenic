@@ -1,0 +1,67 @@
+.article {
+  position: relative;
+  grid-row: span 2 / span 2;
+  grid-column: span 1 / span 1;
+  @include screen(tablet) {
+    min-height: 100%;
+    overflow: hidden;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-height: 410px;
+    @include screen(tablet) {
+      max-height: 100%;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 16px;
+    @include screen(tablet) {
+      padding: 20px 24px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 4px;
+
+    @include screen(tablet) {
+      height: 100%;
+    }
+  }
+  &__name {
+    color: $text;
+    @include sans-lg;
+    @include line-clamp-2;
+    @include screen(tablet) {
+      color: $white;
+      @include sans-md;
+    }
+  }
+  &__date {
+    color: $white-400;
+    @include sans-base;
+    @include screen(tablet) {
+      color: $shice;
+      @include sans-md;
+    }
+  }
+  &-small {
+    grid-row: span 1 / span 1;
+    grid-column: span 1 / span 1;
+    min-height: 522px;
+    @include screen(tablet) {
+      min-height: 220px;
+      max-height: 220px;
+    }
+  }
+}

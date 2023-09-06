@@ -1,3 +1,4 @@
+import '@splidejs/splide/css';
 import "./assets/styles/app.scss";
 
 if (module.hot) {

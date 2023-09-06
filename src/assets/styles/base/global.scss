@@ -74,6 +74,7 @@ svg {
 }
 
 .section {
+  overflow: hidden;
   &-white {
     background-color: $white;
   }

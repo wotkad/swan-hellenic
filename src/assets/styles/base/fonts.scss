@@ -1,7 +1,9 @@
 @font-face {
   font-family: "Chap-Medium";
   src: url("../fonts/Chap-Medium.eot");
-  src: local("Chap-Medium Regular"), local("Chap-Medium"),
+  src:
+    local("Chap-Medium Regular"),
+    local("Chap-Medium"),
     url("../fonts/Chap-Medium.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Chap-Medium.woff") format("woff"),
     url("../fonts/Chap-Medium.woff2") format("woff2"),
@@ -12,7 +14,9 @@
 @font-face {
   font-family: "DM Sans";
   src: url("../fonts/DMSans-Regular.eot");
-  src: local("DM Sans Regular"), local("DMSans-Regular"),
+  src:
+    local("DM Sans Regular"),
+    local("DMSans-Regular"),
     url("../fonts/DMSans-Regular.eot?#iefix") format("embedded-opentype"),
     url("../fonts/DMSans-Regular.woff2") format("woff2"),
     url("../fonts/DMSans-Regular.woff") format("woff"),
@@ -24,7 +28,9 @@
 @font-face {
   font-family: "DM Sans";
   src: url("../fonts/DMSans-Medium.eot");
-  src: local("DM Sans Medium"), local("DMSans-Medium"),
+  src:
+    local("DM Sans Medium"),
+    local("DMSans-Medium"),
     url("../fonts/DMSans-Medium.eot?#iefix") format("embedded-opentype"),
     url("../fonts/DMSans-Medium.woff2") format("woff2"),
     url("../fonts/DMSans-Medium.woff") format("woff"),
@@ -36,7 +42,9 @@
 @font-face {
   font-family: "Arsenal";
   src: url("../fonts/Arsenal-Regular.eot");
-  src: local("DM Sans Medium"), local("Arsenal-Regular"),
+  src:
+    local("DM Sans Medium"),
+    local("Arsenal-Regular"),
     url("../fonts/Arsenal-Regular.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Arsenal-Regular.woff2") format("woff2"),
     url("../fonts/Arsenal-Regular.woff") format("woff"),
@@ -47,7 +55,9 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: local("OpenSans-Regular"), local("OpenSans-Regular"),
+  src:
+    local("OpenSans-Regular"),
+    local("OpenSans-Regular"),
     url("../fonts/OpenSans-Regular.woff2") format("woff2"),
     url("../fonts/OpenSans-Regular.woff") format("woff"),
     url("../fonts/OpenSans-Regular.ttf") format("truetype");
@@ -57,7 +67,9 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: local("OpenSans-Medium"), local("OpenSans-Medium"),
+  src:
+    local("OpenSans-Medium"),
+    local("OpenSans-Medium"),
     url("../fonts/OpenSans-Medium.woff2") format("woff2"),
     url("../fonts/OpenSans-Medium.woff") format("woff"),
     url("../fonts/OpenSans-Medium.ttf") format("truetype");
