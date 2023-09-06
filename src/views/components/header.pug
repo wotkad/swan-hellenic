@@ -3,13 +3,13 @@ header.header
     .header__top
       .header__contact
         a.header__phone(href="tel:+7 (800) 555-35-35")
-          svg(width="24px" height="24px" viewBox="0 0 25 25")
+          svg(viewBox="0 0 25 25" width="24px" height="24px")
             use(xlink:href="#svg-phone")
           span +7 (800) 555-35-35
       a.header__logo(href="/")
-        svg(class="header__logo-pc" width="166px" height="40px" viewBox="0 0 166 40")
+        svg.header__logo-pc(viewBox="0 0 166 40" width="166px" height="40px")
           use(xlink:href="#svg-logo")
-        svg(class="header__logo-mob" width="65px" height="40px" viewBox="0 0 65 44")
+        svg.header__logo-mob(viewBox="0 0 65 44" width="65px" height="40px")
           use(xlink:href="#svg-logo-mobile")
       button.header__burger(type="button")
         svg.header__burger__svg(
@@ -24,52 +24,60 @@ header.header
       include ./mob-menu
       .header__submenu
         button.header__search(type="button" aria-label="search")
-          svg(width="24px" height="24px" viewBox="0 0 24 24")
+          svg(viewBox="0 0 24 24" width="24px" height="24px")
             use(xlink:href="#svg-search")
         form.search__form(action="#")
           input(type="text" name="search" required)
           button.search__button(type="submit" aria-label="search")
-            svg.search__button__icon(width="24px" height="24px" viewBox="0 0 24 24")
+            svg.search__button__icon(
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            )
               use(xlink:href="#svg-search")
         a.header__item.header__item-contact(href="#")
           span.header__item__text Contact us
         .header__lang
           button.header__toggle(type="button")
-            svg(width="18px" height="18px" viewBox="0 0 18 18")
+            svg(viewBox="0 0 18 18" width="18px" height="18px")
               use(xlink:href="#svg-en-uk")
             span EN
-            svg(class="header__lang__arrow" width="16px" height="17px" viewBox="0 0 16 17")
+            svg.header__lang__arrow(
+              viewBox="0 0 16 17"
+              width="16px"
+              height="17px"
+            )
               use(xlink:href="#svg-arrow-down-small")
           .header__languages
             .header__languages__item.select-language(data-id="ru")
               a.header__language(href="#")
                 span Russian (RU)
-                svg(width="12px" height="12px" viewBox="0 0 12 12")
+                svg(viewBox="0 0 12 12" width="12px" height="12px")
                   use(xlink:href="#svg-check-small-green")
             .header__languages__item.select-language.active(data-id="uk")
               a.header__language.active(href="#")
                 span English (UK)
-                svg(width="12px" height="12px" viewBox="0 0 12 12")
+                svg(viewBox="0 0 12 12" width="12px" height="12px")
                   use(xlink:href="#svg-check-small-green")
             .header__languages__item.select-language(data-id="us")
               a.header__language(href="#")
                 span English (US)
-                svg(width="12px" height="12px" viewBox="0 0 12 12")
+                svg(viewBox="0 0 12 12" width="12px" height="12px")
                   use(xlink:href="#svg-check-small-green")
     .header__bottom
       .header__logo
         a.header__logo__inner(href="/")
-          svg(width="166px" height="40px" viewBox="0 0 166 40")
+          svg(viewBox="0 0 166 40" width="166px" height="40px")
             use(xlink:href="#svg-logo")
       nav.header__menu
         .header__item
           a.header__link(href="/")
             .header__icon
-              svg(width="24px" height="25px" viewBox="0 0 24 25")
+              svg(viewBox="0 0 24 25" width="24px" height="25px")
                 use(xlink:href="#svg-ship")
             span.header__item__text Find your cruise
             .header__arrow
-              svg(width="16px" height="17px" viewBox="0 0 16 17")
+              svg(viewBox="0 0 16 17" width="16px" height="17px")
                 use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-find-your-cruise
             .wrapper
@@ -79,19 +87,34 @@ header.header
                     .header-dropdown__nav__col.header-dropdown__nav__step1
                       a.header-dropdown__nav__link.active(href="#" data-id="1")
                         span Destinations
-                        svg.header-dropdown__nav__arrow(width="24px" height="24px" viewBox="0 0 24 24")
+                        svg.header-dropdown__nav__arrow(
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          height="24px"
+                        )
                           use(xlink:href="#svg-arrow-right")
                       a.header-dropdown__nav__link(href="#" data-id="2")
                         span Ships
-                        svg.header-dropdown__nav__arrow(width="24px" height="24px" viewBox="0 0 24 24")
+                        svg.header-dropdown__nav__arrow(
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          height="24px"
+                        )
                           use(xlink:href="#svg-arrow-right")
                       a.header-dropdown__nav__link(href="#" data-id="3")
                         span Departures
-                        svg.header-dropdown__nav__arrow(width="24px" height="24px" viewBox="0 0 24 24")
+                        svg.header-dropdown__nav__arrow(
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          height="24px"
+                        )
                           use(xlink:href="#svg-arrow-right")
                     .header-dropdown__nav__col.header-dropdown__nav__step2
                       .header-dropdown__nav__list.active(data-id="1")
-                        a.header-dropdown__nav__link.active(href="#" data-id="1")
+                        a.header-dropdown__nav__link.active(
+                          href="#"
+                          data-id="1"
+                        )
                           span Africa
                         a.header-dropdown__nav__link(href="#" data-id="2")
                           span Antarctica
@@ -182,7 +205,7 @@ header.header
           a.header__link(href="/")
             span.header__item__text Destinations
             .header__arrow
-              svg(width="16px" height="17px" viewBox="0 0 16 17")
+              svg(viewBox="0 0 16 17" width="16px" height="17px")
                 use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-destinations
             .wrapper
@@ -235,7 +258,7 @@ header.header
           a.header__link(href="/")
             span.header__item__text Ships
             .header__arrow
-              svg(width="16px" height="17px" viewBox="0 0 16 17")
+              svg(viewBox="0 0 16 17" width="16px" height="17px")
                 use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-ships
             .wrapper
@@ -267,7 +290,7 @@ header.header
           a.header__link(href="/")
             span.header__item__text Why swan
             .header__arrow
-              svg(width="16px" height="17px" viewBox="0 0 16 17")
+              svg(viewBox="0 0 16 17" width="16px" height="17px")
                 use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-why-swan
             .wrapper
@@ -303,7 +326,7 @@ header.header
           a.header__link(href="/")
             span.header__item__text Plan your trip
             .header__arrow
-              svg(width="16px" height="17px" viewBox="0 0 16 17")
+              svg(viewBox="0 0 16 17" width="16px" height="17px")
                 use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-plan-your-trip
             .wrapper
@@ -339,13 +362,19 @@ header.header
                   .header-dropdown__links
                     .header-dropdown__links__title Download mobil app
                     .header-dropdown__downloads
-                      a.header-dropdown__link.header-dropdown__link-download(href="#" target="_blank")
-                        svg(width="37px" height="35px" viewBox="0 0 37 35")
+                      a.header-dropdown__link.header-dropdown__link-download(
+                        href="#"
+                        target="_blank"
+                      )
+                        svg(viewBox="0 0 37 35" width="37px" height="35px")
                           use(xlink:href="#svg-android")
                         span download for
                         p Android
-                      a.header-dropdown__link.header-dropdown__link-download(href="#" target="_blank")
-                        svg(width="35px" height="35px" viewBox="0 0 35 35")
+                      a.header-dropdown__link.header-dropdown__link-download(
+                        href="#"
+                        target="_blank"
+                      )
+                        svg(viewBox="0 0 35 35" width="35px" height="35px")
                           use(xlink:href="#svg-app-store")
                         span download for
                         p iOS
@@ -353,7 +382,7 @@ header.header
           a.header__link(href="/")
             span.header__item__text Partnerships
             .header__arrow
-              svg(width="16px" height="17px" viewBox="0 0 16 17")
+              svg(viewBox="0 0 16 17" width="16px" height="17px")
                 use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-partnerships
             .wrapper
@@ -378,12 +407,14 @@ header.header
                     a.header-dropdown__link(href="#") Partner 4
                     a.header-dropdown__link(href="#") Partner 5
                     a.header-dropdown__link(href="#") Partner 6
-                    a.header-dropdown__link.header-dropdown__link-more(href="#") View all
+                    a.header-dropdown__link.header-dropdown__link-more(
+                      href="#"
+                    ) View all
         .header__item
           a.header__link(href="/")
             span.header__item__text About us
             .header__arrow
-              svg(width="16px" height="17px" viewBox="0 0 16 17")
+              svg(viewBox="0 0 16 17" width="16px" height="17px")
                 use(xlink:href="#svg-arrow-down-small")
           .header-dropdown.header-dropdown-about-us
             .wrapper
@@ -417,5 +448,9 @@ header.header
                   .header-dropdown__links
                     .header-dropdown__links__title Contact us
                     a.header-dropdown__link(href="tel:+44 (0) 207 846 0271") +44 (0) 207 846 0271
-                    a.header-dropdown__link(href="mailto:enquiries@swanhellenic.com") enquiries@swanhellenic.com
-                    a.header-dropdown__link.header-dropdown__link-more(href="#") View all Contacts
+                    a.header-dropdown__link(
+                      href="mailto:enquiries@swanhellenic.com"
+                    ) enquiries@swanhellenic.com
+                    a.header-dropdown__link.header-dropdown__link-more(
+                      href="#"
+                    ) View all Contacts
