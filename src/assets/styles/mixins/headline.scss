@@ -17,14 +17,20 @@
     }
   }
   &-white {
-    @include chap-base;
-    color: $white;
-    @include screen(laptop) {
-      @include chap-lg;
+    .headline__title {
+      color: $white;
     }
   }
   &-centered {
     text-align: center;
+  }
+  &-md {
+    .headline__title {
+      @include chap-base;
+      @include screen(laptop) {
+        @include chap-2base;
+      }
+    }
   }
   &-note {
     display: flex;

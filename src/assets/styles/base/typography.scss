@@ -28,6 +28,12 @@
   font-weight: 500;
 }
 
+@mixin chap-2base {
+  font-size: 64px;
+  line-height: 82px;
+  font-weight: 500;
+}
+
 @mixin chap-base {
   font-size: 45px;
   line-height: 50px;

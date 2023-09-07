@@ -1,6 +1,6 @@
 import Splide from '@splidejs/splide';
 
-function newsSlider() {
+function sliderNews() {
   if ($('.news-block').length !== 0) {
     new Splide('.news-block', {
       gap: 24,
@@ -8,6 +8,7 @@ function newsSlider() {
       pagination: false,
       perPage: 1,
       padding: { right: 80 },
+      lazyLoad: 'nearby',
       drag: true,
       perMove: 1,
       mediaQuery: 'min',
@@ -19,4 +20,4 @@ function newsSlider() {
     }).mount();
   }
 }
-newsSlider();
+sliderNews();

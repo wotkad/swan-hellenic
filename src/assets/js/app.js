@@ -26,7 +26,8 @@ import "./components/toggle/toggle-sidebar-items";
 import "./components/toggle/toggle-popup-map";
 import "./components/toggle/toggle-sidebar-cruises";
 
-import "./components/slider/news";
+import "./components/slider/slider-news";
+import "./components/slider/slider-flip";
 
 import "./components/hover/hover-menu";
 

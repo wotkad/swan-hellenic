@@ -14,4 +14,7 @@ block manifestBrowserconfigFiles
 block content
   main
     include ./components/hero
+    include ./mixins/flip-slider
+    +flip-slider('')
+    +flip-slider('flip-slider-reversed')
     include ./components/news-block

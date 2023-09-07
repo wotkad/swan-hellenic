@@ -1,0 +1,77 @@
+include ../mixins/headline
+include ../mixins/button
+
+mixin flip-slider(reversed, i)
+  section.section.section-white.flip-slider(
+    class="" + reversed
+    data-slider="slider" + i
+  )
+    .wrapper
+      .flip-slider__wrapper
+        .flip-slider__content
+          .flip-slider__top
+            +headline('Onboard Experience', '', 'headline-md headline-white')
+            .flip-slider__list.splide
+              .splide__track
+                .splide__list
+                  .flip-slider__list__item.splide__slide
+                    svg.flip-slider__list__icon(
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-selected")
+                    span What to expect
+                  .flip-slider__list__item.splide__slide
+                    svg.flip-slider__list__icon(
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-selected")
+                    span Restaurant and bars
+                  .flip-slider__list__item.splide__slide
+                    svg.flip-slider__list__icon(
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-selected")
+                    span Excursions
+                  .flip-slider__list__item.splide__slide
+                    svg.flip-slider__list__icon(
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-selected")
+                    span Fitness & Spa
+          .flip-slider__bottom
+            +button('button-green button-no-center', 'Explore more', false, '/')
+        .flip-slider__images.splide
+          .splide__track
+            ul.splide__list
+              .flip-slider__image.splide__slide
+                img(
+                  src="/assets/images/flip-slide.png"
+                  alt="flip-slide"
+                  loading="lazy"
+                )
+              .flip-slider__image.splide__slide
+                img(
+                  src="/assets/images/flip-slide.png"
+                  alt="flip-slide"
+                  loading="lazy"
+                )
+              .flip-slider__image.splide__slide
+                img(
+                  src="/assets/images/flip-slide.png"
+                  alt="flip-slide"
+                  loading="lazy"
+                )
+              .flip-slider__image.splide__slide
+                img(
+                  src="/assets/images/flip-slide.png"
+                  alt="flip-slide"
+                  loading="lazy"
+                )

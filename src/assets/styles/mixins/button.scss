@@ -1,7 +1,7 @@
 .button {
   @include button-border;
   transition: $transition-default;
-  span {
+  &__text {
     color: $fathom;
     transition: $transition-default;
     @include sans-base-medium;
@@ -9,20 +9,26 @@
   &-green {
     border-color: $white;
     background-color: $fathom;
-    span {
+    .button__text {
       color: $white;
     }
     &:hover {
       background-color: $white;
-      span {
+      .button__text {
         color: $fathom;
       }
     }
   }
-  &:hover {
-    background-color: $fathom;
-    span {
-      color: $white;
+  &-transparent {
+    &:hover {
+      background-color: $fathom;
+      .button__text {
+        color: $white;
+      }
     }
+  }
+  &-no-center {
+    left: auto;
+    transform: translate(0);
   }
 }

@@ -2,6 +2,6 @@ mixin heading(title, className, type, iconClass)
   .heading(class="" + className)
     h1.heading__title= title
     if type == "cruises"
-      button.heading__icon(type="button" aria-label="filter" class=""+iconClass)
+      button.heading__icon(type="button" aria-label="filter" class="" + iconClass)
         svg(viewBox="0 0 32 32" width="32px" height="32px")
           use(xlink:href="#svg-filter")
