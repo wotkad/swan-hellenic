@@ -1,11 +1,5 @@
 .article {
-  position: relative;
-  grid-row: span 2 / span 2;
-  grid-column: span 1 / span 1;
-  @include screen(tablet) {
-    min-height: 100%;
-    overflow: hidden;
-  }
+  height: 100%;
   img {
     height: 100%;
     width: 100%;
@@ -13,6 +7,7 @@
     max-height: 410px;
     @include screen(tablet) {
       max-height: 100%;
+      min-height: 476px;
     }
   }
   &__wrapper {
@@ -33,7 +28,6 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: 4px;
-
     @include screen(tablet) {
       height: 100%;
     }
@@ -53,15 +47,6 @@
     @include screen(tablet) {
       color: $shice;
       @include sans-md;
-    }
-  }
-  &-small {
-    grid-row: span 1 / span 1;
-    grid-column: span 1 / span 1;
-    min-height: 522px;
-    @include screen(tablet) {
-      min-height: 220px;
-      max-height: 220px;
     }
   }
 }

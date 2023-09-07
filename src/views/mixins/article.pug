@@ -1,7 +1,8 @@
 mixin article(className, src, alt, name, date)
-  article.article(class="" + className)
-    img(src="" + src alt="" + alt)
-    .article__wrapper
-      .article__description
-        .article__name= name
-        time.article__date= date
+  a(href="#" class="news-block__card splide__slide" + className)
+    article.article
+      img(src="" + src alt="" + alt loading="lazy")
+      .article__wrapper
+        .article__description
+          .article__name= name
+          time.article__date= date
