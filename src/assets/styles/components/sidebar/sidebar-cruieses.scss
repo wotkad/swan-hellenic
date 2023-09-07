@@ -1,7 +1,24 @@
 .sidebar {
   &-cruises {
-    display: none;
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    bottom: -100%;
+    min-height: 100vh;
+    opacity: 0;
+    z-index: 1000;
+    left: 0;
+    padding: 32px 16px;
+    border-radius: 14px 14px 0 0;
     @include screen(laptop) {
+      opacity: 1;
+      left: auto;
+      min-height: auto;
+      z-index: auto;
+      border-radius: 0;
+      padding: 0;
+      bottom: auto;
+      position: static;
       display: block;
     }
     .sidebar {
@@ -10,9 +27,31 @@
         text-transform: uppercase;
         margin-bottom: 54px;
         @include sans-xl-medium;
+        display: none;
+        @include screen(laptop) {
+          display: block;
+        }
+      }
+      &__blocks {
+        max-height: calc(100vh - 132px);
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+        @include screen(laptop) {
+          max-height: 100%;
+          overflow-y: unset;
+        }
       }
       &__block {
-        margin-top: 36px;
+        margin-top: 20px;
+        @include screen(laptop) {
+          margin-top: 36px;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
       }
       &__tip {
         position: absolute;
@@ -23,8 +62,7 @@
         opacity: 0;
         z-index: -1;
         visibility: hidden;
-        bottom: 32px;
-        left: 0;
+        top: 32px;
         width: 246px;
         padding: 16px 8px 16px 16px;
         border-radius: 4px;
@@ -32,6 +70,11 @@
         background-color: $white;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
         @include sans-xs;
+        @include screen(laptop) {
+          bottom: 32px;
+          left: 0;
+          top: auto;
+        }
         a {
           transition: color $transition-default;
           &:hover {
@@ -221,18 +264,34 @@
         @include sans-md-medium;
       }
       &__button {
-        margin-top: 36px;
-        padding: 11px 40px;
+        padding: 11px;
+        margin-top: 20px;
         text-transform: uppercase;
         color: $fathom;
         border: 1px solid $fathom;
         border-radius: 100px;
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
+        width: calc(100% - 32px);
+        position: absolute;
+        bottom: 32px;
+        left: 16px;
+        right: 16px;
         @include sans-base-medium;
+        @include screen(laptop) {
+          position: relative;
+          bottom: auto;
+          right: auto;
+          left: 50%;
+          margin-top: 36px;
+          transform: translateX(-50%);
+          width: 100%;
+          padding: 11px 40px;
+        }
         &-hidden {
-          display: none;
+          @include screen(laptop) {
+            display: none;
+          }
         }
       }
       &__labels {
