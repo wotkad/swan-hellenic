@@ -1,11 +1,14 @@
 .header {
-  background-color: $fathom;
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   transition: transform $transition-default;
+  &-green {
+    background-color: $fathom;
+  }
   &.scrolled {
     @include screen(laptop) {
       transform: translateY(-90px);
