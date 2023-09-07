@@ -22,4 +22,22 @@
       display: grid;
     }
   }
+  &__card {
+    position: relative;
+    grid-row: span 2 / span 2;
+    grid-column: span 1 / span 1;
+    @include screen(tablet) {
+      min-height: 100%;
+      overflow: hidden;
+    }
+    &-small {
+      grid-row: span 1 / span 1;
+      grid-column: span 1 / span 1;
+      min-height: 522px;
+      @include screen(tablet) {
+        min-height: 220px;
+        max-height: 220px;
+      }
+    }
+  }
 }
