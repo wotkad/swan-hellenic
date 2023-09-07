@@ -1,9 +1,11 @@
 .button {
   @include button-border;
-  transition: $transition-default;
+  transition:
+    background-color $transition-default,
+    border-color $transition-default;
   &__text {
     color: $fathom;
-    transition: $transition-default;
+    transition: color $transition-default;
     @include sans-base-medium;
   }
   &-green {

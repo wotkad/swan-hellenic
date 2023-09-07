@@ -1,9 +1,5 @@
 .news-block {
   margin-top: 70px;
-  margin-bottom: 70px;
-  @include screen(tablet) {
-    margin-bottom: 34px;
-  }
   &__wrapper {
     display: flex;
     gap: 0;
@@ -20,6 +16,12 @@
   &.is-initialized:not(.is-active) .splide__list {
     @include screen(tablet) {
       display: grid;
+    }
+  }
+  &__button {
+    margin-top: 34px;
+    @include screen(tablet) {
+      margin-top: 70px;
     }
   }
   &__card {

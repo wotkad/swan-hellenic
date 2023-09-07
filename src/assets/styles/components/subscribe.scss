@@ -38,6 +38,8 @@
   }
   &__label {
     position: relative;
+    display: block;
+    height: 100%;
   }
   .button {
     margin-top: 16px;
@@ -49,6 +51,9 @@
       top: 50%;
       right: 8px;
       left: auto;
+      &:hover {
+        border-color: $fathom;
+      }
     }
   }
   &__policy {
@@ -60,12 +65,19 @@
       position: relative;
       &:before {
         position: absolute;
+        transition: opacity $transition-default;
         content: "";
         width: 100%;
+        opacity: 0;
         height: 1px;
         background-color: $fathom;
         left: 0;
         bottom: 2px;
+      }
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
       }
     }
   }

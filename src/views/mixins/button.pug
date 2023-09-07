@@ -1,6 +1,6 @@
-mixin button(className, title, isDefault, href)
+mixin button(className, buttonType, title, isDefault, href)
   if isDefault
-    button.button(type="button" class="" + className)
+    button.button(type="" + buttonType class="" + className)
       .button__text= title
   if href
     a.button(href="" + href class="" + className)
