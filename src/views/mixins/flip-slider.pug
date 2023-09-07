@@ -2,16 +2,13 @@ include ../mixins/headline
 include ../mixins/button
 
 mixin flip-slider(reversed, i)
-  section.section.section-white.flip-slider(
-    class="" + reversed
-    data-slider="slider" + i
-  )
+  section.gapper-small.section.section-white.flip-slider(class="" + reversed)
     .wrapper
-      .flip-slider__wrapper
+      .flip-slider__wrapper(data-slider="flip-slider")
         .flip-slider__content
           .flip-slider__top
             +headline('Onboard Experience', '', 'headline-md headline-white')
-            .flip-slider__list.splide
+            .splide.flip-slider__list(class="flip-slider" + i + "__list")
               .splide__track
                 .splide__list
                   .flip-slider__list__item.splide__slide
@@ -48,7 +45,7 @@ mixin flip-slider(reversed, i)
                     span Fitness & Spa
           .flip-slider__bottom
             +button('button-green button-no-center', 'Explore more', false, '/')
-        .flip-slider__images.splide
+        .splide.flip-slider__images(class="flip-slider" + i + "__images")
           .splide__track
             ul.splide__list
               .flip-slider__image.splide__slide
