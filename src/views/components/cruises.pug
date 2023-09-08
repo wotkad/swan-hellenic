@@ -1,6 +1,7 @@
 include ../mixins/breadcrumbs
 include ../mixins/heading
 include ../mixins/card
+include ../mixins/button
 section.gapper.section.section-white
   .wrapper
     .section__wrapper
@@ -17,5 +18,5 @@ section.gapper.section.section-white
           +card('with status', 'with logos', 'sale')
           +card('with status', 'with logos', '')
           +card('with status', 'with logos', 'sale')
-        button.cruises__button.cruises__button-more(type="button") Load more
+        +button('cruises__button cruises__button-more', 'button', 'Load more')
 include ./popup/popup-map

@@ -32,5 +32,14 @@ function togglePopupMap() {
     bg.removeClass('active');
     enablePageScroll();
   });
+  document.addEventListener('keydown', function(e) {
+    if (e.key == 'Escape') {
+      gsap.to(wrapper, {x: 0, duration: 0.8, ease: "power2.out", onComplete: () => {
+        popup.removeClass('active');
+      }});
+      bg.removeClass('active');
+      enablePageScroll();
+    }
+  });
 }
 togglePopupMap();
