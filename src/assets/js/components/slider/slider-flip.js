@@ -13,6 +13,8 @@ function initializeSliders() {
       pagination: false,
       mediaQuery: 'min',
       type: 'fade',
+      drag: false,
+      speed: 800,
     });
 
     let thumbnails = new Splide(thumbnailsSelector, {
@@ -22,6 +24,7 @@ function initializeSliders() {
       mediaQuery: 'min',
       drag: true,
       perPage: 1,
+      speed: 800,
       classes: {
         arrow : 'flip-slider__arrow'
       },

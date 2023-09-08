@@ -3,9 +3,10 @@
     background-color: $white;
     position: fixed;
     width: 100%;
-    bottom: -100%;
-    min-height: 100vh;
+    transform: translateY(100%);
+    min-height: 90vh;
     opacity: 0;
+    bottom: 0;
     z-index: 1000;
     left: 0;
     padding: 32px 16px;
@@ -15,6 +16,7 @@
       left: auto;
       min-height: auto;
       z-index: auto;
+      transform: translateY(0);
       border-radius: 0;
       padding: 0;
       bottom: auto;
@@ -33,7 +35,7 @@
         }
       }
       &__blocks {
-        max-height: calc(100vh - 132px);
+        max-height: calc(90vh - 132px);
         overflow-y: auto;
         &::-webkit-scrollbar {
           width: 0;

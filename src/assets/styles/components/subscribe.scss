@@ -51,9 +51,9 @@
       top: 50%;
       right: 8px;
       left: auto;
-      &:hover {
-        border-color: $fathom;
-      }
+    }
+    &:hover {
+      border-color: $fathom;
     }
   }
   &__policy {
