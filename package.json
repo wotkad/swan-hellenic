@@ -91,7 +91,6 @@
     }
   },
   "lint-staged": {
-    "src/**/*.*": "yarn lint:editorconfig",
     "src/**/*.pug": "node ./node_scripts/svg-clear && yarn lint:pug",
     "src/**/*.scss": "yarn lint:scss && yarn lint:stylelint"
   }
