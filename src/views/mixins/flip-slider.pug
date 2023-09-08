@@ -44,14 +44,22 @@ mixin flip-slider(reversed, i)
                       use(xlink:href="#svg-selected")
                     span Fitness & Spa
               .splide__arrows.splide__arrows--ltr
-                button.splide__arrow.flip-slider__arrow.splide__arrow--prev(type="button" aria-label="Previous slide" aria-controls="splide01-track")
+                button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
+                  type="button"
+                  aria-controls="splide01-track"
+                  aria-label="Previous slide"
+                )
                   svg(viewBox="0 0 24 24" width="24px" height="24px")
                     use(xlink:href="#svg-arrow-right")
-                button.splide__arrow.flip-slider__arrow.splide__arrow--next(type="button" aria-label="Next slide" aria-controls="splide01-track")
+                button.splide__arrow.flip-slider__arrow.splide__arrow--next(
+                  type="button"
+                  aria-controls="splide01-track"
+                  aria-label="Next slide"
+                )
                   svg(viewBox="0 0 24 24" width="24px" height="24px")
                     use(xlink:href="#svg-arrow-right")
           .flip-slider__bottom
-            +button('button-green button-no-center', 'button', 'Explore more', false, '/')
+            +button('button-green button-no-center', '', 'Explore more')
         .splide.flip-slider__images(class="flip-slider" + i + "__images")
           .splide__track
             ul.splide__list
@@ -79,4 +87,4 @@ mixin flip-slider(reversed, i)
                   alt="flip-slide"
                   loading="lazy"
                 )
-        +button('button-green button-no-center', 'button', 'Explore more', false, '/')
+        +button('button-green button-no-center', '', 'Explore more')

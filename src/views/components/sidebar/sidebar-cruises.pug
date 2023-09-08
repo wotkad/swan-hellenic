@@ -1,3 +1,4 @@
+include ../../mixins/button
 .sidebar.sidebar-cruises
   .sidebar__title FIND YOUR CRUISE
   .sidebar__filter
@@ -273,4 +274,4 @@
           label.sidebar__label
             input(type="radio" name="ship" value="Diana")
             span Diana
-    button.sidebar__button.sidebar__button-hidden(type="button") Clear filters
+    +button('button-transparent news-block__button sidebar__button sidebar__button-hidden', 'button', 'Clear filters')

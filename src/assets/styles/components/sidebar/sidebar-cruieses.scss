@@ -264,28 +264,17 @@
         @include sans-md-medium;
       }
       &__button {
-        padding: 11px;
         margin-top: 20px;
-        text-transform: uppercase;
-        color: $fathom;
-        border: 1px solid $fathom;
-        border-radius: 100px;
-        position: relative;
-        left: 50%;
         width: calc(100% - 32px);
         position: absolute;
         bottom: 32px;
+        transform: translateX(0);
         left: 16px;
         right: 16px;
-        @include sans-base-medium;
         @include screen(laptop) {
-          position: relative;
-          bottom: auto;
-          right: auto;
-          left: 50%;
-          margin-top: 36px;
-          transform: translateX(-50%);
           width: 100%;
+          position: static;
+          margin-top: 36px;
           padding: 11px 40px;
         }
         &-hidden {

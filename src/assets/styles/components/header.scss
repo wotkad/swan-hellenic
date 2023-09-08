@@ -355,7 +355,18 @@
         @include line-clamp-2;
         @include sans-base;
       }
+      &__image {
+        overflow: hidden;
+        img {
+          transition: transform $transition-default;
+        }
+      }
       &:hover {
+        .header-dropdown__card__image {
+          img {
+            transform: scale(1.1);
+          }
+        }
         .header-dropdown__card__title {
           color: $shice;
           border-color: $shice;
