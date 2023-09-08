@@ -1,0 +1,51 @@
+.icons-block {
+  margin-top: 66px;
+  &__wrapper {
+    @include screen(laptop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+  }
+  &.is-initialized:not(.is-active) .splide__list {
+    @include screen(laptop) {
+      display: flex;
+    }
+  }
+  .splide {
+    &__pagination {
+      bottom: -64px;
+      li {
+        button {
+          width: 12px;
+          height: 12px;
+          background-color: $green-200;
+          &.is-active {
+            transform: scale(1);
+            opacity: 1;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $untold-400;
+            background-color: $white;
+            &::before {
+              position: absolute;
+              content: "";
+              border-radius: 50%;
+              background-color: $untold-400;
+              width: 12px;
+              height: 12px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+      &__page {
+        opacity: 0.5;
+      }
+    }
+  }
+}
