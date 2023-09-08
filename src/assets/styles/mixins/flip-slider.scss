@@ -1,0 +1,180 @@
+.flip-slider {
+  overflow: hidden;
+  padding: 56px 0;
+  background-color: $fathom;
+  @include screen(laptop) {
+    background-color: transparent;
+    padding: 30px 0;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include screen(laptop) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  &__images {
+    background-color: $fathom;
+    @include screen(laptop) {
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      width: calc(50% + 72px);
+    }
+  }
+  &__list {
+    .splide__list {
+      @include screen(laptop) {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      color: $white;
+      @include sans-lg-medium;
+      svg {
+        margin-top: -10px;
+        display: none;
+        @include screen(laptop) {
+          display: block;
+        }
+      }
+      @include screen(laptop) {
+        justify-content: flex-start;
+      }
+    }
+    &__icon {
+      opacity: 0;
+      transition: opacity 0.3s;
+      fill: $white;
+    }
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    position: relative;
+    background-color: $fathom;
+    @include screen(laptop) {
+      gap: 160px;
+      width: 50%;
+      padding: 84px 180px 120px 0;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: -999px;
+      top: 0;
+      width: 999px;
+      right: 0;
+      height: 100%;
+      background-color: $fathom;
+      display: none;
+      @include screen(laptop) {
+        display: block;
+      }
+    }
+  }
+  &-reversed {
+    .flip-slider {
+      &__wrapper {
+        @include screen(laptop) {
+          justify-content: flex-end;
+        }
+      }
+      &__content {
+        @include screen(laptop) {
+          order: 2;
+          padding-left: 147px;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          right: -999px;
+          top: 0;
+          width: 999px;
+          left: auto;
+          height: 100%;
+          display: none;
+          background-color: $fathom;
+          @include screen(laptop) {
+            display: block;
+          }
+        }
+      }
+      &__list,
+      &__bottom {
+        @include screen(laptop) {
+          padding-left: 71px;
+        }
+      }
+      &__images {
+        @include screen(laptop) {
+          order: -1;
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include screen(laptop) {
+      gap: 54px;
+    }
+  }
+  &__bottom {
+    .button {
+      display: none;
+      @include screen(laptop) {
+        display: inline-flex;
+      }
+    }
+  }
+  &__arrow {
+    transition: opacity $transition-default;
+    svg {
+      fill: transparent;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .splide__track--nav > .splide__list > .splide__slide {
+    opacity: 0;
+    border: none;
+    transition: opacity $transition-default;
+    @include screen(laptop) {
+      opacity: 1;
+    }
+    &.is-active {
+      opacity: 1;
+      .flip-slider__list__icon {
+        opacity: 1;
+      }
+    }
+  }
+  &__image {
+    img {
+      max-height: 235px;
+      min-height: 235px;
+      width: 100%;
+      display: flex;
+      object-fit: cover;
+      @include screen(tablet) {
+        max-height: 563px;
+        min-height: 563px;
+      }
+    }
+  }
+}
