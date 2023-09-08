@@ -73,7 +73,7 @@
     }
     &__icon {
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity $transition-default;
       fill: $white;
     }
   }
