@@ -98,6 +98,13 @@ svg {
   }
 }
 
+.padding-bottom {
+  padding: 0 16px 64px;
+  @include screen(laptop) {
+    padding: 0 16px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

@@ -28,6 +28,7 @@ import "./components/toggle/toggle-sidebar-cruises";
 
 import "./components/slider/slider-news";
 import "./components/slider/slider-flip";
+import "./components/slider/slider-icons";
 
 import "./components/hover/hover-menu";
 
