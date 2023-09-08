@@ -57,6 +57,7 @@
       @include screen(laptop) {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 12px;
       }
     }
@@ -68,9 +69,6 @@
       cursor: pointer;
       color: $white;
       @include sans-lg-medium;
-      &:hover {
-        color: $green-200;
-      }
       svg {
         margin-top: -10px;
         display: none;
@@ -188,6 +186,9 @@
       .flip-slider__list__icon {
         opacity: 1;
       }
+    }
+    &:hover:not(.is-active) {
+      color: $green-200;
     }
   }
   &__image {
