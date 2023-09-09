@@ -1,0 +1,43 @@
+mixin hero
+  .hero
+    .hero__images.splide
+      .splide__track
+        .splide__list
+          .splide__slide
+            img(src="/assets/images/hero.png" alt="hero" loading="lazy")
+          .splide__slide
+            img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+          .splide__slide
+            img(src="/assets/images/hero.png" alt="hero" loading="lazy")
+          .splide__slide
+            img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+    .hero__content.splide
+      .splide__track
+        .splide__list
+          .splide__slide
+            h2.hero__title Travel with SWan Hellenic
+            p.hero__description Amet minim mollit non deserunt
+          .splide__slide
+            h2.hero__title Travel with SWan Hellenic
+            p.hero__description Amet minim mollit non deserunt
+          .splide__slide
+            h2.hero__title Travel with SWan Hellenic
+            p.hero__description Amet minim mollit non deserunt
+          .splide__slide
+            h2.hero__title Travel with SWan Hellenic
+            p.hero__description Amet minim mollit non deserunt
+      .splide__arrows
+        button.splide__arrow.hero__arrow.splide__arrow--prev(
+          type="button"
+          aria-controls="splide01-track"
+          aria-label="Previous slide"
+        )
+          svg(viewBox="0 0 70 70" width="70px" height="70px")
+            use(xlink:href="#svg-arrow-big")
+        button.splide__arrow.hero__arrow.splide__arrow--next(
+          type="button"
+          aria-controls="splide01-track"
+          aria-label="Next slide"
+        )
+          svg(viewBox="0 0 70 70" width="70px" height="70px")
+            use(xlink:href="#svg-arrow-big")

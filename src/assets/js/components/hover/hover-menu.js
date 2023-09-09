@@ -3,6 +3,7 @@ function hoverMenu() {
   let button2 = $('.header-dropdown__nav__step2 .header-dropdown__nav__link');
   let container = $('.header-dropdown__nav__list');
   let results = $('.header-dropdown__result');
+  let header = $('.header');
   for (let i = 0; i < Array.from(button).length; i++) {
     $(button[i]).on('mouseover', function () {
       let id = button[i].getAttribute('data-id');
@@ -15,6 +16,12 @@ function hoverMenu() {
       $(this).addClass('active');
     });
   }
+  header.on('mouseenter', function () {
+    $(this).addClass('header-green');
+  });
+  header.on('mouseleave', function () {
+    $(this).removeClass('header-green');
+  });
 }
 hoverMenu();
 

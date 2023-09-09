@@ -1,0 +1,70 @@
+.hero {
+  overflow: hidden;
+  &__images {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      opacity: 0.35;
+    }
+    .splide__slide {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__content {
+    position: absolute;
+    height: 100vh;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .splide__arrow {
+      width: 70px;
+      height: 70px;
+      z-index: 4;
+      opacity: 1;
+      svg {
+        fill: $white;
+        height: auto;
+        stroke: transparent;
+        width: auto;
+        transition: fill $transition-default;
+      }
+      &:hover {
+        svg {
+          fill: $fathom;
+        }
+      }
+    }
+  }
+  &__title {
+    color: $white;
+    max-width: 877px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 64px auto 16px;
+    @include chap-2xl;
+  }
+  &__description {
+    color: $white;
+    text-align: center;
+    @include sans-2xl-1;
+  }
+}

@@ -27,13 +27,13 @@ h6 {
 
 main {
   transition: padding $transition-default;
-  padding-top: 68px;
-  @include screen(laptop) {
-    padding-top: 154px;
-  }
-  &.scrolled {
-    padding-top: 68px;
-  }
+  // padding-top: 68px;
+  // @include screen(laptop) {
+  //   padding-top: 154px;
+  // }
+  // &.scrolled {
+  //   padding-top: 68px;
+  // }
 }
 
 .render {

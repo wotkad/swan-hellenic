@@ -61,6 +61,14 @@
         gap: 12px;
       }
     }
+    .splide__arrow {
+      &--prev {
+        left: 0;
+      }
+      &--next {
+        right: 0;
+      }
+    }
     &__item {
       display: flex;
       align-items: center;
@@ -165,7 +173,10 @@
     }
   }
   &__arrow {
+    opacity: 1;
     transition: opacity $transition-default;
+    width: auto;
+    height: auto;
     svg {
       fill: transparent;
       width: 24px;

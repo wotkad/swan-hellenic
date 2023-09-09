@@ -12,9 +12,15 @@ function initializeSliders() {
       arrows: false,
       pagination: false,
       mediaQuery: 'min',
-      type: 'fade',
+      lazyLoad: 'nearby',
       drag: false,
+      gap: 20,
       speed: 800,
+      breakpoints: {
+        1240: {
+          gap: 40
+        },
+      }
     });
 
     let thumbnails = new Splide(thumbnailsSelector, {
@@ -25,9 +31,6 @@ function initializeSliders() {
       drag: true,
       perPage: 1,
       speed: 800,
-      classes: {
-        arrow : 'flip-slider__arrow'
-      },
       breakpoints: {
         1240: {
           arrows: false,

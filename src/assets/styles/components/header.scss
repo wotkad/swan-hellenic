@@ -5,11 +5,14 @@
   left: 0;
   width: 100%;
   z-index: 2000;
-  transition: transform $transition-default;
+  transition:
+    transform $transition-default,
+    background-color $transition-default;
   &-green {
     background-color: $fathom;
   }
   &.scrolled {
+    background-color: $fathom;
     @include screen(laptop) {
       transform: translateY(-90px);
     }
@@ -24,7 +27,7 @@
       height: 90px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      border-bottom: 1px solid $green-500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding: 22px 0;
     }
   }

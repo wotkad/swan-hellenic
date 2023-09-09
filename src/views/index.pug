@@ -13,7 +13,8 @@ block manifestBrowserconfigFiles
 
 block content
   main
-    include ./components/hero
+    include ./mixins/hero
+    +hero
     include ./mixins/flip-slider
     +flip-slider('', 0)
     +flip-slider('flip-slider-reversed', 1)
