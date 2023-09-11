@@ -151,8 +151,10 @@
         margin-bottom: 0;
       }
     }
-    &:hover {
-      color: $shice;
+    @include screen(hover) {
+      &:hover {
+        color: $shice;
+      }
     }
   }
   &__uploads {
@@ -201,8 +203,10 @@
       color: $white;
       transition: color $transition-default;
       @include sans-xs;
-      &:hover {
-        color: $shice;
+      @include screen(hover) {
+        &:hover {
+          color: $shice;
+        }
       }
     }
     &__year {
@@ -220,8 +224,10 @@
       a {
         color: $white;
         transition: color $transition-default;
-        &:hover {
-          color: $shice;
+        @include screen(hover) {
+          &:hover {
+            color: $shice;
+          }
         }
       }
     }

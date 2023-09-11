@@ -11,48 +11,58 @@
     background-color: transparent;
     border-color: $white;
     color: $white;
-    &:hover {
-      background-color: $white;
-      color: $fathom;
+    @include screen(hover) {
+      &:hover {
+        background-color: $white;
+        color: $fathom;
+      }
     }
   }
   &-green {
     background-color: $fathom;
     border: 1px solid transparent;
     color: $white;
-    &:hover {
-      background-color: transparent;
-      border-color: $fathom;
-      color: $fathom;
+    @include screen(hover) {
+      &:hover {
+        background-color: transparent;
+        border-color: $fathom;
+        color: $fathom;
+      }
     }
   }
   &-green-transparent {
     background-color: transparent;
     border-color: $fathom;
     color: $fathom;
-    &:hover {
-      background-color: $fathom;
-      color: $white;
+    @include screen(hover) {
+      &:hover {
+        background-color: $fathom;
+        color: $white;
+      }
     }
   }
   &-brown {
     background-color: $untold-400;
     border: 1px solid transparent;
     color: $white;
-    &:hover {
-      background-color: transparent;
-      border-color: $untold-400;
-      color: $untold-400;
+    @include screen(hover) {
+      &:hover {
+        background-color: transparent;
+        border-color: $untold-400;
+        color: $untold-400;
+      }
     }
   }
   &-brown-transparent {
     background-color: transparent;
     border: 1px solid $untold-400;
     color: $untold-400;
-    &:hover {
-      background-color: $untold-400;
-      border-color: $untold-400;
-      border: $white;
+    @include screen(hover) {
+      &:hover {
+        background-color: $untold-400;
+        border-color: $untold-400;
+        border: $white;
+      }
     }
   }
   &-no-center {

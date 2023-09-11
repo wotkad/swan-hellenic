@@ -72,8 +72,10 @@
     padding: 10px;
     border-radius: 50%;
     transition: background-color $transition-default;
-    &:hover {
-      background-color: $green-400;
+    @include screen(hover) {
+      &:hover {
+        background-color: $green-400;
+      }
     }
     svg {
       stroke: $white;
@@ -86,8 +88,10 @@
     gap: 8px;
     border-radius: 100px;
     transition: background-color $transition-default;
-    &:hover {
-      background-color: $green-400;
+    @include screen(hover) {
+      &:hover {
+        background-color: $green-400;
+      }
     }
     svg {
       min-width: 24px;
@@ -129,8 +133,10 @@
     gap: 8px;
     transition: background-color $transition-default;
     @include sans-xs;
-    &:hover {
-      background-color: $white-300;
+    @include screen(hover) {
+      &:hover {
+        background-color: $white-300;
+      }
     }
     svg {
       opacity: 0;
@@ -153,10 +159,12 @@
         transform: rotate(180deg);
       }
     }
-    &:hover {
-      background-color: $green-400;
-      .header__lang__arrow {
-        transform: rotate(180deg);
+    @include screen(hover) {
+      &:hover {
+        background-color: $green-400;
+        .header__lang__arrow {
+          transform: rotate(180deg);
+        }
       }
     }
     span {
@@ -282,10 +290,12 @@
             opacity: 1;
           }
         }
-        &:hover {
-          background-color: $green-400;
-          .header-dropdown__nav__arrow {
-            opacity: 1;
+        @include screen(hover) {
+          &:hover {
+            background-color: $green-400;
+            .header-dropdown__nav__arrow {
+              opacity: 1;
+            }
           }
         }
       }
@@ -364,15 +374,17 @@
           transition: transform $transition-default;
         }
       }
-      &:hover {
-        .header-dropdown__card__image {
-          img {
-            transform: scale(1.1);
+      @include screen(hover) {
+        &:hover {
+          .header-dropdown__card__image {
+            img {
+              transform: scale(1.1);
+            }
           }
-        }
-        .header-dropdown__card__title {
-          color: $shice;
-          border-color: $shice;
+          .header-dropdown__card__title {
+            color: $shice;
+            border-color: $shice;
+          }
         }
       }
       p {
@@ -410,9 +422,11 @@
       p {
         @include line-clamp-3;
       }
-      &:hover {
-        color: $shice;
-        border-color: $shice;
+      @include screen(hover) {
+        &:hover {
+          color: $shice;
+          border-color: $shice;
+        }
       }
       svg {
         margin-bottom: 8px;
@@ -431,8 +445,10 @@
         border-radius: 12px;
         min-width: 97px;
         transition: background-color $transition-default;
-        &:hover {
-          background-color: $green-300;
+        @include screen(hover) {
+          &:hover {
+            background-color: $green-300;
+          }
         }
         span {
           text-transform: lowercase;
@@ -450,9 +466,11 @@
         transition:
           color $transition-default,
           border-color $transition-default;
-        &:hover {
-          color: $shice;
-          border-color: $shice;
+        @include screen(hover) {
+          &:hover {
+            color: $shice;
+            border-color: $shice;
+          }
         }
       }
     }
@@ -658,32 +676,34 @@
         bottom: 12px;
       }
     }
-    &:hover {
-      .header {
-        &__icon {
-          svg {
-            fill: $shice;
-            stroke: transparent;
+    @include screen(hover) {
+      &:hover {
+        .header {
+          &__icon {
+            svg {
+              fill: $shice;
+              stroke: transparent;
+            }
           }
-        }
-        &__arrow {
-          transform: rotate(180deg);
-          svg {
-            stroke: $shice;
+          &__arrow {
+            transform: rotate(180deg);
+            svg {
+              stroke: $shice;
+            }
           }
-        }
-        &-dropdown {
-          visibility: visible;
-          opacity: 1;
-        }
-        &__item {
-          &__text {
-            color: $shice;
+          &-dropdown {
+            visibility: visible;
+            opacity: 1;
           }
-        }
-        &__link {
-          &:before {
-            width: 100%;
+          &__item {
+            &__text {
+              color: $shice;
+            }
+          }
+          &__link {
+            &:before {
+              width: 100%;
+            }
           }
         }
       }
@@ -695,10 +715,12 @@
       @include screen(laptop) {
         display: block;
       }
-      &:hover {
-        background-color: $green-400;
-        .header__item__text {
-          color: $white;
+      @include screen(hover) {
+        &:hover {
+          background-color: $green-400;
+          .header__item__text {
+            color: $white;
+          }
         }
       }
       span {

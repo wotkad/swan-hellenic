@@ -15,9 +15,11 @@
       color $transition-default,
       border-color $transition-default;
     border-bottom: 1px solid $green-200;
-    &:hover {
-      color: $fathom;
-      border-color: $fathom;
+    @include screen(hover) {
+      &:hover {
+        color: $fathom;
+        border-color: $fathom;
+      }
     }
   }
   span {

@@ -14,10 +14,12 @@
       }
     }
   }
-  &:hover {
-    .article__image {
-      img {
-        transform: scale(1.1);
+  @include screen(hover) {
+    &:hover {
+      .article__image {
+        img {
+          transform: scale(1.1);
+        }
       }
     }
   }
