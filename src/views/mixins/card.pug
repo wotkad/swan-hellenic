@@ -1,3 +1,4 @@
+include ../mixins/button
 mixin card(status, logos, type)
   - className = "";
   - buttonText = "Book now";
@@ -54,4 +55,4 @@ mixin card(status, logos, type)
           .card__oldprice € 15.095
           .card__price € 15.095
             .card__perperson per person
-        button.card__button(type="submit")= buttonText
+        +button('button-brown button-no-center card__button', 'button', buttonText)

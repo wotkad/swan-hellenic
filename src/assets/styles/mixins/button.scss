@@ -4,32 +4,59 @@
     background-color $transition-default,
     border-color $transition-default;
   &__text {
-    color: $fathom;
     transition: color $transition-default;
     @include sans-base-medium;
   }
-  &-green {
+  &-white-transparent {
+    background-color: transparent;
     border-color: $white;
-    background-color: $fathom;
-    .button__text {
-      color: $white;
-    }
+    color: $white;
     &:hover {
       background-color: $white;
-      .button__text {
-        color: $fathom;
-      }
+      color: $fathom;
     }
   }
-  &-transparent {
+  &-green {
+    background-color: $fathom;
+    border: 1px solid transparent;
+    color: $white;
+    &:hover {
+      background-color: transparent;
+      border-color: $fathom;
+      color: $fathom;
+    }
+  }
+  &-green-transparent {
+    background-color: transparent;
+    border-color: $fathom;
+    color: $fathom;
     &:hover {
       background-color: $fathom;
-      .button__text {
-        color: $white;
-      }
+      color: $white;
+    }
+  }
+  &-brown {
+    background-color: $untold-400;
+    border: 1px solid transparent;
+    color: $white;
+    &:hover {
+      background-color: transparent;
+      border-color: $untold-400;
+      color: $untold-400;
+    }
+  }
+  &-brown-transparent {
+    background-color: transparent;
+    border: 1px solid $untold-400;
+    color: $untold-400;
+    &:hover {
+      background-color: $untold-400;
+      border-color: $untold-400;
+      border: $white;
     }
   }
   &-no-center {
+    width: auto;
     left: auto;
     transform: translate(0);
   }

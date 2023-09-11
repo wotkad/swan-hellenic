@@ -1,0 +1,86 @@
+.hero-filter {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  &__wrapper {
+    background-color: $white;
+    border-radius: 100px;
+    border: 1px solid $white-350;
+    padding: 8px 8px 8px 24px;
+    display: flex;
+    align-items: center;
+    max-width: 1093px;
+    margin: 0 auto;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  &__icon {
+    min-width: 24px;
+  }
+  &__label {
+    padding: 0 30px;
+    border-left: 1px solid rgba($white-450, 0.4);
+    cursor: pointer;
+    &:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+    &-destination {
+      .hero-filter {
+        &__container {
+          min-width: 250px;
+        }
+        &__icon {
+          fill: $untold-400;
+          stroke: $untold-400;
+        }
+      }
+    }
+    &-calendar {
+      .hero-filter {
+        &__container {
+          min-width: 250px;
+        }
+        &__icon {
+          fill: $untold-400;
+          stroke: transparent;
+        }
+      }
+    }
+    &-ship {
+      .hero-filter {
+        &__container {
+          min-width: 200px;
+        }
+        &__icon {
+          fill: $untold-400;
+          stroke: transparent;
+        }
+      }
+    }
+  }
+  &__arrow {
+    min-width: 16px;
+    fill: transparent;
+    stroke: $white-450;
+  }
+  &__input {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    color: $white-450;
+    @include sans-base;
+  }
+  &__button {
+    padding: 17px;
+    left: auto;
+    transform: translateX(0);
+    flex: 1;
+    width: 100%;
+  }
+}

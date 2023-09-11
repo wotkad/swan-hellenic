@@ -1,6 +1,5 @@
 .cruises {
   &__button {
-    @include button-border;
     max-width: 343px;
     margin-top: 40px;
     @include sans-base-medium;

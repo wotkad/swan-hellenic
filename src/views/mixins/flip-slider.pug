@@ -59,7 +59,7 @@ mixin flip-slider(reversed, i)
                   svg(viewBox="0 0 24 24" width="24px" height="24px")
                     use(xlink:href="#svg-arrow-right")
           .flip-slider__bottom
-            +button('button-green button-no-center', '', 'Explore more')
+            +button('button-white-transparent button-no-center', '', 'Explore more')
         .splide.flip-slider__images(class="flip-slider" + i + "__images")
           .splide__track
             ul.splide__list
@@ -87,4 +87,4 @@ mixin flip-slider(reversed, i)
                   alt="flip-slide"
                   loading="lazy"
                 )
-        +button('button-green button-no-center', '', 'Explore more')
+        +button('button-green button-no-center button-white', '', 'Explore more')

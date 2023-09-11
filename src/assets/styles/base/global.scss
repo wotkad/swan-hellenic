@@ -29,52 +29,63 @@ main {
   transition: padding $transition-default;
 }
 
-.splide__pagination {
-  display: flex;
-  align-items: center;
-  li {
-    margin: 0 6px;
-    button {
-      display: flex;
-      width: 12px;
-      height: 12px;
-      background-color: $green-200;
-      &.is-active {
-        transform: scale(1);
-        opacity: 1;
-        position: relative;
+.splide {
+  &__numbers {
+    position: absolute;
+    right: 78px;
+    display: flex;
+    color: $white;
+    align-items: center;
+    top: 48px;
+    @include chap-xs-2;
+  }
+  &__pagination {
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 6px;
+      button {
+        display: flex;
         width: 12px;
         height: 12px;
-        background-color: transparent;
-        &:after {
-          position: absolute;
-          content: "";
-          border-radius: 50%;
-          background-color: $untold-400;
+        background-color: $green-200;
+        &.is-active {
+          transform: scale(1);
+          opacity: 1;
+          position: relative;
           width: 12px;
           height: 12px;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        &:before {
-          position: absolute;
-          content: "";
-          border-radius: 50%;
-          background-color: $white;
-          border: 1px solid $untold-400;
-          width: 20px;
-          height: 20px;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          background-color: transparent;
+          &:after {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            background-color: $untold-400;
+            width: 12px;
+            height: 12px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            background-color: $white;
+            border: 1px solid $untold-400;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
       }
     }
-  }
-  &__page {
-    margin: 0;
-    opacity: 0.5;
+    &__page {
+      margin: 0;
+      opacity: 0.5;
+    }
   }
 }
 

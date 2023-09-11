@@ -1,6 +1,10 @@
 import Splide from '@splidejs/splide';
 
 function sliderHero() {
+  let slides = $('.hero__content .splide__slide').length;
+  let total = $('.splide__number-total');
+  let current = $('.splide__number-current');
+  total.text(slides);
   if ($('.hero').length !== 0) {
     let images = new Splide('.hero__images', {
       type: 'fade',
@@ -21,6 +25,9 @@ function sliderHero() {
     images.sync(content);
     images.mount();
     content.mount();
+    content.on('moved', function(slideIndex) {
+      current.text(slideIndex + 1);
+    });
   }
 }
 sliderHero();

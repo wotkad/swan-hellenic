@@ -46,6 +46,12 @@
   font-weight: 500;
 }
 
+@mixin chap-xs-2 {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
 @mixin chap-xs {
   font-size: 18px;
   line-height: 28px;

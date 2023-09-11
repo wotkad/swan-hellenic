@@ -5,6 +5,7 @@
 */
 @import "./utils/keyframes";
 @import "./utils/mixins";
+@import "./utils/typography";
 
 /*
   Базовые стили
@@ -16,7 +17,6 @@
   Шрифты и типография
 */
 @import "./base/fonts";
-@import "./base/typography";
 
 /*
   Миксины
@@ -42,6 +42,7 @@
 @import "./components/cruises";
 @import "./components/subscribe";
 @import "./components/icons-block";
+@import "./components/hero-filter";
 
 @import "./components/news-block";
 
