@@ -14,18 +14,22 @@
     .button__text {
       color: $white;
     }
-    &:hover {
-      background-color: $white;
-      .button__text {
-        color: $fathom;
+    @include screen(hover) {
+      &:hover {
+        background-color: $white;
+        .button__text {
+          color: $fathom;
+        }
       }
     }
   }
   &-transparent {
-    &:hover {
-      background-color: $fathom;
-      .button__text {
-        color: $white;
+    @include screen(hover) {
+      &:hover {
+        background-color: $fathom;
+        .button__text {
+          color: $white;
+        }
       }
     }
   }

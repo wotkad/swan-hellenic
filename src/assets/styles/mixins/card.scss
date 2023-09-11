@@ -11,8 +11,10 @@
     color: $white;
     transition: background-color $transition-default;
     @include sans-base-medium;
-    &:hover {
-      background-color: $untold-100;
+    @include screen(hover) {
+      &:hover {
+        background-color: $untold-100;
+      }
     }
   }
   &__price {

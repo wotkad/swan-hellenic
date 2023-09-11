@@ -28,10 +28,12 @@
       border-radius: 0;
       margin-top: 22px;
       transform: translateX(0);
-      &:hover {
-        background-color: transparent;
-        .button__text {
-          color: $white;
+      @include screen(hover) {
+        &:hover {
+          background-color: transparent;
+          .button__text {
+            color: $white;
+          }
         }
       }
     }
@@ -198,8 +200,10 @@
         opacity: 1;
       }
     }
-    &:hover:not(.is-active) {
-      color: $green-200;
+    @include screen(hover) {
+      &:hover:not(.is-active) {
+        color: $green-200;
+      }
     }
   }
   &__image {
