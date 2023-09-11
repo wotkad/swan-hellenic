@@ -15,19 +15,24 @@
       background-color: $black;
       opacity: 0.35;
     }
-    .splide__slide {
-      width: 100%;
-      height: 100%;
-      img {
+    .splide {
+      &__track {
+        height: 100%;
+      }
+      &__slide {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
   &__content {
     position: absolute;
-    height: 100vh;
+    height: calc(100vh - 273px);
     z-index: 3;
     top: 0;
     left: 0;
@@ -35,21 +40,48 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    .splide__arrow {
-      width: 70px;
-      height: 70px;
-      z-index: 4;
-      opacity: 1;
-      svg {
-        fill: $white;
-        height: auto;
-        stroke: transparent;
-        width: auto;
-        transition: fill $transition-default;
+    padding: 273px 16px 0;
+    @include screen(laptop) {
+      height: 100vh;
+      padding: 0;
+    }
+    .splide {
+      &__arrows {
+        display: none;
+        @include screen(laptop) {
+          display: block;
+        }
       }
-      &:hover {
+      &__arrow {
+        width: 70px;
+        height: 70px;
+        z-index: 4;
+        opacity: 1;
         svg {
-          fill: $fathom;
+          fill: $white;
+          height: auto;
+          stroke: transparent;
+          width: auto;
+          transition: fill $transition-default;
+        }
+        &:hover {
+          svg {
+            fill: $fathom;
+          }
+        }
+      }
+      &__pagination {
+        justify-content: flex-start;
+        top: 0;
+        li {
+          button {
+            background-color: $white;
+            &.is-active {
+              &:before {
+                background-color: transparent;
+              }
+            }
+          }
         }
       }
     }
@@ -58,13 +90,20 @@
     color: $white;
     max-width: 877px;
     text-transform: uppercase;
-    text-align: center;
-    margin: 64px auto 16px;
-    @include chap-2xl;
+    margin: 0 0 8px;
+    @include chap-base;
+    @include screen(laptop) {
+      margin: 64px auto 16px;
+      text-align: center;
+      @include chap-2xl;
+    }
   }
   &__description {
     color: $white;
-    text-align: center;
-    @include sans-2xl-1;
+    @include sans-md;
+    @include screen(laptop) {
+      text-align: center;
+      @include sans-2xl-1;
+    }
   }
 }
