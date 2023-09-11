@@ -15,9 +15,19 @@ block content
   main
     include ./mixins/hero
     +hero
+    include ./mixins/default-slider
+    include ./mixins/headline
+    section.gapper-small.section.section-white.default-slider(data-slider="default-slider")
+      .wrapper
+        +headline('Destinations', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.', 'headline-centered')
+        +default-slider('0')
     include ./mixins/flip-slider
     +flip-slider('', 0)
     +flip-slider('flip-slider-reversed', 1)
     include ./components/icons-block
+    section.gapper-small.section.section-white.default-slider(data-slider="default-slider")
+      .wrapper
+        +headline('Partnerships', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat', '')
+        +default-slider('1')
     include ./components/news-block
     include ./components/subscribe

@@ -16,6 +16,12 @@
       @content;
     }
   }
+
+  @if $breakpoint == hover {
+    @media only screen and (hover: hover) {
+      @content;
+    }
+  }
 }
 
 @mixin line-clamp-1 {

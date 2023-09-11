@@ -1,7 +1,7 @@
 import Splide from '@splidejs/splide';
 
-function initializeSliders() {
-  const sliderContainers = document.querySelectorAll('[data-slider]');
+function sliderFlip() {
+  const sliderContainers = document.querySelectorAll('.flip-slider');
   let i = 0;
   sliderContainers.forEach((container, index) => {
 
@@ -48,8 +48,8 @@ function initializeSliders() {
   });
 
 }
-initializeSliders();
+sliderFlip();
 
 $(window).on('resize', function() {
-  initializeSliders();
+  sliderFlip();
 });

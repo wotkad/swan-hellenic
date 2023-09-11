@@ -2,9 +2,9 @@ include ../mixins/headline
 include ../mixins/button
 
 mixin flip-slider(reversed, i)
-  section.gapper-small.section.section-white.flip-slider(class="" + reversed)
+  section.gapper-small.section.section-white.flip-slider(class="" + reversed data-slider="flip-slider")
     .wrapper
-      .flip-slider__wrapper(data-slider="flip-slider")
+      .flip-slider__wrapper
         .flip-slider__content
           .flip-slider__top
             +headline('Onboard Experience', '', 'headline-md headline-white')
