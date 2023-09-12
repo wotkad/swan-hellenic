@@ -1,0 +1,62 @@
+.partner-block {
+  display: flex;
+  flex-direction: column-reverse;
+  @include screen(tablet) {
+    align-items: center;
+  }
+  @include screen(laptop) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  &-reversed {
+    @include screen(laptop) {
+      flex-direction: row-reverse;
+    }
+    .partner-block__image {
+      @include screen(laptop) {
+        margin-left: -100px;
+        margin-right: 0;
+      }
+    }
+  }
+  &__title {
+    color: $fathom;
+    text-transform: uppercase;
+    font-family: "Chap-Medium";
+    @include chap-sm;
+  }
+  &__text {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: $text;
+    @include sans-base;
+    @include screen(laptop) {
+      margin-top: 48px;
+      margin-bottom: 48px;
+      @include sans-lg-medium;
+    }
+  }
+  &__image {
+    height: 220px;
+    width: 100%;
+    @include screen(tablet) {
+      max-width: 699px;
+      height: 100%;
+    }
+    @include screen(laptop) {
+      margin-right: -100px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    max-width: 535px;
+    padding-top: 24px;
+    @include screen(laptop) {
+      padding: 65px 0;
+    }
+  }
+}

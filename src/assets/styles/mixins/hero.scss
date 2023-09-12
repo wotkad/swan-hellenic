@@ -108,6 +108,7 @@
     max-width: 877px;
     text-transform: uppercase;
     margin: 0 0 8px;
+    font-family: "Chap-Medium";
     @include chap-base;
     @include screen(laptop) {
       margin: 64px auto 16px;
