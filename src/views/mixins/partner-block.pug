@@ -4,6 +4,6 @@ mixin partner-block(className, title, text, src, alt)
     .partner-block__content
       .partner-block__title= title
       .partner-block__text !{text}
-      +button('button-green', 'submit', 'learn more')
+      +button('button-green', '', 'learn more')
     .partner-block__image
       img(src="" + src alt="" + alt loading="lazy")
