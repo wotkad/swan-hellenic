@@ -10,7 +10,6 @@ function sliderNews() {
       padding: { right: 80 },
       lazyLoad: 'nearby',
       drag: true,
-      perMove: 1,
       mediaQuery: 'min',
       breakpoints: {
         768: {

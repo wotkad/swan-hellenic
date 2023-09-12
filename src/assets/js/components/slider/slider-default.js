@@ -5,7 +5,7 @@ function sliderDefault() {
     const sliderContainers = document.querySelectorAll('.default-slider');
     let i = 0;
     sliderContainers.forEach((container, index) => {
-      
+
       const mainSelector = `.${container.getAttribute('data-slider')}${i}__track`;
 
       let main = new Splide(mainSelector, {
@@ -18,6 +18,7 @@ function sliderDefault() {
         perPage: 1,
         padding: { right: 100 },
         speed: 800,
+        perMove: 1,
         breakpoints: {
           1240: {
             gap: 40,

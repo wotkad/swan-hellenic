@@ -2,7 +2,10 @@ include ../mixins/headline
 include ../mixins/button
 
 mixin flip-slider(reversed, i)
-  section.gapper-small.section.section-white.flip-slider(class="" + reversed data-slider="flip-slider")
+  section.gapper-small.section.section-white.flip-slider(
+    class="" + reversed
+    data-slider="flip-slider"
+  )
     .wrapper
       .flip-slider__wrapper
         .flip-slider__content

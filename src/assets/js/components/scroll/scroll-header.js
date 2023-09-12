@@ -18,6 +18,13 @@ function scrollHeader() {
 
   gsap.to(logo, 0, {x: -(containerWidth - menuWidth) / 2});
 
+  if (window.pageYOffset > 0) {
+    header.addClass('scrolled');
+    logo.addClass('active');
+    main.addClass('scrolled');
+    gsap.to(items, 0.3, {x: (containerWidth - menuWidth) / 2});
+  }
+
   $(window).on('scroll', function() {
     $('.header__languages').fadeOut(300);
     $('.header__toggle').removeClass('active');

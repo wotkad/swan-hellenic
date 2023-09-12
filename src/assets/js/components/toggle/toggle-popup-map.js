@@ -66,7 +66,7 @@ function togglePopupMap() {
   closeMapPopup();
 
   document.addEventListener('keydown', function(e) {
-    if (e.key == 'Escape') {
+    if (e.key == 'Escape' && wrapper.length !== 0) {
       gsap.to(wrapper, {x: 0, duration: 0.8, ease: "power2.out", onComplete: () => {
         popup.removeClass('active');
       }});

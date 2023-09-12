@@ -2,9 +2,10 @@ include ../mixins/button
 .hero-filter
   .wrapper
     .hero-filter__wrapper
-      label.hero-filter__label.hero-filter__label-destination
-        .hero-filter__container
+      .hero-filter__label.hero-filter__label-destination
+        .hero-filter__container(data-filter="destination")
           .hero-filter__input
+            input(type="text" name="destination")
             svg.hero-filter__icon(
               viewBox="0 0 25 25"
               width="24px"
@@ -18,7 +19,18 @@ include ../mixins/button
             height="16px"
           )
             use(xlink:href="#svg-arrow-down-small")
-      label.hero-filter__label.hero-filter__label-calendar
+        .hero-filter__list(data-filter="destination")
+          .hero-filter__item Africa
+          .hero-filter__item Antarctica
+          .hero-filter__item Artic
+          .hero-filter__item Australia & NZ
+          .hero-filter__item Europe
+          .hero-filter__item Japan
+          .hero-filter__item Mediterranean
+          .hero-filter__item Ocean Voyages
+          .hero-filter__item Pacific Islands
+          .hero-filter__item South America
+      .hero-filter__label.hero-filter__label-calendar
         .hero-filter__container
           .hero-filter__input
             svg.hero-filter__icon(
@@ -27,16 +39,21 @@ include ../mixins/button
               height="24px"
             )
               use(xlink:href="#svg-calendar")
-            span Select month & year
+            input#datepicker(
+              type="datepicker"
+              placeholder="Select month & year"
+              name="ship"
+            )
           svg.hero-filter__arrow(
             viewBox="0 0 16 16"
             width="16px"
             height="16px"
           )
             use(xlink:href="#svg-arrow-down-small")
-      label.hero-filter__label.hero-filter__label-ship
-        .hero-filter__container
+      .hero-filter__label.hero-filter__label-ship
+        .hero-filter__container(data-filter="ship")
           .hero-filter__input
+            input(type="text" name="ship")
             svg.hero-filter__icon(
               viewBox="0 0 25 25"
               width="24px"
@@ -50,4 +67,8 @@ include ../mixins/button
             height="16px"
           )
             use(xlink:href="#svg-arrow-down-small")
+        .hero-filter__list(data-filter="ship")
+          .hero-filter__item SH Minerva
+          .hero-filter__item SH Vega
+          .hero-filter__item SH Diana
       +button('button-brown button-no-center hero-filter__button', 'submit', 'search cruises')

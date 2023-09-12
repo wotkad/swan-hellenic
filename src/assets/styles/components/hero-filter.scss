@@ -7,25 +7,97 @@
     background-color: $white;
     border-radius: 100px;
     border: 1px solid $white-350;
-    padding: 8px 8px 8px 24px;
+    padding: 8px 8px 8px 0;
     display: flex;
     align-items: center;
     max-width: 1093px;
     margin: 0 auto;
   }
+  &__arrow {
+    min-width: 16px;
+    fill: transparent;
+    stroke: $white-450;
+    transition: transform $transition-default;
+  }
+  &__input {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    color: $white-450;
+    position: relative;
+    @include sans-base;
+    input {
+      width: 0;
+      height: 0;
+      position: absolute;
+      opacity: 0;
+      &#datepicker {
+        height: auto;
+        cursor: pointer;
+        opacity: 1;
+        position: absolute;
+        padding-left: 40px;
+        background-color: transparent;
+        left: 0;
+        width: 250px;
+      }
+    }
+  }
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
     padding: 8px 0;
+    &.active {
+      .hero-filter__arrow {
+        transform: rotate(180deg);
+      }
+    }
   }
   &__icon {
     min-width: 24px;
   }
+  &__list {
+    opacity: 0;
+    left: 0;
+    z-index: -1;
+    visibility: hidden;
+    padding: 8px 0;
+    max-height: 124px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    position: absolute;
+    top: 72px;
+    background-color: $white;
+    border-radius: 12px;
+    transition:
+      opacity $transition-default,
+      visibility $transition-default,
+      z-index $transition-default;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 3;
+    }
+  }
+  &__item {
+    transition: background-color $transition-default;
+    padding: 6px 20px;
+    cursor: pointer;
+    @include sans-sm;
+    &:hover {
+      background-color: $white-300;
+    }
+  }
   &__label {
     padding: 0 30px;
     border-left: 1px solid rgba($white-450, 0.4);
-    cursor: pointer;
+    position: relative;
     &:first-child {
       padding-left: 0;
       border-left: 0;
@@ -34,6 +106,7 @@
       .hero-filter {
         &__container {
           min-width: 250px;
+          padding-left: 24px;
         }
         &__icon {
           fill: $untold-400;
@@ -44,7 +117,11 @@
     &-calendar {
       .hero-filter {
         &__container {
+          padding: 0;
           min-width: 250px;
+          .hero-filter__input input {
+            padding: 8px 0;
+          }
         }
         &__icon {
           fill: $untold-400;
@@ -63,18 +140,6 @@
         }
       }
     }
-  }
-  &__arrow {
-    min-width: 16px;
-    fill: transparent;
-    stroke: $white-450;
-  }
-  &__input {
-    gap: 8px;
-    display: flex;
-    align-items: center;
-    color: $white-450;
-    @include sans-base;
   }
   &__button {
     padding: 17px;
