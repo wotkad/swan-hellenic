@@ -135,6 +135,10 @@ svg {
   }
 }
 
+.not-homepage {
+  padding-top: 156px;
+}
+
 .wrapper {
   max-width: calc(#{$screen-mobile} + #{$container-padding * 2});
   margin: 0 auto;

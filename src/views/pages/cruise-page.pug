@@ -1,0 +1,34 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Cruise Page
+
+block basicSeo
+  meta(content="This page Cruises" name="description")
+  meta(content="Page, Cruises" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.not-homepage
+    include ../mixins/hero
+    include ../mixins/partner-block
+    include ../mixins/headline
+    include ../mixins/default-slider
+    +hero()
+    section.section.section-white
+      .section__wrapper
+        +partner-block('', false, false, 'YOUR TRIP', 'JRE', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-1.png', 'item-1')
+    section.section.section-white.default-slider(data-slider="default-slider")
+      .gapper
+        .wrapper
+          +headline('HIGHLIGHTS', 'YOUR TRIP', 'headline-note')
+          +default-slider('0')
+    section.section.section-white
+      .gapper
+        .wrapper
+          +headline('ITINERARY', 'CHECK OUT YOUR', 'headline-note headline-centered')
+          include ../components/itinerary
+          

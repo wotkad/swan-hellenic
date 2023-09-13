@@ -12,5 +12,16 @@ block manifestBrowserconfigFiles
   meta(content="../browserconfig.xml" name="msapplication-config")
 
 block content
-  main
-    include ../components/partnerships
+  mai.not-homepage
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    include ../mixins/button
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([ { href: '/', title: '' } ])
+        +heading('Partnerships', '', '', '')
+      .section__wrapper
+        include ../components/partnerships
+      .wrapper
+        .partnerships__button
+          +button('', '', 'view All')
