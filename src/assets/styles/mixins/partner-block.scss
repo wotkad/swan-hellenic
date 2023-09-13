@@ -40,6 +40,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
     color: $text;
+    @include line-clamp-12;
     @include sans-base;
     @include screen(laptop) {
       margin-top: 48px;
@@ -57,7 +58,8 @@
       position: absolute;
       order: 1;
       right: 0;
-      width: calc(50% - 53px);
+      max-width: calc(50% - 53px);
+      width: 100%;
     }
     img {
       width: 100%;

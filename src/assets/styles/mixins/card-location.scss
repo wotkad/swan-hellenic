@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  position: relative;
   svg {
     stroke: $green-200;
     fill: $green-200;
+  }
+  &:before {
+    position: absolute;
+    // content: url(/);
   }
   &__image {
     min-width: 600px;
