@@ -46,6 +46,13 @@
   overflow: hidden;
 }
 
+@mixin line-clamp-8 {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin button-border {
   display: inline-flex;
   justify-content: center;

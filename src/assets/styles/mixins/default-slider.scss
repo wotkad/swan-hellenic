@@ -8,6 +8,7 @@
   &__text {
     margin-top: 12px;
     color: $text;
+    @include line-clamp-3;
     @include sans-md;
     @include screen(laptop) {
       margin-top: 16px;

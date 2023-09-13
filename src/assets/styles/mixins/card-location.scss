@@ -45,6 +45,7 @@
   &__description {
     padding-top: 32px;
     color: $text;
+    @include line-clamp-8;
     @include sans-md;
   }
   &__content {
