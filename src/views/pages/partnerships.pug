@@ -13,4 +13,15 @@ block manifestBrowserconfigFiles
 
 block content
   main
-    include ../components/partnerships
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    include ../mixins/button
+    section.gapper.section.section-white.section-not-homepage
+      .wrapper
+        +breadcrumbs([ { href: '/', title: '' } ])
+        +heading('Partnerships', '', '', '')
+      .section__wrapper
+        include ../components/partnerships
+      .wrapper
+        .partnerships__button
+          +button('', '', 'view All')
