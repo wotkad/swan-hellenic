@@ -1,0 +1,17 @@
+.partnerships {
+  padding-top: 48px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @include screen(laptop) {
+      gap: 124px;
+    }
+  }
+  &__button {
+    margin-top: 50px;
+    @include screen(laptop) {
+      margin-top: 70px;
+    }
+  }
+}

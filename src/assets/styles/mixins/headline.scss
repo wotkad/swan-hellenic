@@ -8,6 +8,7 @@
   &__title {
     text-transform: uppercase;
     color: $fathom;
+    font-family: "Chap-Medium";
     @include chap-base;
     @include screen(laptop) {
       @include chap-2lg;
@@ -37,6 +38,7 @@
   }
   &-md {
     .headline__title {
+      font-family: "Chap-Medium";
       @include chap-sm;
       @include screen(laptop) {
         @include chap-2base;
