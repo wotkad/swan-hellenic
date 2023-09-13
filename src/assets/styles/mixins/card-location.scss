@@ -1,0 +1,71 @@
+.card-location {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  svg {
+    stroke: $green-200;
+    fill: $green-200;
+  }
+  &__image {
+    min-width: 600px;
+    max-width: 600px;
+    height: 400px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $gray-100;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__data {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    span {
+      text-transform: uppercase;
+      color: $green-200;
+      @include sans-base-medium;
+    }
+  }
+  &__description {
+    padding-top: 32px;
+    color: $text;
+    @include sans-md;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__buttons {
+    padding-top: 40px;
+    display: flex;
+    gap: 65px;
+  }
+  &__button {
+    color: $untold-400;
+    text-transform: uppercase;
+    border-bottom: 1px solid $untold-400;
+    transition: $transition-default;
+    @include sans-sm-med;
+    &:hover {
+      color: $untold-100;
+      border-color: $untold-400;
+    }
+  }
+}

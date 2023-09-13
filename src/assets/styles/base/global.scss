@@ -133,6 +133,9 @@ svg {
   &-white {
     background-color: $white;
   }
+  &-not-homepage {
+    padding-top: 256px;
+  }
 }
 
 .wrapper {
