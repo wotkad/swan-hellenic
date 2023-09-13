@@ -72,7 +72,7 @@
     padding: 10px;
     border-radius: 50%;
     transition: background-color $transition-default;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $green-400;
       }
@@ -88,7 +88,7 @@
     gap: 8px;
     border-radius: 100px;
     transition: background-color $transition-default;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $green-400;
       }
@@ -133,7 +133,7 @@
     gap: 8px;
     transition: background-color $transition-default;
     @include sans-xs;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $white-300;
       }
@@ -159,7 +159,7 @@
         transform: rotate(180deg);
       }
     }
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $green-400;
         .header__lang__arrow {
@@ -290,7 +290,7 @@
             opacity: 1;
           }
         }
-        @include screen(hover) {
+        @include screen(laptop) {
           &:hover {
             background-color: $green-400;
             .header-dropdown__nav__arrow {
@@ -374,7 +374,7 @@
           transition: transform $transition-default;
         }
       }
-      @include screen(hover) {
+      @include screen(laptop) {
         &:hover {
           .header-dropdown__card__image {
             img {
@@ -422,7 +422,7 @@
       p {
         @include line-clamp-3;
       }
-      @include screen(hover) {
+      @include screen(laptop) {
         &:hover {
           color: $shice;
           border-color: $shice;
@@ -445,7 +445,7 @@
         border-radius: 12px;
         min-width: 97px;
         transition: background-color $transition-default;
-        @include screen(hover) {
+        @include screen(laptop) {
           &:hover {
             background-color: $green-300;
           }
@@ -466,7 +466,7 @@
         transition:
           color $transition-default,
           border-color $transition-default;
-        @include screen(hover) {
+        @include screen(laptop) {
           &:hover {
             color: $shice;
             border-color: $shice;
@@ -676,7 +676,7 @@
         bottom: 12px;
       }
     }
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         .header {
           &__icon {
@@ -715,7 +715,7 @@
       @include screen(laptop) {
         display: block;
       }
-      @include screen(hover) {
+      @include screen(laptop) {
         &:hover {
           background-color: $green-400;
           .header__item__text {

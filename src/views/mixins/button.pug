@@ -1,7 +1,14 @@
-mixin button(className, buttonType, title)
+mixin button(className, buttonType, title, icon, filterStep)
   if buttonType
-    button.button(type="" + buttonType class="" + className)
+    button.button(
+      type="" + buttonType
+      class="" + className
+      data-filter-step="" + filterStep
+    )
       .button__text= title
+      if icon
+        svg(viewBox="0 0 24 24" width="24px" height="24px")
+          use(xlink:href="" + icon)
   else
     a.button(href="#" class="" + className)
       .button__text= title

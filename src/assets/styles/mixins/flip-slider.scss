@@ -28,7 +28,7 @@
       border-radius: 0;
       margin-top: 22px;
       transform: translateX(0);
-      @include screen(hover) {
+      @include screen(laptop) {
         &:hover {
           background-color: transparent;
           .button__text {
@@ -201,7 +201,7 @@
         opacity: 1;
       }
     }
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover:not(.is-active) {
         color: $green-200;
       }

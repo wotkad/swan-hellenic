@@ -37,10 +37,9 @@
   &__content {
     display: flex;
     align-items: center;
+    height: 100vh;
     justify-content: center;
-    padding-top: 323px;
     @include screen(laptop) {
-      height: 100vh;
       padding-top: 0;
       position: absolute;
       width: 100%;

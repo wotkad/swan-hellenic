@@ -15,7 +15,7 @@
       color $transition-default,
       border-color $transition-default;
     border-bottom: 1px solid $green-200;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         color: $fathom;
         border-color: $fathom;

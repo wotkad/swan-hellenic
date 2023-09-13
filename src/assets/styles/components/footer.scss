@@ -151,7 +151,7 @@
         margin-bottom: 0;
       }
     }
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         color: $shice;
       }
@@ -203,7 +203,7 @@
       color: $white;
       transition: color $transition-default;
       @include sans-xs;
-      @include screen(hover) {
+      @include screen(laptop) {
         &:hover {
           color: $shice;
         }
@@ -224,7 +224,7 @@
       a {
         color: $white;
         transition: color $transition-default;
-        @include screen(hover) {
+        @include screen(laptop) {
           &:hover {
             color: $shice;
           }

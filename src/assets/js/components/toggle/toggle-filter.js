@@ -9,7 +9,7 @@ function toggleFilter() {
   items.on('click', function() {
     let text = $(this).text();
     $(this).parent().prev().find('.hero-filter__input input').val(text);
-    $(this).parent().prev().find('.hero-filter__input span').text(text);
+    $(this).parent().prev().find('.hero-filter__input span').text(text).addClass('selected');
     container.removeClass('active');
     button.removeClass('active');
   });
@@ -79,3 +79,19 @@ function filterCalendar() {
   }
 }
 filterCalendar();
+
+function toggleFilterMob() {
+  let button = $('.button');
+  let container = $('.hero-filter__label');
+  for (let i = 0; i < Array.from(button).length; i++) {
+    $(button[i]).on('click', function (e) {
+      if ($(this).attr('data-filter-step') !== 'success') {
+        let id = button[i].getAttribute('data-filter-step');
+        let block = $('.hero-filter__label[data-filter-step="' + id + '"]');
+        container.removeClass('active');
+        $(block).attr('data-filter-step', $(this).attr('data-filter-step')).addClass('active');
+      }
+    });
+  }
+}
+toggleFilterMob();

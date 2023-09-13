@@ -11,7 +11,7 @@
     background-color: transparent;
     border-color: $white;
     color: $white;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $white;
         color: $fathom;
@@ -22,7 +22,7 @@
     background-color: $fathom;
     border: 1px solid transparent;
     color: $white;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: transparent;
         border-color: $fathom;
@@ -34,7 +34,7 @@
     background-color: transparent;
     border-color: $fathom;
     color: $fathom;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $fathom;
         color: $white;
@@ -45,7 +45,7 @@
     background-color: $untold-400;
     border: 1px solid transparent;
     color: $white;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: transparent;
         border-color: $untold-400;
@@ -57,7 +57,7 @@
     background-color: transparent;
     border: 1px solid $untold-400;
     color: $untold-400;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $untold-400;
         border-color: $untold-400;

@@ -14,7 +14,7 @@
       }
     }
   }
-  @include screen(hover) {
+  @include screen(laptop) {
     &:hover {
       .article__image {
         img {

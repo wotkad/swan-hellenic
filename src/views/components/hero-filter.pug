@@ -1,8 +1,10 @@
 include ../mixins/button
 .hero-filter
   .wrapper
-    .hero-filter__wrapper
-      .hero-filter__label.hero-filter__label-destination
+    form.hero-filter__wrapper(action="#")
+      .hero-filter__label.hero-filter__label-destination.active(
+        data-filter-step="destination"
+      )
         .hero-filter__container(data-filter="destination")
           .hero-filter__input
             input(type="text" name="destination")
@@ -30,7 +32,11 @@ include ../mixins/button
           .hero-filter__item Ocean Voyages
           .hero-filter__item Pacific Islands
           .hero-filter__item South America
-      .hero-filter__label.hero-filter__label-calendar
+        +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'calendar')
+      .hero-filter__label.hero-filter__label-calendar(
+        data-filter-step="calendar"
+      )
+        +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'destination')
         .hero-filter__container
           .hero-filter__input
             svg.hero-filter__icon(
@@ -50,7 +56,9 @@ include ../mixins/button
             height="16px"
           )
             use(xlink:href="#svg-arrow-down-small")
-      .hero-filter__label.hero-filter__label-ship
+        +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'ship')
+      .hero-filter__label.hero-filter__label-ship(data-filter-step="ship")
+        +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'calendar')
         .hero-filter__container(data-filter="ship")
           .hero-filter__input
             input(type="text" name="ship")
@@ -71,4 +79,5 @@ include ../mixins/button
           .hero-filter__item SH Minerva
           .hero-filter__item SH Vega
           .hero-filter__item SH Diana
-      +button('button-brown button-no-center hero-filter__button', 'submit', 'search cruises')
+        +button('button-brown button-no-center hero-filter__search', 'submit', '', '#svg-search', 'success')
+      +button('button-brown button-no-center hero-filter__submit', 'submit', 'search cruises', '#svg-arrow-right', '')

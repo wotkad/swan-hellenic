@@ -11,7 +11,7 @@
     color: $white;
     transition: background-color $transition-default;
     @include sans-base-medium;
-    @include screen(hover) {
+    @include screen(laptop) {
       &:hover {
         background-color: $untold-100;
       }
