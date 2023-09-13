@@ -40,6 +40,7 @@
       position: absolute;
       opacity: 0;
       &#datepicker {
+        color: $text;
         height: auto;
         cursor: pointer;
         opacity: 1;
@@ -103,14 +104,58 @@
       z-index: 3;
     }
   }
+  &__submit {
+    padding: 10px;
+    left: auto;
+    transform: translateX(0);
+    position: absolute;
+    right: 8px;
+    display: none;
+    @include screen(laptop) {
+      display: block;
+      position: static;
+      flex: 1;
+      padding: 17px;
+      width: 100%;
+    }
+    .button__text {
+      display: none;
+      @include screen(laptop) {
+        display: block;
+      }
+    }
+    svg {
+      stroke: $white;
+      @include screen(laptop) {
+        display: none;
+      }
+    }
+  }
   &__item {
     transition: background-color $transition-default;
     padding: 6px 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     @include sans-sm;
     @include screen(laptop) {
       &:hover {
         background-color: $white-300;
+      }
+    }
+    svg {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      right: 20px;
+      transition:
+        opacity $transition-default,
+        visibility $transition-default;
+    }
+    &.active {
+      svg {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -210,32 +255,5 @@
   &__next,
   &__search {
     right: 8px;
-  }
-  &__submit {
-    padding: 10px;
-    left: auto;
-    transform: translateX(0);
-    position: absolute;
-    right: 8px;
-    display: none;
-    @include screen(laptop) {
-      display: block;
-      position: static;
-      flex: 1;
-      padding: 17px;
-      width: 100%;
-    }
-    .button__text {
-      display: none;
-      @include screen(laptop) {
-        display: block;
-      }
-    }
-    svg {
-      stroke: $white;
-      @include screen(laptop) {
-        display: none;
-      }
-    }
   }
 }

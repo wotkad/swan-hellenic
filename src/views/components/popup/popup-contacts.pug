@@ -1,0 +1,19 @@
+.popup.popup-contacts(data-popup="contacts")
+  .popup__bg
+  .popup__wrapper
+    .popup__close
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="36px" height="36px")
+          use(xlink:href="#svg-arrow-right")
+    .popup__container
+      .popup__heading
+        h2.popup__title Contact Us
+        p.popup__description Whatever you need, we are here to satisfy your curious expedition mind whilst giving you the best experience possible. Simply complete the form below and one of our expedition specialists will come back to you shortly.
+      form.popup__form(action="#")
+        .popup__labels
+          label.popup__label
+            input(type="radio" name="contact_type" value="phone")
+            span Phone
+          label.popup__label
+            input(type="radio" name="contact_type" value="email")
+            span E-mail

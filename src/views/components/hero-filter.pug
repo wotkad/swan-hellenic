@@ -22,16 +22,46 @@ include ../mixins/button
           )
             use(xlink:href="#svg-arrow-down-small")
         .hero-filter__list(data-filter="destination")
-          .hero-filter__item Africa
-          .hero-filter__item Antarctica
-          .hero-filter__item Artic
-          .hero-filter__item Australia & NZ
-          .hero-filter__item Europe
-          .hero-filter__item Japan
-          .hero-filter__item Mediterranean
-          .hero-filter__item Ocean Voyages
-          .hero-filter__item Pacific Islands
-          .hero-filter__item South America
+          .hero-filter__item
+            span Africa
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Antarctica
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Artic
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Australia & NZ
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Europe
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Japan
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Mediterranean
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Ocean Voyages
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span Pacific Islands
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span South America
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
         +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'calendar')
       .hero-filter__label.hero-filter__label-calendar(
         data-filter-step="calendar"
@@ -76,8 +106,17 @@ include ../mixins/button
           )
             use(xlink:href="#svg-arrow-down-small")
         .hero-filter__list(data-filter="ship")
-          .hero-filter__item SH Minerva
-          .hero-filter__item SH Vega
-          .hero-filter__item SH Diana
+          .hero-filter__item
+            span SH Minerva
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span SH Vega
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .hero-filter__item
+            span SH Diana
+            svg(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
         +button('button-brown button-no-center hero-filter__search', 'submit', '', '#svg-search', 'success')
       +button('button-brown button-no-center hero-filter__submit', 'submit', 'search cruises', '#svg-arrow-right', '')

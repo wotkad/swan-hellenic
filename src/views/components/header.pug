@@ -35,7 +35,10 @@ header.header
               height="24px"
             )
               use(xlink:href="#svg-search")
-        button.header__item.header__item-contact(type="button")
+        button.header__item.header__item-contact.popup-trigger(
+          type="button"
+          data-popup-button="contacts"
+        )
           span.header__item__text Contact us
         .header__lang
           button.header__toggle(type="button")

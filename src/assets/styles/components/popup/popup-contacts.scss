@@ -1,0 +1,70 @@
+.popup-contacts {
+  .popup {
+    &__container {
+      gap: 24px;
+      @include screen(tablet) {
+        gap: 42px;
+        max-width: 80%;
+      }
+      @include screen(laptop) {
+        max-width: 50%;
+      }
+    }
+    &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__title {
+      color: $fathom;
+      font-family: "Chap-Medium";
+      @include chap-base;
+      @include screen(tablet) {
+        @include chap-lg;
+      }
+    }
+    &__description {
+      @include sans-md;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+    &__labels {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+    }
+    &__label {
+      position: relative;
+      width: 100%;
+      max-width: 223px;
+      input {
+        width: 0;
+        height: 0;
+        position: absolute;
+        opacity: 0;
+        &:checked {
+          & + span {
+            color: $white;
+            background-color: $fathom;
+          }
+        }
+      }
+      span {
+        color: $fathom;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        transition:
+          color $transition-default,
+          background-color $transition-default;
+        padding: 8px;
+        border-radius: 100px;
+        background-color: rgba($shice, 0.3);
+        @include sans-xl-base;
+      }
+    }
+  }
+}

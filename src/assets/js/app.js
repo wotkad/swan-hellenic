@@ -22,7 +22,7 @@ import "./components/toggle/toggle-mob-menu";
 import "./components/toggle/toggle-mob-menu-items";
 import "./components/toggle/toggle-mob-menu-year";
 import "./components/toggle/toggle-sidebar-items";
-import "./components/toggle/toggle-popup-map";
+import "./components/toggle/toggle-popup";
 import "./components/toggle/toggle-sidebar-cruises";
 import "./components/toggle/toggle-filter";
 

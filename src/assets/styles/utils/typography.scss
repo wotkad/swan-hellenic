@@ -78,6 +78,13 @@
   letter-spacing: -0.2px;
 }
 
+@mixin sans-xl-base {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
 @mixin sans-xl-medium {
   font-size: 24px;
   line-height: 32px;

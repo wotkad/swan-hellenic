@@ -3,10 +3,7 @@
     &__heading {
       display: flex;
       flex-direction: column;
-      gap: 28px;
-      @include screen(tablet) {
-        gap: 24px;
-      }
+      gap: 24px;
     }
     &__subtitle {
       text-transform: uppercase;

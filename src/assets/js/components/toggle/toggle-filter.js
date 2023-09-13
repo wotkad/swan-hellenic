@@ -8,6 +8,8 @@ function toggleFilter() {
   let items = $('.hero-filter__item');
   items.on('click', function() {
     let text = $(this).text();
+    items.removeClass('active');
+    $(this).addClass('active');
     $(this).parent().prev().find('.hero-filter__input input').val(text);
     $(this).parent().prev().find('.hero-filter__input span').text(text).addClass('selected');
     container.removeClass('active');
