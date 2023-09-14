@@ -46,6 +46,13 @@
   overflow: hidden;
 }
 
+@mixin line-clamp-7 {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin line-clamp-8 {
   display: -webkit-box;
   -webkit-line-clamp: 8;

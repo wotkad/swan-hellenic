@@ -4,10 +4,57 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    @include screen(laptop) {
+    gap: 24px;
+    @include screen(tablet) {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 106px;
+    }
+  }
+  &-unreversed {
+    .partner-block__image {
+      order: 1;
+    }
+  }
+  &-reversed {
+    .partner-block__image {
+      @include screen(tablet) {
+        order: 1;
+      }
+      @include screen(laptop) {
+        order: -1;
+        left: 0;
+        right: auto;
+      }
+    }
+    .partner-block__content {
+      @include screen(laptop) {
+        grid-column-start: 2;
+      }
+    }
+  }
+  &__subtitle {
+    color: $green-200;
+    margin-bottom: 36px;
+    text-transform: uppercase;
+    @include sans-base-medium;
+  }
+  &__title {
+    color: $fathom;
+    text-transform: uppercase;
+    font-family: "Chap-Medium";
+    @include chap-sm;
+  }
+  &__text {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: $text;
+    @include line-clamp-12;
+    @include sans-base;
+    @include screen(laptop) {
+      margin-top: 48px;
+      margin-bottom: 48px;
+      @include sans-lg-medium;
     }
   }
   &__image {
@@ -30,7 +77,6 @@
     }
   }
   &__content {
-    padding-top: 24px;
     @include screen(laptop) {
       max-width: 535px;
       padding: 65px 0;

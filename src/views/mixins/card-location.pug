@@ -3,16 +3,17 @@ mixin card-location(src, alt, location, date, description)
     .card-location__image
       img(src="" + src alt="" + alt loading="lazy")
     .card-location__content
-      .card-location__header
-        .card-location__data
-          svg(viewBox="0 0 24 24" width="24" height="24")
-            use(xlink:href="#svg-location")
-          span= location
-        .card-location__data
-          svg(viewBox="0 0 25 25" width="24px" height="24px")
-            use(xlink:href="#svg-calendar")
-          span= date
-      .card-location__description !{ description }
+      .card-location__top
+        .card-location__header
+          .card-location__data
+            svg(width="24" height="24" viewBox="0 0 24 24")
+              use(xlink:href="#svg-location")
+            span= location
+          .card-location__data
+            svg(viewBox="0 0 25 25" width="24px" height="24px")
+              use(xlink:href="#svg-calendar") 
+            span= date
+        .card-location__description !{description}
       .card-location__buttons
         button.card-location__button VIEW SHORE EXCURSIONS
         button.card-location__button VIEW EXPEDITION ACTIVITES
