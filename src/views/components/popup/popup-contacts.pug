@@ -14,48 +14,81 @@ include ../../mixins/button
       form.popup__form(action="#")
         .popup__labels
           label.popup__label
-            input(type="radio" name="contact_type" value="phone" checked)
+            input(type="radio" checked name="contact_type" value="phone")
             span Phone
           label.popup__label
             input(type="radio" name="contact_type" value="email")
             span E-mail
         .popup__inputs
           .popup__input
-            input(type="text" name="name" required placeholder="First Name *")
+            input(type="text" placeholder="First Name *" name="name" required)
           .popup__input
-            input(type="text" name="submenu" required placeholder="Last Name *")
+            input(
+              type="text"
+              placeholder="Last Name *"
+              name="submenu"
+              required
+            )
           .popup__input
             .popup__dropdown
-              button(type="button").popup__dropdown__current
-                svg.popup__dropdown__flag(viewBox="0 0 28 20" width="24px" height="24px")
+              button.popup__dropdown__current(type="button")
+                svg.popup__dropdown__flag(
+                  viewBox="0 0 28 20"
+                  width="24px"
+                  height="24px"
+                )
                   use(xlink:href="#svg-flag-ru")
-                svg.popup__arrow(viewBox="0 0 16 16" width="16px" height="16px")
+                svg.popup__arrow(
+                  viewBox="0 0 16 16"
+                  width="16px"
+                  height="16px"
+                )
                   use(xlink:href="#svg-arrow-down-small")
               .popup__dropdown__list
-                button(type="button").popup__dropdown__country 
-                  svg.popup__dropdown__flag(viewBox="0 0 28 20" width="24px" height="24px")
+                button.popup__dropdown__country(type="button")
+                  svg.popup__dropdown__flag(
+                    viewBox="0 0 28 20"
+                    width="24px"
+                    height="24px"
+                  )
                     use(xlink:href="#svg-flag-ru")
                   span +7
-                button(type="button").popup__dropdown__country 
-                  svg.popup__dropdown__flag(viewBox="0 0 28 20" width="24px" height="24px")
+                button.popup__dropdown__country(type="button")
+                  svg.popup__dropdown__flag(
+                    viewBox="0 0 28 20"
+                    width="24px"
+                    height="24px"
+                  )
                     use(xlink:href="#svg-flag-ge")
                   span +995
-                button(type="button").popup__dropdown__country 
-                  svg.popup__dropdown__flag(viewBox="0 0 28 20" width="24px" height="24px")
+                button.popup__dropdown__country(type="button")
+                  svg.popup__dropdown__flag(
+                    viewBox="0 0 28 20"
+                    width="24px"
+                    height="24px"
+                  )
                     use(xlink:href="#svg-flag-ru")
                   span +7
-                button(type="button").popup__dropdown__country 
-                  svg.popup__dropdown__flag(viewBox="0 0 28 20" width="24px" height="24px")
+                button.popup__dropdown__country(type="button")
+                  svg.popup__dropdown__flag(
+                    viewBox="0 0 28 20"
+                    width="24px"
+                    height="24px"
+                  )
                     use(xlink:href="#svg-flag-ge")
                   span +995
-                button(type="button").popup__dropdown__country 
-                  svg.popup__dropdown__flag(viewBox="0 0 28 20" width="24px" height="24px")
+                button.popup__dropdown__country(type="button")
+                  svg.popup__dropdown__flag(
+                    viewBox="0 0 28 20"
+                    width="24px"
+                    height="24px"
+                  )
                     use(xlink:href="#svg-flag-ru")
                   span +7
-            input(type="tel" name="phone" required placeholder="+7")
+            input(type="tel" placeholder="+7" name="phone" required)
           .popup__input.popup__input-full
-            textarea(name="message" placeholder="Your message")
+            textarea(placeholder="Your message" name="message")
           .popup__button
             +button('button-green', 'submit', 'Submit')
-          .popup__policy 
+          .popup__policy
             span Fields with an asterisk (*) are required. By clicking “SUBMIT”, you are agreeing to our <a href="#">privacy policy</a>

@@ -18,7 +18,7 @@ block content
     include ../mixins/headline
     include ../mixins/default-slider
     include ../mixins/card-suite
-    +hero()
+    +hero
     section.section.section-white.gapper-small-mob
       .section__wrapper
         +partner-block('partner-block-unreversed', false, false, 'YOUR TRIP', 'JRE', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-1.png', 'item-1')
@@ -37,9 +37,7 @@ block content
         .section__wrapper
           include ../components/about-ship
     section.section.section-white
-      .gapper-small.card-suite-slider(
-      data-slider="card-suite-slider")
+      .gapper-small.card-suite-slider(data-slider="card-suite-slider")
         .wrapper
           +headline('YOUR SUITE TYPE', 'CHOOSE', 'headline-note')
           +card-suite('0')
-          
