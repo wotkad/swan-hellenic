@@ -1,0 +1,19 @@
+include ../mixins/button
+include ../mixins/headline
+include ../mixins/card-suite
+section.section.section-white.gapper-small
+  .wrapper
+    +headline('YOUR SUITE TYPE', 'CHOOSE', 'headline-note')
+    .suites
+      .suites__wrapper
+        .suites__nav
+          .suites__title Number of Guests:
+          .suites__buttons
+            +button('suites__button button-green-transparent active', 'button', '1')
+            +button('suites__button button-green-transparent', 'button', '2')
+        .grid.grid-two.suites__container.active(data-id="1")
+          +card-suite('0')
+          +card-suite('1')
+        .grid.grid-two.suites__container(data-id="2")
+          +card-suite('2')
+          +card-suite('3')

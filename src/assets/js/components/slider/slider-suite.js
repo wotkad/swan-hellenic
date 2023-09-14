@@ -1,37 +1,21 @@
 import Splide from '@splidejs/splide';
 
-function sliderDefault() {
-  if ($('.card-suite-slider').length !== 0) {
-    const sliderContainers = document.querySelectorAll('.card-suite-slider');
+function sliderSuite() {
+  if ($('.card-suite__wrapper').length !== 0) {
+    const sliderContainers = document.querySelectorAll('.card-suite__wrapper');
     let i = 0;
     sliderContainers.forEach((container, index) => {
 
       const mainSelector = `.${container.getAttribute('data-slider')}${i}__track`;
 
       let main = new Splide(mainSelector, {
-        mediaQuery: 'min',
-        lazyLoad: 'nearby',
         gap: 20,
         drag: true,
+        speed: 800,
         pagination: false,
         arrows: false,
         perPage: 1,
-        padding: { right: 100 },
-        speed: 800,
-        perMove: 1,
-        breakpoints: {
-          1240: {
-            gap: 40,
-            perPage: 3,
-            padding: { right: 0 },
-            arrows: true,
-          },
-          768: {
-            gap: 40,
-            perPage: 2,
-            padding: { right: 120 },
-          },
-        }
+        lazyLoad: 'nearby',
       });
 
       main.mount();
@@ -41,8 +25,8 @@ function sliderDefault() {
   }
 
 }
-sliderDefault();
+sliderSuite();
 
 $(window).on('resize', function() {
-  sliderDefault();
+  sliderSuite();
 });

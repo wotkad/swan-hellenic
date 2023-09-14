@@ -1,0 +1,39 @@
+.suites {
+  &__nav {
+    padding-top: 50px;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+  }
+  &__title {
+    text-transform: uppercase;
+    @include sans-base-medium;
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+  &__button {
+    transform: translateX(0);
+    left: 0;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.active {
+      background-color: $fathom;
+      color: $white;
+    }
+  }
+  &__container {
+    display: none;
+    row-gap: 68px;
+    column-gap: 40px;
+    padding-top: 50px;
+    &.active {
+      display: grid;
+    }
+  }
+}

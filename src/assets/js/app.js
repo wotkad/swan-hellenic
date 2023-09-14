@@ -32,6 +32,7 @@ import "./components/slider/slider-flip";
 import "./components/slider/slider-icons";
 import "./components/slider/slider-hero";
 import "./components/slider/slider-default";
+import "./components/slider/slider-suite";
 
 import "./components/hover/hover-menu";
 
