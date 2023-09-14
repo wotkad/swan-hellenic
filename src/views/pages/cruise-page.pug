@@ -37,7 +37,8 @@ block content
         .section__wrapper
           include ../components/about-ship
     section.section.section-white
-      .gapper-small
+      .gapper-small.card-suite-slider(
+      data-slider="card-suite-slider")
         .wrapper
           +headline('YOUR SUITE TYPE', 'CHOOSE', 'headline-note')
           +card-suite('0')

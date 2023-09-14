@@ -1,8 +1,8 @@
 import Splide from '@splidejs/splide';
 
 function sliderDefault() {
-  if ($('.card-suite__slider').length !== 0) {
-    const sliderContainers = document.querySelectorAll('.card-suite__slider');
+  if ($('.card-suite-slider').length !== 0) {
+    const sliderContainers = document.querySelectorAll('.card-suite-slider');
     let i = 0;
     sliderContainers.forEach((container, index) => {
 
