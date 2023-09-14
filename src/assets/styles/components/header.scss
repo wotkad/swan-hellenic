@@ -757,7 +757,7 @@
       align-items: center;
       @include screen(laptop) {
         top: 22px;
-        transform: translateX(calc(-50% + 12px));
+        transform: translateX(calc(-50% + 16px));
         width: calc(50% + 44px);
         left: 50%;
         z-index: -1;

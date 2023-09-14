@@ -1,5 +1,3 @@
-import { enablePageScroll } from "scroll-lock";
-
 function toggleLang() {
   let button = $('.header__toggle');
   let menu = $('.header__languages');
@@ -20,7 +18,6 @@ function toggleLang() {
       $(".header__burger").removeClass('active')
       $(".mob-menu").removeClass('active');
       $('.mob-menu__block').removeClass('active');
-      enablePageScroll();
     });
   }
   $(document).mouseup(function(e) {
