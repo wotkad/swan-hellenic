@@ -81,4 +81,9 @@
       }
     }
   }
+  &-big {
+    .partner-block__title {
+      @include chap-2lg;
+    }
+  }
 }
