@@ -371,7 +371,7 @@
       &__image {
         overflow: hidden;
         img {
-          transition: transform $transition-default;
+          transition: transform $transition-slow;
         }
       }
       @include screen(laptop) {

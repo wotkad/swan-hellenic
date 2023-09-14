@@ -7,7 +7,7 @@
       width: 100%;
       object-fit: cover;
       max-height: 410px;
-      transition: transform $transition-default;
+      transition: transform $transition-slow;
       @include screen(tablet) {
         max-height: 100%;
         min-height: 476px;
