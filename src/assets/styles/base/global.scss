@@ -17,6 +17,14 @@ body {
   color: $text;
 }
 
+input {
+  transition: border-color $transition-default;
+}
+
+input.error {
+  border-color: $red-400;
+}
+
 h1,
 h2,
 h3,

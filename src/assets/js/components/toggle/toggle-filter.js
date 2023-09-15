@@ -19,9 +19,18 @@ function toggleFilter() {
     $(button[i]).on('click', function () {
       let id = button[i].getAttribute('data-filter');
       let block = $('.hero-filter__list[data-filter="' + id + '"]');
-      $('.easepick-wrapper').toggleClass('active');
       $(block).attr('data-filter', $(this).attr('data-filter')).toggleClass('active');
       $(this).toggleClass('active');
+
+      button.not(this).removeClass('active');
+      container.not($(block).attr('data-filter', $(this).attr('data-filter'))).removeClass('active');
+
+      if ($(button[i]).hasClass('hero-filter__container-calendar')) {
+        $('.easepick-wrapper').toggleClass('active');
+      } else {
+        $('.easepick-wrapper').removeClass('active');
+        $('.hero-filter__container-calendar').removeClass('active');
+      }
 
       function isElementOutOfViewport($el) {
         const rect = $el[0].getBoundingClientRect();
@@ -37,15 +46,21 @@ function toggleFilter() {
     });
   }
   $(document).mouseup(function(e) {
-    if (!container.is(e.target) && !button.is(e.target) && !$('#datepicker').is(e.target)) {
+    if (
+        !container.is(e.target) &&
+        !button.is(e.target) &&
+        !$('#datepicker').is(e.target)
+      ) {
       container.removeClass('active');
       button.removeClass('active');
+      $('.easepick-wrapper').removeClass('active');
     }
   });
   document.addEventListener('keydown', function(e) {
     if (e.key == 'Escape') {
       container.removeClass('active');
       button.removeClass('active');
+      $('.easepick-wrapper').removeClass('active');
     }
   });
 }
@@ -102,6 +117,7 @@ function toggleFilterMob() {
         let id = button[i].getAttribute('data-filter-step');
         let block = $('.hero-filter__label[data-filter-step="' + id + '"]');
         container.removeClass('active');
+        $('.easepick-wrapper').removeClass('active');
         $(block).attr('data-filter-step', $(this).attr('data-filter-step')).addClass('active');
       }
     });

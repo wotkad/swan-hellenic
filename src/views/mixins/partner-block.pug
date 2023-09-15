@@ -9,8 +9,8 @@ mixin partner-block(className, buttonGreen, buttonWhite, subtitle, title, text, 
           h3.partner-block__title= title
           .partner-block__text !{ text }
           if buttonGreen
-            +button('button-no-center button-green partner-block__button', '', 'Learn more')
+            +button('button-no-center button-green partner-block__button', '', 'Learn more', '', '')
           if buttonWhite
-            +button('button-no-center button-green-transparent partner-block__button', '', 'Explore more')
+            +button('button-no-center button-green-transparent partner-block__button', '', 'Explore more', '', '')
         .partner-block__image
           img(src="" + src alt="" + alt loading="lazy")

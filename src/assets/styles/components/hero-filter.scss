@@ -62,6 +62,7 @@
       }
     }
     span {
+      user-select: none;
       &.selected {
         color: $text;
       }
