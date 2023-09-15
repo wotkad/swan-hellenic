@@ -67,7 +67,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    max-height: calc(100% - 42px);
+    max-height: calc(100vh - 316px);
     overflow-y: auto;
     &::-webkit-scrollbar {
       width: 0;

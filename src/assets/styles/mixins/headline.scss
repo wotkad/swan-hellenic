@@ -28,6 +28,9 @@
   }
   &-centered {
     align-items: center;
+    .headline__title {
+      text-align: center;
+    }
     .headline__description {
       text-align: center;
       @include screen(laptop) {

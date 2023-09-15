@@ -59,6 +59,12 @@
       padding: 65px 0;
     }
   }
+  &__button {
+    width: 100%;
+    @include screen(tablet) {
+      width: auto;
+    }
+  }
   &-unreversed {
     .partner-block__image {
       order: 1;
@@ -83,7 +89,10 @@
   }
   &-big {
     .partner-block__title {
-      @include chap-2lg;
+      @include chap-base;
+      @include screen(tablet) {
+        @include chap-2lg;
+      }
     }
   }
 }

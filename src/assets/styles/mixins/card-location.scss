@@ -79,6 +79,9 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    svg {
+      margin-top: -2px;
+    }
     span {
       text-transform: uppercase;
       color: $green-200;

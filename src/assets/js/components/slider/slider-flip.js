@@ -14,11 +14,12 @@ function sliderFlip() {
         pagination: false,
         mediaQuery: 'min',
         lazyLoad: 'nearby',
-        drag: false,
+        drag: true,
         gap: 20,
         speed: 800,
         breakpoints: {
           1240: {
+            drag: false,
             gap: 40
           },
         }

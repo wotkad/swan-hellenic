@@ -7,6 +7,7 @@ textarea,
 input,
 button {
   font-family: "DM Sans", "Open Sans", sans-serif;
+  touch-action: manipulation;
 }
 
 html,
@@ -142,10 +143,12 @@ svg {
   &-white {
     background-color: $white;
   }
-}
-
-.header-not-green {
-  padding-top: 154px;
+  &-not-green {
+    padding-top: 69px;
+    @include screen(laptop) {
+      padding-top: 154px;
+    }
+  }
 }
 
 .wrapper {

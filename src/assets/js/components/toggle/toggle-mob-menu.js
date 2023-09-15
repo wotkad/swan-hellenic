@@ -1,4 +1,4 @@
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { disablePageScroll, enablePageScroll, clearQueueScrollLocks } from "scroll-lock";
 
 export default function toggleMobMenu() {
   let button = $(".header__burger");
@@ -10,6 +10,7 @@ export default function toggleMobMenu() {
       menu.removeClass('active');
       $('.mob-menu__block').removeClass('active');
       $('.mob-menu__year').removeClass('active');
+      clearQueueScrollLocks();
       enablePageScroll();
     } else {
       $(this).addClass('active');

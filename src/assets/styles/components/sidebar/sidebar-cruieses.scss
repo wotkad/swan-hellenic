@@ -4,7 +4,7 @@
     position: fixed;
     width: 100%;
     transform: translateY(100%);
-    min-height: 90vh;
+    height: 90vh;
     opacity: 0;
     bottom: 0;
     z-index: 1000;
@@ -14,7 +14,7 @@
     @include screen(laptop) {
       opacity: 1;
       left: auto;
-      min-height: auto;
+      height: auto;
       z-index: auto;
       transform: translateY(0);
       border-radius: 0;
@@ -250,13 +250,11 @@
         justify-content: center;
         background-color: rgba(146, 199, 208, 0.5);
         border-radius: 50%;
-        @include screen(laptop) {
-          &:hover {
-            .sidebar__tip {
-              opacity: 1;
-              z-index: 2;
-              visibility: visible;
-            }
+        &:hover {
+          .sidebar__tip {
+            opacity: 1;
+            z-index: 2;
+            visibility: visible;
           }
         }
         svg {

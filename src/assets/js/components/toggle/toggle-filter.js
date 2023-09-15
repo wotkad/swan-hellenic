@@ -83,7 +83,7 @@ function filterCalendar() {
 filterCalendar();
 
 function toggleFilterMob() {
-  let button = $('.button');
+  let button = $('.hero-filter__next, .hero-filter__prev');
   let container = $('.hero-filter__label');
   for (let i = 0; i < Array.from(button).length; i++) {
     $(button[i]).on('click', function (e) {

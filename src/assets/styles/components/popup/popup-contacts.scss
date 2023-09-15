@@ -1,9 +1,12 @@
 .popup-contacts {
   .popup {
     &__container {
-      padding: 60px 60px 32px;
+      max-height: calc(100vh - 16px);
       gap: 24px;
+      padding: 32px 16px 16px;
       @include screen(tablet) {
+        max-height: 100vh;
+        padding: 50px 60px 32px;
         gap: 32px;
         max-width: 80%;
       }
@@ -18,14 +21,16 @@
     }
     &__title {
       color: $fathom;
-      font-family: "Chap-Medium";
       @include chap-base;
       @include screen(tablet) {
-        @include chap-lg;
+        @include chap-xl;
       }
     }
     &__description {
-      @include sans-md;
+      @include sans-sm;
+      @include screen(tablet) {
+        @include sans-md;
+      }
     }
     &__form {
       display: flex;
@@ -105,9 +110,13 @@
     &__inputs {
       margin-top: 22px;
       display: grid;
-      row-gap: 28px;
+      row-gap: 24px;
       column-gap: 48px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      @include screen(tablet) {
+        ow-gap: 28px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
     &__input {
       display: flex;
@@ -115,7 +124,10 @@
       grid-column: span 1 / span 1;
       border-bottom: 1px solid $green-200;
       &-full {
-        grid-column: span 2 / span 2;
+        grid-column: span 1 / span 1;
+        @include screen(tablet) {
+          grid-column: span 2 / span 2;
+        }
         textarea {
           width: 100%;
           resize: none;
@@ -127,9 +139,12 @@
       }
     }
     &__policy {
-      grid-column: span 2 / span 2;
+      grid-column: span 1 / span 1;
       color: $green-200;
       @include sans-sm-medium;
+      @include screen(tablet) {
+        grid-column: span 2 / span 2;
+      }
       a {
         color: $fathom;
         border-bottom: 1px solid transparent;
@@ -147,7 +162,9 @@
     &__label {
       position: relative;
       width: 100%;
-      max-width: 223px;
+      @include screen(tablet) {
+        max-width: 223px;
+      }
       input {
         width: 0;
         height: 0;
@@ -172,7 +189,10 @@
         padding: 8px;
         border-radius: 100px;
         background-color: rgba($shice, 0.3);
-        @include sans-xl-base;
+        @include sans-md;
+        @include screen(tablet) {
+          @include sans-xl-base;
+        }
       }
     }
     &__button {

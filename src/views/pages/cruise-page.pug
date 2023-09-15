@@ -17,11 +17,13 @@ block content
     include ../mixins/partner-block
     include ../mixins/headline
     include ../mixins/default-slider
-    +hero()
+    +hero
     section.section.section-white.gapper-small-mob
       .section__wrapper
         +partner-block('partner-block-unreversed', false, false, 'YOUR TRIP', 'JRE', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-1.png', 'item-1')
-    section.gapper.section.section-white.default-slider(data-slider="default-slider")
+    section.gapper.section.section-white.default-slider(
+      data-slider="default-slider"
+    )
       .wrapper
         +headline('HIGHLIGHTS', 'YOUR TRIP', 'headline-note')
         +default-slider('0')
