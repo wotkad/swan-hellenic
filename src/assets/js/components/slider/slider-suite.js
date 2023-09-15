@@ -12,7 +12,6 @@ function sliderSuite() {
         gap: 20,
         drag: true,
         speed: 800,
-        pagination: false,
         arrows: false,
         perPage: 1,
         lazyLoad: 'nearby',
@@ -26,7 +25,3 @@ function sliderSuite() {
 
 }
 sliderSuite();
-
-$(window).on('resize', function() {
-  sliderSuite();
-});

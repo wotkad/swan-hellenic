@@ -46,6 +46,14 @@
       }
     }
   }
+  &-xl {
+    .headline__title {
+      @include chap-sm;
+      @include screen(laptop) {
+        @include chap-2lg;
+      }
+    }
+  }
   &-note {
     gap: 24px;
     flex-direction: column-reverse;
