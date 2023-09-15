@@ -105,6 +105,9 @@
     &-bottom {
       top: auto;
       bottom: 62px;
+      @include screen(laptop) {
+        bottom: auto;
+      }
     }
     @include screen(laptop) {
       top: 72px;

@@ -16,11 +16,9 @@ function toggleFilter() {
     button.removeClass('active');
   });
   for (let i = 0; i < Array.from(button).length; i++) {
-    $(button[i]).on('click', function (e) {
+    $(button[i]).on('click', function () {
       let id = button[i].getAttribute('data-filter');
       let block = $('.hero-filter__list[data-filter="' + id + '"]');
-      // container.removeClass('active');
-      // button.removeClass('active');
       $('.easepick-wrapper').toggleClass('active');
       $(block).attr('data-filter', $(this).attr('data-filter')).toggleClass('active');
       $(this).toggleClass('active');
