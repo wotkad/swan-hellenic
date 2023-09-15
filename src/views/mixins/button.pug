@@ -4,6 +4,7 @@ mixin button(className, buttonType, title, icon, filterStep)
       type="" + buttonType
       class="" + className
       data-filter-step="" + filterStep
+      aria-label=""+title || 'button'
     )
       .button__text= title
       if icon
