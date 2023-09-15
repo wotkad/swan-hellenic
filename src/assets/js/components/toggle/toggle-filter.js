@@ -19,14 +19,27 @@ function toggleFilter() {
     $(button[i]).on('click', function (e) {
       let id = button[i].getAttribute('data-filter');
       let block = $('.hero-filter__list[data-filter="' + id + '"]');
-      container.removeClass('active');
-      button.removeClass('active');
-      $(block).attr('data-filter', $(this).attr('data-filter')).addClass('active');
-      $(this).addClass('active');
+      // container.removeClass('active');
+      // button.removeClass('active');
+      $('.easepick-wrapper').toggleClass('active');
+      $(block).attr('data-filter', $(this).attr('data-filter')).toggleClass('active');
+      $(this).toggleClass('active');
+
+      function isElementOutOfViewport($el) {
+        const rect = $el[0].getBoundingClientRect();
+        const screenBottom = window.innerHeight;
+        return rect.bottom > screenBottom;
+      }
+
+      if (isElementOutOfViewport(container)) {
+        container.addClass('hero-filter__list-bottom');
+      } else {
+        container.removeClass('hero-filter__list-bottom');
+      }
     });
   }
   $(document).mouseup(function(e) {
-    if (!container.is(e.target) && !button.is(e.target)) {
+    if (!container.is(e.target) && !button.is(e.target) && !$('#datepicker').is(e.target)) {
       container.removeClass('active');
       button.removeClass('active');
     }
@@ -96,4 +109,6 @@ function toggleFilterMob() {
     });
   }
 }
-toggleFilterMob();
+if ($(window).width() < 1240) {
+  toggleFilterMob();
+}

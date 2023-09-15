@@ -34,6 +34,16 @@
     color: $white-450;
     position: relative;
     @include sans-base;
+    .easepick-wrapper {
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: -2;
+      }
+    }
     input {
       width: 0;
       height: 0;
@@ -92,6 +102,10 @@
       z-index $transition-default;
     overflow-y: auto;
     top: 62px;
+    &-bottom {
+      top: auto;
+      bottom: 62px;
+    }
     @include screen(laptop) {
       top: 72px;
     }
