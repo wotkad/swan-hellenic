@@ -108,4 +108,15 @@
       max-width: 60%;
     }
   }
+  &__check {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    transition:
+      opacity $transition-default,
+      z-index $transition-default,
+      visibility $transition-default;
+  }
 }

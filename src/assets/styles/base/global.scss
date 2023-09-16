@@ -19,10 +19,17 @@ body {
 
 input {
   transition: border-color $transition-default;
-}
-
-input.error {
-  border-color: $red-400;
+  &.error {
+    border-color: $red-400;
+  }
+  &.success {
+    border-color: $green-200;
+    & ~ .popup__check {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+  }
 }
 
 h1,
