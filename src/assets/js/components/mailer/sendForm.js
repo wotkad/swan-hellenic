@@ -1,25 +1,28 @@
 import sendMail from "./sendMail.js"
-import successMessage from "./successMessage.js";
-import errorMessage from "./errorMessage.js";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 function sendForm() {
 
+  let closeAlertPopup = $('.popup-alert__button');
+  let bg = $('.popup__overlay');
+  let popupAlert = $('.popup-alert')
+  closeAlertPopup.on('click', function() {
+    popupAlert.removeClass('active');
+    bg.removeClass('active');
+    enablePageScroll();
+  });
+
   function sendPopupForm() {
-    let form = $('.popup form');
-    if (form) {
-      form.on('submit', function(e) {
-        e.preventDefault();
-        sendMail(that).then(function() {
-          that.get(0).reset();
-          // if (form.hasClass('subscribe__form')) {
-          //   return successMessage('Бриф отправлен!');
-          // } else {
-          //   return successMessage('Заявка отправлена!');
-          // }
-        });
-        // errorMessage('Ошибка отправки!');
+    $('button[type="submit"]').closest('form').on('submit', function(e) {
+      disablePageScroll();
+      let that = $(this);
+      e.preventDefault();
+      sendMail(that).then(function() {
+        $('.popup').removeClass('active');
+        $('.popup__bg').removeClass('active');
+        that.get(0).reset();
       });
-    }
+    });
   }
   sendPopupForm();
 

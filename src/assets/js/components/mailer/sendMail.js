@@ -1,3 +1,6 @@
+import successMessage from "./successMessage.js";
+import errorMessage from "./errorMessage.js";
+
 export default function sendMail(selector) {
   function getValues() {
     const checkboxes = [];
@@ -16,5 +19,11 @@ export default function sendMail(selector) {
   return fetch('/assets/files/mail.php', {
     method: 'POST',
     body: formData
-  });
+  }).then(function(response) {
+    if (response.ok == false) {
+      errorMessage('popup-alert-error');
+    } else {
+      successMessage('popup-alert-success');
+    }
+  })
 };

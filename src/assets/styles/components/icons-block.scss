@@ -3,7 +3,7 @@
   &__wrapper {
     @include screen(laptop) {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 16px;
     }

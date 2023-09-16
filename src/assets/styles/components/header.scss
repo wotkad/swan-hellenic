@@ -747,7 +747,8 @@
       opacity: 0;
       transition:
         opacity $transition-default,
-        z-index $transition-default;
+        z-index $transition-default,
+        visibility $transition-default;
       position: absolute;
       width: 100%;
       top: 12px;

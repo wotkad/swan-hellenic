@@ -1,9 +1,23 @@
-export default function successMessage(text) {
-  let container = $('.success-alert');
-  let content = $('.success-alert__text')
-  container.addClass('active');
-  content.text(text);
-  setTimeout(function() {
-    container.removeClass('active');
-  }, 2000);
+import { enablePageScroll } from "scroll-lock";
+
+export default function successMessage(container) {
+  let popup = $(`.${container}`);
+  let bg = $('.popup__overlay');
+  let timer;
+
+  function closePopup() {
+    popup.removeClass('active');
+    bg.removeClass('active');
+    enablePageScroll();
+    clearTimeout(timer);
+  }
+
+  popup.addClass('active');
+  bg.addClass('active');
+
+  timer = setTimeout(closePopup, 4000);
+
+  popup.on('click', function() {
+    closePopup();
+  });
 }

@@ -3,6 +3,7 @@
   bottom: 50px;
   left: 0;
   width: 100%;
+  z-index: 100;
   @include screen(laptop) {
     bottom: 70px;
   }
@@ -217,12 +218,12 @@
     &-calendar {
       padding: 0 68px;
       @include screen(laptop) {
-        padding: 0 30px;
+        padding: 0 20px 0 30px;
       }
       .hero-filter {
         &__container {
           @include screen(laptop) {
-            min-width: 250px;
+            min-width: 260px;
           }
           .hero-filter__input input {
             padding: 8px 0;

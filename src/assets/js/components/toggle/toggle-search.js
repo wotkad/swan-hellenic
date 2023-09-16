@@ -3,6 +3,7 @@ function toggleSearch() {
   let search = $('.search__form');
   button.on('click', function() {
     search.addClass('active');
+    search.find('input').focus();
   });
   document.addEventListener('keydown', function(e) {
     if (e.key == 'Escape') {
