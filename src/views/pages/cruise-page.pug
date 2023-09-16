@@ -17,19 +17,21 @@ block content
     include ../mixins/partner-block
     include ../mixins/headline
     include ../mixins/default-slider
+    include ../mixins/card
+    include ../mixins/button
     +hero
-    section.section.section-white.gapper-small-mob
+    section.section.section-white.gapper-small-mob.cruise-page__partner
       .section__wrapper
         +partner-block('partner-block-unreversed', false, false, 'YOUR TRIP', 'JRE', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-1.png', 'item-1')
     section.gapper.section.section-white.default-slider(
       data-slider="default-slider"
     )
       .wrapper
-        +headline('HIGHLIGHTS', 'YOUR TRIP', 'headline-note')
+        +headline('HIGHLIGHTS', 'YOUR TRIP', 'headline-note headline-xl')
         +default-slider('0')
     section.gapper-small.section.section-white
       .wrapper
-        +headline('ITINERARY', 'CHECK OUT YOUR', 'headline-note headline-centered')
+        +headline('ITINERARY', 'CHECK OUT YOUR', 'headline-note headline-centered headline-xl')
         include ../components/itinerary
     section.gapper-small.section.section-white
       .section__wrapper
@@ -39,3 +41,12 @@ block content
             +partner-block('partner-block-big partner-block-reversed', false, false, 'YOUR','SETI', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-4.png', 'item-4')
             +partner-block('partner-block-big', false, false, 'WHATS','partner 3', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-5.png', 'item-5')
     include ../components/suites
+    section.gapper.section.section-white
+      .wrapper
+        +headline('RELATED CRUISES', 'see also', 'headline-note headline-centered headline-xl')
+        .grid.grid__gap.grid__gap-bottom.grid-three.grid-offset
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+        .cruise-page__button
+          +button('button-green-transparent', '', 'view all related cruises')

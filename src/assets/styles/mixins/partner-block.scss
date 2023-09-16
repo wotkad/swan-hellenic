@@ -54,7 +54,7 @@
     }
   }
   &__content {
-    @include screen(laptop) {
+    @include screen(tablet) {
       max-width: 535px;
       padding: 65px 0;
     }

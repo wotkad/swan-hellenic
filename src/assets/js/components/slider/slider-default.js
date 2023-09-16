@@ -42,7 +42,3 @@ function sliderDefault() {
 
 }
 sliderDefault();
-
-$(window).on('resize', function() {
-  sliderDefault();
-});

@@ -51,7 +51,3 @@ function sliderFlip() {
   }
 }
 sliderFlip();
-
-$(window).on('resize', function() {
-  sliderFlip();
-});
