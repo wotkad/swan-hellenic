@@ -21,7 +21,7 @@ function renderPage() {
     $('.header__top').addClass('active');
     $('.hero-filter').addClass('active');
 
-    $('.header__link').addClass('active');
+    $('.header__link__inner').addClass('active');
     $('.hero__content .splide__arrows').addClass('active');
 
     $('.hero__title').addClass('active');

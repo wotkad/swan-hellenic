@@ -206,16 +206,20 @@
     display: flex;
     align-items: center;
     padding: 20px 0;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition:
-      opacity $transition-default,
-      transform $transition-default,
-      background-color $transition-default;
-    transition-delay: $transition-default;
-    &.active {
-      opacity: 1;
-      transform: translateY(0);
+    transition: background-color $transition-default;
+    &__inner {
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition:
+        opacity $transition-default,
+        transform $transition-default;
+      transition-delay: $transition-default;
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
   &__lang {
