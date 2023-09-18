@@ -160,7 +160,7 @@
 }
 
 .calendar>.days-grid>.day:hover,
-.container.range-plugin .calendar>.days-grid>.day.end, 
+.container.range-plugin .calendar>.days-grid>.day.end,
 .container.range-plugin .calendar>.days-grid>.day.start {
   background-color: #004155;
   color: #fff;

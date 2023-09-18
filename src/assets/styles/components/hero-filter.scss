@@ -235,6 +235,26 @@
         }
       }
     }
+    &-ship {
+      padding: 0 68px;
+      @include screen(laptop) {
+        padding: 0 30px;
+      }
+      .hero-filter {
+        &__input {
+          pointer-events: none;
+        }
+        &__container {
+          @include screen(laptop) {
+            min-width: 200px;
+          }
+        }
+        &__icon {
+          fill: $untold-400;
+          stroke: transparent;
+        }
+      }
+    }
     &-calendar {
       padding: 0 68px;
       @include screen(laptop) {
@@ -253,26 +273,6 @@
                 padding: 10px 32px 8px;
               }
             }
-          }
-        }
-        &__icon {
-          fill: $untold-400;
-          stroke: transparent;
-        }
-      }
-    }
-    &-ship {
-      padding: 0 68px;
-      @include screen(laptop) {
-        padding: 0 30px;
-      }
-      .hero-filter {
-        &__input {
-          pointer-events: none;
-        }
-        &__container {
-          @include screen(laptop) {
-            min-width: 200px;
           }
         }
         &__icon {

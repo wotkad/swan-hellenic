@@ -20,10 +20,10 @@ function toggleFilter() {
     $(button[i]).on('click', function () {
       let id = button[i].getAttribute('data-filter');
       let block = $('.hero-filter__list[data-filter="' + id + '"]');
-      
+
       $(block).attr('data-filter', $(this).attr('data-filter')).toggleClass('active');
       $(this).toggleClass('active');
-      
+
       button.not(this).removeClass('active');
       container.not($(block).attr('data-filter', $(this).attr('data-filter'))).removeClass('active');
 
