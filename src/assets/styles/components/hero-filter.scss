@@ -42,7 +42,7 @@
       &.active {
         opacity: 1;
         visibility: visible;
-        z-index: -2;
+        z-index: 2;
       }
     }
     input {
@@ -56,10 +56,16 @@
         cursor: pointer;
         opacity: 1;
         position: absolute;
-        padding-left: 32px;
+        padding: 0 32px;
         background-color: transparent;
         left: 0;
-        width: 250px;
+        width: 282px;
+        @include screen(tablet) {
+          width: 630px;
+        }
+        &.selected {
+          @include sans-2xs;
+        }
       }
     }
     span {
@@ -86,24 +92,33 @@
   &__icon {
     min-width: 24px;
   }
-  &__list {
-    opacity: 0;
+  &__scroll {
     left: 0;
-    z-index: -1;
-    visibility: hidden;
-    padding: 8px 0;
-    max-height: 124px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
     position: absolute;
+    max-height: 108px;
+    overflow-y: auto;
+    top: 8px;
     background-color: $white;
+  }
+  &__list {
+    opacity: 0;
+    overflow: hidden;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+    visibility: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    height: 124px;
+    padding: 8px 0;
+    width: 100%;
+    position: absolute;
     border-radius: 12px;
+    top: 60px;
     transition:
       opacity $transition-default,
       visibility $transition-default,
       z-index $transition-default;
-    overflow-y: auto;
-    top: 62px;
     &-bottom {
       top: auto;
       bottom: 62px;
@@ -113,9 +128,6 @@
     }
     @include screen(laptop) {
       top: 72px;
-    }
-    &::-webkit-scrollbar {
-      width: 0;
     }
     &.active {
       opacity: 1;
@@ -209,6 +221,9 @@
             min-width: 250px;
           }
         }
+        &__input {
+          pointer-events: none;
+        }
         &__icon {
           fill: $untold-400;
           stroke: $untold-400;
@@ -225,8 +240,14 @@
           @include screen(laptop) {
             min-width: 260px;
           }
-          .hero-filter__input input {
-            padding: 8px 0;
+          .hero-filter__input {
+            padding: 0;
+            #datepicker {
+              padding: 8px 32px;
+              &.selected {
+                padding: 10px 32px 8px;
+              }
+            }
           }
         }
         &__icon {
@@ -241,6 +262,9 @@
         padding: 0 30px;
       }
       .hero-filter {
+        &__input {
+          pointer-events: none;
+        }
         &__container {
           @include screen(laptop) {
             min-width: 200px;

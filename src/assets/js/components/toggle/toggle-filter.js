@@ -20,9 +20,10 @@ function toggleFilter() {
     $(button[i]).on('click', function () {
       let id = button[i].getAttribute('data-filter');
       let block = $('.hero-filter__list[data-filter="' + id + '"]');
+      
       $(block).attr('data-filter', $(this).attr('data-filter')).toggleClass('active');
       $(this).toggleClass('active');
-
+      
       button.not(this).removeClass('active');
       container.not($(block).attr('data-filter', $(this).attr('data-filter'))).removeClass('active');
 
@@ -73,7 +74,7 @@ function filterCalendar() {
     new easepick.create({
       element: datepicker,
       css: [
-        'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.css',
+        '/src/datepicker.min.css',
         '/src/datepicker.css',
       ],
       plugins: [AmpPlugin, RangePlugin],
@@ -95,12 +96,16 @@ function filterCalendar() {
       setup(picker) {
         picker.on('select', () => {
           setTimeout(function() {
+            $('#datepicker').addClass('selected');
+            $('.easepick-wrapper').removeClass('active');
             $('.hero-filter__label-calendar .hero-filter__container').removeClass('active');
           }, 0);
         });
         picker.on('clear', () => {
           setTimeout(function() {
             picker.hide();
+            $('#datepicker').removeClass('selected');
+            $('.easepick-wrapper').removeClass('active');
             $('.hero-filter__label-calendar .hero-filter__container').removeClass('active');
           }, 0);
         });
