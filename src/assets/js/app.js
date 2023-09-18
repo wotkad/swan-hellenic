@@ -26,10 +26,12 @@ import "./components/toggle/toggle-sidebar-cruises";
 import "./components/toggle/toggle-filter";
 import "./components/toggle/toggle-flag";
 import "./components/toggle/toggle-popup-fields";
+import "./components/toggle/toggle-suite-type";
 
 import "./components/mailer/textareaChecker";
 import "./components/mailer/sendForm";
 import "./components/mailer/sendMail";
+
 
 import "./components/slider/slider-news";
 import "./components/slider/slider-flip";
