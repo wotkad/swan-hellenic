@@ -1,16 +1,19 @@
 include ../mixins/headline
 include ../mixins/button
 
-mixin flip-slider(reversed, i)
+mixin flip-slider(reversed, i, className, isSubtitle)
   section.gapper-small.section.section-white.flip-slider(
-    class="" + reversed
+    class="" + reversed + className
     data-slider="flip-slider"
   )
     .wrapper
       .flip-slider__wrapper
         .flip-slider__content
           .flip-slider__top
-            +headline('Onboard Experience', '', 'headline-md headline-white')
+            if isSubtitle
+              +headline('INCLUDED', 'WHATS', 'headline-xl headline-note')
+            else
+              +headline('Onboard Experience', '', 'headline-md headline-white')
             .splide.flip-slider__list(class="flip-slider" + i + "__list")
               .splide__track
                 .splide__list

@@ -1,13 +1,21 @@
 include ../mixins/button
-mixin partner-block(className, buttonGreen, buttonWhite, subtitle, title, text, src, alt)
-  .partner-block(class="" + className)
+include ../mixins/flip-slider
+mixin partner-block(className, buttonGreen, buttonWhite, subtitle, title, surname, text, src, alt)
+  .partner-block(
+    class=""+ className
+  )
     .wrapper
       .partner-block__wrapper
         .partner-block__content
           if subtitle
             .partner-block__subtitle= subtitle
           h3.partner-block__title= title
-          .partner-block__text !{ text }
+          if surname
+            .partner-block__surname= surname
+            .partner-block__text !{ text }
+          else
+            .partner-block__text !{ text }
+
           if buttonGreen
             +button('button-no-center button-green partner-block__button', '', 'Learn more', '', '')
           if buttonWhite

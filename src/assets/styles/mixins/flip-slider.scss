@@ -220,4 +220,85 @@
       }
     }
   }
+  &-transparent {
+    padding: 0;
+    background-color: transparent;
+    .button {
+      display: none;
+    }
+    @include screen(laptop) {
+      min-height: 764px;
+    }
+    .flip-slider {
+      &__wrapper {
+        @include screen(laptop) {
+          align-items: flex-start;
+        }
+      }
+      &__arrow {
+        svg {
+          stroke: $green-200;
+        }
+      }
+      &__bottom {
+        @include screen(laptop) {
+          display: none;
+        }
+      }
+      &__images {
+        background-color: transparent;
+      }
+      &__content {
+        background-color: transparent;
+        @include screen(laptop) {
+          padding: 65px 106px 65px 0;
+        }
+        &:before {
+          display: none;
+        }
+      }
+      &__images {
+        @include screen(laptop) {
+          max-width: calc(50% - 53px);
+          width: 700px;
+          height: 764px;
+        }
+        img {
+          @include screen(laptop) {
+            max-height: 100%;
+            max-width: 100%;
+            min-height: 100%;
+          }
+        }
+      }
+      &__list {
+        &__item {
+          color: $fathom;
+        }
+        &__item.is-active {
+          span {
+            color: $text;
+          }
+        }
+        &__icon {
+          fill: $text;
+          stroke: $text;
+        }
+      }
+    }
+    .headline {
+      &-white {
+        .headline {
+          &__title {
+            color: $fathom;
+          }
+        }
+      }
+    }
+    .splide {
+      &__track {
+        height: 100%;
+      }
+    }
+  }
 }

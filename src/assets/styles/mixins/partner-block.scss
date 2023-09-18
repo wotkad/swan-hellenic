@@ -11,6 +11,11 @@
       gap: 106px;
     }
   }
+  &__surname {
+    margin-top: 54px;
+    color: $fathom;
+    @include sans-3xl;
+  }
   &__image {
     order: -1;
     height: 200px;
