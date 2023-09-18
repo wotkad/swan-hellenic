@@ -36,6 +36,7 @@ function toggleSidebarItems() {
     $('.sidebar__select__item').removeClass('active');
     $('.sidebar__select-destination .sidebar__select__value span').text('Choose destination');
     $('.sidebar__select-departing_port .sidebar__select__value span').text('Choose departing port');
+    $('.sidebar__select-months .sidebar__select__value span').text('Choose month');
     noValueFiller();
   });
 

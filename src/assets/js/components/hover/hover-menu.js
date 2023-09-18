@@ -17,10 +17,10 @@ function hoverMenu() {
     });
   }
   header.on('mouseenter', function () {
-    $(this).addClass('header-green');
+    $(this).addClass('header-colorizer');
   });
   header.on('mouseleave', function () {
-    $(this).removeClass('header-green');
+    $(this).removeClass('header-colorizer');
   });
 }
 hoverMenu();

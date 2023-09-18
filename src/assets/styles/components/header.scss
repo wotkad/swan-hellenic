@@ -8,7 +8,8 @@
   transition:
     transform $transition-default,
     background-color $transition-default;
-  &-green {
+  &-green,
+  &-colorizer {
     background-color: $fathom;
   }
   &.scrolled {
@@ -18,11 +19,20 @@
     }
   }
   &__top {
+    opacity: 0;
+    transform: translateY(-20px);
     padding: 12px 0;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition:
+      opacity $transition-default,
+      transform $transition-default;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
     @include screen(laptop) {
       height: 90px;
       display: grid;
@@ -194,9 +204,19 @@
   }
   &__link {
     display: flex;
-    transition: background-color $transition-default;
     align-items: center;
     padding: 20px 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:
+      opacity $transition-default,
+      transform $transition-default,
+      background-color $transition-default;
+    transition-delay: $transition-default;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   &__lang {
     position: relative;

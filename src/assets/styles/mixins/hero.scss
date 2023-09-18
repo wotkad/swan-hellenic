@@ -47,9 +47,16 @@
     }
     .splide {
       &__arrows {
+        opacity: 0;
         display: none;
         position: absolute;
         width: 100%;
+        transition: opacity $transition-default;
+        transition-delay: $transition-default;
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
         @include screen(laptop) {
           display: block;
         }
@@ -106,6 +113,16 @@
     max-width: 877px;
     text-transform: uppercase;
     margin: 0 0 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:
+      opacity $transition-default,
+      transform $transition-default;
+    transition-delay: $transition-default;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
     @include chap-base;
     @include screen(laptop) {
       margin: 64px auto 16px;
@@ -115,6 +132,16 @@
   }
   &__description {
     color: $white;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:
+      opacity $transition-default,
+      transform $transition-default;
+    transition-delay: $transition-default * 2;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
     @include sans-md;
     @include screen(laptop) {
       text-align: center;
