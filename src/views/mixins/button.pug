@@ -1,10 +1,11 @@
-mixin button(className='', buttonType, title, icon, filterStep)
+mixin button(className='', buttonType, title, icon, filterStep, id)
   if buttonType
     button.button(
       type="" + buttonType
       aria-label="" + title ? false : icon
       class="" + className
-      data-id="" + filterStep || false
+      data-filter-step="" + filterStep || false
+      data-id="" + id || false
     )
       .button__text= title
       if icon

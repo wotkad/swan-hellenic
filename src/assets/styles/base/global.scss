@@ -119,6 +119,11 @@ main {
       opacity: 0.5;
     }
   }
+  &:not(.is-overflow) {
+    .splide__pagination {
+      display: flex;
+    }
+  }
 }
 
 .render {

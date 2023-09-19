@@ -6,13 +6,11 @@ function toggleSuiteType() {
       let id = button[i].getAttribute('data-id');
       let block = $('.suites__container[data-id="' + id + '"]');
 
-      if ($(this).hasClass('active')) {
-        $(this).removeClass('active')
-        container.removeClass('active');
-      }
-      
+      container.removeClass('active');
+      button.removeClass('active');
+
       $(block).attr('data-id', $(this).attr('data-id')).addClass('active');
-      $(container).attr('data-id', $(this).attr('data-id')).addClass('active');
+      $(this).addClass('active');
     });
   }
 }
