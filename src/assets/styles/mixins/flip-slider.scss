@@ -186,27 +186,6 @@
       height: 24px;
     }
   }
-  .splide__track--nav > .splide__list > .splide__slide {
-    opacity: 0;
-    border: none;
-    transition:
-      opacity $transition-default,
-      color $transition-default;
-    @include screen(laptop) {
-      opacity: 1;
-    }
-    &.is-active {
-      opacity: 1;
-      .flip-slider__list__icon {
-        opacity: 1;
-      }
-    }
-    @include screen(laptop) {
-      &:hover:not(.is-active) {
-        color: $green-200;
-      }
-    }
-  }
   &__image {
     img {
       max-height: 235px;
@@ -245,9 +224,6 @@
           display: none;
         }
       }
-      &__images {
-        background-color: transparent;
-      }
       &__content {
         background-color: transparent;
         @include screen(laptop) {
@@ -258,6 +234,7 @@
         }
       }
       &__images {
+        background-color: transparent;
         @include screen(laptop) {
           max-width: calc(50% - 53px);
           width: 700px;
@@ -298,6 +275,27 @@
     .splide {
       &__track {
         height: 100%;
+      }
+    }
+  }
+  .splide__track--nav > .splide__list > .splide__slide {
+    opacity: 0;
+    border: none;
+    transition:
+      opacity $transition-default,
+      color $transition-default;
+    @include screen(laptop) {
+      opacity: 1;
+    }
+    &.is-active {
+      opacity: 1;
+      .flip-slider__list__icon {
+        opacity: 1;
+      }
+    }
+    @include screen(laptop) {
+      &:hover:not(.is-active) {
+        color: $green-200;
       }
     }
   }

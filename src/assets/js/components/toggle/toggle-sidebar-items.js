@@ -113,7 +113,7 @@ function toggleSidebarItems() {
   $typeButton.on('click', function (e) {
     e.stopPropagation();
   });
-  
+
   $(document).on('keydown', function(e) {
     if (e.key == 'Escape') {
         $headerButton.removeClass('active');

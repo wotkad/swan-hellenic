@@ -1,5 +1,5 @@
 mixin hero(className='', isCruise, title, description)
-  section.hero(class=""+className)
+  section.hero(class="" + className)
     .hero__images.splide
       .splide__track
         .splide__list
@@ -18,28 +18,28 @@ mixin hero(className='', isCruise, title, description)
             .splide__list
               .splide__slide
                 if isCruise == 'cruise'
-                  .hero__tip 
+                  .hero__tip
                     p Last <span>5</span> spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{description}
+                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
               .splide__slide
                 if isCruise == 'cruise'
-                  .hero__tip 
+                  .hero__tip
                     p Last 5 spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{description}
+                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
               .splide__slide
                 if isCruise == 'cruise'
-                  .hero__tip 
+                  .hero__tip
                     p Last 5 spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{description}
+                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
               .splide__slide
                 if isCruise == 'cruise'
-                  .hero__tip 
+                  .hero__tip
                     p Last 5 spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{description}
+                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
           .splide__arrows
             button.splide__arrow.hero__arrow.splide__arrow--prev(
               type="button"
@@ -64,8 +64,11 @@ mixin hero(className='', isCruise, title, description)
         else
           include ../components/hero-filter
         if isCruise == 'cruise'
-          .hero__footer 
+          .hero__footer
             .wrapper
               .hero__footer__wrapper
                 .hero__number CRUISE ID: D0923051410
-                button(type="button" data-popup-button="contacts").popup-trigger.hero__contacts Contact us
+                button.popup-trigger.hero__contacts(
+                  type="button"
+                  data-popup-button="contacts"
+                ) Contact us

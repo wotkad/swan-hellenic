@@ -7,11 +7,7 @@ include ../mixins/button
       )
         .hero-filter__container.hero-filter__container-calendar
           .hero-filter__input
-            input(
-              type="text"
-              name="calendar"
-              value="14.11.23 - 25.11.23"
-            )
+            input(type="text" name="calendar" value="14.11.23 - 25.11.23")
             svg.hero-filter__icon(
               viewBox="0 0 25 25"
               width="24px"
@@ -24,11 +20,7 @@ include ../mixins/button
         +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'calendar')
         .hero-filter__container(data-filter="ship")
           .hero-filter__input
-            input(
-              type="text"
-              name="ship"
-              value="SH Minerva"
-            )
+            input(type="text" name="ship" value="SH Minerva")
             svg.hero-filter__icon(
               viewBox="0 0 25 25"
               width="24px"
@@ -41,11 +33,7 @@ include ../mixins/button
         +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'ship')
         .hero-filter__container(data-filter="nights")
           .hero-filter__input
-            input(
-              type="text"
-              name="nights"
-              value="11"
-            )
+            input(type="text" name="nights" value="11")
             svg.hero-filter__icon(
               viewBox="0 0 25 25"
               width="24px"
@@ -58,11 +46,7 @@ include ../mixins/button
         +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'nights')
         .hero-filter__container(data-filter="guests")
           .hero-filter__input
-            input(
-              type="text"
-              name="guests"
-              value="2"
-            )
+            input(type="text" name="guests" value="2")
             svg.hero-filter__icon(
               viewBox="0 0 25 25"
               width="24px"
@@ -101,16 +85,14 @@ include ../mixins/button
               height="24px"
             )
               use(xlink:href="#svg-price")
-            input(
-              type="text"
-              name="price"
-              value="15095"
-            )
+            input(type="text" name="price" value="15095")
             .card__prices
               .card__label FROM
               .card__price € 15.095
                 .card__perperson per person
         +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'booking')
-      .hero-filter__label.hero-filter__label-booking(data-filter-step="booking")
+      .hero-filter__label.hero-filter__label-booking(
+        data-filter-step="booking"
+      )
         +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'price')
         +button('button-brown button-no-center hero-filter__submit', 'submit', 'Book now', '', 'success')
