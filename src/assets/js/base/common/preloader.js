@@ -20,12 +20,19 @@ function renderPage() {
     enablePageScroll();
     $('.header__top').addClass('active');
     $('.hero-filter').addClass('active');
+    $('.splide__pagination').addClass('active');
 
     $('.header__link__inner').addClass('active');
     $('.hero__content .splide__arrows').addClass('active');
 
     $('.hero__title').addClass('active');
+    if ($('.hero__tip').length > 0) {
+      $('.hero__tip').addClass('active');
+    }
     $('.hero__description').addClass('active');
+    if ($('.hero__footer').length > 0) {
+      $('.hero__footer').addClass('active');
+    }
 
   }});
 }

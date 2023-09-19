@@ -1,0 +1,116 @@
+include ../mixins/button
+.hero-filter
+  .wrapper
+    form.hero-filter__wrapper(action="#")
+      .hero-filter__label.hero-filter__label-calendar.active(
+        data-filter-step="calendar"
+      )
+        .hero-filter__container.hero-filter__container-calendar
+          .hero-filter__input
+            input(
+              type="text"
+              name="calendar"
+              value="14.11.23 - 25.11.23"
+            )
+            svg.hero-filter__icon(
+              viewBox="0 0 25 25"
+              width="24px"
+              height="24px"
+            )
+              use(xlink:href="#svg-calendar")
+            span 14.11.23 - 25.11.23
+        +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'ship')
+      .hero-filter__label.hero-filter__label-ship(data-filter-step="ship")
+        +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'calendar')
+        .hero-filter__container(data-filter="ship")
+          .hero-filter__input
+            input(
+              type="text"
+              name="ship"
+              value="SH Minerva"
+            )
+            svg.hero-filter__icon(
+              viewBox="0 0 25 25"
+              width="24px"
+              height="24px"
+            )
+              use(xlink:href="#svg-ship")
+            span SH Minerva
+        +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'nights')
+      .hero-filter__label.hero-filter__label-nights(data-filter-step="nights")
+        +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'ship')
+        .hero-filter__container(data-filter="nights")
+          .hero-filter__input
+            input(
+              type="text"
+              name="nights"
+              value="11"
+            )
+            svg.hero-filter__icon(
+              viewBox="0 0 25 25"
+              width="24px"
+              height="24px"
+            )
+              use(xlink:href="#svg-nights")
+            span 11 Nignts
+        +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'guests')
+      .hero-filter__label.hero-filter__label-guests(data-filter-step="guests")
+        +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'nights')
+        .hero-filter__container(data-filter="guests")
+          .hero-filter__input
+            input(
+              type="text"
+              name="guests"
+              value="2"
+            )
+            svg.hero-filter__icon(
+              viewBox="0 0 25 25"
+              width="24px"
+              height="24px"
+            )
+              use(xlink:href="#svg-user")
+            span Select guests
+          svg.hero-filter__arrow(
+            viewBox="0 0 16 16"
+            width="16px"
+            height="16px"
+          )
+            use(xlink:href="#svg-arrow-down-small")
+        .hero-filter__list(data-filter="guests")
+          .hero-filter__scroll.custom-scroll(data-scroll-lock-scrollable)
+            .hero-filter__item
+              span 1 Guest
+              svg(viewBox="0 0 12 12" width="12px" height="12px")
+                use(xlink:href="#svg-check-small-green")
+            .hero-filter__item
+              span 2 Guests
+              svg(viewBox="0 0 12 12" width="12px" height="12px")
+                use(xlink:href="#svg-check-small-green")
+            .hero-filter__item
+              span 3+ Guests
+              svg(viewBox="0 0 12 12" width="12px" height="12px")
+                use(xlink:href="#svg-check-small-green")
+        +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'price')
+      .hero-filter__label.hero-filter__label-price(data-filter-step="price")
+        +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'guests')
+        .hero-filter__container(data-filter="price")
+          .hero-filter__input
+            svg.hero-filter__icon(
+              viewBox="0 0 25 25"
+              width="24px"
+              height="24px"
+            )
+              use(xlink:href="#svg-price")
+            input(
+              type="text"
+              name="price"
+              value="15095"
+            )
+            .card__prices
+              .card__label FROM
+              .card__price € 15.095
+                .card__perperson per person
+        +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'booking')
+      .hero-filter__label.hero-filter__label-booking(data-filter-step="booking")
+        +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'price')
+        +button('button-brown button-no-center hero-filter__submit', 'submit', 'Book now', '', 'success')

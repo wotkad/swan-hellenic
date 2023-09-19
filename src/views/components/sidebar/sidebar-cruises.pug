@@ -1,7 +1,7 @@
 include ../../mixins/button
 .sidebar.sidebar-cruises
   .sidebar__title FIND YOUR CRUISE
-  .sidebar__filter
+  form(action="#").sidebar__filter
     .sidebar__blocks
       .sidebar__block
         .sidebar__subtitle
@@ -34,7 +34,7 @@ include ../../mixins/button
               svg(viewBox="0 0 16 16" width="16px" height="16px")
                 use(xlink:href="#svg-arrow-down-small")
           .sidebar__select__list
-            .sidebar__select__scroll.custom-scroll
+            .sidebar__select__scroll.custom-scroll(data-scroll-lock-scrollable)
               label.sidebar__select__item.sidebar__select-type
                 input(type="checkbox" name="type" value="Africa")
                 span Africa
@@ -98,7 +98,7 @@ include ../../mixins/button
               svg(viewBox="0 0 16 16" width="16px" height="16px")
                 use(xlink:href="#svg-arrow-down-small")
           .sidebar__select__list
-            .sidebar__select__scroll.custom-scroll
+            .sidebar__select__scroll.custom-scroll(data-scroll-lock-scrollable)
               .sidebar__select__item
                 span Africa
                 svg(viewBox="0 0 12 12" width="12px" height="12px")
@@ -152,7 +152,7 @@ include ../../mixins/button
               svg(viewBox="0 0 16 16" width="16px" height="16px")
                 use(xlink:href="#svg-arrow-down-small")
           .sidebar__select__list
-            .sidebar__select__scroll.custom-scroll
+            .sidebar__select__scroll.custom-scroll(data-scroll-lock-scrollable)
               .sidebar__select__item
                 span Africa
                 svg(viewBox="0 0 12 12" width="12px" height="12px")
@@ -216,7 +216,7 @@ include ../../mixins/button
               svg(viewBox="0 0 16 16" width="16px" height="16px")
                 use(xlink:href="#svg-arrow-down-small")
           .sidebar__select__list
-            .sidebar__select__scroll.custom-scroll
+            .sidebar__select__scroll.custom-scroll(data-scroll-lock-scrollable)
               .sidebar__select__item
                 span January
                 svg(viewBox="0 0 12 12" width="12px" height="12px")
@@ -279,3 +279,4 @@ include ../../mixins/button
             input(type="radio" name="ship" value="Diana")
             span Diana
     +button('button-green-transparent news-block__button sidebar__button sidebar__button-hidden', 'button', 'Clear filters', '', '')
+    +button('button-brown sidebar__button sidebar__button-submit', 'submit', 'Search', '', '')

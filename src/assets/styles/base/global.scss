@@ -24,6 +24,7 @@ input,
 button {
   font-family: "DM Sans", "Open Sans", sans-serif;
   touch-action: manipulation;
+  outline: none;
 }
 
 html,
@@ -59,6 +60,10 @@ h6 {
 
 main {
   transition: padding $transition-default;
+}
+
+.splide.is-focus-in .splide__arrow:focus {
+  outline: none;
 }
 
 .splide {
@@ -183,7 +188,7 @@ svg {
 }
 
 .wrapper {
-  max-width: calc(#{$screen-mobile} + #{$container-padding * 2});
+  max-width: calc(#{$mobile-wrapper} + #{$container-padding * 2});
   margin: 0 auto;
   padding: 0 #{$container-padding};
   @include screen(tablet) {

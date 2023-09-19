@@ -22,7 +22,7 @@ include ../mixins/button
           )
             use(xlink:href="#svg-arrow-down-small")
         .hero-filter__list(data-filter="destination")
-          .hero-filter__scroll.custom-scroll
+          .hero-filter__scroll.custom-scroll(data-scroll-lock-scrollable)
             .hero-filter__item
               span Africa
               svg(viewBox="0 0 12 12" width="12px" height="12px")
@@ -107,7 +107,7 @@ include ../mixins/button
           )
             use(xlink:href="#svg-arrow-down-small")
         .hero-filter__list(data-filter="ship")
-          .hero-filter__scroll.custom-scroll
+          .hero-filter__scroll.custom-scroll(data-scroll-lock-scrollable)
             .hero-filter__item
               span SH Minerva
               svg(viewBox="0 0 12 12" width="12px" height="12px")

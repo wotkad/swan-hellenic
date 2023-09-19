@@ -80,12 +80,14 @@ function togglePopup() {
     closePopupByTouch();
 
     document.addEventListener('keydown', function(e) {
-      if (e.key == 'Escape' && wrapper.length !== 0) {
-        gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
-          popup.removeClass('active');
-          bg.removeClass('active');
-        }});
-        enablePageScroll();
+      if ($(window).width() > 768) {
+        if (e.key == 'Escape' && wrapper.length !== 0) {
+          gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
+            popup.removeClass('active');
+            bg.removeClass('active');
+          }});
+          enablePageScroll();
+        }
       }
     });
   });

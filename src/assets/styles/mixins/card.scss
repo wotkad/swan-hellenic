@@ -22,8 +22,12 @@
     align-items: flex-end;
     gap: 4px;
     margin-top: 6px;
-    @include sans-3xl;
+    @include sans-xl;
     line-height: 28px;
+    @include screen(mobile) {
+      @include sans-3xl;
+      line-height: 28px;
+    }
     @include screen(laptop) {
       margin-top: 10px;
     }
@@ -47,6 +51,7 @@
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
   &__bubble {
@@ -181,9 +186,13 @@
   }
   &__period {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    right: 80px;
     color: $green-200;
+    @include screen(tablet) {
+      right: auto;
+      transform: translate(-50%);
+      left: 50%;
+    }
   }
   &__footer {
     display: flex;
@@ -208,9 +217,13 @@
   &__perperson {
     color: $text;
     max-width: 42px;
-    margin-bottom: -2px;
     @include sans-3xs;
-    line-height: 16px;
+    margin-bottom: 2px;
+    line-height: 12px;
+    @include screen(mobile) {
+      line-height: 16px;
+      margin-bottom: -2px;
+    }
     @include screen(tablet) {
       max-width: 100%;
       margin-bottom: 0;

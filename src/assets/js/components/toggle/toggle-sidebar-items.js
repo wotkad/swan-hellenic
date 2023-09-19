@@ -11,8 +11,10 @@ function toggleSidebarItems() {
 
   $headerButton.on('click', function (e) {
     if ($headerButton.is(e.target) || $(".sidebar__select__value span").is(e.target) || $(".sidebar__select__header svg").is(e.target) || $(".sidebar__select__header use").is(e.target)) {
-      $(this).addClass('active');
-      $(this).next($sidebarList).addClass('active');
+      $(this).toggleClass('active');
+      $(this).next($sidebarList).toggleClass('active');
+      $headerButton.not(this).removeClass('active');
+      $headerButton.not(this).next($sidebarList).removeClass('active');
     }
   });
 
@@ -50,7 +52,7 @@ function toggleSidebarItems() {
           <div class="sidebar__select__value active">
             <input type="text" name="type" value="${text}">
             <span>${text}</span>
-            <button class="sidebar__select__remove"><svg width="12px" height="12px" viewBox="0 0 24 24"><use xlink:href="#svg-close"></use></svg></button>
+            <button class="sidebar__select__remove"><svg width="12px" height="12px" viewBox="0 0 24 24"><use xlink:href="#svg-x-mark"></use></svg></button>
           </div>
         `);
         $selectValuesContainer.append(newItem);
@@ -100,13 +102,18 @@ function toggleSidebarItems() {
     updateClearButtonVisibility();
   });
 
-  $(document).on('mouseup', function(e) {
-    if (!$typeButton.is(e.target) && !$(".sidebar__select-type span").is(e.target) && !$(".sidebar__select-type svg").is(e.target)  && !$(".sidebar__select-type use").is(e.target)) {
-        $headerButton.removeClass('active');
+  // Добавьте следующий код:
+  $(document).on('click', function(e) {
+    if (!$typeButton.is(e.target) && !$headerButton.is(e.target) && !$sidebarList.is(e.target) && !$(".sidebar__select-type span").is(e.target) && !$(".sidebar__select-type svg").is(e.target)  && !$(".sidebar__select-type use").is(e.target)) {
       $sidebarList.removeClass('active');
+      $headerButton.removeClass('active');
     }
   });
 
+  $typeButton.on('click', function (e) {
+    e.stopPropagation();
+  });
+  
   $(document).on('keydown', function(e) {
     if (e.key == 'Escape') {
         $headerButton.removeClass('active');

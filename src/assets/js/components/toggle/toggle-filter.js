@@ -11,8 +11,8 @@ function toggleFilter() {
     let text = $(this).text();
     items.removeClass('active');
     $(this).addClass('active');
-    $(this).parent().prev().find('.hero-filter__input input').val(text);
-    $(this).parent().prev().find('.hero-filter__input span').text(text).addClass('selected');
+    $(this).parent().parent().prev().find('.hero-filter__input input').val(text);
+    $(this).parent().parent().prev().find('.hero-filter__input span').text(text).addClass('selected');
     container.removeClass('active');
     button.removeClass('active');
   });
@@ -78,6 +78,9 @@ function filterCalendar() {
         '/src/datepicker.css',
       ],
       plugins: [AmpPlugin, RangePlugin],
+      RangePlugin: {
+        tooltip: false
+      },
       AmpPlugin: {
         resetButton: true,
         dropdown: {
@@ -130,6 +133,6 @@ function toggleFilterMob() {
     });
   }
 }
-if ($(window).width() < 1240) {
+if ($(window).width() < 1280) {
   toggleFilterMob();
 }
