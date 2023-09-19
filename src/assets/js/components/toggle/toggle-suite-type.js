@@ -1,16 +1,19 @@
 function toggleSuiteType() {
-  var buttons = $(".suites__button");
+  let button = $('.suites__button');
+  let container = $('.suites__container');
+  for (let i = 0; i < Array.from(button).length; i++) {
+    $(button[i]).on('click', function () {
+      let id = button[i].getAttribute('data-id');
+      let block = $('.suites__container[data-id="' + id + '"]');
 
-  // Назначаем обработчик события click для каждой кнопки
-  buttons.on("click", function() {
-    // Получаем контейнер с контентом, соответствующий ID кнопки
-    var container = $(".suites__container[data-id='" + $(this).data("id") + "']");
-
-    // Скрываем все контейнеры
-    $(".suites__container").hide();
-
-    // Показываем выбранный контейнер
-    container.show();
-  });
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active')
+        container.removeClass('active');
+      }
+      
+      $(block).attr('data-id', $(this).attr('data-id')).addClass('active');
+      $(container).attr('data-id', $(this).attr('data-id')).addClass('active');
+    });
+  }
 }
 toggleSuiteType();
