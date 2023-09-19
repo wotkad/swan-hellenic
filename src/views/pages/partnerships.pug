@@ -17,11 +17,12 @@ block content
     include ../mixins/heading
     include ../mixins/button
     section.gapper.section.section-white
-      .wrapper
-        +breadcrumbs([ { href: '/', title: '' } ])
-        +heading('Partnerships', '', '', '')
-      .section__wrapper
-        include ../components/partnerships
-      .wrapper
-        .partnerships__button
-          +button('button-green-transparent', '', 'View all', '', '')
+      .wrapper-xl
+        .wrapper
+          +breadcrumbs([ { href: '/', title: '' } ])
+          +heading('Partnerships', '', '', '')
+        .section__wrapper
+          include ../components/partnerships
+        .wrapper
+          .partnerships__button
+            +button('button-green-transparent', '', 'View all', '', '')

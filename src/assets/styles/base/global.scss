@@ -199,6 +199,12 @@ svg {
   }
 }
 
+.wrapper-xl {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .padding-bottom {
   padding: 0 16px 64px;
   @include screen(laptop) {
