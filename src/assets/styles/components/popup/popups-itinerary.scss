@@ -1,5 +1,13 @@
-.popup-excursions {
+.popup-itinerary {
   .popup {
+    &__container {
+      max-width: 915px;
+      .popup-slider__track {
+        max-height: 100vh;
+        overflow-y: auto;
+        padding-bottom: 52px;
+      }
+    }
     &__heading {
       display: flex;
       flex-direction: column;
@@ -31,7 +39,11 @@
     &__name {
       font-family: "Chap-Medium";
       text-transform: uppercase;
+      padding-right: 20px;
       @include sans-2xl-1;
+      @include screen(tablet) {
+        padding-right: 0;
+      }
     }
     &__data {
       margin-top: 10px;
@@ -39,15 +51,13 @@
     &__svg {
       width: 40px;
       height: 40px;
+      min-width: 40px;
+      min-height: 40px;
       border-radius: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: rgba(31, 103, 125, 0.2);
-      @include screen(tablet) {
-        min-width: 40px;
-        min-height: 40px;
-      }
       svg {
         stroke: $green-300;
       }
@@ -55,13 +65,19 @@
     &__list {
       list-style-type: disc;
       padding-left: 28px;
+      padding-right: 10px;
       margin-top: 28px;
       display: flex;
       flex-direction: column;
       gap: 16px;
       @include screen(tablet) {
-        margin-top: 0;
+        margin-top: 36px;
         gap: 24px;
+      }
+      @include screen(laptop) {
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
       }
       li {
         @include sans-base;
@@ -81,9 +97,6 @@
         @include sans-sm;
       }
     }
-    &__slider {
-      padding-bottom: 52px;
-    }
     &__block {
       @include screen(tablet) {
         border: 1px solid $gray-200;
@@ -92,13 +105,27 @@
         margin-top: 36px;
         display: flex;
         flex-direction: column;
-        gap: 45px;
         &:first-child {
           margin-top: 0;
         }
       }
       @include screen(laptop) {
         flex-direction: row;
+        gap: 45px;
+      }
+    }
+    &__text {
+      @include sans-base;
+      padding-left: 10px;
+      margin-right: 10px;
+      margin-top: 28px;
+      @include screen(tablet) {
+        margin-top: 36px;
+      }
+      @include screen(laptop) {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
