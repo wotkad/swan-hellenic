@@ -20,7 +20,7 @@ function sliderFlip() {
           gap: 20,
           speed: 800,
           breakpoints: {
-            1280: {
+            1240: {
               drag: false,
               gap: 40
             },
@@ -36,7 +36,7 @@ function sliderFlip() {
           perPage: 1,
           speed: 800,
           breakpoints: {
-            1280: {
+            1240: {
               arrows: false,
               drag: false,
               perPage: 'auto',

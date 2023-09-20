@@ -7,7 +7,7 @@ function toggleSidebarCruises() {
   let bg = $('.popup__overlay');
   let scrollableElement = document.querySelector('.sidebar__blocks');
   button.on('click', function() {
-    if ($(window).width() < 1280) {
+    if ($(window).width() < 1240) {
       bg.addClass('active');
       gsap.to(sidebar, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out"});
     }
@@ -24,7 +24,7 @@ function toggleSidebarCruises() {
         const endY = event.originalEvent.changedTouches[0].clientY;
         const deltaY = endY - startY;
         if (deltaY > 200) {
-          if ($(window).width() < 1280) {
+          if ($(window).width() < 1240) {
             bg.removeClass('active');
             gsap.to(sidebar, {y: '100%', opacity: 1, duration: 0.4, ease: "power2.out"});
             enablePageScroll();

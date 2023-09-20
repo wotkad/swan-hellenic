@@ -13,7 +13,7 @@ function sliderIcons() {
       updateOnMove : true,
       mediaQuery: 'min',
       breakpoints: {
-        1280: {
+        1240: {
           destroy: true,
         },
         768: {

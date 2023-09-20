@@ -21,7 +21,7 @@ function sliderDefault() {
           speed: 800,
           perMove: 1,
           breakpoints: {
-            1280: {
+            1240: {
               gap: 40,
               perPage: 3,
               padding: { right: 0 },
