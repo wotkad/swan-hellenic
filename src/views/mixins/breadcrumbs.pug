@@ -3,5 +3,8 @@ mixin breadcrumbs(links)
     a(href="/") Home
     span /
     each link in links
-      a(href="" + link.href)= link.title
-      span /
+      if link.type == 'span'
+        span= link.title
+      else 
+        a(href="" + link.href)= link.title
+        span /

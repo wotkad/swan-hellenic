@@ -127,9 +127,11 @@
     border-bottom: 1px solid $untold-400;
     transition: $transition-default;
     @include sans-sm-med;
-    &:hover {
-      color: $untold-100;
-      border-color: $untold-400;
+    @include screen(laptop) {
+      &:hover {
+        color: $untold-100;
+        border-color: $untold-400;
+      }
     }
   }
 }

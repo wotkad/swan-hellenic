@@ -43,7 +43,7 @@
         }
       }
       &__blocks {
-        max-height: calc(100vh - 282px);
+        max-height: calc(100vh - 216px);
         overflow-y: auto;
         &::-webkit-scrollbar {
           width: 0;
@@ -288,14 +288,14 @@
       }
       &__button {
         margin-top: 20px;
-        width: calc(100% - 32px);
+        width: calc(50% - 32px);
         position: absolute;
         bottom: 32px;
         transform: translateX(0);
         left: 16px;
-        right: 16px;
         &-submit {
-          bottom: 100px;
+          left: auto;
+          right: 16px;
           @include screen(laptop) {
             display: none;
           }

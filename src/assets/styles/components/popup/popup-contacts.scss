@@ -74,8 +74,10 @@
         gap: 8px;
         transition: background-color $transition-default;
         padding: 4px 8px;
-        &:hover {
-          background-color: $white-300;
+        @include screen(laptop) {
+          &:hover {
+            background-color: $white-300;
+          }
         }
         &.active {
           background-color: $white-300;
@@ -170,8 +172,10 @@
         color: $fathom;
         border-bottom: 1px solid transparent;
         transition: border-color $transition-default;
-        &:hover {
-          border-color: $fathom;
+        @include screen(laptop) {
+          &:hover {
+            border-color: $fathom;
+          }
         }
       }
     }
@@ -216,8 +220,10 @@
         @include screen(tablet) {
           @include sans-xl-base;
         }
-        &:hover {
-          border-color: $fathom;
+        @include screen(laptop) {
+          &:hover {
+            border-color: $fathom;
+          }
         }
       }
     }
