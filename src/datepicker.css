@@ -142,6 +142,7 @@
   transform: translateX(-50%);
   width: 94px;
   height: 33px;
+  transition: 0.3s;
   padding: 6px;
 }
 
@@ -173,20 +174,19 @@
 
 .container.range-plugin .calendar>.days-grid>.day,
 .container.range-plugin .calendar>.days-grid>.day.in-range,
+.container.range-plugin .calendar>.days-grid>.day.in-range:last-of-type,
 .container.range-plugin .calendar>.days-grid>.day.start.flipped,
 .container.range-plugin .calendar>.days-grid>.day.start.end,
 .container.range-plugin .calendar>.days-grid>.day.start,
 .container.range-plugin .calendar>.days-grid>.day.end,
-.container.range-plugin .calendar>.days-grid>.day.end.flipped {
+.container.range-plugin .calendar>.days-grid>.day.end.flipped,
+.container.range-plugin .calendar>.days-grid>div:not(.day)+.day.in-range {
   border-radius: 50%;
 }
 
-.container.range-plugin .calendar>.days-grid>.day.start:after {
-  border-left-color: #004155;
-}
-
+.container.range-plugin .calendar>.days-grid>.day.start:after,
 .container.range-plugin .calendar>.days-grid>.day.end:after {
-  border-right-color: #004155;
+  display: none;
 }
 
 .container.range-plugin .calendar>.days-grid>div:nth-child(7n+1).in-range,
