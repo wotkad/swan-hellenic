@@ -170,8 +170,8 @@
         &__item {
           svg {
             opacity: 0;
-            visibility: hidden;
             right: 20px;
+            z-index: -1;
             transition:
               opacity 0.3,
               visibility $transition-default;
@@ -179,7 +179,7 @@
           &.active {
             svg {
               opacity: 1;
-              visibility: visible;
+              z-index: 2;
             }
           }
         }
