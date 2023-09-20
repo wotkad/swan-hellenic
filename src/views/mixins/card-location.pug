@@ -15,5 +15,13 @@ mixin card-location(src, alt, location, date, description)
             span= date
         .card-location__description !{ description }
       .card-location__buttons
-        button.card-location__button.popup-trigger(type="button" data-popup-button="excursions" aria-label="button") VIEW SHORE EXCURSIONS
-        button.card-location__button.popup-trigger(type="button" data-popup-button="activities" aria-label="button") VIEW EXPEDITION ACTIVITES
+        button.card-location__button.popup-trigger(
+          type="button"
+          aria-label="button"
+          data-popup-button="excursions"
+        ) VIEW SHORE EXCURSIONS
+        button.card-location__button.popup-trigger(
+          type="button"
+          aria-label="button"
+          data-popup-button="activities"
+        ) VIEW EXPEDITION ACTIVITES
