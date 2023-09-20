@@ -5,6 +5,6 @@ mixin breadcrumbs(links)
     each link in links
       if link.type == 'span'
         span= link.title
-      else 
+      else
         a(href="" + link.href)= link.title
         span /
