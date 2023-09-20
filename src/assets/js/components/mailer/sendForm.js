@@ -20,7 +20,7 @@ function sendForm() {
       e.preventDefault();
       sendMail(that).then(function() {
         $('.popup').removeClass('active');
-        $('.popup__bg').removeClass('active');
+        $('.popup__overlay').removeClass('active');
         $('#datepicker').removeClass('selected');
         $('.hero-filter__input span').removeClass('selected');
         $('.hero-filter__item').removeClass('active');

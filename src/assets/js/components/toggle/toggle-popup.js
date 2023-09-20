@@ -16,7 +16,7 @@ function togglePopup() {
   buttons.on('click', function() {
     const popupId = $(this).data('popup-button');
     const popup = $(`.popup[data-popup="${popupId}"]`);
-    const bg = popup.find('.popup__bg');
+    const bg = $('.popup__overlay');
     const wrapper = popup.find('.popup__wrapper');
     const container = popup.find('.popup__container');
     const close = popup.find('.popup__close');
@@ -30,7 +30,6 @@ function togglePopup() {
     } else {
       gsap.to(wrapper, { y: 0, duration: 0.4, ease: "power2.out" });
     }
-
 
     disablePageScroll(scrollableElement);
 
@@ -53,7 +52,9 @@ function togglePopup() {
           bg.removeClass('active');
         }});
       }
-      enablePageScroll();
+      if (!$('.header__burger').hasClass('active')) {
+        enablePageScroll();
+      }
     });
 
     function closePopupByTouch() {
