@@ -37,9 +37,12 @@
   }
   &__subtitle {
     color: $green-200;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     text-transform: uppercase;
     @include sans-base-medium;
+    @include screen(laptop) {
+      margin-bottom: 40px;
+    }
   }
   &__title {
     color: $fathom;

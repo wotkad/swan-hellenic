@@ -26,6 +26,7 @@
     }
   }
   @include screen(tablet) {
+    height: 100vh;
     display: block;
   }
   &.active {

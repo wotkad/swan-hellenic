@@ -6,6 +6,9 @@
         max-height: 100vh;
         overflow-y: auto;
         padding-bottom: 52px;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
       }
     }
     &__heading {
@@ -37,10 +40,9 @@
       }
     }
     &__name {
-      font-family: "Chap-Medium";
       text-transform: uppercase;
       padding-right: 20px;
-      @include sans-2xl-1;
+      @include chap-sm-xs;
       @include screen(tablet) {
         padding-right: 0;
       }
@@ -60,6 +62,12 @@
       background-color: rgba(31, 103, 125, 0.2);
       svg {
         stroke: $green-300;
+      }
+      &-filled {
+        svg {
+          fill: $fathom;
+          stroke: transparent;
+        }
       }
     }
     &__list {
@@ -92,6 +100,12 @@
       gap: 5px;
       svg {
         stroke: $untold-400;
+      }
+      &-filled {
+        svg {
+          fill: $untold-400;
+          stroke: transparent;
+        }
       }
       span {
         @include sans-sm;
