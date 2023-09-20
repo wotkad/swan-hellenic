@@ -1,0 +1,56 @@
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  z-index: 2000;
+  width: 100%;
+  &__wrapper {
+    padding: 24px 0 32px;
+    @include screen(laptop) {
+      padding: 44px 0 40px;
+    }
+  }
+  &__title {
+    font-family: "Chap-Medium";
+    color: $fathom;
+    @include chap-xs;
+  }
+  &__description {
+    color: $green-200;
+    @include sans-2xs;
+    a {
+      font-weight: 500;
+      color: $fathom;
+      border-bottom: 1px solid $fathom;
+    }
+  }
+  &__content {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @include screen(laptop) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  &__buttons {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 16px;
+    @include screen(tablet) {
+      align-items: center;
+    }
+    @include screen(laptop) {
+      flex-direction: row;
+    }
+  }
+  .button {
+    white-space: nowrap;
+    @include screen(tablet) {
+      width: 246px;
+    }
+  }
+}
