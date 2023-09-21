@@ -73,6 +73,18 @@
       max-height: 100vh;
     }
   }
+  &__icon {
+    border: 2px solid $white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    svg {
+      fill: $white;
+    }
+  }
   &__close {
     cursor: pointer;
     width: 72px;
@@ -85,17 +97,24 @@
     @include screen(tablet) {
       display: flex;
     }
-  }
-  &__icon {
-    border: 2px solid $white;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    svg {
-      fill: $white;
+    &-mob {
+      position: absolute;
+      z-index: 2;
+      top: 16px;
+      right: 16px;
+
+      .popup__icon {
+        width: 32px;
+        height: 32px;
+        border: none;
+        svg {
+          fill: transparent;
+          stroke: $fathom;
+        }
+      }
+      @include screen(tablet) {
+        display: none;
+      }
     }
   }
   &__container {

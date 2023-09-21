@@ -19,7 +19,7 @@ function togglePopup() {
     const bg = $('.popup__overlay');
     const wrapper = popup.find('.popup__wrapper');
     const container = popup.find('.popup__container');
-    const close = popup.find('.popup__close');
+    const close = popup.find('.popup__close, .popup__close-mob');
     const scrollableElement = document.querySelectorAll('.popup__form')
 
     popup.addClass('active');
@@ -34,10 +34,17 @@ function togglePopup() {
     disablePageScroll(scrollableElement);
 
     close.on('click', function() {
-      gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
-        popup.removeClass('active');
-        bg.removeClass('active');
-      }});
+      if ($(window).width() > 768) {
+        gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
+          popup.removeClass('active');
+          bg.removeClass('active');
+        }});
+      } else {
+        gsap.to(wrapper, { y: container.outerHeight(), duration: 0.4, ease: "power2.out", onComplete: () => {
+          popup.removeClass('active');
+          bg.removeClass('active');
+        }});
+      }
       enablePageScroll();
     });
 
