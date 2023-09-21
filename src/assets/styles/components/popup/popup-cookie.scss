@@ -15,7 +15,8 @@
       position: relative;
     }
     &__labels {
-      max-height: calc(100vh - 450px);
+      max-height: calc(100vh - 264px);
+      padding-bottom: 200px;
       overflow-y: auto;
     }
     &__label {
@@ -113,6 +114,10 @@
       left: 0;
       width: 100%;
       background-color: $white;
+      padding-top: 16px;
+      @include screen(laptop) {
+        padding-top: 0;
+      }
     }
     &__buttons {
       margin-top: 16px;

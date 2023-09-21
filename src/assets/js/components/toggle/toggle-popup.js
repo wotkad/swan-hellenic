@@ -21,14 +21,17 @@ function togglePopup() {
     const container = popup.find('.popup__container');
     const close = popup.find('.popup__close, .popup__close-mob');
     const scrollableElement = document.querySelectorAll('.popup__form, .popup__labels')
+    const popupCookie = $('.cookie');
 
     popup.addClass('active');
     bg.addClass('active');
 
-    if ($(window).width() > 768) {
-      gsap.to(wrapper, { x: 0, duration: 0.4, ease: "power2.out" });
-    } else {
-      gsap.to(wrapper, { y: 0, duration: 0.4, ease: "power2.out" });
+    if (wrapper.length > 0) {
+      if ($(window).width() > 768) {
+        gsap.to(wrapper, { x: 0, duration: 0.4, ease: "power2.out" });
+      } else {
+        gsap.to(wrapper, { y: 0, duration: 0.4, ease: "power2.out" });
+      }
     }
 
     disablePageScroll(scrollableElement);
