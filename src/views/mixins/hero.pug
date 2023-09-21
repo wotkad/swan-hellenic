@@ -21,25 +21,37 @@ mixin hero(className='', isCruise, title, description)
                   .hero__tip
                     p Last <span>5</span> spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                if isCruise == 'cruise'
+                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                else 
+                  p.hero__description !{ description }
               .splide__slide
                 if isCruise == 'cruise'
                   .hero__tip
                     p Last 5 spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                if isCruise == 'cruise'
+                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                else 
+                  p.hero__description !{ description }
               .splide__slide
                 if isCruise == 'cruise'
                   .hero__tip
                     p Last 5 spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                if isCruise == 'cruise'
+                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                else 
+                  p.hero__description !{ description }
               .splide__slide
                 if isCruise == 'cruise'
                   .hero__tip
                     p Last 5 spots left
                 h2.hero__title= title
-                p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                if isCruise == 'cruise'
+                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                else 
+                  p.hero__description !{ description }
           .splide__arrows
             button.splide__arrow.hero__arrow.splide__arrow--prev(
               type="button"

@@ -4,9 +4,9 @@ function toggleFlag() {
   let items = $('.popup__dropdown__country');
   let input = $('.popup input[type="tel"]');
   let currentFlag = $('.popup__dropdown__current .popup__dropdown__flag use').prop('href')
-  button.on('click', function() {
-    $(this).addClass('active');
-    menu.addClass('active');
+  button.on('click', function(e) {
+    $(this).toggleClass('active');
+    menu.toggleClass('active');
   });
   for (let i = 0; i < Array.from(items).length; i++) {
     $(items[i]).on('click', function () {
@@ -24,7 +24,7 @@ function toggleFlag() {
     });
   }
   $(document).mouseup(function(e) {
-    if (!menu.is(e.target) && !button.is(e.target)) {
+    if (!menu.is(e.target) && !button.is(e.target) && button.has(e.target).length === 0) {
       menu.removeClass('active');
       button.removeClass('active');
     }

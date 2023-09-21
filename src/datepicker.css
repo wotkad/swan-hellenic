@@ -227,21 +227,8 @@
   .container.amp-plugin {
     width: 343px;
     max-width: 343px;
-    padding: 76px 16px 8px;
+    padding: 16px 16px 8px;
     background-color: #fff;
-    &:before {
-      top: 32px;
-      left: 16px;
-      position: absolute;
-      font-family: DM Sans, sans-serif;
-      content: 'Choose the date';
-      text-transform: uppercase;
-      color: #668D99;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 20px;
-    }
   }
   .container.amp-plugin main {
     overflow: hidden;
@@ -250,7 +237,7 @@
   }
   .calendar>.header button.previous-button,
   .calendar>.header button.next-button {
-    top: 90px;
+    top: 32px;
   }
   .calendar>.header button.previous-button {
     right: 85px;

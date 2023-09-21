@@ -39,6 +39,7 @@ function toggleSidebarItems() {
     $('.sidebar__select-destination .sidebar__select__value span').text('Choose destination');
     $('.sidebar__select-departing_port .sidebar__select__value span').text('Choose departing port');
     $('.sidebar__select-months .sidebar__select__value span').text('Choose month');
+    $('.sidebar__select__scroll').scrollTop(0);
     noValueFiller();
   });
 
@@ -104,9 +105,10 @@ function toggleSidebarItems() {
 
   // Добавьте следующий код:
   $(document).on('click', function(e) {
-    if (!$typeButton.is(e.target) && !$headerButton.is(e.target) && !$sidebarList.is(e.target) && !$(".sidebar__select-type span").is(e.target) && !$(".sidebar__select-type svg").is(e.target)  && !$(".sidebar__select-type use").is(e.target)) {
+    if (!$typeButton.is(e.target) && !$headerButton.is(e.target) && !$sidebarList.is(e.target) && $typeButton.is(e.target).length === 0) {
       $sidebarList.removeClass('active');
       $headerButton.removeClass('active');
+      $('.sidebar__select__scroll').scrollTop(0);
     }
   });
 

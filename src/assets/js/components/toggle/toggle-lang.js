@@ -3,8 +3,8 @@ function toggleLang() {
   let menu = $('.header__languages');
   let items = $('.select-language');
   button.on('click', function() {
-    $(this).addClass('active');
-    menu.fadeIn(300);
+    $(this).toggleClass('active');
+    menu.toggleClass('active');
   });
   for (let i = 0; i < Array.from(items).length; i++) {
     $(items[i]).on('click', function () {
@@ -14,22 +14,22 @@ function toggleLang() {
       button.removeClass('active');
       $(block).attr('data-id', $(this).attr('data-id')).addClass('active');
       $(this).addClass('active');
-      menu.fadeOut(300);
+      menu.removeClass('active');
       $(".header__burger").removeClass('active')
       $(".mob-menu").removeClass('active');
       $('.mob-menu__block').removeClass('active');
     });
   }
   $(document).mouseup(function(e) {
-    if (!menu.is(e.target) && !button.is(e.target)) {
-      menu.fadeOut(300);
+    if (!menu.is(e.target) && !button.is(e.target) && button.has(e.target).length === 0) {
+      menu.removeClass('active');
       button.removeClass('active');
     }
   });
   document.addEventListener('keydown', function(e) {
     if (e.key == 'Escape') {
       button.removeClass('active');
-      menu.fadeOut(300);
+      menu.removeClass('active');
     }
   });
 }

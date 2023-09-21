@@ -29,7 +29,6 @@ import "./components/toggle/toggle-popup-fields";
 import "./components/toggle/toggle-suite-type";
 import "./components/toggle/toggle-cookie";
 
-import "./components/mailer/textareaChecker";
 import "./components/mailer/sendForm";
 import "./components/mailer/sendMail";
 

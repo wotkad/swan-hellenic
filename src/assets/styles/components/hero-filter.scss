@@ -126,20 +126,17 @@
     width: 100%;
     position: absolute;
     border-radius: 12px;
-    top: 60px;
-    transition:
-      opacity $transition-default,
-      visibility $transition-default,
-      z-index $transition-default;
-    &-bottom {
-      top: auto;
-      bottom: 62px;
+    &-top {
+      top: 60px;
       @include screen(laptop) {
-        bottom: auto;
+        top: 72px;
       }
     }
-    @include screen(laptop) {
-      top: 72px;
+    &-bottom {
+      bottom: 62px;
+      @include screen(laptop) {
+        bottom: 72px;
+      }
     }
     &.active {
       opacity: 1;

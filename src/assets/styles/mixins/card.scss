@@ -186,8 +186,11 @@
   }
   &__period {
     position: absolute;
-    right: 80px;
+    right: 0;
     color: $green-200;
+    @include screen(mobile) {
+      right: 80px;
+    }
     @include screen(tablet) {
       right: auto;
       transform: translate(-50%);

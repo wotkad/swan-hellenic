@@ -14,6 +14,8 @@ function toggleFilter() {
     $(this).parent().parent().prev().find('.hero-filter__input input').val(text);
     $(this).parent().parent().prev().find('.hero-filter__input span').text(text).addClass('selected');
     container.removeClass('active');
+    container.removeClass('hero-filter__list-top');
+    container.removeClass('hero-filter__list-bottom');
     button.removeClass('active');
   });
   for (let i = 0; i < Array.from(button).length; i++) {
@@ -24,6 +26,9 @@ function toggleFilter() {
       $(block).attr('data-filter', $(this).attr('data-filter')).toggleClass('active');
       $(this).toggleClass('active');
 
+      container.removeClass('hero-filter__list-top');
+      container.removeClass('hero-filter__list-bottom');
+      
       button.not(this).removeClass('active');
       container.not($(block).attr('data-filter', $(this).attr('data-filter'))).removeClass('active');
 
@@ -34,16 +39,29 @@ function toggleFilter() {
         $('.hero-filter__container-calendar').removeClass('active');
       }
 
-      function isElementOutOfViewport($el) {
-        const rect = $el[0].getBoundingClientRect();
+      function isAnyElementOutOfViewport($els) {
         const screenBottom = window.innerHeight;
-        return rect.bottom > screenBottom;
+        for (let i = 0; i < $els.length; i++) {
+          const rect = $els[i].getBoundingClientRect();
+          if (rect.bottom > screenBottom) {
+            return true;
+          }
+        }
+        return false;
       }
 
-      if (isElementOutOfViewport(container)) {
+      let easepickCalendar = $('.easepick-wrapper')[0].shadowRoot;
+      let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
+      let calendarOffset = easepickCalendarContainer.height();
+
+      if (isAnyElementOutOfViewport(container)) {
         container.addClass('hero-filter__list-bottom');
+        container.removeClass('hero-filter__list-top');
+        easepickCalendarContainer.css('top', -calendarOffset-80+'px');
       } else {
         container.removeClass('hero-filter__list-bottom');
+        container.addClass('hero-filter__list-top');
+        easepickCalendarContainer.css('top', 22+'px');
       }
     });
   }
@@ -54,6 +72,8 @@ function toggleFilter() {
         !$('#datepicker').is(e.target)
       ) {
       container.removeClass('active');
+      container.removeClass('hero-filter__list-top');
+      container.removeClass('hero-filter__list-bottom');
       button.removeClass('active');
       $('.easepick-wrapper').removeClass('active');
     }
@@ -61,6 +81,8 @@ function toggleFilter() {
   document.addEventListener('keydown', function(e) {
     if (e.key == 'Escape') {
       container.removeClass('active');
+      container.removeClass('hero-filter__list-top');
+      container.removeClass('hero-filter__list-bottom');
       button.removeClass('active');
       $('.easepick-wrapper').removeClass('active');
     }

@@ -113,7 +113,7 @@ include ../../mixins/button
                   )
                     use(xlink:href="#svg-flag-ru")
                   span +7
-            input(type="tel" placeholder="+7" autocomplete="on" name="phone")
+            input(type="tel" placeholder="+7 *" autocomplete="on" name="phone")
           .popup__input.popup__input-email(data-input="email")
             input(
               type="email"
@@ -122,7 +122,7 @@ include ../../mixins/button
               name="email"
             )
           .popup__input.popup__input-full
-            textarea(placeholder="Your message" name="message")
+            textarea.custom-scroll(placeholder="Your message" name="message")
           .popup__button
             +button('button-green', 'submit', 'Submit', '', '')
           .popup__policy

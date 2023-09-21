@@ -1,7 +1,9 @@
 .popup-itinerary {
+  @include screen(laptop) {
+    max-width: calc(915px + 104px);
+  }
   .popup {
     &__container {
-      max-width: 915px;
       .popup-slider__track {
         max-height: 100vh;
         overflow-y: auto;

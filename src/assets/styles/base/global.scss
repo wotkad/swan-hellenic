@@ -1,6 +1,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .custom-scroll {
@@ -21,7 +22,9 @@
 
 textarea,
 input,
-button {
+button,
+select,
+a {
   font-family: "DM Sans", "Open Sans", sans-serif;
   touch-action: manipulation;
   outline: none;

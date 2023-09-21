@@ -13,7 +13,15 @@ function toggleSidebarCruises() {
     }
     disablePageScroll(scrollableElement);
   });
-
+  if (sidebar.length > 0) {
+    $(window).on('resize', function() {
+      if ($(window).width() > 1240) {
+        gsap.to(sidebar, {y: 0, opacity: 1, duration: 0});
+      } else {
+        gsap.to(sidebar, {y: '100%', opacity: 0, duration: 0});
+      }
+    });
+  }
   function closeSidebarCruise() {
     let startY = null;
     sidebar.on('touchstart', function(event) {
@@ -38,7 +46,9 @@ function toggleSidebarCruises() {
 
   bg.on('click', function() {
     bg.removeClass('active');
-    gsap.to(sidebar, {y: '100%', opacity: 1, duration: 0.4, ease: "power2.out"});
+    if (sidebar.length > 0) {
+      gsap.to(sidebar, {y: '100%', opacity: 1, duration: 0.4, ease: "power2.out"});
+    }
     enablePageScroll();
   });
 }
