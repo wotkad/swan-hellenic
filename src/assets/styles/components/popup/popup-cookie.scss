@@ -1,6 +1,7 @@
 .popup-cookie {
   .popup {
     &__continer {
+      position: relative;
       gap: 16px;
       &::-webkit-scrollbar {
         width: 0;
@@ -8,6 +9,14 @@
       @include screen(tablet) {
         gap: 45px;
       }
+    }
+    &__form {
+      height: 100%;
+      position: relative;
+    }
+    &__labels {
+      max-height: calc(100vh - 450px);
+      overflow-y: auto;
     }
     &__label {
       margin-top: 16px;
@@ -84,17 +93,26 @@
       }
     }
     &__policy {
-      margin-top: 16px;
       color: $text;
       @include sans-2xs;
       @include screen(tablet) {
         @include sans-sm;
-        margin-top: 82px;
       }
       a {
-        border-bottom: 1px solid $text;
+        border-bottom: 1px solid transparent;
         font-weight: 500;
+        transition: border-color $transition-default;
+        &:hover {
+          border-color: $fathom;
+        }
       }
+    }
+    &__footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: $white;
     }
     &__buttons {
       margin-top: 16px;
