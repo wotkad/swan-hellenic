@@ -1,4 +1,4 @@
-mixin button(className='', buttonType, title, icon, filterStep, id)
+mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup)
   if buttonType
     button.button(
       type="" + buttonType
@@ -6,6 +6,7 @@ mixin button(className='', buttonType, title, icon, filterStep, id)
       class="" + className
       data-filter-step="" + filterStep || false
       data-id="" + id || false
+      data-popup-button="" + dataPopup || false
     )
       .button__text= title
       if icon

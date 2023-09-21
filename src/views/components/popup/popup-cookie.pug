@@ -1,0 +1,34 @@
+include ../../mixins/button
+.popup.popup-cookie(data-popup="cookie")
+  .popup__bg
+  .popup__wrapper
+    .popup__close
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="36px" height="36px")
+          use(xlink:href="#svg-arrow-right")
+    .popup__container
+      .popup__heading
+        h2.popup__title Choose your<br>cookie preferences
+      form(action="#").popup__form
+        .popup__labels
+          label.popup__label
+            input.popup__input(type="checkbox" name="type" value="Mandatory" checked)
+            h3 Mandatory
+            .popup__text Our website can’t operate properly without essential cookies. We only collect the minimum personal information needed to provide services on swanhellenic.com. You can disable these cookies in your browser but parts of swanhellenic.com may not work.
+          label.popup__label
+            input.popup__input(type="checkbox" name="type" value="Analytics")
+            h3 Analytics
+            .popup__text We use analytical cookies to measure how you use our website and help improve swanhellenic.com.
+          label.popup__label
+            input.popup__input(type="checkbox" name="type" value="Advertising and Marketing")
+            h3 Advertising and Marketing
+            .popup__text We use marketing cookies to display personalised advertisements on other sites you may visit. We work with approved partners to deliver relevant content and measure the effectiveness of these advertisements.
+          label.popup__label
+            input.popup__input(type="checkbox" name="type" value="Functional")
+            h3 Functional
+            .popup__text These cookies let us save the choices you make and some of the information you provide when browsing swanhellenic.com. They don’t track your browsing activity on other websites. Without functional cookies, swanhellenic.com may not work reliably.
+        .popup__footer
+          .popup__policy Please note that anytime later you may visit our <a href="#" target="_blank">Cookie Policy</a> page and review your consent.
+          .popup__buttons
+            +button('button-green-transparent button-no-center popup-trigger', 'button', 'confirm your choises', '' , '', '', '')
+            +button('button-green button-no-center', 'button', 'Accert all cookies', '' , '', '', '')
