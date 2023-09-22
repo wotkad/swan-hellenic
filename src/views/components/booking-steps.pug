@@ -1,0 +1,24 @@
+.booking-steps
+  .booking-steps__wrapper
+    .booking-steps__block
+      .booking-steps__icon
+        svg(viewBox="0 0 32 33" width="32px" height="33px")
+          use(xlink:href="#svg-list")
+      .booking-steps__information
+        h3.booking-steps__title 1. Stateroom selection
+        .booking-steps__name Select your stateroom
+    .booking-steps__block
+      .booking-steps__icon
+        svg(viewBox="0 0 33 33" width="33px" height="33px")
+          use(xlink:href="#svg-users")
+      .booking-steps__information
+        h3.booking-steps__title 2. Guests details
+        .booking-steps__name Fill in guest details
+    .booking-steps__block.active
+      .booking-steps__icon
+        svg(viewBox="0 0 32 33" width="32px" height="33px")
+          use(xlink:href="#svg-credit-card")
+      .booking-steps__information
+        h3.booking-steps__title 3. Review & send enquiry
+        .booking-steps__name Review your booking request & submit
+

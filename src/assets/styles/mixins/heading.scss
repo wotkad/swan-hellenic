@@ -20,4 +20,12 @@
       display: none;
     }
   }
+  &-sm {
+    .heading__title {
+      @include chap-sm;
+      @include screen(tablet) {
+        @include chap-base;
+      }
+    }
+  }
 }
