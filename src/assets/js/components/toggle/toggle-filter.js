@@ -28,7 +28,7 @@ function toggleFilter() {
 
       container.removeClass('hero-filter__list-top');
       container.removeClass('hero-filter__list-bottom');
-      
+
       button.not(this).removeClass('active');
       container.not($(block).attr('data-filter', $(this).attr('data-filter'))).removeClass('active');
 
