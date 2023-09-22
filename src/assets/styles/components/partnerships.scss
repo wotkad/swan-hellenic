@@ -20,4 +20,45 @@
       margin-top: 70px;
     }
   }
+  .flip-slider {
+    &__content {
+      position: static;
+      padding-top: 24px;
+      @include screen(laptop) {
+        position: relative;
+        padding-top: 0;
+      }
+    }
+    &__images {
+      order: -1;
+    }
+    &__list {
+      &__item {
+        position: relative;
+        text-align: center;
+        padding: 0 43px;
+        @include sans-base;
+        @include screen(laptop) {
+          text-align: left;
+          padding: 0;
+          @include sans-lg-medium;
+        }
+      }
+    }
+    &__wrapper {
+      padding-top: 110px;
+      position: relative;
+      @include screen(laptop) {
+        position: static;
+        padding-top: 0;
+      }
+      .headline {
+        position: absolute;
+        top: 0;
+        @include screen(laptop) {
+          position: static;
+        }
+      }
+    }
+  }
 }

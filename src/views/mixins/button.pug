@@ -1,17 +1,17 @@
 mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup)
   if buttonType
     button.button(
+      class=className || false
       type="" + buttonType
-      aria-label="" + title ? false : icon
-      class="" + className
-      data-filter-step="" + filterStep || false
-      data-id="" + id || false
-      data-popup-button="" + dataPopup || false
+      aria-label= icon || false
+      data-filter-step=filterStep || false
+      data-id=id || false
+      data-popup-button=dataPopup || false
     )
       .button__text= title
       if icon
         svg(viewBox="0 0 24 24" width="24px" height="24px")
           use(xlink:href="" + icon)
   else
-    a.button(href="#" class="" + className)
+    a.button(href="#" class=className || false)
       .button__text= title

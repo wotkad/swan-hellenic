@@ -82,6 +82,8 @@
       svg {
         margin-top: -10px;
         display: none;
+        min-width: 24px;
+        min-height: 24px;
         @include screen(laptop) {
           display: block;
         }

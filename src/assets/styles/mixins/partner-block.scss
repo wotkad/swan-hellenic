@@ -8,19 +8,43 @@
     @include screen(tablet) {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 80px;
+    }
+    @include screen(laptop) {
       gap: 106px;
     }
   }
   &__surname {
-    margin-top: 54px;
     color: $fathom;
-    @include sans-3xl;
+    margin-top: 24px;
+    @include sans-md;
+    @include screen(tablet) {
+      margin-top: 54px;
+      @include sans-3xl;
+    }
   }
   &__image {
     order: -1;
     height: 200px;
-    @include screen(tablet) {
+    display: none;
+    &-mob {
+      display: block;
+      margin-top: 24px;
+      @include screen(tablet) {
+        display: none;
+      }
+    }
+    &-pc {
+      display: none;
+      height: auto;
+      order: 2;
+      @include screen(tablet) {
+        display: block;
+      }
+    }
+    @include screen(laptop) {
       height: 100%;
+      display: block;
     }
     @include screen(laptop) {
       position: absolute;
@@ -81,10 +105,9 @@
   &-reversed {
     .partner-block__image {
       @include screen(tablet) {
-        order: 1;
+        order: -1;
       }
       @include screen(laptop) {
-        order: -1;
         left: 0;
         right: auto;
       }
@@ -98,7 +121,7 @@
   &-big {
     .partner-block__title {
       @include chap-base;
-      @include screen(tablet) {
+      @include screen(laptop) {
         @include chap-2lg;
       }
     }
