@@ -9,6 +9,8 @@
     border-radius: 100px;
     text-transform: uppercase;
     color: $white;
+    flex: 1;
+    max-width: 191px;
     transition: background-color $transition-default;
     @include sans-base-medium;
     @include screen(laptop) {

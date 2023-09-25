@@ -42,6 +42,9 @@
   &-booking {
     grid-template-columns: 1fr;
     margin-top: 18px;
+    .wrapper {
+      padding: 0;
+    }
     @include screen(laptop) {
       margin-top: 70px;
       gap: 76px;

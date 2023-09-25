@@ -13,8 +13,10 @@
     @include screen(tablet) {
       align-items: center;
       gap: 16px;
+      margin-bottom: 20px;
     }
     @include screen(laptop) {
+      margin-bottom: 0;
       flex-direction: row;
     }
     &:first-child {

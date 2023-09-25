@@ -12,7 +12,7 @@ block manifestBrowserconfigFiles
   meta(content="../browserconfig.xml" name="msapplication-config")
 
 block content
-  main
+  main.section-not-green
     include ../mixins/breadcrumbs
     include ../mixins/heading
     section.gapper.section.section-white
@@ -21,5 +21,26 @@ block content
         +heading('Book Cruise Arctic Islands & Fjords','heading-sm', '')
         include ../components/booking-steps
         .grid.grid-booking
-          include ../components/booking
+          include ../mixins/button
+          include ../mixins/headline
+          include ../mixins/card-suite
+          .wrapper
+            +headline('Stateroom selection', '', 'headline-sm headline-booking')
+            .suites.booking
+              .suites__wrapper
+                .suites__nav
+                  .suites__title Guests:
+                  .suites__buttons
+                    +button('suites__button button-lightgreen active', 'button', '1', '', '', '1', '')
+                    +button('suites__button button-lightgreen', 'button', '2', '', '', '2', '')
+                .grid.grid-two.suites__container.active(data-id="1")
+                  +card-suite('0', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                  +card-suite('1', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                  +card-suite('2', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                  +card-suite('3', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                  +card-suite('4', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                  +card-suite('5', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                .grid.grid-two.suites__container(data-id="2")
+                  +card-suite('6', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                  +card-suite('7', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
           include ../components/sidebar/sidebar-booking

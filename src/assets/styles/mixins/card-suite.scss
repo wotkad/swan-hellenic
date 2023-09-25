@@ -1,9 +1,12 @@
 .card-suite {
   .splide {
     &__pagination {
-      bottom: 27px;
-      left: auto;
-      right: 30px;
+      bottom: 20px;
+      @include screen(laptop) {
+        bottom: 27px;
+        left: auto;
+        right: 10px;
+      }
       li {
         button {
           background-color: $white;

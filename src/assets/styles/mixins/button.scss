@@ -30,6 +30,19 @@
       }
     }
   }
+
+  &-lightgreen {
+    background-color: rgba(146, 199, 208, 0.3);
+    border: 1px solid transparent;
+    color: $fathom;
+    @include screen(laptop) {
+      &:hover {
+        background-color: $fathom;
+        border-color: $fathom;
+        color: $white;
+      }
+    }
+  }
   &-green-transparent {
     background-color: transparent;
     border-color: $fathom;

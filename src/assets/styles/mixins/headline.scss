@@ -75,4 +75,9 @@
       }
     }
   }
+  &-booking {
+    .headline__title {
+      display: none;
+    }
+  }
 }
