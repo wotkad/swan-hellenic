@@ -50,18 +50,23 @@ function toggleFilter() {
         return false;
       }
 
-      let easepickCalendar = $('.easepick-wrapper')[0].shadowRoot;
-      let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
-      let calendarOffset = easepickCalendarContainer.height();
+      if ($('.easepick-wrapper').length > 0) {
+        let easepickCalendar = $('.easepick-wrapper')[0].shadowRoot;
+        let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
+        let calendarOffset = easepickCalendarContainer.height();
 
+        if (isAnyElementOutOfViewport(container)) {
+          easepickCalendarContainer.css('top', -calendarOffset-80+'px');
+        } else {
+          easepickCalendarContainer.css('top', 22+'px');
+        }
+      }
       if (isAnyElementOutOfViewport(container)) {
         container.addClass('hero-filter__list-bottom');
         container.removeClass('hero-filter__list-top');
-        easepickCalendarContainer.css('top', -calendarOffset-80+'px');
       } else {
         container.removeClass('hero-filter__list-bottom');
         container.addClass('hero-filter__list-top');
-        easepickCalendarContainer.css('top', 22+'px');
       }
     });
   }
