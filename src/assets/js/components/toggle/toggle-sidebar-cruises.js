@@ -5,6 +5,7 @@ function toggleSidebarCruises() {
   let button = $('.heading__icon-cruises');
   let sidebar = $('.sidebar-cruises');
   let bg = $('.popup__overlay');
+  let close = $('.popup__close-mob');
   let scrollableElement = document.querySelector('.sidebar__blocks');
   button.on('click', function() {
     if ($(window).width() < 1240) {
@@ -13,12 +14,21 @@ function toggleSidebarCruises() {
     }
     disablePageScroll(scrollableElement);
   });
+  close.on('click', function() {
+    bg.removeClass('active');
+    gsap.to(sidebar, {y: '100%', opacity: 1, duration: 0.4, ease: "power2.out"});
+    enablePageScroll();
+  });
   if (sidebar.length > 0) {
     $(window).on('resize', function() {
       if ($(window).width() > 1240) {
         gsap.to(sidebar, {y: 0, opacity: 1, duration: 0});
+        bg.removeClass('active');
+        enablePageScroll();
       } else {
         gsap.to(sidebar, {y: '100%', opacity: 0, duration: 0});
+        bg.removeClass('active');
+        enablePageScroll();
       }
     });
   }

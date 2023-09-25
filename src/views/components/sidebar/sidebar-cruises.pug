@@ -1,5 +1,9 @@
 include ../../mixins/button
 .sidebar.sidebar-cruises
+  .popup__close-mob
+    button.popup__icon(type="button" aria-label="close")
+      svg(viewBox="0 0 24 24" width="24px" height="24px")
+        use(xlink:href="#svg-x-mark")
   .sidebar__title FIND YOUR CRUISE
   form.sidebar__filter(action="#")
     .sidebar__blocks
@@ -278,5 +282,5 @@ include ../../mixins/button
           label.sidebar__label
             input(type="radio" name="ship" value="Diana")
             span Diana
-    +button('button-green-transparent news-block__button sidebar__button sidebar__button-hidden', 'button', 'Clear filters', '', '')
-    +button('button-brown sidebar__button sidebar__button-submit', 'submit', 'Search', '', '')
+    +button('button-green-transparent news-block__button sidebar__button sidebar__button-hidden', 'button', 'Clear filters', '', '', '', '')
+    +button('button-green sidebar__button sidebar__button-submit', 'submit', 'Search', '', '', '', '')

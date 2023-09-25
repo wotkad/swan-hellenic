@@ -45,10 +45,8 @@
       &__blocks {
         max-height: calc(100vh - 216px);
         overflow-y: auto;
-        &::-webkit-scrollbar {
-          width: 0;
-          height: 0;
-        }
+        padding-right: 10px;
+        margin-right: -10px;
         @include screen(laptop) {
           max-height: 100%;
           overflow-y: unset;
@@ -288,11 +286,15 @@
       }
       &__button {
         margin-top: 20px;
-        width: calc(50% - 32px);
+        width: calc(50% - 24px);
         position: absolute;
         bottom: 32px;
+        padding: 17px 0;
         transform: translateX(0);
         left: 16px;
+        @include screen(tablet) {
+          width: calc(50% - 32px);
+        }
         &-submit {
           left: auto;
           right: 16px;
