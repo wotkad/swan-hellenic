@@ -78,6 +78,9 @@
   &-booking {
     .headline__title {
       display: none;
+      @include screen(laptop) {
+        display: block;
+      }
     }
   }
 }
