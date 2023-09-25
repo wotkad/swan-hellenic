@@ -1,0 +1,153 @@
+.booking-details {
+  &__subtitle {
+    margin-top: 16px;
+    color: $fathom;
+    @include sans-base-medium;
+  }
+  &__title {
+    color: $fathom;
+    margin-top: 20px;
+    @include chap-xs;
+  }
+  &__inputs {
+    margin-top: 18px;
+    row-gap: 42px;
+    display: grid;
+    column-gap: 48px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    &-small {
+      row-gap: 12px;
+    }
+    &-third {
+      @include screen(tablet) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    @include screen(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-column: span 1 / span 1;
+    position: relative;
+    border-bottom: 1px solid $green-200;
+    input {
+      @include sans-md;
+      padding: 16px 0;
+      width: 100%;
+      &.error {
+        border-color: $red-400;
+      }
+    }
+    &-phone,
+    &-email {
+      // display: none;
+    }
+    &-phone {
+      input {
+        padding-left: 58px;
+      }
+    }
+    &-full {
+      grid-column: span 1 / span 1;
+      @include screen(tablet) {
+        grid-column: span 2 / span 2;
+      }
+      textarea {
+        height: 57px;
+        padding: 16px 0;
+        width: 100%;
+        resize: none;
+        border-bottom: 1px solid $green-200;
+      }
+    }
+    &-icone {
+      gap: 10px;
+    }
+    &-big {
+      grid-column: span 2;
+    }
+    &-small {
+      grid-column-end: 1;
+    }
+    &.active {
+      display: flex;
+    }
+  }
+  &__note {
+    color: $green-200;
+    @include sans-sm-medium;
+  }
+  &__dropdown {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    position: absolute;
+    &__current {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      &.active {
+        .popup__arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__flag {
+      stroke: transparent;
+      max-width: 24px;
+      max-height: 24px;
+    }
+    &__country {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color $transition-default;
+      padding: 4px 8px;
+      @include screen(laptop) {
+        &:hover {
+          background-color: $white-300;
+        }
+      }
+      &.active {
+        background-color: $white-300;
+      }
+    }
+    &__list {
+      max-height: 104px;
+      overflow-y: auto;
+      position: absolute;
+      padding: 4px 0;
+      top: 32px;
+      left: 0;
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+      transition:
+        opacity $transition-default,
+        visibility $transition-default,
+        z-index $transition-default;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 3;
+      }
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+  &__calendar {
+    stroke: $fathom;
+    fill: $fathom;
+  }
+}
