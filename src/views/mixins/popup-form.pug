@@ -1,0 +1,136 @@
+include ../mixins/button
+
+mixin popup-form(popupType, className)
+  .popup(
+      data-popup=""+popupType 
+      class=""+className)
+    .popup__wrapper
+      .popup__close
+        button.popup__icon(type="button" aria-label="close")
+          svg(viewBox="0 0 24 24" width="36px" height="36px")
+            use(xlink:href="#svg-arrow-right")
+      .popup__close-mob
+        button.popup__icon(type="button" aria-label="close")
+          svg(viewBox="0 0 24 24" width="24px" height="24px")
+            use(xlink:href="#svg-x-mark")
+      .popup__container
+        .popup__heading
+          if popupType == 'callback'
+            h2.popup__title.popup__title-small Callback Request
+          if popupType == 'contacts'
+            h2.popup__title Contact Us
+          p.popup__description Whatever you need, we are here to satisfy your curious expedition mind whilst giving you the best experience possible. Simply complete the form below and one of our expedition specialists will come back to you shortly.
+        form.popup__form(action="#")
+          if popupType == 'contacts'
+            .popup__labels
+              label.popup__label(data-label="phone")
+                input(type="radio" checked name="contact_type" value="phone")
+                span Phone
+              label.popup__label(data-label="email")
+                input(type="radio" name="contact_type" value="email")
+                span E-mail
+          .popup__inputs
+            .popup__input
+              input(
+                type="text"
+                placeholder="First Name *"
+                autocomplete="on"
+                name="name"
+              )
+              svg.popup__check(viewBox="0 0 12 12" width="12px" height="12px")
+                use(xlink:href="#svg-check-small-green")
+            .popup__input
+              input(
+                type="text"
+                placeholder="Last Name *"
+                autocomplete="on"
+                name="surname"
+              )
+            .popup__input.popup__input-phone.active(data-input="phone")
+              .popup__dropdown
+                button.popup__dropdown__current(
+                  type="button"
+                  aria-label="country"
+                )
+                  svg.popup__dropdown__flag(
+                    viewBox="0 0 28 20"
+                    width="24px"
+                    height="24px"
+                  )
+                    use(xlink:href="#svg-flag-ru")
+                  svg.popup__arrow(
+                    viewBox="0 0 16 16"
+                    width="16px"
+                    height="16px"
+                  )
+                    use(xlink:href="#svg-arrow-down-small")
+                .popup__dropdown__list
+                  button.popup__dropdown__country(
+                    type="button"
+                    aria-label="country"
+                  )
+                    svg.popup__dropdown__flag(
+                      viewBox="0 0 28 20"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-flag-ru")
+                    span +7
+                  button.popup__dropdown__country(
+                    type="button"
+                    aria-label="country"
+                  )
+                    svg.popup__dropdown__flag(
+                      viewBox="0 0 28 20"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-flag-ge")
+                    span +995
+                  button.popup__dropdown__country(
+                    type="button"
+                    aria-label="country"
+                  )
+                    svg.popup__dropdown__flag(
+                      viewBox="0 0 28 20"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-flag-ru")
+                    span +7
+                  button.popup__dropdown__country(
+                    type="button"
+                    aria-label="country"
+                  )
+                    svg.popup__dropdown__flag(
+                      viewBox="0 0 28 20"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-flag-ge")
+                    span +995
+                  button.popup__dropdown__country(
+                    type="button"
+                    aria-label="country"
+                  )
+                    svg.popup__dropdown__flag(
+                      viewBox="0 0 28 20"
+                      width="24px"
+                      height="24px"
+                    )
+                      use(xlink:href="#svg-flag-ru")
+                    span +7
+              input(type="tel" placeholder="+7 *" autocomplete="on" name="phone")
+            .popup__input.popup__input-email(data-input="email")
+              input(
+                type="email"
+                placeholder="E-mail *"
+                autocomplete="on"
+                name="email"
+              )
+            .popup__input.popup__input-full
+              textarea.custom-scroll(placeholder="Your message" name="message")
+            .popup__button
+              +button('button-green', 'submit', 'Submit', '', '')
+            .popup__policy
+              span Fields with an asterisk (*) are required. By clicking “SUBMIT”, you are agreeing to our <a href="#">privacy policy</a>

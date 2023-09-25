@@ -83,7 +83,9 @@ html(lang="ru")
     include ../components/footer
 
     .popup__overlay
-    include ../components/popup/popup-contacts
+    include ../mixins/popup-form
+    +popup-form('contacts', 'popup-contacts')
+    +popup-form('callback', 'popup-callback')
     include ../components/popup/popup-success
     include ../components/popup/popup-error
     include ../components/popup/popup-map
@@ -91,5 +93,4 @@ html(lang="ru")
     include ../components/popup/popup-itinerary-excursions
     include ../components/cookie
     include ../components/popup/popup-cookie
-
     block js

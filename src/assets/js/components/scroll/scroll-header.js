@@ -26,7 +26,7 @@ function scrollHeader() {
   }
 
   $(window).on('scroll', function() {
-    $('.header__languages').fadeOut(300);
+    $('.header__languages').removeClass('active');
     $('.header__toggle').removeClass('active');
     if (window.pageYOffset > 0) {
       header.addClass('scrolled');

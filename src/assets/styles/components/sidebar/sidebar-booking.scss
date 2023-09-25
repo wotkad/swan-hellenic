@@ -143,14 +143,14 @@
         }
       }
       &__phone {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         margin-top: 4px;
         gap: 10px;
         span {
           color: $text;
+          transition: color $transition-default;
           @include sans-lg-medium;
-          transform: color $transition-default;
         }
         &:hover {
           span {
