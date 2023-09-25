@@ -1,0 +1,22 @@
+include ../mixins/button
+include ../mixins/headline
+include ../mixins/card-suite
+.wrapper
+  +headline('Stateroom selection', '', 'headline-sm')
+  .suites
+    .suites__wrapper
+      .suites__nav
+        .suites__title Number of Guests:
+        .suites__buttons
+          +button('suites__button button-green-transparent active', 'button', '1', '', '', '1')
+          +button('suites__button button-green-transparent', 'button', '2', '', '', '2')
+      .grid.grid-two.suites__container.active(data-id="1")
+        +card-suite('0', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')
+        +card-suite('1', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')
+        +card-suite('2', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')
+        +card-suite('3', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')
+        +card-suite('4', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')
+        +card-suite('5', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')
+      .grid.grid-two.suites__container(data-id="2")
+        +card-suite('6', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')
+        +card-suite('7', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter')

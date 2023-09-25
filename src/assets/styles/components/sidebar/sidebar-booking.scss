@@ -1,0 +1,163 @@
+.sidebar {
+  &-booking {
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    transform: translateY(100%);
+    opacity: 0;
+    bottom: 0;
+    z-index: 2000;
+    left: 0;
+    padding: 32px 16px;
+    border-radius: 14px 14px 0 0;
+    &:after {
+      width: 100%;
+      content: "";
+      position: absolute;
+      bottom: -999px;
+      height: 999px;
+      background-color: $white;
+    }
+    @include screen(laptop) {
+      opacity: 1;
+      left: auto;
+      height: auto;
+      z-index: auto;
+      transform: translateY(0);
+      border-radius: 0;
+      padding: 0;
+      bottom: auto;
+      position: static;
+      display: block;
+    }
+    .sidebar {
+      &__title {
+        color: $fathom;
+        text-transform: uppercase;
+        @include chap-sm;
+      }
+      &__name {
+        color: $text;
+        @include sans-lg;
+      }
+      &__form {
+        input {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+      }
+      &__input {
+        position: relative;
+      }
+      &__number {
+        text-transform: uppercase;
+        color: $white-400;
+        margin-top: 12px;
+      }
+      &__data {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        svg {
+          stroke: $untold-400;
+          fill: $untold-400;
+        }
+        span {
+          color: $text;
+          @include sans-sm;
+        }
+      }
+      &__date {
+        margin-left: 33px;
+        color: $green-200;
+        @include sans-sm;
+      }
+      &__img {
+        margin-top: 40px;
+        max-height: 277px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        img {
+          object-fit: cover;
+        }
+      }
+      &__subtitle {
+        margin-top: 32px;
+        color: $green-200;
+        text-transform: uppercase;
+        @include sans-base-medium;
+      }
+      &__room {
+        margin-top: 12px;
+        color: $text;
+        @include sans-lg-medium;
+      }
+      &__wrapper {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 24px;
+      }
+      &__description {
+        width: 114px;
+      }
+      &__heading {
+        text-transform: uppercase;
+        color: $green-200;
+        @include sans-base-medium;
+      }
+      &__text {
+        span {
+          color: $text;
+          @include sans-lg-medium;
+        }
+      }
+      &__button {
+        margin-top: 30px;
+        width: 100%;
+        &-green {
+          margin-top: 30px;
+        }
+      }
+      &__note {
+        margin-top: 18px;
+        color: $green-200;
+        max-width: 377px;
+        @include sans-sm-medium;
+      }
+      &__callback {
+        margin-top: 50px;
+        & > span {
+          padding-left: 42px;
+          color: $green-200;
+          @include sans-base-medium;
+        }
+        svg {
+          stroke: $untold-400;
+          fill: $untold-400;
+        }
+      }
+      &__phone {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        gap: 10px;
+        span {
+          color: $text;
+          @include sans-lg-medium;
+          transform: color $transition-default;
+        }
+        &:hover {
+          span {
+            color: $untold-400;
+          }
+        }
+      }
+    }
+  }
+}

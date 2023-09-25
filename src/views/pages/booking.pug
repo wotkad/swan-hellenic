@@ -16,8 +16,10 @@ block content
     include ../mixins/breadcrumbs
     include ../mixins/heading
     section.gapper.section.section-white
-      .wrapper-xl
-        .wrapper
-          +breadcrumbs([{href: '#', title: 'CRUISES'}, {href: '#', title: 'Arctic Islands & Fjords'}])
-          +heading('Book Cruise Arctic Islands & Fjords','heading-sm', '')
-          include ../components/booking-steps
+      .wrapper
+        +breadcrumbs([{href: '#', title: 'CRUISES'}, {href: '#', title: 'Arctic Islands & Fjords'}])
+        +heading('Book Cruise Arctic Islands & Fjords','heading-sm', '')
+        include ../components/booking-steps
+        .grid.grid-booking
+          include ../components/booking
+          include ../components/sidebar/sidebar-booking

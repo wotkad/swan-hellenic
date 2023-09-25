@@ -38,6 +38,11 @@
       }
     }
   }
+  &-sm {
+    .headline__title {
+      @include chap-sm;
+    }
+  }
   &-md {
     .headline__title {
       @include chap-sm;
