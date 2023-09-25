@@ -1,9 +1,7 @@
 include ../mixins/button
 
 mixin popup-form(popupType, className)
-  .popup(
-      data-popup=""+popupType 
-      class=""+className)
+  .popup(class="" + className data-popup="" + popupType)
     .popup__wrapper
       .popup__close
         button.popup__icon(type="button" aria-label="close")
@@ -120,7 +118,12 @@ mixin popup-form(popupType, className)
                     )
                       use(xlink:href="#svg-flag-ru")
                     span +7
-              input(type="tel" placeholder="+7 *" autocomplete="on" name="phone")
+              input(
+                type="tel"
+                placeholder="+7 *"
+                autocomplete="on"
+                name="phone"
+              )
             .popup__input.popup__input-email(data-input="email")
               input(
                 type="email"
