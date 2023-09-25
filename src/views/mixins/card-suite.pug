@@ -1,4 +1,4 @@
-mixin card-suite(i, type, title, description, footer)
+mixin card-suite(i, type, title, description, footer, buttonText)
   - className = "";
   case type
     when type = "sale"
@@ -36,4 +36,4 @@ mixin card-suite(i, type, title, description, footer)
               .card__label FROM
               .card__oldprice € 15.095
               .card__price € 15.095
-            +button('button-brown button-no-center card__button', 'button', 'Book now')
+            +button('button-brown button-no-center card__button', 'button', buttonText)

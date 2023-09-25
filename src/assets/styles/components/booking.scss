@@ -1,0 +1,17 @@
+.booking {
+  .headline {
+    display: none;
+    @include screen(tablet) {
+      display: block;
+    }
+  }
+  .suites {
+    &__button {
+      &.active {
+        color: $fathom;
+        background-color: rgba(146, 199, 208, 0.3);
+        border-color: transparent;
+      }
+    }
+  }
+}
