@@ -1,8 +1,8 @@
 .booking-details
   .booking-details__subtitle Guest 1
   h3.booking-details__title Contact details
-  form.booking-details__form(action="#")
-  .booking-details__inputs
+  form(action="#").booking-details__form
+  .booking-details__inputs.booking-details__inputs-mt
     .booking-details__input
       input(
         type="text"
@@ -44,11 +44,9 @@
         name="surname"
       )
   .booking-details__inputs.booking-details__inputs-small
-    .booking-details__input.booking-details__input-email(data-input="email")
+    .booking-details__input.booking-details__input-mt.booking-details__input-email(data-input="email")
       input(type="email" placeholder="E-mail *" autocomplete="on" name="email")
-    .booking-details__input.booking-details__input-phone.active(
-      data-input="phone"
-    )
+    .booking-details__input.booking-details__input-phone.booking-details__input-mt.active(data-input="phone")
       .booking-details__dropdown
         button.booking-details__dropdown__current(
           type="button"
@@ -125,7 +123,8 @@
       input(type="tel" placeholder="+7 *" autocomplete="on" name="phone")
     .booking-details__note Booking enquiry details will be sent to this e-mail address
     .booking-details__note We will shortly contact you via this phone number
-  h3.booking-details__title Postal address
+  h3.booking-details__title.booking-details__title-mt Postal address
+  .booking-details__inputs.booking-details__inputs-one.booking-details__inputs-mt
     .booking-details__input
       input(
         type="text"
@@ -150,18 +149,25 @@
         )
       .booking-details__input.booking-details__input-big
         input(type="text" placeholder="City" autocomplete="on" name="City")
-    .booking-details__inputs
-      .booking-details__input
-        input(
-          type="text"
-          placeholder="Region/State"
-          autocomplete="on"
-          name="Region/State"
-        )
-      .booking-details__input
-        input(
-          type="text"
-          placeholder="Country"
-          autocomplete="on"
-          name="Country"
-        )
+  .booking-details__inputs
+    .booking-details__input.booking-details__input-mt
+      input(type="text" placeholder="Region/State" autocomplete="on" name="Region/State")
+    .booking-details__input.booking-details__input-mt
+      input(type="text" placeholder="Country" autocomplete="on" name="Country")
+  label.booking-details__label
+    input(type="checkbox" name="type" value="guest 1 - approved Privacy policy and Terms & Conditions")
+    span I have read and approved <a href="#" target="_blank"> Privacy policy* </a> and <a href="#" target="_blank"> Terms & Conditions* </a>
+  .booking-details__subtitle.booking-details__subtitle-mt Guest 1
+  h3.booking-details__title Contact details
+  .booking-details__inputs.booking-details__inputs-mt
+    .booking-details__input
+      input(type="text" placeholder="First Name (as it appears in passport) *" autocomplete="on" name="name")
+      svg.booking-details__check(viewBox="0 0 12 12" width="12px" height="12px")
+        use(xlink:href="#svg-check-small-green")
+    .booking-details__input
+      input(type="text" placeholder="Last Name (as it appears in passport) *" autocomplete="on" name="surname")
+    .booking-details__input
+      input(type="text" placeholder="Middle name" autocomplete="on" name="surname")
+  label.booking-details__label
+    input(type="checkbox" name="type" value="guest 1 - approved Privacy policy and Terms & Conditions")
+    span I have read and approved <a href="#" target="_blank"> Privacy policy* </a> and <a href="#" target="_blank"> Terms & Conditions* </a>
