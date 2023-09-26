@@ -77,6 +77,10 @@
     &::-webkit-scrollbar {
       width: 0;
     }
+    @media screen and (orientation: landscape) {
+      max-height: none;
+      overflow: inherit;
+    }
   }
   &__years {
     display: grid;
@@ -143,7 +147,7 @@
     }
   }
   &__block {
-    padding-top: 80px;
+    margin-top: 80px;
     opacity: 0;
     z-index: -1;
     position: relative;
@@ -152,13 +156,22 @@
     background-color: $fathom;
     grid-row-start: 1;
     grid-column-start: 1;
+    margin-bottom: 80px;
     transition:
       opacity $transition-default,
       z-index $transition-default,
       visibility $transition-default;
+    @media screen and (orientation: landscape) {
+      max-height: calc(100vh - 160px);
+      overflow-y: auto;
+    }
     &[data-id="menu"] {
       .mob-menu__list {
         max-height: calc(100vh - 316px);
+        @media screen and (orientation: landscape) {
+          max-height: none;
+          overflow: inherit;
+        }
       }
     }
     &.active {

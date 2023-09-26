@@ -1,6 +1,7 @@
 import sendMail from "./sendMail.js"
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import gsap from "gsap";
+import Inputmask from 'inputmask';
 
 function sendForm() {
 
@@ -36,15 +37,16 @@ function sendForm() {
   }
   sendPopupForm();
 
-  // function inputMask() {
-  //   let input =  $('input[type="tel"]');
-  //   Array.from(input).forEach(function(element) {
-  //     let mask = new Inputmask('+7 (999) 999-99-99');
-  //     mask.mask(element);
-  //   });
-  // }
-  // inputMask();
 }
 setTimeout(function() {
   sendForm();
 }, 100);
+
+function inputMask() {
+  let input =  $('input[type="tel"]');
+  Array.from(input).forEach(function(element) {
+    let mask = new Inputmask('+7 (999) 999-99-99');
+    mask.mask(element);
+  });
+}
+inputMask();

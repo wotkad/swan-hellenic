@@ -20,7 +20,7 @@ function togglePopup() {
     const wrapper = popup.find('.popup__wrapper');
     const container = popup.find('.popup__container');
     const close = popup.find('.popup__close, .popup__close-mob');
-    const scrollableElement = document.querySelectorAll('.popup__form, .popup__labels')
+    const scrollableElement = document.querySelectorAll('.popup__form, .popup__labels, .popup__block')
 
     popup.addClass('active');
     bg.addClass('active');

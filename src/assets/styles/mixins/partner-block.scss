@@ -26,7 +26,6 @@
   &__image {
     order: -1;
     height: 200px;
-    display: none;
     &-mob {
       display: block;
       margin-top: 24px;
@@ -44,7 +43,6 @@
     }
     @include screen(laptop) {
       height: 100%;
-      display: block;
     }
     @include screen(laptop) {
       position: absolute;
@@ -124,6 +122,11 @@
       @include screen(laptop) {
         @include chap-2lg;
       }
+    }
+    .partner-block__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }

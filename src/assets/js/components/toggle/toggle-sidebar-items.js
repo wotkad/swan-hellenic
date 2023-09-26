@@ -31,15 +31,17 @@ function toggleSidebarItems() {
   }
 
   $clearButton.on('click', function () {
+    $('.sidebar__select__scroll').scrollTop(0);
     updateClearButtonVisibility();
     $filterInput.prop('checked', false);
     $selectMonths.hide();
+    $headerButton.removeClass('active');
+    $sidebarList.removeClass('active');
     $(this).addClass('sidebar__button-hidden');
     $('.sidebar__select__item').removeClass('active');
     $('.sidebar__select-destination .sidebar__select__value span').text('Choose destination');
     $('.sidebar__select-departing_port .sidebar__select__value span').text('Choose departing port');
     $('.sidebar__select-months .sidebar__select__value span').text('Choose month');
-    $('.sidebar__select__scroll').scrollTop(0);
     noValueFiller();
   });
 
@@ -118,7 +120,7 @@ function toggleSidebarItems() {
 
   $(document).on('keydown', function(e) {
     if (e.key == 'Escape') {
-        $headerButton.removeClass('active');
+      $headerButton.removeClass('active');
       $sidebarList.removeClass('active');
     }
   });

@@ -5,7 +5,7 @@ export default function toggleMobMenu() {
   let menu = $(".mob-menu");
   let list = document.querySelectorAll('.mob-menu__list');
   $(window).on('resize', function() {
-    if ($(window).width() > 1240) {
+    if ($(window).width() >= 1240) {
       $('.header').removeClass('header-green');
       button.removeClass('active');
       menu.removeClass('active');

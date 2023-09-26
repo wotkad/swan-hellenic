@@ -55,7 +55,7 @@ function toggleFilter() {
         let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
         let calendarOffset = easepickCalendarContainer.height();
 
-        if (isAnyElementOutOfViewport(container)) {
+        if (isAnyElementOutOfViewport(easepickCalendarContainer)) {
           easepickCalendarContainer.css('top', -calendarOffset-80+'px');
         } else {
           easepickCalendarContainer.css('top', 22+'px');
@@ -108,6 +108,7 @@ function filterCalendar() {
       RangePlugin: {
         tooltip: false
       },
+      format: "DD.MM.YYYY",
       AmpPlugin: {
         resetButton: true,
         dropdown: {
@@ -161,6 +162,6 @@ function toggleFilterMob() {
     });
   }
 }
-if ($(window).width() < 1240) {
+if ($(window).width() <= 1240) {
   toggleFilterMob();
 }
