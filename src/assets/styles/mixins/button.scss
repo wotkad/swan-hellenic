@@ -6,6 +6,59 @@
   &__text {
     transition: color $transition-default;
     @include sans-base-medium;
+    &-selected {
+      display: none;
+    }
+    &-unselect {
+      display: none;
+    }
+  }
+  &__label {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: relative;
+    .button {
+      width: 100%;
+      pointer-events: none;
+    }
+    @include screen(laptop) {
+      &:hover {
+        .button {
+          background-color: transparent;
+          border-color: $untold-400;
+          color: $untold-400;
+        }
+      }
+    }
+    input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      &:checked {
+        & + .button .button__text {
+          display: none;
+          &-selected {
+            display: block;
+          }
+        }
+        @include screen(laptop) {
+          &:hover {
+            & + .button .button__text {
+              display: none;
+              &-selected {
+                display: none;
+              }
+              &-unselect {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &-white-transparent {
     background-color: transparent;

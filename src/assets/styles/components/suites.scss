@@ -4,6 +4,20 @@
     display: flex;
     gap: 12px;
     flex-direction: column;
+    &__button {
+      transform: translateX(0);
+      left: 0;
+      padding: 0;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        background-color: $fathom;
+        color: $white;
+      }
+    }
   }
   &__title {
     text-transform: uppercase;
@@ -14,17 +28,9 @@
     gap: 10px;
   }
   &__button {
-    transform: translateX(0);
-    left: 0;
-    padding: 0;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &.active {
-      background-color: $fathom;
-      color: $white;
+    margin-top: 40px;
+    @include screen(laptop) {
+      display: none;
     }
   }
   &__container {

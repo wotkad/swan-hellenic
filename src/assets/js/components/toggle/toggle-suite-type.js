@@ -1,5 +1,5 @@
 function toggleSuiteType() {
-  let button = $('.suites__button');
+  let button = $('.suites__nav__button');
   let container = $('.suites__container');
   for (let i = 0; i < Array.from(button).length; i++) {
     $(button[i]).on('click', function () {

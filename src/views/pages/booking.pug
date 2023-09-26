@@ -31,8 +31,8 @@ block content
                 .suites__nav
                   .suites__title Guests:
                   .suites__buttons
-                    +button('suites__button button-lightgreen active', 'button', '1', '', '', '1', '')
-                    +button('suites__button button-lightgreen', 'button', '2', '', '', '2', '')
+                    +button('suites__nav__button button-lightgreen active', 'button', '1', '', '', '1', '')
+                    +button('suites__nav__button button-lightgreen', 'button', '2', '', '', '2', '')
                 .grid.grid-two.suites__container.active(data-id="1")
                   +card-suite('0', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
                   +card-suite('1', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
@@ -43,4 +43,5 @@ block content
                 .grid.grid-two.suites__container(data-id="2")
                   +card-suite('6', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
                   +card-suite('7', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Select')
+                +button('button-green-transparent suites__button', 'button', 'View all suite types', '')
           include ../components/sidebar/sidebar-booking

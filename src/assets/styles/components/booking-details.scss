@@ -32,7 +32,6 @@
     display: flex;
     align-items: center;
     grid-column: span 1 / span 1;
-    position: relative;
     border-bottom: 1px solid $green-200;
     input {
       @include sans-md;

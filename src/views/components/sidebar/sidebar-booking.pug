@@ -1,76 +1,78 @@
 include ../../mixins/button
 .sidebar.sidebar-booking
-  form.sidebar__form(action="#")
-    h3.sidebar__title Summary
-    .sidebar__name.sidebar__input
-      input(type="text" name="name" value="Arctic Islands & Fjords")
-      span Arctic Islands & Fjords
-    .sidebar__number.sidebar__input
-      input(type="text" name="uid" value="V0623030520")
-      span V0623030520
-    .sidebar__data.sidebar__input
-      input(type="text" name="destanation" value="Ushuaia - Cape Town")
-      svg(viewBox="0 0 24 24" width="24" height="24")
-        use(xlink:href="#svg-location")
-      span Ushuaia - Cape Town
-    .sidebar__data.sidebar__input
-      input(type="text" name="ship" value="SH Vega")
-      svg(viewBox="0 0 24 25" width="24px" height="24px")
-        use(xlink:href="#svg-ship")
-      span SH Vega
-    .sidebar__data.sidebar__input
-      input(type="text" name="nights" value="20 Nights")
-      svg(viewBox="0 0 24 25" width="24px" height="24px")
-        use(xlink:href="#svg-calendar")
-      span 20 Nights
-      .sidebar__date.sidebar__input
-        input(type="text" name="date" value="05.03.23 - 25.03.23")
-        span 05.03.23 - 25.03.23
-    .sidebar__img
-      img(src="/assets/images/cruise-page/item-6.png" alt="item-6")
-    .sidebar__subtitle
-      span your stateroom
-    .sidebar__room.sidebar__input
-      input(type="text" name="room" value="Oceanview D4")
-      span Oceanview D4
-    .sidebar__wrapper
-      .sidebar__description
-        .sidebar__heading NO
-        .sidebar__text.sidebar__input
-          input(type="text" name="NO" value="402")
-          span 402
-      .sidebar__description
-        .sidebar__heading Sleeps
-        .sidebar__text.sidebar__input
-          input(type="text" name="Sleeps" value="2")
-          span 2
-      .sidebar__description
-        .sidebar__heading Area
-        .sidebar__text.sidebar__input
-          input(type="text" name="Area" value="19 m2")
-          span 19 m2
-      .sidebar__description
-        .sidebar__heading GUESTS
-        .sidebar__text.sidebar__input
-          input(type="text" name="GUESTS" value="2")
-          span 2
-      .sidebar__description
-        .sidebar__heading DESK
-        .sidebar__text.sidebar__input
-          input(type="text" name="DESK" value="4")
-          span 4
-    .sidebar__wrapper
-      .sidebar__description
-        .sidebar__heading Price
-        .sidebar__text.sidebar__input
-          input(type="text" name="Price" value="€ 23,078")
-          span € 23,078
-    +button('button-brown sidebar__button sidebar__button-submit button-no-center', 'submit', 'CONFIRM & CONTINUE', '', '')
-    .sidebar__note Please select a stateroom & click CONFIRM & CONTINUE to submit your booking enquiry.
-  .sidebar__callback
-    span 9AM - 5.30PM GMT
-    a.sidebar__phone(href="tel:+49 (0) 211 13 866 123")
-      svg(viewBox="0 0 25 25" width="24px" height="24px")
-        use(xlink:href="#svg-phone")
-      span +49 (0) 211 13 866 123
-  +button('sidebar__button-green button-green button-no-center popup-trigger', 'button', 'ARRANGE A CALLBACK', '', '', '', 'callback')
+  .wrapper
+    .sidebar-booking__wrapper
+      form.sidebar__form(action="#")
+        h3.sidebar__title Summary
+        .sidebar__name.sidebar__input
+          input(type="text" name="title" value="Arctic Islands & Fjords")
+          span Arctic Islands & Fjords
+        .sidebar__number.sidebar__input
+          input(type="text" name="uid" value="V0623030520")
+          span V0623030520
+        .sidebar__data.sidebar__input
+          input(type="text" name="destanation" value="Ushuaia - Cape Town")
+          svg(viewBox="0 0 24 24" width="24" height="24")
+            use(xlink:href="#svg-location")
+          span Ushuaia - Cape Town
+        .sidebar__data.sidebar__input
+          input(type="text" name="ship" value="SH Vega")
+          svg(viewBox="0 0 24 25" width="24px" height="24px")
+            use(xlink:href="#svg-ship")
+          span SH Vega
+        .sidebar__data.sidebar__input
+          input(type="text" name="nights" value="20 Nights")
+          svg(viewBox="0 0 24 25" width="24px" height="24px")
+            use(xlink:href="#svg-calendar")
+          span 20 Nights
+          .sidebar__date.sidebar__input
+            input(type="text" name="date" value="05.03.23 - 25.03.23")
+            span 05.03.23 - 25.03.23
+        .sidebar__img
+          img(src="/assets/images/cruise-page/item-6.png" alt="item-6")
+        .sidebar__subtitle
+          span your stateroom
+        .sidebar__room.sidebar__input
+          input(type="text" name="room" value="Oceanview D4")
+          span Oceanview D4
+        .sidebar__wrapper
+          .sidebar__description
+            .sidebar__heading NO
+            .sidebar__text.sidebar__input
+              input(type="text" name="NO" value="402")
+              span 402
+          .sidebar__description
+            .sidebar__heading Sleeps
+            .sidebar__text.sidebar__input
+              input(type="text" name="Sleeps" value="2")
+              span 2
+          .sidebar__description
+            .sidebar__heading Area
+            .sidebar__text.sidebar__input
+              input(type="text" name="Area" value="19 m2")
+              span 19 m2
+          .sidebar__description
+            .sidebar__heading GUESTS
+            .sidebar__text.sidebar__input
+              input(type="text" name="GUESTS" value="2")
+              span 2
+          .sidebar__description
+            .sidebar__heading DESK
+            .sidebar__text.sidebar__input
+              input(type="text" name="DESK" value="4")
+              span 4
+        .sidebar__wrapper
+          .sidebar__description
+            .sidebar__heading Price
+            .sidebar__text.sidebar__input
+              input(type="text" name="Price" value="€ 23,078")
+              span € 23,078
+        +button('button-brown sidebar__button-submit button-no-center sidebar__button', 'submit', 'CONFIRM & CONTINUE', '', '')
+        .sidebar__note Please select a stateroom & click CONFIRM & CONTINUE to submit your booking enquiry.
+      .sidebar__callback
+        span 9AM - 5.30PM GMT
+        a.sidebar__phone(href="tel:+49 (0) 211 13 866 123")
+          svg(viewBox="0 0 25 25" width="24px" height="24px")
+            use(xlink:href="#svg-phone")
+          span +49 (0) 211 13 866 123
+      +button('sidebar__button-green button-green button-no-center popup-trigger sidebar__button', 'button', 'ARRANGE A CALLBACK', '', '', '', 'callback')

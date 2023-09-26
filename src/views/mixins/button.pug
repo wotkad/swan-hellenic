@@ -1,17 +1,35 @@
-mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup)
+mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup, select=false)
   if buttonType
-    button.button(
-      type="" + buttonType
-      aria-label=icon || false
-      class=className || false
-      data-filter-step=filterStep || false
-      data-id=id || false
-      data-popup-button=dataPopup || false
-    )
-      .button__text= title
-      if icon
-        svg(viewBox="0 0 24 24" width="24px" height="24px")
-          use(xlink:href="" + icon)
+    if select == 'select'
+      label.button__label(for="button" + id)
+        input(type="checkbox" id="button" + id)
+        button.button(
+          type="" + buttonType
+          aria-label=icon || false
+          class=className || false
+          data-filter-step=filterStep || false
+          data-id=id || false
+          data-popup-button=dataPopup || false
+        )
+          .button__text= title
+          .button__text.button__text-selected Selected
+          .button__text.button__text-unselect Unselect
+          if icon
+            svg(viewBox="0 0 24 24" width="24px" height="24px")
+              use(xlink:href="" + icon)
+    else
+      button.button(
+        type="" + buttonType
+        aria-label=icon || false
+        class=className || false
+        data-filter-step=filterStep || false
+        data-id=id || false
+        data-popup-button=dataPopup || false
+      )
+        .button__text= title
+        if icon
+          svg(viewBox="0 0 24 24" width="24px" height="24px")
+            use(xlink:href="" + icon)
   else
     a.button(href="#" class=className || false)
       .button__text= title

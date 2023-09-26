@@ -1,15 +1,39 @@
 .sidebar {
   &-booking {
-    background-color: $white;
-    position: fixed;
-    width: 100%;
-    transform: translateY(100%);
-    opacity: 0;
-    bottom: 0;
-    z-index: 2000;
-    left: 0;
-    padding: 32px 16px;
-    border-radius: 14px 14px 0 0;
+    & > .wrapper {
+      position: fixed;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      margin-top: 10px;
+      transform: translateY(-50%);
+      transition: transform $transition-default;
+      @include screen(laptop) {
+        position: static;
+        transform: translateY(0);
+        top: 0;
+        width: auto;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -60px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          #fff 20.47%
+        );
+        @include screen(laptop) {
+          display: none;
+        }
+      }
+    }
     &:after {
       width: 100%;
       content: "";
@@ -17,9 +41,15 @@
       bottom: -999px;
       height: 999px;
       background-color: $white;
+      display: none;
+      @include screen(laptop) {
+        display: block;
+      }
     }
     @include screen(laptop) {
+      padding: 32px 16px;
       opacity: 1;
+      margin-top: 0;
       left: auto;
       height: auto;
       z-index: auto;
@@ -30,14 +60,26 @@
       position: static;
       display: block;
     }
+    &__wrapper {
+      position: relative;
+      padding: 0 16px;
+      @include screen(laptop) {
+        padding: 0;
+      }
+    }
     .sidebar {
       &__title {
         color: $fathom;
         text-transform: uppercase;
         @include chap-sm;
+        display: none;
+        @include screen(laptop) {
+          display: block;
+        }
       }
       &__name {
         color: $text;
+        margin-top: 16px;
         @include sans-lg;
       }
       &__form {
@@ -47,9 +89,6 @@
           width: 0;
           height: 0;
         }
-      }
-      &__input {
-        position: relative;
       }
       &__number {
         text-transform: uppercase;
@@ -70,10 +109,24 @@
           @include sans-sm;
         }
       }
+      &__input {
+        position: relative;
+        display: none;
+        @include screen(laptop) {
+          display: flex;
+        }
+      }
       &__date {
         margin-left: 33px;
-        color: $green-200;
+        span {
+          color: $green-200;
+        }
         @include sans-sm;
+        @include screen(laptop) {
+          &.sidebar__input {
+            display: inline;
+          }
+        }
       }
       &__img {
         margin-top: 40px;
@@ -81,6 +134,10 @@
         overflow: hidden;
         height: 100%;
         width: 100%;
+        display: none;
+        @include screen(laptop) {
+          display: block;
+        }
         img {
           object-fit: cover;
         }
@@ -90,6 +147,10 @@
         color: $green-200;
         text-transform: uppercase;
         @include sans-base-medium;
+        display: none;
+        @include screen(laptop) {
+          display: block;
+        }
       }
       &__room {
         margin-top: 12px;
@@ -98,10 +159,13 @@
       }
       &__wrapper {
         margin-top: 30px;
-        display: flex;
         flex-wrap: wrap;
         row-gap: 30px;
         column-gap: 24px;
+        display: none;
+        @include screen(laptop) {
+          display: flex;
+        }
       }
       &__description {
         width: 114px;
@@ -120,8 +184,19 @@
       &__button {
         margin-top: 30px;
         width: 100%;
+        @include screen(tablet) {
+          width: auto;
+        }
+        @include screen(laptop) {
+          width: 100%;
+        }
         &-green {
           margin-top: 30px;
+        }
+        &.popup-trigger {
+          @include screen(laptop) {
+            width: auto;
+          }
         }
       }
       &__note {
@@ -132,6 +207,9 @@
       }
       &__callback {
         margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         & > span {
           padding-left: 42px;
           color: $green-200;
@@ -153,9 +231,11 @@
           transition: color $transition-default;
           @include sans-lg-medium;
         }
-        &:hover {
-          span {
-            color: $untold-400;
+        @include screen(laptop) {
+          &:hover {
+            span {
+              color: $untold-400;
+            }
           }
         }
       }

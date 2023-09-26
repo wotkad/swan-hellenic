@@ -96,6 +96,7 @@
 
 .container.amp-plugin .calendars .calendar>.header .month-name select {
   cursor: pointer;
+  padding: 0;
 }
 
 .container.amp-plugin .calendars .calendar>.header .month-name select.month-name--dropdown,

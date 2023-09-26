@@ -44,5 +44,6 @@ import "./components/slider/slider-popup";
 import "./components/hover/hover-menu";
 
 import "./components/scroll/scroll-header";
+import "./components/scroll/scroll-sidebar-booking";
 
 import "./components/mousemove/card-cursor";
