@@ -55,7 +55,7 @@ function toggleFilter() {
         let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
         let calendarOffset = easepickCalendarContainer.height();
 
-        if (isAnyElementOutOfViewport(easepickCalendarContainer)) {
+        if (isAnyElementOutOfViewport(container)) {
           easepickCalendarContainer.css('top', -calendarOffset-80+'px');
         } else {
           easepickCalendarContainer.css('top', 22+'px');

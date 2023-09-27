@@ -126,6 +126,9 @@
     width: 100%;
     position: absolute;
     border-radius: 12px;
+    &[data-filter="calendar"] {
+      height: 343px;
+    }
     &-top {
       top: 60px;
       @include screen(laptop) {

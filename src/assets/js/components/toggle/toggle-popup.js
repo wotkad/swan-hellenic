@@ -34,8 +34,10 @@ function togglePopup() {
     }
 
     disablePageScroll(scrollableElement);
-
+    
+    close.off('click');
     close.on('click', function() {
+      console.log('123');
       if ($(window).width() > 768) {
         gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
           popup.removeClass('active');
@@ -79,6 +81,7 @@ function togglePopup() {
             if ($(window).width() < 768) {
               gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
                 popup.removeClass('active');
+                bg.removeClass('active');
               }});
               enablePageScroll();
             }

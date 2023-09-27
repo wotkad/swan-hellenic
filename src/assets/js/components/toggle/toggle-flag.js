@@ -3,7 +3,6 @@ function toggleFlag() {
   let menu = $('.popup__dropdown__list');
   let items = $('.popup__dropdown__country');
   let input = $('.popup input[type="tel"]');
-  let currentFlag = $('.popup__dropdown__current .popup__dropdown__flag use').prop('href')
   button.on('click', function(e) {
     $(this).toggleClass('active');
     menu.toggleClass('active');
@@ -18,7 +17,8 @@ function toggleFlag() {
       $(this).addClass('active');
       menu.removeClass('active');
       input.val($(this).find('span').text());
-      let newFlag = $(this).find('use').prop('href')
+      let newFlag = $(this).find('use').prop('href');
+      let currentFlag = $(this).parent().prev().find('.popup__dropdown__flag use').prop('href');
       currentFlag.animVal = newFlag.animVal;
       currentFlag.baseVal = newFlag.baseVal;
     });

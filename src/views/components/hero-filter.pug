@@ -87,6 +87,7 @@ include ../mixins/button
             height="16px"
           )
             use(xlink:href="#svg-arrow-down-small")
+        .hero-filter__list(data-filter="calendar")
         +button('button-brown button-no-center hero-filter__next', 'button', '', '#svg-arrow-right', 'ship')
       .hero-filter__label.hero-filter__label-ship(data-filter-step="ship")
         +button('button-brown button-no-center hero-filter__prev', 'button', '', '#svg-arrow-left', 'calendar')

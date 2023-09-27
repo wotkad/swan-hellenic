@@ -10,7 +10,7 @@ function toggleSidebarItems() {
   const $labelsYears = $('.sidebar__labels-years input[name="year"]');
 
   $headerButton.on('click', function (e) {
-    if ($headerButton.is(e.target) || $(".sidebar__select__value span").is(e.target) || $(".sidebar__select__header svg").is(e.target) || $(".sidebar__select__header use").is(e.target)) {
+    if ($headerButton.is(e.target)) {
       $(this).toggleClass('active');
       $(this).next($sidebarList).toggleClass('active');
       $headerButton.not(this).removeClass('active');
@@ -42,12 +42,14 @@ function toggleSidebarItems() {
     $('.sidebar__select-destination .sidebar__select__value span').text('Choose destination');
     $('.sidebar__select-departing_port .sidebar__select__value span').text('Choose departing port');
     $('.sidebar__select-months .sidebar__select__value span').text('Choose month');
+    $('.sidebar__select__scroller').removeClass('selected');
     noValueFiller();
   });
 
   function createValues() {
     $('.sidebar__select-type input').on('change', function () {
       $selectValuesContainer.empty();
+      $('.sidebar__select__scroller').addClass('selected');
       $('.sidebar__select-type input:checked').each(function () {
         const $checked = $(this);
         const text = $checked.siblings('span').text();
@@ -87,6 +89,7 @@ function toggleSidebarItems() {
         </div>
       `);
       $selectValuesContainer.append(noItem);
+      $('.sidebar__select__scroller').removeClass('selected');
     }
   }
 
@@ -105,9 +108,8 @@ function toggleSidebarItems() {
     updateClearButtonVisibility();
   });
 
-  // Добавьте следующий код:
-  $(document).on('click', function(e) {
-    if (!$typeButton.is(e.target) && !$headerButton.is(e.target) && !$sidebarList.is(e.target) && $typeButton.is(e.target).length === 0) {
+  $(document).mouseup(function(e) {
+    if (!$typeButton.is(e.target) && !$headerButton.is(e.target) && !$sidebarList.is(e.target) && $typeButton.has(e.target).length === 0) {
       $sidebarList.removeClass('active');
       $headerButton.removeClass('active');
       $('.sidebar__select__scroll').scrollTop(0);

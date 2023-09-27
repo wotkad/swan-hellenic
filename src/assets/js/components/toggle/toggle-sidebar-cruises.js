@@ -10,27 +10,28 @@ function toggleSidebarCruises() {
   button.on('click', function() {
     if ($(window).width() <= 1240) {
       bg.addClass('active');
-      gsap.to(sidebar, {y: 0, opacity: 1, duration: 0.4, ease: "power2.out"});
+      gsap.to(sidebar, {y: 0, bottom: 0, opacity: 1, duration: 0.4, ease: "power2.out"});
     }
     disablePageScroll(scrollableElement);
   });
   close.on('click', function() {
     bg.removeClass('active');
-    gsap.to(sidebar, {y: '100%', opacity: 1, duration: 0.4, ease: "power2.out"});
+    gsap.to(sidebar, {y: '100%', opacity: 1, bottom: '-100%', duration: 0.4, ease: "power2.out"});
     enablePageScroll();
   });
   if (sidebar.length > 0) {
     $(window).on('resize', function() {
       if ($(window).width() >= 1240) {
-        gsap.to(sidebar, {y: 0, opacity: 1, duration: 0});
-        bg.removeClass('active');
-        enablePageScroll();
-      } else {
-        gsap.to(sidebar, {y: '100%', opacity: 0, duration: 0});
+        gsap.to(sidebar, {y: 0, opacity: 1, bottom: '-100%', duration: 0});
         bg.removeClass('active');
         enablePageScroll();
       }
     });
+    if ($(window).width() < 1240) {
+      gsap.to(sidebar, {y: '100%', opacity: 1, bottom: '-100%', duration: 0});
+      bg.removeClass('active');
+      enablePageScroll();
+    }
   }
   function closeSidebarCruise() {
     let startY = null;
@@ -44,7 +45,7 @@ function toggleSidebarCruises() {
         if (deltaY > 200) {
           if ($(window).width() <= 1240) {
             bg.removeClass('active');
-            gsap.to(sidebar, {y: '100%', opacity: 1, duration: 0.4, ease: "power2.out"});
+            gsap.to(sidebar, {y: '100%', opacity: 1, bottom: '-100%', duration: 0.4, ease: "power2.out"});
             enablePageScroll();
           }
         }
@@ -57,7 +58,9 @@ function toggleSidebarCruises() {
   bg.on('click', function() {
     bg.removeClass('active');
     if (sidebar.length > 0) {
-      gsap.to(sidebar, {y: '100%', opacity: 1, duration: 0.4, ease: "power2.out"});
+      if ($(window).width() <= 768) {
+        gsap.to(sidebar, {y: '100%', opacity: 1, bottom: '-100%', duration: 0.4, ease: "power2.out"});
+      }
     }
     enablePageScroll();
   });
