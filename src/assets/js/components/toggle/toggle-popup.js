@@ -34,7 +34,7 @@ function togglePopup() {
     }
 
     disablePageScroll(scrollableElement);
-    
+
     close.off('click');
     close.on('click', function() {
       console.log('123');
