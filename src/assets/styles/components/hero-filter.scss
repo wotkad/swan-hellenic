@@ -41,16 +41,6 @@
     color: $white-450;
     position: relative;
     @include sans-base;
-    .easepick-wrapper {
-      opacity: 0;
-      visibility: hidden;
-      z-index: -1;
-      &.active {
-        opacity: 1;
-        visibility: visible;
-        z-index: 2;
-      }
-    }
     input {
       width: 0;
       height: 0;
@@ -70,6 +60,7 @@
           width: 630px;
         }
         @include screen(laptop) {
+          height: 44px;
           width: 282px;
         }
         &.selected {

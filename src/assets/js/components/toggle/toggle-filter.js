@@ -3,10 +3,45 @@ import { easepick } from "@easepick/bundle";
 import { AmpPlugin } from '@easepick/amp-plugin';
 import { RangePlugin } from '@easepick/range-plugin';
 
+let container = $('.hero-filter__list');
+
+function isAnyElementOutOfViewport($els) {
+  const screenBottom = window.innerHeight;
+  for (let i = 0; i < $els.length; i++) {
+    const rect = $els[i].getBoundingClientRect();
+    if (rect.bottom > screenBottom) {
+      return true;
+    }
+  }
+  return false;
+}
+
+if (isAnyElementOutOfViewport(container)) {
+  container.addClass('hero-filter__list-bottom');
+  container.removeClass('hero-filter__list-top');
+} else {
+  container.removeClass('hero-filter__list-bottom');
+  container.addClass('hero-filter__list-top');
+}
+
+function recalculateCalendarPosition() {
+  if ($('.easepick-wrapper').length > 0) {
+    let easepickCalendar = $('.easepick-wrapper')[0].shadowRoot;
+    let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
+    let calendarOffset = easepickCalendarContainer.height();
+
+    if (isAnyElementOutOfViewport(container)) {
+      easepickCalendarContainer.css('top', -calendarOffset-80+'px');
+    } else {
+      easepickCalendarContainer.css('top', 22+'px');
+    }
+  }
+}
+
 function toggleFilter() {
   let button = $('.hero-filter__container');
-  let container = $('.hero-filter__list');
   let items = $('.hero-filter__item');
+
   items.on('click', function() {
     let text = $(this).text();
     items.removeClass('active');
@@ -39,28 +74,18 @@ function toggleFilter() {
         $('.hero-filter__container-calendar').removeClass('active');
       }
 
-      function isAnyElementOutOfViewport($els) {
-        const screenBottom = window.innerHeight;
-        for (let i = 0; i < $els.length; i++) {
-          const rect = $els[i].getBoundingClientRect();
-          if (rect.bottom > screenBottom) {
-            return true;
-          }
-        }
-        return false;
-      }
-
-      if ($('.easepick-wrapper').length > 0) {
+      if (!$('.easepick-wrapper').hasClass('active')) {
         let easepickCalendar = $('.easepick-wrapper')[0].shadowRoot;
         let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
-        let calendarOffset = easepickCalendarContainer.height();
-
-        if (isAnyElementOutOfViewport(container)) {
-          easepickCalendarContainer.css('top', -calendarOffset-80+'px');
-        } else {
-          easepickCalendarContainer.css('top', 22+'px');
-        }
+        easepickCalendarContainer.removeClass('show');
       }
+    });
+
+    $(button[i]).on('click', function () {
+      recalculateCalendarPosition();
+    });
+
+    $(button[i]).not('.hero-filter__container-calendar').on('click', function () {
       if (isAnyElementOutOfViewport(container)) {
         container.addClass('hero-filter__list-bottom');
         container.removeClass('hero-filter__list-top');
@@ -69,6 +94,7 @@ function toggleFilter() {
         container.addClass('hero-filter__list-top');
       }
     });
+
   }
   $(document).mouseup(function(e) {
     if (
@@ -141,6 +167,9 @@ function filterCalendar() {
             $('.hero-filter__label-calendar .hero-filter__container').removeClass('active');
           }, 0);
         });
+        picker.on('view', (e) => {
+          recalculateCalendarPosition();
+        })
       },
     });
   }
