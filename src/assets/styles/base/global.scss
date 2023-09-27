@@ -45,7 +45,7 @@ input {
   }
   &.success {
     border-color: $green-200;
-    & ~ .popup__check {
+    & ~ .svg__check {
       opacity: 1;
       visibility: visible;
       z-index: 1;
