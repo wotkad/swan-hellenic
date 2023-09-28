@@ -1,0 +1,188 @@
+.popup {
+  &.popup-select {
+    .popup__container {
+      justify-content: space-between;
+    }
+    @include screen(laptop) {
+      max-width: 1200px;
+    }
+    .popup-select {
+      &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      &__title {
+        text-transform: uppercase;
+        @include chap-base;
+        line-height: 40px;
+      }
+      &__subtitle {
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        @include chap-sm;
+      }
+      &__button {
+        padding: 17px 70px;
+      }
+      &__desks {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+      &__desk {
+        position: relative;
+        cursor: pointer;
+        input {
+          width: 0;
+          height: 0;
+          position: absolute;
+          opacity: 0;
+          &:checked + span {
+            color: $fathom;
+          }
+        }
+        span {
+          transition: color $transition-default;
+          color: $green-200;
+          @include sans-lg-medium;
+        }
+      }
+      &__types {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: flex-start;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        column-gap: 42px;
+      }
+      &__type {
+        min-width: 220px;
+        position: relative;
+        cursor: pointer;
+        padding-left: 66px;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 50px;
+          height: 50px;
+          border-radius: 5px;
+        }
+        &-premium {
+          &:before {
+            background-color: #43235c;
+          }
+        }
+        &-unavalible {
+          &:before {
+            background-color: #c7c7c7;
+          }
+        }
+        &-balcony {
+          &:before {
+            background-color: #b799dc;
+          }
+        }
+        &-suite {
+          &:before {
+            background-color: #724e9f;
+          }
+        }
+        p {
+          text-transform: uppercase;
+          color: $green-200;
+          @include sans-base-medium;
+        }
+        span {
+          display: inline-block;
+          @include sans-lg-medium;
+        }
+        input {
+          width: 0;
+          height: 0;
+          position: absolute;
+          opacity: 0;
+          &:checked + svg {
+            opacity: 1;
+          }
+        }
+        svg {
+          transition: opacity $transition-default;
+          opacity: 0;
+          fill: transparent;
+          stroke: $white;
+          position: absolute;
+          left: 13px;
+          top: 13px;
+        }
+      }
+      &__suites {
+        svg {
+          stroke: inherit;
+          path {
+            transition:
+              fill $transition-default,
+              stroke $transition-default;
+          }
+        }
+      }
+      &__suite {
+        &-avalible {
+          cursor: pointer;
+          &:hover {
+            .popup-select__suite-bg {
+              fill: #b799dc;
+              filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+            }
+            .popup-select__suite-text {
+              fill: $white;
+            }
+          }
+        }
+        &-unavalible {
+          cursor: not-allowed;
+          .popup-select__suite-bg {
+            fill: #cccccc;
+          }
+          .popup-select__suite-text {
+            fill: #7e7e7e;
+          }
+        }
+      }
+      &__summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &__info {
+        width: 100%;
+      }
+      &__preferences {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(154px, 1fr));
+        gap: 70px;
+      }
+      &__preference {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        p {
+          text-transform: uppercase;
+          color: $green-200;
+          @include sans-base-medium;
+        }
+        span {
+          display: inline-block;
+          @include sans-lg-medium;
+        }
+      }
+    }
+  }
+}

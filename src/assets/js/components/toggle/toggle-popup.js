@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { clearQueueScrollLocks, disablePageScroll, enablePageScroll } from "scroll-lock";
 
 function togglePopup() {
   const buttons = $('.popup-trigger');
@@ -37,12 +37,12 @@ function togglePopup() {
 
     close.off('click');
     close.on('click', function() {
-      console.log('123');
       if ($(window).width() > 768) {
         gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
           popup.removeClass('active');
           bg.removeClass('active');
         }});
+        clearQueueScrollLocks();
       } else {
         gsap.to(wrapper, { y: container.outerHeight(), duration: 0.4, ease: "power2.out", onComplete: () => {
           popup.removeClass('active');

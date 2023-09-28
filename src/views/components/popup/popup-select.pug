@@ -1,0 +1,68 @@
+include ../../mixins/button
+.popup.popup-select(data-popup="select")
+  .popup__wrapper
+    .popup__close
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="36px" height="36px")
+          use(xlink:href="#svg-arrow-right")
+    .popup__close-mob
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="24px" height="24px")
+          use(xlink:href="#svg-x-mark")
+    .popup__container
+      .popup-select__header
+        .popup-select__heading
+          h3.popup-select__title Select <br> a stateroom
+          .popup-select__desks
+            label.popup-select__desk
+              input(type="radio" name="desk" value="desk_4" checked)
+              span Desk 4
+            label.popup-select__desk
+              input(type="radio" name="desk" value="desk_5")
+              span Desk 5
+            label.popup-select__desk
+              input(type="radio" name="desk" value="desk_6")
+              span Desk 6
+        .popup-select__types
+          label.popup-select__type.popup-select__type-balcony
+            input(type="radio" name="type" value="balcony")
+            svg(viewBox="0 0 24 24" width="24px" height="24px")
+              use(xlink:href="#svg-check")
+            p Balcony D6
+            span € 19,859
+          label.popup-select__type.popup-select__type-premium
+            input(type="radio" name="type" value="premium")
+            svg(viewBox="0 0 24 24" width="24px" height="24px")
+              use(xlink:href="#svg-check")
+            p Premium Suite
+            span € 27,619
+          label.popup-select__type.popup-select__type-suite
+            input(type="radio" name="type" value="suite")
+            svg(viewBox="0 0 24 24" width="24px" height="24px")
+              use(xlink:href="#svg-check")
+            p Suite
+            span € 23,424
+          label.popup-select__type.popup-select__type-unavalible
+            input(type="radio" name="type" value="unavalible")
+            svg(viewBox="0 0 24 24" width="24px" height="24px")
+              use(xlink:href="#svg-check")
+            p Unavailable <br> stateroom
+      .popup-select__suites
+        include ship.svg
+      .popup-select__info
+        .popup-select__subtitle SELECTED PREFERENCE
+        .popup-select__summary
+          .popup-select__preferences
+            .popup-select__preference
+              p Desk
+              span -
+            .popup-select__preference
+              p Type
+              span -
+            .popup-select__preference
+              p Stateroom
+              span -
+            .popup-select__preference
+              p Price
+              span -
+          +button('button-brown button-no-center button-disabled popup-select__button', 'button', 'Select', '' ,'', '', '', '')
