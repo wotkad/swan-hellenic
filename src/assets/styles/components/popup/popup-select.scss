@@ -7,10 +7,17 @@
       max-width: 1200px;
     }
     .popup-select {
+      position: relative;
+      &__selected {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
       &__header {
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
       }
       &__heading {
@@ -31,36 +38,31 @@
       &__button {
         padding: 17px 70px;
       }
-      &__desks {
+      &__decks {
         display: flex;
         align-items: center;
         gap: 50px;
       }
-      &__desk {
+      &__deck {
         position: relative;
         cursor: pointer;
-        input {
-          width: 0;
-          height: 0;
-          position: absolute;
-          opacity: 0;
-          &:checked + span {
-            color: $fathom;
-          }
-        }
-        span {
-          transition: color $transition-default;
-          color: $green-200;
-          @include sans-lg-medium;
+        transition: color $transition-default;
+        color: $green-200;
+        @include sans-lg-medium;
+        &.active {
+          color: $fathom;
         }
       }
       &__types {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: flex-start;
         flex-wrap: wrap;
         row-gap: 24px;
         column-gap: 42px;
+        &.active {
+          display: grid;
+        }
       }
       &__type {
         min-width: 220px;
@@ -81,6 +83,7 @@
           }
         }
         &-unavalible {
+          cursor: not-allowed;
           &:before {
             background-color: #c7c7c7;
           }
@@ -104,15 +107,6 @@
           display: inline-block;
           @include sans-lg-medium;
         }
-        input {
-          width: 0;
-          height: 0;
-          position: absolute;
-          opacity: 0;
-          &:checked + svg {
-            opacity: 1;
-          }
-        }
         svg {
           transition: opacity $transition-default;
           opacity: 0;
@@ -121,6 +115,11 @@
           position: absolute;
           left: 13px;
           top: 13px;
+        }
+        &.active {
+          svg {
+            opacity: 1;
+          }
         }
       }
       &__suites {
@@ -131,6 +130,12 @@
               fill $transition-default,
               stroke $transition-default;
           }
+        }
+      }
+      &__ship {
+        display: none;
+        &.active {
+          display: block;
         }
       }
       &__suite {
@@ -153,6 +158,59 @@
           }
           .popup-select__suite-text {
             fill: #7e7e7e;
+          }
+        }
+        &-suite.active {
+          .popup-select__suite-bg {
+            fill: #724e9f;
+            &:hover {
+              fill: #724e9f;
+            }
+          }
+          .popup-select__suite-text {
+            fill: $white;
+          }
+        }
+        &-balcony.active {
+          .popup-select__suite-bg {
+            fill: #b799dc;
+            &:hover {
+              fill: #b799dc;
+            }
+          }
+          .popup-select__suite-text {
+            fill: $white;
+          }
+        }
+        &-premium.active {
+          .popup-select__suite-bg {
+            fill: #43235c;
+            &:hover {
+              fill: #43235c;
+            }
+          }
+          .popup-select__suite-text {
+            fill: $white;
+          }
+        }
+        &.active {
+          &:hover {
+            .popup-select__suite-bg {
+              filter: none;
+            }
+          }
+        }
+        &.selected {
+          .popup-select__suite-bg {
+            fill: $untold-400;
+          }
+          .popup-select__suite-text {
+            fill: $white;
+          }
+          &:hover {
+            .popup-select__suite-bg {
+              fill: $untold-400;
+            }
           }
         }
       }
