@@ -1,26 +1,25 @@
 include ../../mixins/button
 .sidebar.sidebar-booking-review
-  .sidebar-booking__wrapper
-    form.sidebar__form(action="#")
-      .sidebar__img
-        img(src="/assets/images/cruise-page/item-6.png" alt="item-6")
-      .sidebar__promocode
-        .sidebar__subtitle PROMOCODE
-        .sidebar__input
-          input(type="text" placeholder="Enter your promocode" name="Promocode")
-        .sidebar__note If you have a promocode, please, fill in the dedicated field.
-      .sidebar__description
-        .sidebar__heading Price
-        .sidebar__text
-          input(type="text" name="Price" value="€ 23,078")
-          span € 23,078
-      .sidebar__button-main
-        +button('button-brown sidebar__button-submit button-no-center sidebar__button', 'submit', 'send enquery', '', '')
-        .sidebar__note Please select a stateroom & click CONFIRM & CONTINUE to submit your booking enquiry.
-    .sidebar__callback
-      span 9AM - 5.30PM GMT
-      a.sidebar__phone(href="tel:+49 (0) 211 13 866 123")
-        svg(viewBox="0 0 25 25" width="24px" height="24px")
-          use(xlink:href="#svg-phone")
-        span +49 (0) 211 13 866 123
-    +button('sidebar__button-green button-green button-no-center popup-trigger sidebar__button', 'button', 'ARRANGE A CALLBACK', '', '', '', 'callback')
+  form.sidebar__form(action="#")
+    .sidebar__img
+      img(src="/assets/images/cruise-page/item-6.png" alt="item-6")
+    .sidebar__promocode
+      .sidebar__subtitle PROMOCODE
+      .sidebar__input
+        input(type="text" placeholder="Enter your promocode" name="Promocode")
+      .sidebar__note If you have a promocode, please, fill in the dedicated field.
+    .sidebar__description
+      .sidebar__heading Price
+      .sidebar__text
+        input(type="text" name="Price" value="€ 23,078")
+        span € 23,078
+    .sidebar__button-main
+      +button('button-brown sidebar__button-submit button-no-center sidebar__button', 'submit', 'send enquery', '', '')
+      .sidebar__note Please select a stateroom & click CONFIRM & CONTINUE to submit your booking enquiry.
+  .sidebar__callback
+    span 9AM - 5.30PM GMT
+    a.sidebar__phone(href="tel:+49 (0) 211 13 866 123")
+      svg(viewBox="0 0 25 25" width="24px" height="24px")
+        use(xlink:href="#svg-phone")
+      span +49 (0) 211 13 866 123
+  +button('sidebar__button-green button-green button-no-center popup-trigger sidebar__button', 'button', 'ARRANGE A CALLBACK', '', '', '', 'callback')

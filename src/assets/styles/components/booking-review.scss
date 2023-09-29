@@ -14,8 +14,12 @@
     }
   }
   .sidebar__button {
-    margin-top: 40px;
-    padding: 16px 137px;
+    display: none;
+    @include screen(laptop) {
+      display: inline-flex;
+      margin-top: 40px;
+      padding: 16px 137px;
+    }
   }
   &__form {
     input {
@@ -27,9 +31,21 @@
   }
   &__card {
     display: flex;
-    gap: 46px;
+    gap: 24px;
+    flex-wrap: wrap;
+    @include screen(laptop) {
+      gap: 46px;
+    }
     &-justify {
       justify-content: space-between;
+      .booking-review__column {
+        &:first-child {
+          width: 100%;
+          @include screen(laptop) {
+            width: auto;
+          }
+        }
+      }
     }
   }
   &__column {
@@ -44,12 +60,23 @@
     }
   }
   &__wrapper {
-    margin-top: 32px;
+    margin-top: 24px;
+    @include screen(laptop) {
+      margin-top: 44px;
+    }
+    &-small {
+      @include screen(laptop) {
+        margin-top: 32px;
+      }
+    }
   }
   &__title {
-    margin-top: 55px;
+    margin-top: 24px;
     color: $text;
     @include sans-lg-medium;
+    @include screen(laptop) {
+      margin-top: 55px;
+    }
   }
   &__subtitle {
     color: $green-200;
@@ -58,9 +85,14 @@
     @include sans-base-medium;
   }
   &__block {
-    padding: 36px 0;
+    padding: 24px 0;
+    @include screen(laptop) {
+      padding: 36px 0;
+    }
     &:nth-child(1) {
-      padding-top: 32px;
+      @include screen(laptop) {
+        padding-top: 32px;
+      }
     }
     &:nth-child(2) {
       border: 1px solid $green-200;
@@ -78,7 +110,10 @@
     column-gap: 46px;
   }
   &__cabin {
-    margin-top: 44px;
+    margin-top: 34px;
+    @include screen(laptop) {
+      margin-top: 44px;
+    }
   }
   &__date {
     color: $green-200;
@@ -97,13 +132,26 @@
       @include sans-sm;
     }
   }
+  &__image {
+    height: 290px;
+    width: 100%;
+    overflow: hidden;
+    margin: 33px auto 0;
+    @include screen(tablet) {
+      height: 390px;
+    }
+    @include screen(laptop) {
+      display: none;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   &__input {
     white-space: nowrap;
     position: relative;
-    display: none;
-    @include screen(laptop) {
-      display: flex;
-    }
+    display: flex;
   }
   &__note {
     color: $green-200;
