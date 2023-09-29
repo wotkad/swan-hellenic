@@ -2,9 +2,9 @@ mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup, s
   if buttonType
     if select == 'select'
       .button__label.popup-trigger(
-          for="button" + id
-          data-popup-button=dataPopup || false
-        )
+        for="button" + id
+        data-popup-button=dataPopup || false
+      )
         input(type="checkbox" id="button" + id)
         button.button(
           type="" + buttonType

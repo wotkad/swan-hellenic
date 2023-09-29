@@ -1,6 +1,13 @@
 include ../../mixins/button
 .popup.popup-select(data-popup="select")
-  input.popup-select__selected(type="text" name="suite_number" data-deck="" data-suite-type="" data-suiteroom="" data-price="")
+  input.popup-select__selected(
+    type="text"
+    name="suite_number"
+    data-deck=""
+    data-price=""
+    data-suite-type=""
+    data-suiteroom=""
+  )
   .popup__wrapper
     .popup__close
       button.popup__icon(type="button" aria-label="close")
@@ -16,17 +23,21 @@ include ../../mixins/button
           h3.popup-select__title Select <br> a stateroom
           .popup-select__decks
             .popup-select__deck(data-deck="deck_4") Deсk 4
-            .popup-select__deck(data-deck="deck_5").active Deсk 5
+            .popup-select__deck.active(data-deck="deck_5") Deсk 5
             .popup-select__deck(data-deck="deck_6") Deсk 6
         .popup-select__container
           .popup-select__types(data-types="deck_4")
-            .popup-select__type.popup-select__type-oceanview(data-type="oceanview-d4")
+            .popup-select__type.popup-select__type-oceanview(
+              data-type="oceanview-d4"
+            )
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               .popup-select__type__content
                 p Oceanview D4
                 span € 12,823
-            .popup-select__type.popup-select__type-oceanview(data-type="oceanview-m4")
+            .popup-select__type.popup-select__type-oceanview(
+              data-type="oceanview-m4"
+            )
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               .popup-select__type__content
@@ -36,8 +47,10 @@ include ../../mixins/button
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               p Unavailable <br> stateroom
-          .popup-select__types(data-types="deck_5").active
-            .popup-select__type.popup-select__type-balcony(data-type="balcony-d5")
+          .popup-select__types.active(data-types="deck_5")
+            .popup-select__type.popup-select__type-balcony(
+              data-type="balcony-d5"
+            )
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               .popup-select__type__content
@@ -49,7 +62,9 @@ include ../../mixins/button
               .popup-select__type__content
                 p Junior Suite
                 span € 33,871
-            .popup-select__type.popup-select__type-balcony(data-type="balcony-m5")
+            .popup-select__type.popup-select__type-balcony(
+              data-type="balcony-m5"
+            )
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               .popup-select__type__content
@@ -66,7 +81,9 @@ include ../../mixins/button
                 use(xlink:href="#svg-check")
               p Unavailable <br> stateroom
           .popup-select__types(data-types="deck_6")
-            .popup-select__type.popup-select__type-balcony(data-type="balcony-d6")
+            .popup-select__type.popup-select__type-balcony(
+              data-type="balcony-d6"
+            )
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               .popup-select__type__content
