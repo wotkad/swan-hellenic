@@ -4,6 +4,7 @@ function toggleShipSuite() {
   let room = $('.popup-select__suite');
   let typesContainer = $('.popup-select__types');
   let shipContainer = $('.popup-select__ship');
+  let select = $('.popup-select__button');
   for (let i = 0; i < Array.from(deck).length; i++) {
     $(deck[i]).on('click', function () {
       deck.removeClass('active');
@@ -31,6 +32,7 @@ function toggleShipSuite() {
       $(types).attr('data-type', $(this).attr('data-type')).addClass('active');
     });
   }
+
   for (let i = 0; i < Array.from(room).length; i++) {
     $(room[i]).not('.popup-select__suite-unavalible').on('click', function () {
       room.removeClass('active').removeClass('selected');
@@ -42,6 +44,14 @@ function toggleShipSuite() {
       $(rooms).attr('data-type', $(this).attr('data-type')).addClass('active');
       $(types).attr('data-type', $(this).attr('data-type')).addClass('active');
       $(this).addClass('selected');
+
+      $('.popup-select__preference-deck span').text($('.popup-select__deck.active').text())
+      $('.popup-select__preference-type span').text($('.popup-select__type.active .popup-select__type__content p').eq(0).text())
+      $('.popup-select__preference-stateroom span').text($('.popup-select__deck.active').eq(0).text())
+      $('.popup-select__preference-price span').text($('.popup-select__type.active .popup-select__type__content span').eq(0).text())
+
+      select.removeClass('button-disabled');
+
     });
   }
 }

@@ -44,8 +44,12 @@
             display: block;
           }
         }
-        @include screen(laptop) {
-          &:hover {
+      }
+    }
+    @include screen(laptop) {
+      &:hover {
+        input {
+          &:checked {
             & + .button .button__text {
               display: none;
               &-selected {

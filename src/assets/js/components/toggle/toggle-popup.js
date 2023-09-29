@@ -19,7 +19,7 @@ function togglePopup() {
     const bg = $('.popup__overlay');
     const wrapper = popup.find('.popup__wrapper');
     const container = popup.find('.popup__container');
-    const close = popup.find('.popup__close, .popup__close-mob');
+    const close = $('.popup__close, .popup__close-mob, .popup-select__button');
     const scrollableElement = document.querySelectorAll('.popup__form, .popup__labels, .popup__block')
 
     popup.addClass('active');
@@ -49,6 +49,22 @@ function togglePopup() {
           bg.removeClass('active');
         }});
       }
+      $('.popup-select__suite').removeClass('active').removeClass('selected');
+      $('.popup-select__type').removeClass('active');
+      $('.popup-select__suite').removeClass('active');
+      $('.popup-select__types').removeClass('active');
+      $('.popup-select__types[data-types="deck_5"]').addClass('active');
+      $('.popup-select__deck').removeClass('active');
+      $('.popup-select__deck[data-deck="deck_5"]').addClass('active');
+      $('.popup-select__ship').removeClass('active');
+      $('.popup-select__ship[data-ship="deck_5"]').addClass('active');
+      $('.popup-select__button').addClass('button-disabled');
+
+      $('.popup-select__preference-deck span').text('-');
+      $('.popup-select__preference-type span').text('-');
+      $('.popup-select__preference-stateroom span').text('-');
+      $('.popup-select__preference-price span').text('-');
+      
       enablePageScroll();
     });
 

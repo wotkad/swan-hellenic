@@ -3,10 +3,7 @@ include ../../mixins/button
   input.popup-select__selected(
     type="text"
     name="suite_number"
-    data-deck=""
-    data-price=""
-    data-suite-type=""
-    data-suiteroom=""
+    data-selected=""
   )
   .popup__wrapper
     .popup__close
@@ -122,16 +119,16 @@ include ../../mixins/button
         h4.popup-select__subtitle SELECTED PREFERENCE
         .popup-select__summary
           .popup-select__preferences
-            .popup-select__preference
+            .popup-select__preference.popup-select__preference-deck
               p Deck
               span -
-            .popup-select__preference
+            .popup-select__preference.popup-select__preference-type
               p Type
               span -
-            .popup-select__preference
+            .popup-select__preference.popup-select__preference-stateroom
               p Stateroom
               span -
-            .popup-select__preference
+            .popup-select__preference.popup-select__preference-price
               p Price
               span -
           +button('button-brown button-no-center button-disabled popup-select__button', 'button', 'Select', '' ,'', '', '', '')
