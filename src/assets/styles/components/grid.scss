@@ -24,6 +24,12 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  &-six {
+    grid-template-columns: 1fr;
+    @include screen(tablet) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
   &-offset {
     padding: 40px 0;
     @include screen(laptop) {
@@ -67,6 +73,14 @@
             }
           }
         }
+      }
+    }
+    &-review {
+      @include screen(laptop) {
+        margin-top: 97px;
+        padding-bottom: 0;
+        gap: 92px;
+        grid-template-columns: 1fr 512px;
       }
     }
   }

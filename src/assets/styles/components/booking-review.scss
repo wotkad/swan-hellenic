@@ -1,0 +1,112 @@
+.booking-review {
+  .grid {
+    row-gap: 12px;
+    &-six {
+      column-gap: 86px;
+      div {
+        &:first-child {
+          grid-column: span 2;
+        }
+        &:nth-child(6) {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+  .sidebar__button {
+    margin-top: 40px;
+    padding: 16px 137px;
+  }
+  &__form {
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+  &__card {
+    display: flex;
+    gap: 46px;
+    &-justify {
+      justify-content: space-between;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__text {
+    @include sans-md;
+    &-medium {
+      @include sans-lg-medium;
+    }
+  }
+  &__wrapper {
+    margin-top: 32px;
+  }
+  &__title {
+    margin-top: 55px;
+    color: $text;
+    @include sans-lg-medium;
+  }
+  &__subtitle {
+    color: $green-200;
+    text-transform: uppercase;
+    white-space: nowrap;
+    @include sans-base-medium;
+  }
+  &__block {
+    padding: 36px 0;
+    &:nth-child(1) {
+      padding-top: 32px;
+    }
+    &:nth-child(2) {
+      border: 1px solid $green-200;
+      border-width: 1px 0 1px 0;
+    }
+  }
+  &__number {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: $white-400;
+    @include sans-md;
+  }
+  &__information {
+    margin-top: 12px;
+    column-gap: 46px;
+  }
+  &__cabin {
+    margin-top: 44px;
+  }
+  &__date {
+    color: $green-200;
+    @include sans-sm;
+  }
+  &__data {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    svg {
+      stroke: $untold-400;
+      fill: $untold-400;
+    }
+    span {
+      color: $text;
+      @include sans-sm;
+    }
+  }
+  &__input {
+    white-space: nowrap;
+    position: relative;
+    display: none;
+    @include screen(laptop) {
+      display: flex;
+    }
+  }
+  &__note {
+    color: $green-200;
+    @include sans-lg-medium;
+  }
+}

@@ -1,0 +1,30 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Booking
+
+block basicSeo
+  meta(content="This page Cruises" name="description")
+  meta(content="Page, Cruises" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([{href: '#', title: 'CRUISES'}, {href: '#', title: 'Arctic Islands & Fjords'}])
+        +heading('Book Cruise Arctic Islands & Fjords','heading-sm', '')
+        include ../components/booking-steps
+        .grid.grid-booking-review
+          include ../mixins/button
+          include ../mixins/headline
+          include ../mixins/card-suite
+          .booking__wrapper
+            +headline('Review & send enquiry', '', 'headline-sm headline-booking')
+            include ../components/booking-review
+          include ../components/sidebar/sidebar-booking-review
