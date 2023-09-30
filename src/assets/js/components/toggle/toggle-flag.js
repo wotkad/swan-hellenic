@@ -33,6 +33,7 @@ function toggleFlag() {
     if (e.key == 'Escape') {
       button.removeClass('active');
       menu.removeClass('active');
+      document.removeEventListener('keydown', arguments.callee);
     }
   });
 }

@@ -1,10 +1,5 @@
 include ../../mixins/button
 .popup.popup-select(data-popup="select")
-  input.popup-select__selected(
-    type="text"
-    name="suite_number"
-    data-selected=""
-  )
   .popup__wrapper
     .popup__close
       button.popup__icon(type="button" aria-label="close")
@@ -131,4 +126,12 @@ include ../../mixins/button
             .popup-select__preference.popup-select__preference-price
               p Price
               span -
-          +button('button-brown button-no-center button-disabled popup-select__button', 'button', 'Select', '' ,'', '', '', '')
+          .button__label.popup-select__button
+            input.button__input(type="checkbox" data-selected="")
+            button.button(
+              type="button"
+              class="button-brown button-no-center button-disabled popup-select__button"
+            )
+              .button__text Select
+              .button__text.button__text-selected Selected
+              .button__text.button__text-unselect Unselect

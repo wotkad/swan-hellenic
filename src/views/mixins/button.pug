@@ -1,7 +1,7 @@
 mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup, select=false)
   if buttonType
     if select == 'select'
-      .button__label.popup-trigger(
+      .button__label.popup-trigger.card-suite__button(
         for="button" + id
         data-popup-button=dataPopup || false
       )
