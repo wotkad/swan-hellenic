@@ -8,10 +8,13 @@ export default function toggleMobMenu() {
     if ($(window).width() >= 1240) {
       $('.header').removeClass('header-green');
       button.removeClass('active');
+      if (menu.hasClass('active')) {
+        enablePageScroll();
+      }
       menu.removeClass('active');
       $('.mob-menu__block').removeClass('active');
       $('.mob-menu__year').removeClass('active');
-      enablePageScroll();
+      
     }
   });
   button.on("click", function() {
