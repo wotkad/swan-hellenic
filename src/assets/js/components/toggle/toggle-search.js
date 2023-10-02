@@ -8,6 +8,7 @@ function toggleSearch() {
   document.addEventListener('keydown', function(e) {
     if (e.key == 'Escape') {
       search.removeClass('active');
+      document.removeEventListener('keydown', arguments.callee);
     }
   });
   $(document).mouseup(function(e) {

@@ -6,11 +6,21 @@
     transform: translateY(100%);
     height: calc(100vh - 60px);
     opacity: 0;
-    bottom: 0;
+    bottom: -100%;
     z-index: 2000;
     left: 0;
     padding: 32px 16px;
     border-radius: 14px 14px 0 0;
+    .popup__close-mob {
+      top: 28px;
+      @include screen(tablet) {
+        display: block;
+      }
+      @include screen(laptop) {
+        display: none;
+        top: 16px;
+      }
+    }
     &:after {
       width: 100%;
       content: "";
@@ -171,6 +181,10 @@
           display: flex;
           align-items: center;
           overflow-x: auto;
+          pointer-events: none;
+          &.selected {
+            pointer-events: all;
+          }
           &::-webkit-scrollbar {
             width: 0;
             height: 0;
@@ -186,6 +200,7 @@
           right: 20px;
           transition: transform $transition-default;
           z-index: 4;
+          pointer-events: none;
         }
         &__scroll {
           left: 0;
@@ -232,7 +247,8 @@
           }
           svg {
             display: none;
-            fill: $fathom;
+            fill: transparent;
+            stroke: $fathom;
           }
           @include screen(laptop) {
             &:hover {

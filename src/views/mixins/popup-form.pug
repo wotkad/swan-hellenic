@@ -124,13 +124,14 @@ mixin popup-form(popupType, className)
                 autocomplete="on"
                 name="phone"
               )
-            .popup__input.popup__input-email(data-input="email")
-              input(
-                type="email"
-                placeholder="E-mail *"
-                autocomplete="on"
-                name="email"
-              )
+            if popupType == 'contacts'
+              .popup__input.popup__input-email(data-input="email")
+                input(
+                  type="email"
+                  placeholder="E-mail *"
+                  autocomplete="on"
+                  name="email"
+                )
             .popup__input.popup__input-full
               textarea.custom-scroll(placeholder="Your message" name="message")
             .popup__button

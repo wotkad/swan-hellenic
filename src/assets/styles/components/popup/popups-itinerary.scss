@@ -5,11 +5,13 @@
   .popup {
     &__container {
       .popup-slider__track {
-        max-height: 100vh;
-        overflow-y: auto;
         padding-bottom: 52px;
         &::-webkit-scrollbar {
           width: 0;
+        }
+        @include screen(laptop) {
+          max-height: 100vh;
+          overflow-y: auto;
         }
       }
     }
@@ -114,6 +116,8 @@
       }
     }
     &__block {
+      max-height: calc(100vh - 340px);
+      overflow-y: auto;
       @include screen(tablet) {
         border: 1px solid $gray-200;
         padding: 24px;

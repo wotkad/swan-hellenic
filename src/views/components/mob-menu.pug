@@ -1,7 +1,7 @@
 .mob-menu
   .wrapper
     .mob-menu__wrapper
-      .mob-menu__block(data-id="menu")
+      .mob-menu__block(data-id="menu" data-scroll-lock-scrollable)
         .mob-menu__list
           .mob-menu__item.mob-menu__stepper(data-id="cruises")
             a.mob-menu__link(href="/cruises")
@@ -67,7 +67,7 @@
             svg(viewBox="0 0 25 25" width="24px" height="24px")
               use(xlink:href="#svg-phone")
             span 8 800 555 35 35
-      .mob-menu__block(data-id="cruises")
+      .mob-menu__block(data-id="cruises" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -96,7 +96,10 @@
             .header__arrow
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-arrow-right")
-      .mob-menu__block(data-id="cruises-destinations")
+      .mob-menu__block(
+        data-id="cruises-destinations"
+        data-scroll-lock-scrollable
+      )
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -137,7 +140,7 @@
           .mob-menu__item
             a.mob-menu__link(href="#")
               span South America
-      .mob-menu__block(data-id="cruises-ships")
+      .mob-menu__block(data-id="cruises-ships" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -157,7 +160,10 @@
           .mob-menu__item
             a.mob-menu__link(href="#")
               span Vega
-      .mob-menu__block(data-id="cruises-departures")
+      .mob-menu__block(
+        data-id="cruises-departures"
+        data-scroll-lock-scrollable
+      )
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -283,7 +289,7 @@
             .mob-menu__item
               a.mob-menu__link(href="#")
                 span December
-      .mob-menu__block(data-id="destinations")
+      .mob-menu__block(data-id="destinations" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -324,7 +330,7 @@
           .mob-menu__item
             a.mob-menu__link(href="#")
               span Pacific Islands
-      .mob-menu__block(data-id="ships")
+      .mob-menu__block(data-id="ships" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -344,7 +350,7 @@
           .mob-menu__item
             a.mob-menu__link(href="#")
               span Vega
-      .mob-menu__block(data-id="why-swan")
+      .mob-menu__block(data-id="why-swan" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -386,7 +392,7 @@
             .mob-menu__item
               a.mob-menu__link(href="#")
                 span Wildlife
-      .mob-menu__block(data-id="plan-your-trip")
+      .mob-menu__block(data-id="plan-your-trip" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -424,7 +430,7 @@
           .mob-menu__item
             a.mob-menu__link(href="#")
               span Terms & conditions
-      .mob-menu__block(data-id="partnerships")
+      .mob-menu__block(data-id="partnerships" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -456,7 +462,7 @@
           .mob-menu__item
             a.mob-menu__link(href="#")
               span Partner 7
-      .mob-menu__block(data-id="about-us")
+      .mob-menu__block(data-id="about-us" data-scroll-lock-scrollable)
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"
@@ -491,7 +497,10 @@
           .mob-menu__item
             a.mob-menu__link(href="#")
               span Contact us
-      .mob-menu__block.mob-menu__block-lang(data-id="lang")
+      .mob-menu__block.mob-menu__block-lang(
+        data-id="lang"
+        data-scroll-lock-scrollable
+      )
         .mob-menu__heading
           button.mob-menu__heading__back.mob-menu__stepper(
             type="button"

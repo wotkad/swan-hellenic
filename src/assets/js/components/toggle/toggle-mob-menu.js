@@ -5,13 +5,16 @@ export default function toggleMobMenu() {
   let menu = $(".mob-menu");
   let list = document.querySelectorAll('.mob-menu__list');
   $(window).on('resize', function() {
-    if ($(window).width() > 1240) {
+    if ($(window).width() >= 1240) {
       $('.header').removeClass('header-green');
       button.removeClass('active');
+      if (menu.hasClass('active')) {
+        enablePageScroll();
+      }
       menu.removeClass('active');
       $('.mob-menu__block').removeClass('active');
       $('.mob-menu__year').removeClass('active');
-      enablePageScroll();
+      
     }
   });
   button.on("click", function() {

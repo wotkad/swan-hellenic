@@ -1,15 +1,15 @@
 mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup, select=false)
   if buttonType
     if select == 'select'
-      label.button__label(for="button" + id)
-        input(type="checkbox" id="button" + id)
+      .button__label.popup-trigger.card-suite__button(
+        for="button" + id
+        data-popup-button=dataPopup || false
+      )
+        input.button__input(type="checkbox" id="button" + id data-selected="item" + id)
         button.button(
           type="" + buttonType
-          aria-label=icon || false
           class=className || false
-          data-filter-step=filterStep || false
           data-id=id || false
-          data-popup-button=dataPopup || false
         )
           .button__text= title
           .button__text.button__text-selected Selected
