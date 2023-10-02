@@ -21,14 +21,6 @@
       padding: 16px 137px;
     }
   }
-  &__form {
-    input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-  }
   &__card {
     display: flex;
     gap: 24px;
@@ -152,6 +144,12 @@
     white-space: nowrap;
     position: relative;
     display: flex;
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
   }
   &__note {
     color: $green-200;

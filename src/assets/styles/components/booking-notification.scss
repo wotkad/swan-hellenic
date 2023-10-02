@@ -1,0 +1,102 @@
+.booking-notification {
+  &__description {
+    margin-top: 28px;
+    color: $text;
+    @include sans-lg;
+    a {
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: $transition-default;
+      &:hover {
+        border-bottom: 1px solid $text;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid $green-200;
+    @include screen(tablet) {
+      flex-direction: row;
+      align-items: flex-end;
+      padding: 36px 0;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border: none;
+      align-items: flex-start;
+      padding-top: 0;
+      @include screen(tablet) {
+        padding-top: 24px;
+      }
+    }
+  }
+  &__block {
+    width: 100%;
+    @include screen(tablet) {
+      width: auto;
+    }
+    &-mobile {
+      padding-bottom: 24px;
+      padding-top: 24px;
+      border-bottom: 1px solid $green-200;
+      width: 100%;
+      @include screen(tablet) {
+        padding-bottom: 0;
+        border: none;
+        width: auto;
+      }
+    }
+  }
+  .booking-review {
+    &__title {
+      margin-top: 56px;
+      margin-bottom: 24px;
+      @include screen(tablet) {
+        margin-top: 48px;
+        margin-bottom: 32px;
+      }
+    }
+    &__wrapper-small {
+      @include screen(tablet) {
+        margin-top: 24px;
+      }
+    }
+    &__card {
+      @include screen(tablet) {
+        flex-wrap: nowrap;
+      }
+      &-top {
+        margin-top: 48px;
+        @include screen(tablet) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .sidebar {
+    &__heading {
+      text-transform: uppercase;
+      color: $green-200;
+      margin-bottom: 12px;
+      @include sans-base-medium;
+    }
+    &__text {
+      span {
+        color: $text;
+        @include sans-3xl;
+      }
+    }
+    &__description {
+      padding-top: 24px;
+      @include screen(tablet) {
+        padding-top: 0;
+      }
+    }
+  }
+}
