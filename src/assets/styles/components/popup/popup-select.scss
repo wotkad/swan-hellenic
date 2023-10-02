@@ -1,7 +1,25 @@
 .popup {
   &.popup-select {
     .popup__container {
-      justify-content: space-between;
+      gap: 24px;
+      padding: 32px 16px 28px;
+      @include screen(laptop) {
+        gap: 60px;
+        padding: 60px;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+      }
+    }
+    .popup__close {
+      display: none;
+      @include screen(laptop) {
+        display: flex;
+      }
     }
     @include screen(laptop) {
       max-width: 1200px;
@@ -17,19 +35,25 @@
         display: flex;
         flex-direction: column;
         gap: 28px;
+        grid-row-start: 1;
+        grid-column-start: 1;
       }
       &__title {
         text-transform: uppercase;
-        @include chap-base;
-        line-height: 40px;
+        @include chap-sm;
+        @include screen(laptop) {
+          @include chap-base;
+          line-height: 40px;
+        }
       }
       &__subtitle {
         text-transform: uppercase;
         margin-bottom: 24px;
+        display: none;
         @include chap-sm;
-      }
-      &__button {
-        padding: 17px 70px;
+        @include screen(laptop) {
+          display: block;
+        }
       }
       &__decks {
         display: flex;
@@ -46,16 +70,46 @@
           color: $fathom;
         }
       }
-      &__types {
-        display: none;
-        align-items: flex-start;
-        align-items: flex-end;
+      &__container {
+        width: 100%;
+        @include screen(laptop) {
+          width: auto;
+        }
+      }
+      &__scroll {
+        display: flex;
         flex-direction: column;
-        max-height: 132px;
-        flex-wrap: wrap;
+        padding: 0 16px;
+        align-items: flex-end;
+        grid-row-start: 1;
+        overflow-y: auto;
+        grid-column-start: 1;
+        justify-content: space-between;
+        grid-column-end: 2;
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+        @include screen(laptop) {
+          overflow: hidden;
+          height: calc(100vh - 120px);
+        }
+      }
+      &__types {
+        overflow-x: auto;
+        max-width: 100%;
+        display: none;
         row-gap: 24px;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
         &.active {
           display: flex;
+        }
+        @include screen(laptop) {
+          overflow: hidden;
+          align-items: flex-end;
+          flex-direction: column;
+          max-height: 132px;
+          flex-wrap: wrap;
         }
       }
       &__type {
@@ -130,6 +184,14 @@
         }
       }
       &__suites {
+        overflow-y: hidden;
+        overflow-x: auto;
+        min-height: 190px;
+        width: calc(100% + 32px);
+        margin: 0 -16px;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
         svg {
           stroke: inherit;
           path {
@@ -234,16 +296,40 @@
       }
       &__summary {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
+        flex-direction: column;
+        @include screen(laptop) {
+          align-items: center;
+          flex-direction: row;
+        }
+        .button__label {
+          width: 100%;
+          margin-top: 24px;
+          max-width: 343px;
+          @include screen(laptop) {
+            max-width: 100%;
+            width: auto;
+            margin-top: 0;
+            margin-left: 54px;
+          }
+        }
       }
       &__info {
         width: 100%;
       }
       &__preferences {
         display: grid;
-        grid-template-columns: repeat(4, minmax(154px, 1fr));
-        gap: 70px;
+        row-gap: 32px;
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        column-gap: 36px;
+        @include screen(mobile) {
+          grid-template-columns: repeat(2, minmax(154px, 1fr));
+        }
+        @include screen(laptop) {
+          grid-template-columns: repeat(4, minmax(154px, 1fr));
+          gap: 70px;
+        }
       }
       &__preference {
         display: flex;

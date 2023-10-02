@@ -20,4 +20,9 @@ export default function successMessage(container) {
   popup.on('click', function() {
     closePopup();
   });
+  document.addEventListener('keydown', function(e) {
+    if (e.key == 'Escape') {
+      closePopup();
+    }
+  });
 }

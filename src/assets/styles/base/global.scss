@@ -42,10 +42,10 @@ input {
   transition: border-color $transition-default;
   color: $text;
   &.error {
-    border-color: $red-400;
+    border-color: $red-400 !important;
   }
   &.success {
-    border-color: $green-200;
+    border-color: $green-200 !important;
     & ~ .svg__check {
       opacity: 1;
       visibility: visible;

@@ -10,15 +10,15 @@ include ../../mixins/button
         svg(viewBox="0 0 24 24" width="24px" height="24px")
           use(xlink:href="#svg-x-mark")
     .popup__container
-      .popup-select__header
-        .popup-select__heading
-          h3.popup-select__title Select <br> a stateroom
-          .popup-select__decks
-            .popup-select__deck(data-deck="deck_4") Deсk 4
-            .popup-select__deck.active(data-deck="deck_5") Deсk 5
-            .popup-select__deck(data-deck="deck_6") Deсk 6
+      .popup-select__heading
+        h3.popup-select__title Select <br> a stateroom
+        .popup-select__decks
+          .popup-select__deck(data-deck="deck_4") Deсk 4
+          .popup-select__deck.active(data-deck="deck_5") Deсk 5
+          .popup-select__deck(data-deck="deck_6") Deсk 6
+      .popup-select__scroll(data-scroll-lock-scrollable)
         .popup-select__container
-          .popup-select__types(data-types="deck_4")
+          .popup-select__types(data-types="deck_4" data-scroll-lock-scrollable)
             .popup-select__type.popup-select__type-oceanview(
               data-type="oceanview-d4"
             )
@@ -39,7 +39,7 @@ include ../../mixins/button
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               p Unavailable <br> stateroom
-          .popup-select__types.active(data-types="deck_5")
+          .popup-select__types.active(data-types="deck_5" data-scroll-lock-scrollable)
             .popup-select__type.popup-select__type-balcony(
               data-type="balcony-d5"
             )
@@ -72,7 +72,7 @@ include ../../mixins/button
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               p Unavailable <br> stateroom
-          .popup-select__types(data-types="deck_6")
+          .popup-select__types(data-types="deck_6" data-scroll-lock-scrollable)
             .popup-select__type.popup-select__type-balcony(
               data-type="balcony-d6"
             )
@@ -103,35 +103,35 @@ include ../../mixins/button
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               p Unavailable <br> stateroom
-      .popup-select__suites
-        .popup-select__ship(data-ship="deck_4")
-          include deck_5.pug
-        .popup-select__ship.active(data-ship="deck_5")
-          include deck_5.pug
-        .popup-select__ship(data-ship="deck_6")
-          include deck_5.pug
-      .popup-select__info
-        h4.popup-select__subtitle SELECTED PREFERENCE
-        .popup-select__summary
-          .popup-select__preferences
-            .popup-select__preference.popup-select__preference-deck
-              p Deck
-              span -
-            .popup-select__preference.popup-select__preference-type
-              p Type
-              span -
-            .popup-select__preference.popup-select__preference-stateroom
-              p Stateroom
-              span -
-            .popup-select__preference.popup-select__preference-price
-              p Price
-              span -
-          .button__label.popup-select__button
-            input.button__input(type="checkbox" data-selected="")
-            button.button(
-              type="button"
-              class="button-brown button-no-center button-disabled popup-select__button"
-            )
-              .button__text Select
-              .button__text.button__text-selected Selected
-              .button__text.button__text-unselect Unselect
+        .popup-select__suites(data-scroll-lock-scrollable)
+          .popup-select__ship(data-ship="deck_4")
+            include deck_5.pug
+          .popup-select__ship.active(data-ship="deck_5")
+            include deck_5.pug
+          .popup-select__ship(data-ship="deck_6")
+            include deck_5.pug
+        .popup-select__info
+          h4.popup-select__subtitle SELECTED PREFERENCE
+          .popup-select__summary
+            .popup-select__preferences
+              .popup-select__preference.popup-select__preference-deck
+                p Deck
+                span -
+              .popup-select__preference.popup-select__preference-type
+                p Type
+                span -
+              .popup-select__preference.popup-select__preference-stateroom
+                p Stateroom
+                span -
+              .popup-select__preference.popup-select__preference-price
+                p Price
+                span -
+            .button__label.popup-select__button
+              input.button__input(type="checkbox" data-selected="")
+              button.button(
+                type="button"
+                class="button-brown button-no-center button-disabled popup-select__button"
+              )
+                .button__text Select
+                .button__text.button__text-selected Selected
+                .button__text.button__text-unselect Unselect

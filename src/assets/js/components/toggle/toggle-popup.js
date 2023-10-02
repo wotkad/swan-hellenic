@@ -55,7 +55,6 @@ function togglePopup() {
         }
         $('.popup-select__suite').removeClass('active').removeClass('selected');
         $('.popup-select__type').removeClass('active');
-        $('.popup-select__suite').removeClass('active');
         $('.popup-select__types').removeClass('active');
         $('.popup-select__types[data-types="deck_5"]').addClass('active');
         $('.popup-select__deck').removeClass('active');
@@ -133,9 +132,7 @@ function togglePopup() {
     }
     
     if ($(this).hasClass('button__label')) {
-      console.log('has label')
       if ($(this).find('.button__input').prop('checked') == false) {
-        console.log('find button__input')
         openPopup();
       } else {
         cardButtons.find('.button__input').attr('checked', false);

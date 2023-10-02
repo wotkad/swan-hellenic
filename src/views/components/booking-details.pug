@@ -12,8 +12,9 @@
       )
       svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
         use(xlink:href="#svg-check-small-green")
-    .booking-details__input.error
-      input(
+    .booking-details__input
+      input.error(
+        class=""
         type="text"
         placeholder="Last Name (as it appears in passport) *"
         autocomplete="on"
@@ -21,7 +22,16 @@
       )
       svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
         use(xlink:href="#svg-check-small-green")
-    .booking-details__input.booking-details__input-icone
+    .booking-details__input
+      input(
+        type="text"
+        placeholder="Middle name"
+        autocomplete="on"
+        name="surname"
+      )
+      svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+        use(xlink:href="#svg-check-small-green")
+    .booking-details__input.booking-details__input-icon
       svg.booking-details__calendar(
         viewBox="0 0 24 24"
         width="24px"
@@ -36,19 +46,10 @@
       )
       svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
         use(xlink:href="#svg-check-small-green")
-    .booking-details__input
-      input(
-        type="text"
-        placeholder="Middle name"
-        autocomplete="on"
-        name="surname"
-      )
-      svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
-        use(xlink:href="#svg-check-small-green")
   .booking-details__inputs.booking-details__inputs-small.booking-details__inputs-grid
-    .booking-details__input.booking-details__input-mt.booking-details__input-email(data-input="email")
+    .booking-details__input.booking-details__input-mt.booking-details__input-email
       input(type="email" placeholder="E-mail *" autocomplete="on" name="email")
-    .booking-details__input.popup__input.popup__input-phone.active(data-input="phone")
+    .booking-details__input.popup__input.popup__input-phone
       .popup__dropdown
         button.popup__dropdown__current(
           type="button"
@@ -169,47 +170,54 @@
       input(type="text" placeholder="Region/State" autocomplete="on" name="Region/State")
       svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
         use(xlink:href="#svg-check-small-green")
-    .booking-details__input.popup__input.popup__input-country.active(data-input="phone")
-      input(type="text" placeholder="Country" autocomplete="on" name="Country")
-      .popup__dropdown
-        button.popup__dropdown__current(
+    .booking-details__input.booking-details__input.booking-details__input-country
+      .booking-details__dropdown
+        button.booking-details__dropdown__current(
           type="button"
           aria-label="country"
         )
-          svg.popup__arrow(
+          svg.booking-details__arrow(
             viewBox="0 0 16 16"
             width="16px"
             height="16px"
           )
             use(xlink:href="#svg-arrow-down-small")
-        .popup__dropdown__list
-          button.popup__dropdown__country(
+        .booking-details__dropdown__list
+          button.booking-details__dropdown__country(
             type="button"
             aria-label="country"
           )
-            span Type 1
-          button.popup__dropdown__country(
+            span Russia
+          button.booking-details__dropdown__country(
             type="button"
             aria-label="country"
           )
-            span Type 2
-          button.popup__dropdown__country(
+            span Georgia
+          button.booking-details__dropdown__country(
             type="button"
             aria-label="country"
           )
-            span Type 3
-          button.popup__dropdown__country(
+            span Russia
+          button.booking-details__dropdown__country(
             type="button"
             aria-label="country"
           )
-            span Type 4
-          button.popup__dropdown__country(
+            span Russia
+          button.booking-details__dropdown__country(
             type="button"
             aria-label="country"
           )
-            span Type 5
-      svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
-        use(xlink:href="#svg-check-small-green")
+            span Georgia
+          button.booking-details__dropdown__country(
+            type="button"
+            aria-label="country"
+          )
+            span Russia
+      input(
+        type="text"
+        name="country"
+        placeholder="Country"
+      )
   label.booking-details__label
     input(type="checkbox" name="type" value="guest 1 - approved Privacy policy and Terms & Conditions")
     .booking-details__approved
