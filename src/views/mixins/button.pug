@@ -5,7 +5,11 @@ mixin button(className='', buttonType, title, icon, filterStep, id, dataPopup, s
         for="button" + id
         data-popup-button=dataPopup || false
       )
-        input.button__input(type="checkbox" id="button" + id data-selected="item" + id)
+        input.button__input(
+          type="checkbox"
+          id="button" + id
+          data-selected="item" + id
+        )
         button.button(
           type="" + buttonType
           class=className || false

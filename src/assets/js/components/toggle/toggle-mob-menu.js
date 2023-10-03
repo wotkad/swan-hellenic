@@ -14,7 +14,6 @@ export default function toggleMobMenu() {
       menu.removeClass('active');
       $('.mob-menu__block').removeClass('active');
       $('.mob-menu__year').removeClass('active');
-      
     }
   });
   button.on("click", function() {

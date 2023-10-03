@@ -21,6 +21,11 @@
       padding: 16px 137px;
     }
   }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   &__card {
     display: flex;
     gap: 32px;
@@ -39,11 +44,6 @@
         }
       }
     }
-  }
-  &__column {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
   }
   &__text {
     @include sans-md;

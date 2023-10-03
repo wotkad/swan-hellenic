@@ -18,7 +18,7 @@ include ../../mixins/button
           .popup-select__deck(data-deck="deck_6") Deсk 6
       .popup-select__scroll(data-scroll-lock-scrollable)
         .popup-select__container
-          .popup-select__types(data-types="deck_4" data-scroll-lock-scrollable)
+          .popup-select__types(data-scroll-lock-scrollable data-types="deck_4")
             .popup-select__type.popup-select__type-oceanview(
               data-type="oceanview-d4"
             )
@@ -39,7 +39,10 @@ include ../../mixins/button
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               p Unavailable <br> stateroom
-          .popup-select__types.active(data-types="deck_5" data-scroll-lock-scrollable)
+          .popup-select__types.active(
+            data-scroll-lock-scrollable
+            data-types="deck_5"
+          )
             .popup-select__type.popup-select__type-balcony(
               data-type="balcony-d5"
             )
@@ -72,7 +75,7 @@ include ../../mixins/button
               svg(viewBox="0 0 24 24" width="24px" height="24px")
                 use(xlink:href="#svg-check")
               p Unavailable <br> stateroom
-          .popup-select__types(data-types="deck_6" data-scroll-lock-scrollable)
+          .popup-select__types(data-scroll-lock-scrollable data-types="deck_6")
             .popup-select__type.popup-select__type-balcony(
               data-type="balcony-d6"
             )
@@ -128,9 +131,8 @@ include ../../mixins/button
                 span -
             .button__label.popup-select__button
               input.button__input(type="checkbox" data-selected="")
-              button.button(
+              button.button.button-brown.button-no-center.button-disabled.popup-select__button(
                 type="button"
-                class="button-brown button-no-center button-disabled popup-select__button"
               )
                 .button__text Select
                 .button__text.button__text-selected Selected
