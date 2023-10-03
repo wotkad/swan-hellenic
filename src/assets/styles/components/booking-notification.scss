@@ -54,7 +54,7 @@
     }
     &-items {
       @include screen(laptop) {
-        grid-column-start: 4;
+        grid-column-start: 3;
         grid-column-end: 8;
       }
     }
@@ -126,8 +126,8 @@
         padding-top: 0;
       }
       @include screen(laptop) {
-        grid-column-start: 6;
-        grid-column-end: 8;
+        grid-column-start: 3;
+        grid-column-end: 5;
       }
     }
   }
