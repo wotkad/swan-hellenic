@@ -30,6 +30,12 @@
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
   }
+  &-twelve {
+    grid-template-columns: 1fr;
+    @include screen(tablet) {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
   &-offset {
     padding: 40px 0;
     @include screen(laptop) {
