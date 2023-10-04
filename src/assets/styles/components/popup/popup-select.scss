@@ -72,8 +72,10 @@
       }
       &__container {
         width: 100%;
+        margin-top: 24px;
         @include screen(laptop) {
           width: auto;
+          margin-top: 0;
         }
       }
       &__scroll {
@@ -95,12 +97,12 @@
       }
       &__types {
         overflow-x: auto;
-        max-width: 100%;
+        max-width: calc(100% + 32px);
+        margin: 0 -16px;
+        padding: 0 16px;
         display: none;
         row-gap: 24px;
-        &::-webkit-scrollbar {
-          width: 0;
-        }
+        padding-bottom: 16px;
         &.active {
           display: flex;
         }
@@ -110,6 +112,7 @@
           flex-direction: column;
           max-height: 132px;
           flex-wrap: wrap;
+          padding-bottom: 0;
         }
       }
       &__type {
@@ -175,7 +178,7 @@
           stroke: $white;
           position: absolute;
           left: 13px;
-          top: 13px;
+          top: 16px;
         }
         &.active {
           svg {
@@ -186,11 +189,12 @@
       &__suites {
         overflow-y: hidden;
         overflow-x: auto;
-        min-height: 190px;
+        min-height: 175px;
         width: calc(100% + 32px);
         margin: 0 -16px;
-        &::-webkit-scrollbar {
-          width: 0;
+        order: -1;
+        @include screen(laptop) {
+          order: inherit;
         }
         svg {
           stroke: inherit;
@@ -317,6 +321,10 @@
       }
       &__info {
         width: 100%;
+        margin-top: 8px;
+        @include screen(laptop) {
+          margin-top: 0;
+        }
       }
       &__preferences {
         display: grid;

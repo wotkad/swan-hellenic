@@ -72,6 +72,9 @@
         transition: 0s;
         position: relative;
         transform: translateY(0);
+        &:before {
+          display: none;
+        }
         .sidebar {
           &-booking {
             &__wrapper {

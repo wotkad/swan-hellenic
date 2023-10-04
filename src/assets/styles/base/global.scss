@@ -199,6 +199,11 @@ svg {
       padding-top: 154px;
     }
   }
+  &-no-padding {
+    &-top {
+      padding-top: 0;
+    }
+  }
 }
 
 .wrapper {
