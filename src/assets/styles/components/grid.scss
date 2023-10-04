@@ -8,6 +8,16 @@
         row-gap: 54px;
       }
     }
+    &-search {
+      gap: 80px;
+      @include screen(tablet) {
+        gap: 40px;
+      }
+      @include screen(laptop) {
+        column-gap: 74px;
+        row-gap: 70px;
+      }
+    }
   }
   &-two {
     grid-template-columns: 1fr;

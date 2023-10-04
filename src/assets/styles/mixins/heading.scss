@@ -6,6 +6,12 @@
   @include screen(tablet) {
     margin-top: 36px;
   }
+  &-mb {
+    margin-bottom: 40px;
+    @include screen(laptop) {
+      margin-bottom: 60px;
+    }
+  }
   &__title {
     text-transform: uppercase;
     color: $fathom;
