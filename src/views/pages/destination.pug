@@ -1,0 +1,91 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Destination
+
+block basicSeo
+  meta(content="This page Destination" name="description")
+  meta(content="Page, Destination" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    include ../mixins/hero
+    include ../mixins/default-slider
+    include ../mixins/subheading
+    include ../mixins/headline
+    include ../mixins/article
+    include ../mixins/button
+    include ../mixins/partner-block
+    include ../mixins/card
+    +hero('', '', 'ARCTIC', 'Explore the northernmost part of Earth on an epic voyage', 'filter')
+    section.gapper.section.section-white.default-slider(
+      data-slider="default-slider"
+    )
+      .wrapper
+        +headline('What awaits you', '', '')
+        +subheading('', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '')
+        .splide.default-slider__list(class="default-slider0__track")
+          .splide__track
+            .splide__list
+              .default-slider__list__item.splide__slide
+                .default-slider__image
+                  img(src="/assets/images/default-slider/item-1.png" alt="item-1")
+              .default-slider__list__item.splide__slide
+                .default-slider__image
+                  img(src="/assets/images/default-slider/item-2.png" alt="item-2")
+              .default-slider__list__item.splide__slide
+                .default-slider__image
+                  img(src="/assets/images/default-slider/item-3.png" alt="item-3")
+              .default-slider__list__item.splide__slide
+                .default-slider__image
+                  img(src="/assets/images/default-slider/item-1.png" alt="item-1")
+              .default-slider__list__item.splide__slide
+                .default-slider__image
+                  img(src="/assets/images/default-slider/item-1.png" alt="item-1")
+          .splide__arrows
+            button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
+              type="button"
+              aria-controls="splide01-track"
+              aria-label="Previous slide"
+            )
+              svg(viewBox="0 0 24 24" width="24px" height="24px")
+                use(xlink:href="#svg-arrow-right")
+            button.splide__arrow.flip-slider__arrow.splide__arrow--next(
+              type="button"
+              aria-controls="splide01-track"
+              aria-label="Next slide"
+            )
+              svg(viewBox="0 0 24 24" width="24px" height="24px")
+                use(xlink:href="#svg-arrow-right")
+    section.gapper-small.section.section-white
+      .wrapper
+        +headline('Destinations', '', 'headline-note headline-centered')
+        .splide.news-block
+          .splide__track
+            .splide__list.grid.grid__gap.grid-three.news-block__wrapper
+              +article('', '/assets/images/news/item-1.png', 'item-1', 'Which Wildlife you will meet in the Antarctic', '', '18.02.2022')
+              +article(' news-block__card-small', '/assets/images/news/item-3.png', 'item-3', 'Which Wildlife you will meet in the Antarctic', '', '18.02.2022')
+              +article('', '/assets/images/news/item-3.png', 'item-3', 'Which Wildlife you will meet in the Antarctic', '', '18.02.2022')
+              +article(' news-block__card-small', '/assets/images/news/item-1.png', 'item-1', 'Which Wildlife you will meet in the Antarctic', '', '18.02.2022')
+        +button('button-green-transparent news-block__button', '', 'Watch all destinations', '', '')
+    section.gapper.section.section-white.section-no-padding-top
+      .wrapper-xl
+        .section__wrapper
+          .partnerships
+            .partnerships__wrapper
+              +partner-block('', false, false, '', 'An expedition trip to the spectacular Arctic', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '/assets/images/partner-block/item-1.png', 'item-1')
+              +partner-block('partner-block-reversed', false, false, '', 'This unforgettable polar cruise tracking', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '/assets/images/partner-block/item-2.png', 'item-2')
+              +partner-block('', false, false, '', 'As you enter the Arctic Circle and the most northern of the five major circles', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '/assets/images/partner-block/item-3.png', 'item-3')
+    section.gapper.section.section-white.section-no-padding-top
+      .wrapper
+        +headline('CRUISES', 'Our', 'headline-note headline-xl')
+        .grid.grid__gap.grid__gap-big.grid__gap-bottom.grid-three.grid-offset
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+        .cruise-page__button
+          +button('button-green-transparent', '', 'View all cruises')
