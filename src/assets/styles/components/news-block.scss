@@ -1,5 +1,8 @@
 .news-block {
   margin-top: 70px;
+  &-no-margin {
+    margin: 0;
+  }
   &__wrapper {
     display: flex;
     gap: 0;

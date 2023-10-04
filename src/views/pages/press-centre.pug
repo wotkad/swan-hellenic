@@ -1,0 +1,33 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Press Centre
+
+block basicSeo
+  meta(content="This page Press Centre" name="description")
+  meta(content="Page, Press Centre" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    include ../mixins/button
+    include ../mixins/article
+    include ../mixins/subheading
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([{type: 'span', title: 'Press Centre'}])
+        +heading('Press Centre','heading-sm', '')
+        +subheading('Press about us')
+        .splide.news-block.news-block-no-margin
+          .splide__track
+            .splide__list.grid.grid__gap.grid-three.news-block__wrapper
+              +article('', '/assets/images/news/item-1.png', 'item-1', 'Which Wildlife you will meet in the Antarctic', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es', '')
+              +article(' news-block__card-small', '/assets/images/news/item-3.png', 'item-3', 'Which Wildlife you will meet in the Antarctic', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es', '')
+              +article('', '/assets/images/news/item-3.png', 'item-3', 'Which Wildlife you will meet in the Antarctic', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es', '')
+              +article(' news-block__card-small', '/assets/images/news/item-1.png', 'item-1', 'Which Wildlife you will meet in the Antarctic', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es', '')
+        +button('button-green-transparent news-block__button', '', 'View more', '', '')
