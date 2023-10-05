@@ -27,10 +27,14 @@
       }
     }
   }
-  &__wrapper {
+  &__content {
     position: relative;
     width: 100%;
     padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     @include screen(tablet) {
       padding: 20px 24px;
       height: 100%;
@@ -38,15 +42,6 @@
       top: 0;
       left: 0;
       background-color: rgba(0, 0, 0, 0.35);
-    }
-  }
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    @include screen(tablet) {
-      height: 100%;
     }
   }
   &__name {

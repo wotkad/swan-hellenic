@@ -12,5 +12,16 @@ block manifestBrowserconfigFiles
   meta(content="../browserconfig.xml" name="msapplication-config")
 
 block content
-  main
-    include ../components/not-found
+  main.section-not-green
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    include ../mixins/default-slider
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([{type: 'span', title: '404'}])
+        +heading('Nothing Found','heading-sm', '')
+        include ../components/not-found
+        .default-slider(
+          data-slider="default-slider"
+        )
+          +default-slider('0')

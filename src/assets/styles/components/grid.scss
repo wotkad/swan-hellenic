@@ -8,6 +8,13 @@
         row-gap: 54px;
       }
     }
+    &-medium {
+      gap: 40px;
+      @include screen(laptop) {
+        row-gap: 64px;
+        column-gap: 40px;
+      }
+    }
     &-big {
       gap: 80px;
       @include screen(tablet) {

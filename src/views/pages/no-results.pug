@@ -1,0 +1,23 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | No results
+
+block basicSeo
+  meta(content="This page No results" name="description")
+  meta(content="Page, No results" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([{type: 'span', title: 'Search'}])
+        +heading('aaaaa','heading-sm heading-mb', '')
+        .subtext We couldn't find what you were looking for. Please try alternative search criteria
+        include ../components/no-results

@@ -3,11 +3,10 @@ mixin article(className='', src, alt, name, text, date)
     article.article
       .article__image
         img(src="" + src alt="" + alt loading="lazy")
-      .article__wrapper
-        .article__content
-          .article__name= name
-          .article__text= text
-          if date
-            time.article__date= date
-          if !date
-            .article__link Read more
+      .article__content
+        .article__name= name
+        .article__text= text
+        if date
+          time.article__date= date
+        if !date
+          .article__link Read more

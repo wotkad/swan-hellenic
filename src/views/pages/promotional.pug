@@ -1,0 +1,32 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Promotional
+
+block basicSeo
+  meta(content="This page Promotional" name="description")
+  meta(content="Page, Promotional" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    include ../mixins/button
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([{type: 'span', title: 'Promotional'}])
+        +heading('Promotional','heading-sm heading-mb', '')
+        .grid.grid-two.grid__gap-medium
+          include ../components/promo.pug
+          include ../components/promo.pug
+          include ../components/promo.pug
+          include ../components/promo.pug
+          include ../components/promo.pug
+          include ../components/promo.pug
+          include ../components/promo.pug
+          include ../components/promo.pug
+        +button('button-green-transparent button-margin-top', '', 'View all', '', '')

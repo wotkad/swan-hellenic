@@ -1,0 +1,61 @@
+include ../../mixins/button
+.popup.popup-contact-info(data-popup="contact-info")
+  .popup__wrapper
+    .popup__close
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="36px" height="36px")
+          use(xlink:href="#svg-arrow-right")
+    .popup__close-mob
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="24px" height="24px")
+          use(xlink:href="#svg-x-mark")
+    .popup__container
+      .popup__heading
+        h2.popup__title Contact information
+      form.popup__form(action="#")
+        .popup__inputs
+          .popup__input
+            input(
+              type="text"
+              placeholder="First Name *"
+              autocomplete="on"
+              name="name"
+            )
+            svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .popup__input
+            input(
+              type="text"
+              placeholder="Last Name *"
+              autocomplete="on"
+              name="surname"
+            )
+          .popup__input(data-input="email")
+            input(
+              type="email"
+              placeholder="E-mail *"
+              autocomplete="on"
+              name="email"
+            )
+          .popup__labels
+            label.booking-details__label
+              input(
+                type="checkbox"
+                name="type"
+                value="receive email"
+              )
+              .booking-details__approved
+                span I would like to receive emails with news and special offers
+            label.booking-details__label
+              input(
+                type="checkbox"
+                name="type"
+                value="receive email"
+                required
+              )
+              .booking-details__approved
+                span I have read and agree with your <a href="#" target="_blank">privacy policy</a> *
+          .popup__button
+            +button('button-green', 'submit', 'Submit', '', '')
+          .popup__policy
+            span Fields with an asterisk (*) are required. By clicking “SUBMIT”, you are agreeing to our <a href="#">privacy policy</a>

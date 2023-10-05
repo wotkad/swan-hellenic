@@ -1,6 +1,7 @@
 .popup {
   &.popup-contacts,
-  &.popup-callback {
+  &.popup-callback,
+  &.popup-contact-info {
     @include screen(laptop) {
       max-width: 50%;
     }

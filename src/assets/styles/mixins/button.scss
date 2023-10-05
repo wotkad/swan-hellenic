@@ -144,4 +144,12 @@
     pointer-events: none;
     opacity: 0.4;
   }
+  &-margin {
+    &-top {
+      margin-top: 40px;
+      @include screen(laptop) {
+        margin-top: 64px;
+      }
+    }
+  }
 }

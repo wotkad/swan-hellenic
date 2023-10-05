@@ -38,6 +38,12 @@ body {
   color: $text;
 }
 
+.svg__check {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
 input {
   transition: border-color $transition-default;
   color: $text;
@@ -134,6 +140,10 @@ main {
       display: flex;
     }
   }
+}
+
+.subtext {
+  @include sans-lg-medium;
 }
 
 .render {
