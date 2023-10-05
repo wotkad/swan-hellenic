@@ -16,11 +16,7 @@
     padding: 24px 0;
     border-bottom: 1px solid $green-200;
     @include screen(tablet) {
-      gap: 48px;
       padding: 36px 0;
-    }
-    @include screen(laptop) {
-      gap: 0;
     }
     &:first-child {
       padding-top: 0;
@@ -30,8 +26,8 @@
       border: none;
       align-items: flex-start;
       padding-top: 0;
-      @include screen(tablet) {
-        padding-top: 24px;
+      @include screen(laptop) {
+        padding-top: 36px;
       }
     }
   }
@@ -42,7 +38,7 @@
       padding-top: 24px;
       border-bottom: 1px solid $green-200;
       width: 100%;
-      @include screen(tablet) {
+      @include screen(laptop) {
         padding-top: 0;
         padding-bottom: 0;
         border: none;
@@ -53,6 +49,7 @@
       grid-column: span 5;
     }
     &-items {
+      grid-column: span 2;
       @include screen(laptop) {
         grid-column-start: 3;
         grid-column-end: 8;
@@ -60,6 +57,7 @@
     }
     &-right {
       display: grid;
+      grid-column: span 12;
       @include screen(tablet) {
         gap: 24px;
       }
@@ -80,7 +78,7 @@
       }
     }
     &__wrapper-small {
-      @include screen(tablet) {
+      @include screen(laptop) {
         margin-top: 24px;
       }
     }
@@ -95,6 +93,11 @@
         display: grid;
         gap: 0;
         grid-template-columns: repeat(4, minmax(0, 1fr));
+        border-bottom: none;
+        padding-bottom: 0;
+        @include screen(laptop) {
+          padding-bottom: 24px;
+        }
       }
       &-top {
         grid-column: span 2;
