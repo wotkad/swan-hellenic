@@ -1,0 +1,17 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Ship
+
+block basicSeo
+  meta(content="This page Cruises" name="description")
+  meta(content="Page, Cruises" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/hero
+    +hero('', '', 'Travel with Swan Hellenic', 'Amet minim mollit non deserunt')
