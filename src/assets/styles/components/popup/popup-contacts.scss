@@ -137,6 +137,11 @@
             border-color: $red-400;
           }
         }
+        .svg__check {
+          position: absolute;
+          right: 0;
+          stroke: $fathom;
+        }
         &-phone,
         &-email {
           display: none;
@@ -153,7 +158,7 @@
           }
           textarea {
             height: 57px;
-            padding: 16px 0;
+            padding: 16px 16px 16px 0;
             width: 100%;
             resize: none;
             border-bottom: 1px solid $green-200;
@@ -172,13 +177,7 @@
         }
         a {
           color: $fathom;
-          border-bottom: 1px solid transparent;
-          transition: border-color $transition-default;
-          @include screen(laptop) {
-            &:hover {
-              border-color: $fathom;
-            }
-          }
+          border-bottom: 1px solid $fathom;
         }
       }
       &__labels {

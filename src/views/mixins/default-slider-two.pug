@@ -1,30 +1,25 @@
 include ../mixins/headline
 include ../mixins/button
 
-mixin default-slider(i, className='')
+mixin default-slider-two(i, className='')
   .splide.default-slider__list(class="default-slider" + i + "__track " + className)
     .splide__track
       .splide__list
         .default-slider__list__item.splide__slide
           .default-slider__image
             img(src="/assets/images/default-slider/item-1.png" alt="item-1")
-          .default-slider__text Arctic
         .default-slider__list__item.splide__slide
           .default-slider__image
             img(src="/assets/images/default-slider/item-2.png" alt="item-2")
-          .default-slider__text Australia & New Zealand
         .default-slider__list__item.splide__slide
           .default-slider__image
             img(src="/assets/images/default-slider/item-3.png" alt="item-3")
-          .default-slider__text Japan
         .default-slider__list__item.splide__slide
           .default-slider__image
             img(src="/assets/images/default-slider/item-1.png" alt="item-1")
-          .default-slider__text Arctic
         .default-slider__list__item.splide__slide
           .default-slider__image
             img(src="/assets/images/default-slider/item-1.png" alt="item-1")
-          .default-slider__text Arctic
     .splide__arrows
       button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
         type="button"

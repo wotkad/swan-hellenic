@@ -29,6 +29,7 @@ import "./components/toggle/toggle-popup-fields";
 import "./components/toggle/toggle-suite-type";
 import "./components/toggle/toggle-cookie";
 import "./components/toggle/toggle-ship-suite.js";
+import "./components/toggle/toggle-country";
 
 import "./components/mailer/sendForm";
 import "./components/mailer/sendMail";
@@ -39,6 +40,7 @@ import "./components/slider/slider-flip";
 import "./components/slider/slider-icons";
 import "./components/slider/slider-hero";
 import "./components/slider/slider-default";
+import "./components/slider/slider-default-two";
 import "./components/slider/slider-suite";
 import "./components/slider/slider-popup";
 

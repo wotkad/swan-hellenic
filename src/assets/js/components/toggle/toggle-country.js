@@ -1,25 +1,23 @@
-function toggleFlag() {
-  let button = $('.popup__dropdown__current');
-  let menu = $('.popup__dropdown__list');
-  let items = $('.popup__dropdown__country');
-  button.on('click', function() {
+function toggleCountry() {
+  let button = $('.booking-details__dropdown__current');
+  let menu = $('.booking-details__dropdown__list');
+  let items = $('.booking-details__dropdown__country');
+  let input = $('.booking-details__input-country input');
+  button.on('click', function(e) {
     $(this).toggleClass('active');
     menu.toggleClass('active');
   });
   for (let i = 0; i < Array.from(items).length; i++) {
     $(items[i]).on('click', function () {
       let id = items[i].getAttribute('data-id');
-      let block = $('.popup__dropdown__country[data-id="' + id + '"]');
+      let block = $('.booking-details__dropdown__country [data-id="' + id + '"]');
       items.removeClass('active');
       button.removeClass('active');
       $(block).attr('data-id', $(this).attr('data-id')).addClass('active');
       $(this).addClass('active');
       menu.removeClass('active');
-      $(this).parent().parent().next().val($(this).find('span').text());
-      let newFlag = $(this).find('use').prop('href');
-      let currentFlag = $(this).parent().prev().find('.popup__dropdown__flag use').prop('href');
-      currentFlag.animVal = newFlag.animVal;
-      currentFlag.baseVal = newFlag.baseVal;
+      input.val($(this).find('span').text());
+      input.addClass('selected');
     });
   }
   $(document).mouseup(function(e) {
@@ -36,4 +34,4 @@ function toggleFlag() {
     }
   });
 }
-toggleFlag();
+toggleCountry();

@@ -42,10 +42,10 @@ input {
   transition: border-color $transition-default;
   color: $text;
   &.error {
-    border-color: $red-400;
+    border-color: $red-400 !important;
   }
   &.success {
-    border-color: $green-200;
+    border-color: $green-200 !important;
     & ~ .svg__check {
       opacity: 1;
       visibility: visible;
@@ -184,6 +184,10 @@ svg {
   }
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .section {
   overflow: hidden;
   &-white {
@@ -193,6 +197,11 @@ svg {
     padding-top: 69px;
     @include screen(laptop) {
       padding-top: 154px;
+    }
+  }
+  &-no-padding {
+    &-top {
+      padding-top: 0;
     }
   }
 }

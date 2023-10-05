@@ -44,18 +44,42 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 4px;
+    align-items: flex-start;
     @include screen(tablet) {
       height: 100%;
     }
   }
   &__name {
+    margin-bottom: 12px;
     color: $text;
     @include sans-lg;
     @include line-clamp-2;
     @include screen(tablet) {
       color: $white;
-      @include sans-md;
+    }
+  }
+  &__text {
+    color: $white;
+    @include sans-base;
+    @include line-clamp-2;
+  }
+  &__link {
+    margin-top: 12px;
+    text-transform: uppercase;
+    color: $white;
+    border-bottom: 1px solid transparent;
+    transition: border-color $transition-default;
+    display: none;
+    @include sans-sm-med;
+    @include screen(tablet) {
+      display: inline-block;
+    }
+  }
+  &:hover {
+    .article {
+      &__link {
+        border-color: $white;
+      }
     }
   }
   &__date {

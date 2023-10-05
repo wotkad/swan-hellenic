@@ -25,7 +25,7 @@ function togglePopup() {
       const scrollableElement = document.querySelectorAll('.popup__form, .popup__labels, .popup__block')
 
       $('.popup-select__button').find('.button__input').attr('data-selected', that.find('.button__input').attr('data-selected'));
-      
+
       popup.addClass('active');
       bg.addClass('active');
 
@@ -55,7 +55,6 @@ function togglePopup() {
         }
         $('.popup-select__suite').removeClass('active').removeClass('selected');
         $('.popup-select__type').removeClass('active');
-        $('.popup-select__suite').removeClass('active');
         $('.popup-select__types').removeClass('active');
         $('.popup-select__types[data-types="deck_5"]').addClass('active');
         $('.popup-select__deck').removeClass('active');
@@ -68,7 +67,7 @@ function togglePopup() {
         $('.popup-select__preference-type span').text('-');
         $('.popup-select__preference-stateroom span').text('-');
         $('.popup-select__preference-price span').text('-');
-        
+
         $('.popup-select__button').find('.button__input').attr('data-selected', '');
         enablePageScroll();
       });
@@ -131,11 +130,9 @@ function togglePopup() {
       }
       document.addEventListener('keydown', handleKeyDown);
     }
-    
+
     if ($(this).hasClass('button__label')) {
-      console.log('has label')
       if ($(this).find('.button__input').prop('checked') == false) {
-        console.log('find button__input')
         openPopup();
       } else {
         cardButtons.find('.button__input').attr('checked', false);

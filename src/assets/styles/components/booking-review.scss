@@ -21,10 +21,18 @@
       padding: 16px 137px;
     }
   }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   &__card {
     display: flex;
-    gap: 24px;
+    gap: 12px;
     flex-wrap: wrap;
+    @include screen(mobile) {
+      gap: 32px;
+    }
     @include screen(laptop) {
       gap: 46px;
     }
@@ -40,11 +48,6 @@
       }
     }
   }
-  &__column {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
   &__text {
     @include sans-md;
     &-medium {
@@ -55,11 +58,6 @@
     margin-top: 24px;
     @include screen(laptop) {
       margin-top: 44px;
-    }
-    &-small {
-      @include screen(laptop) {
-        margin-top: 32px;
-      }
     }
   }
   &__title {
@@ -89,6 +87,9 @@
     &:nth-child(2) {
       border: 1px solid $green-200;
       border-width: 1px 0 1px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
     }
   }
   &__number {
@@ -115,10 +116,6 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    svg {
-      stroke: $untold-400;
-      fill: $untold-400;
-    }
     span {
       color: $text;
       @include sans-sm;
@@ -144,6 +141,24 @@
     white-space: nowrap;
     position: relative;
     display: flex;
+    &-destination {
+      svg {
+        stroke: transparent;
+        fill: $untold-400;
+      }
+    }
+    &-ship {
+      svg {
+        stroke: transparent;
+        fill: $untold-400;
+      }
+    }
+    &-calendar {
+      svg {
+        stroke: transparent;
+        fill: $untold-400;
+      }
+    }
     input {
       position: absolute;
       opacity: 0;

@@ -1,5 +1,4 @@
 include ../mixins/headline
-
 .booking-notification
   .booking-notification__wrapper
     +headline('Your booking request has been sent successfully', '', 'headline-sm')
@@ -13,22 +12,26 @@ include ../mixins/headline
             span V0623030520
           .booking-review__card
             .booking-review__column
-              .booking-review__data.booking-review__input
-                input(type="text" name="destanation" value="Ushuaia - Cape Town")
+              .booking-review__data.booking-review__input.booking-review__input-destination
+                input(
+                  type="text"
+                  name="destanation"
+                  value="Ushuaia - Cape Town"
+                )
                 svg(viewBox="0 0 24 24" width="24" height="24")
                   use(xlink:href="#svg-location")
                 span Ushuaia - Cape Town
-              .booking-review__data.booking-review__input
-                input(type="text" name="ship" value="SH Vega")
-                svg(viewBox="0 0 24 25" width="24px" height="24px")
-                  use(xlink:href="#svg-ship")
-                span SH Vega
-            .booking-review__column
-              .booking-review__data.booking-review__input
+              .booking-review__data.booking-review__input.booking-review__input-calendar
                 input(type="text" name="nights" value="20 Nights")
                 svg(viewBox="0 0 24 25" width="24px" height="24px")
                   use(xlink:href="#svg-calendar")
                 span 20 Nights
+            .booking-review__column
+              .booking-review__data.booking-review__input.booking-review__input-ship
+                input(type="text" name="ship" value="SH Vega")
+                svg(viewBox="0 0 24 25" width="24px" height="24px")
+                  use(xlink:href="#svg-ship")
+                span SH Vega
               .booking-review__date.booking-review__input
                 input(type="text" name="date" value="05.03.23 - 25.03.23")
                 span 05.03.23 - 25.03.23
@@ -80,11 +83,16 @@ include ../mixins/headline
           .booking-review__column.booking-notification__block-mobile.booking-review__card-grid
             .booking-review__subtitle Contact e-mail
             .booking-review__text.booking-review__text-medium.booking-review__input
-              input(type="text" name="Contact e-mail" value="example@gmail.com")
+              input(
+                type="text"
+                name="Contact e-mail"
+                value="example@gmail.com"
+              )
               span example@gmail.com
-          .sidebar__description
-            .sidebar__heading Price
-            .sidebar__text.booking-review__input
-              input(type="text" name="Price" value="€ 23,078")
-              span € 23,078
-              
+          .booking-notification.booking-notification__block-items
+            .booking-review__card-justify.booking-review__card
+              .sidebar__description
+                .sidebar__heading Price
+                .sidebar__text.booking-review__input
+                  input(type="text" name="Price" value="€ 23,078")
+                  span € 23,078

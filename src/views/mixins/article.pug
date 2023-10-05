@@ -1,4 +1,4 @@
-mixin article(className='', src, alt, name, date)
+mixin article(className='', src, alt, name, text, date)
   a(href="#" class="news-block__card splide__slide" + className)
     article.article
       .article__image
@@ -6,4 +6,8 @@ mixin article(className='', src, alt, name, date)
       .article__wrapper
         .article__content
           .article__name= name
-          time.article__date= date
+          .article__text= text
+          if date
+            time.article__date= date
+          if !date
+            .article__link Read more

@@ -5,7 +5,7 @@ function sliderHero() {
   let total = $('.splide__number-total');
   let current = $('.splide__number-current');
   total.text(slides);
-  if ($('.hero').length !== 0) {
+  if ($('.hero__images.splide').length !== 0) {
     let images = new Splide('.hero__images', {
       type: 'fade',
       rewind: true,

@@ -1,80 +1,93 @@
-mixin hero(className='', isCruise, title, description)
+mixin hero(className='', isCruise, title, description, isFilter)
   section.hero(class="" + className)
-    .hero__images.splide
-      .splide__track
-        .splide__list
-          .splide__slide
-            img(src="/assets/images/hero.png" alt="hero" loading="lazy")
-          .splide__slide
-            img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
-          .splide__slide
-            img(src="/assets/images/hero.png" alt="hero" loading="lazy")
-          .splide__slide
-            img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+    if isFilter !== 'filter'
+      .hero__images.splide
+        .splide__track
+          .splide__list
+            .splide__slide
+              img(src="/assets/images/hero.png" alt="hero" loading="lazy")
+            .splide__slide
+              img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+            .splide__slide
+              img(src="/assets/images/hero.png" alt="hero" loading="lazy")
+            .splide__slide
+              img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+    else 
+      .hero__images
+        .hero__image 
+          img(src="/assets/images/destination.png" alt="hero" loading="lazy")
     .hero__wrapper
       .wrapper
-        .hero__content.splide
-          .splide__track
-            .splide__list
-              .splide__slide
-                if isCruise == 'cruise'
-                  .hero__tip
-                    p Last <span>5</span> spots left
-                h2.hero__title= title
-                if isCruise == 'cruise'
-                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
-                else
-                  p.hero__description !{ description }
-              .splide__slide
-                if isCruise == 'cruise'
-                  .hero__tip
-                    p Last 5 spots left
-                h2.hero__title= title
-                if isCruise == 'cruise'
-                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
-                else
-                  p.hero__description !{ description }
-              .splide__slide
-                if isCruise == 'cruise'
-                  .hero__tip
-                    p Last 5 spots left
-                h2.hero__title= title
-                if isCruise == 'cruise'
-                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
-                else
-                  p.hero__description !{ description }
-              .splide__slide
-                if isCruise == 'cruise'
-                  .hero__tip
-                    p Last 5 spots left
-                h2.hero__title= title
-                if isCruise == 'cruise'
-                  p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
-                else
-                  p.hero__description !{ description }
-          .splide__arrows
-            button.splide__arrow.hero__arrow.splide__arrow--prev(
-              type="button"
-              aria-controls="splide01-track"
-              aria-label="Previous slide"
-            )
-              svg(viewBox="0 0 70 70" width="70px" height="70px")
-                use(xlink:href="#svg-arrow-big")
-            button.splide__arrow.hero__arrow.splide__arrow--next(
-              type="button"
-              aria-controls="splide01-track"
-              aria-label="Next slide"
-            )
-              svg(viewBox="0 0 70 70" width="70px" height="70px")
-                use(xlink:href="#svg-arrow-big")
-            .splide__numbers
-              h6.splide__number.splide__number-current 1
-              span /
-              h6.splide__number.splide__number-total
-        if isCruise == 'cruise'
-          include ../components/hero-filter-cruises
-        else
-          include ../components/hero-filter
+        if isFilter !== 'filter'
+          .hero__content.splide
+            .splide__track
+              .splide__list
+                .splide__slide
+                  if isCruise == 'cruise'
+                    .hero__tip
+                      p Last <span>5</span> spots left
+                  h2.hero__title= title
+                  if isCruise == 'cruise'
+                    p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                  else
+                    p.hero__description !{ description }
+                .splide__slide
+                  if isCruise == 'cruise'
+                    .hero__tip
+                      p Last 5 spots left
+                  h2.hero__title= title
+                  if isCruise == 'cruise'
+                    p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                  else
+                    p.hero__description !{ description }
+                .splide__slide
+                  if isCruise == 'cruise'
+                    .hero__tip
+                      p Last 5 spots left
+                  h2.hero__title= title
+                  if isCruise == 'cruise'
+                    p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                  else
+                    p.hero__description !{ description }
+                .splide__slide
+                  if isCruise == 'cruise'
+                    .hero__tip
+                      p Last 5 spots left
+                  h2.hero__title= title
+                  if isCruise == 'cruise'
+                    p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
+                  else
+                    p.hero__description !{ description }
+        else 
+          .hero__content
+            .hero__content__container
+              h2.hero__title= title
+              p.hero__description !{ description }
+          if isFilter !== 'filter'
+            .splide__arrows
+              button.splide__arrow.hero__arrow.splide__arrow--prev(
+                type="button"
+                aria-controls="splide01-track"
+                aria-label="Previous slide"
+              )
+                svg(viewBox="0 0 70 70" width="70px" height="70px")
+                  use(xlink:href="#svg-arrow-big")
+              button.splide__arrow.hero__arrow.splide__arrow--next(
+                type="button"
+                aria-controls="splide01-track"
+                aria-label="Next slide"
+              )
+                svg(viewBox="0 0 70 70" width="70px" height="70px")
+                  use(xlink:href="#svg-arrow-big")
+              .splide__numbers
+                h6.splide__number.splide__number-current 1
+                span /
+                h6.splide__number.splide__number-total
+        if isFilter !== 'filter'
+          if isCruise == 'cruise'
+            include ../components/hero-filter-cruises
+          else
+            include ../components/hero-filter
         if isCruise == 'cruise'
           .hero__footer
             .wrapper
