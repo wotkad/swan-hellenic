@@ -141,7 +141,6 @@
     .booking-details__approved {
       display: flex;
       position: relative;
-      color: $text;
       @include sans-md;
       @include screen(tablet) {
         align-items: center;

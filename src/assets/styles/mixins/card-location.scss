@@ -92,7 +92,6 @@
     }
   }
   &__description {
-    color: $text;
     @include sans-base;
     @include screen(tablet) {
       @include sans-md;

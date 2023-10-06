@@ -78,7 +78,6 @@
         }
       }
       &__name {
-        color: $text;
         margin-top: 16px;
         @include sans-lg;
       }
@@ -105,7 +104,6 @@
           fill: $untold-400;
         }
         span {
-          color: $text;
           @include sans-sm;
         }
       }
@@ -154,7 +152,7 @@
       }
       &__room {
         margin-top: 12px;
-        color: $text;
+
         @include sans-lg-medium;
       }
       &__wrapper {
@@ -177,7 +175,6 @@
       }
       &__text {
         span {
-          color: $text;
           @include sans-lg-medium;
         }
       }
@@ -226,8 +223,6 @@
         margin-top: 4px;
         gap: 10px;
         span {
-          transition: color $transition-default;
-          color: $text;
           transition: color $transition-default;
           @include sans-lg-medium;
         }

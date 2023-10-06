@@ -66,7 +66,6 @@
       }
       &__text {
         span {
-          color: $text;
           @include sans-3xl;
         }
       }
@@ -143,8 +142,6 @@
         margin-top: 4px;
         gap: 10px;
         span {
-          transition: color $transition-default;
-          color: $text;
           transition: color $transition-default;
           @include sans-lg-medium;
         }

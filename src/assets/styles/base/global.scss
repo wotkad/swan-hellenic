@@ -214,6 +214,14 @@ svg {
       padding-top: 0;
     }
   }
+  &-padding {
+    &-top {
+      padding-top: 40px;
+      @include screen(laptop) {
+        padding-top: 100px;
+      }
+    }
+  }
 }
 
 .wrapper {

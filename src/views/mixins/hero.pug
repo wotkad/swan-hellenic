@@ -12,6 +12,18 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
               img(src="/assets/images/hero.png" alt="hero" loading="lazy")
             .splide__slide
               img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+    if page == 'cruise-page'
+      .hero__images.splide
+        .splide__track
+          .splide__list
+            .splide__slide
+              img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+            .splide__slide
+              img(src="/assets/images/hero.png" alt="hero" loading="lazy")
+            .splide__slide
+              img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
+            .splide__slide
+              img(src="/assets/images/hero.png" alt="hero" loading="lazy")
     else if page == 'destination' 
       .hero__images
         .hero__image 
@@ -20,6 +32,10 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
       .hero__images
         .hero__image 
           img(src="/assets/images/what-to-expect.png" alt="hero" loading="lazy")
+    else if page == 'ship' 
+      .hero__images
+        .hero__image 
+          img(src="/assets/images/destination.png" alt="hero" loading="lazy")
     .hero__wrapper
       .wrapper
         if isFilter == 'filter'
@@ -62,13 +78,6 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
                     p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
                   else
                     p.hero__description !{ description }
-        else 
-          .hero__content
-            .hero__content__container
-              h2.hero__title !{title}
-              if description
-                p.hero__description !{ description }
-          if isFilter == 'filter'
             .splide__arrows
               button.splide__arrow.hero__arrow.splide__arrow--prev(
                 type="button"
@@ -88,6 +97,12 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
                 h6.splide__number.splide__number-current 1
                 span /
                 h6.splide__number.splide__number-total
+        else 
+          .hero__content
+            .hero__content__container
+              h2.hero__title !{title}
+              if description
+                p.hero__description !{ description }
         if isFilter == 'filter'
           if isCruise == 'cruise'
             include ../components/hero-filter-cruises

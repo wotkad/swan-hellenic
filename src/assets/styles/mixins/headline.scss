@@ -15,10 +15,18 @@
   }
   &__description {
     @include sans-sm-medium;
-    color: $text;
     @include screen(laptop) {
       @include sans-lg-medium;
       max-width: 1202px;
+    }
+  }
+  &__text {
+    margin-top: 24px;
+    @include sans-sm;
+    @include screen(laptop) {
+      margin-top: 48px;
+      @include sans-md;
+      line-height: 28px;
     }
   }
   &-white {
@@ -48,6 +56,15 @@
       @include chap-sm;
       @include screen(laptop) {
         @include chap-2base;
+      }
+    }
+  }
+  &-lg {
+    .headline__title {
+      @include chap-sm;
+      @include screen(laptop) {
+        font-size: 58px;
+        line-height: 60px;
       }
     }
   }

@@ -30,7 +30,7 @@ mixin card-suite(i, type, title, description, footer, buttonText)
               use(xlink:href="#svg-user")
             span 2
         .card-suite__description= description
-        if footer = 'showFooter'
+        if footer == 'showFooter'
           .card__footer
             .card__prices
               .card__label FROM

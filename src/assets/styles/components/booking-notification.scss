@@ -1,7 +1,6 @@
 .booking-notification {
   &__description {
     margin-top: 28px;
-    color: $text;
     @include sans-lg;
     a {
       font-weight: 500;
@@ -119,7 +118,6 @@
     }
     &__text {
       span {
-        color: $text;
         @include sans-3xl;
       }
     }

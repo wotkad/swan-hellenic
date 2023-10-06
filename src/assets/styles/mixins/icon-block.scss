@@ -22,13 +22,13 @@
   &__title {
     text-align: center;
     margin-top: 32px;
-    color: $text;
+
     @include sans-lg-medium;
   }
   &__text {
     text-align: center;
     margin-top: 16px;
-    color: $text;
+
     max-width: 200px;
   }
 }

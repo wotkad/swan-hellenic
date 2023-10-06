@@ -68,7 +68,7 @@
   }
   &__name {
     padding-left: 20px;
-    color: $text;
+
     display: none;
     @include sans-base;
     @include screen(tablet) {

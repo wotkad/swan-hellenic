@@ -47,7 +47,7 @@
   }
   &__name {
     margin-top: 12px;
-    color: $text;
+
     @include sans-lg;
     @include line-clamp-2;
     @include screen(tablet) {

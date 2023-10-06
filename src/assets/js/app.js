@@ -43,6 +43,7 @@ import "./components/slider/slider-default";
 import "./components/slider/slider-default-two";
 import "./components/slider/slider-suite";
 import "./components/slider/slider-popup";
+import "./components/slider/slider-introducing";
 
 import "./components/hover/hover-menu";
 

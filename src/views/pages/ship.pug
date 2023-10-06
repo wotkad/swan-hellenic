@@ -12,17 +12,345 @@ block manifestBrowserconfigFiles
   meta(content="../browserconfig.xml" name="msapplication-config")
 
 block content
-  main.section-not-green
+  main
     include ../mixins/hero
+    include ../mixins/card
+    include ../mixins/card-suite
+    include ../mixins/button
+    include ../mixins/headline
     include ../mixins/flip-slider
-    +hero('', '', 'SH <br> vega', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint', 'no-filter')
+    include ../mixins/default-slider-two
+    include ../mixins/partner-block
+    +hero('', '', 'SH <br> vega', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint', '', 'ship')
     section.gapper.section.section-white
       include ../components/ship-about
-    section.section.section-white
-      include ../components/ship-introducing
-    section.gapper.section.section-white.default-slider(
+    include ../components/ship-introducing
+    section.gapper-small.section.section-white.flip-slider.flip-slider-reversed.flip-slider-service.flip-slider-padding-top(
+      data-slider="flip-slider"
+    )
+      .wrapper
+        .flip-slider__wrapper
+          .flip-slider__content
+            .flip-slider__top
+              +headline('Engage with your environment', '', 'headline-white headline-lg headline-note')
+              .splide.flip-slider__list(class="flip-slider0__list")
+                .splide__track
+                  .splide__list
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Swan’s Nest
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Stargazing Deck
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Observation Lounge
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Social Club
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Library
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Laboratory
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Basecamp
+                .splide__arrows
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Previous slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--next(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Next slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
+          .splide.flip-slider__images(class="flip-slider0__images")
+            .splide__track
+              ul.splide__list
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+    section.gapper-small.section.section-white.flip-slider.flip-slider-service(
+      data-slider="flip-slider"
+    )
+      .wrapper
+        .flip-slider__wrapper
+          .flip-slider__content
+            .flip-slider__top
+              +headline('Restaurant and bars', '', 'headline-white headline-lg headline-note')
+              .splide.flip-slider__list(class="flip-slider1__list")
+                .splide__track
+                  .splide__list
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Restaurant_1
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Restaurant_2
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Restaurant_3
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Restaurant_4
+                .splide__arrows
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Previous slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--next(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Next slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
+              .flip-slider__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+          .splide.flip-slider__images(class="flip-slider1__images")
+            .splide__track
+              ul.splide__list
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+          .flip-slider__text.flip-slider__text-mob Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+    section.gapper-small.section.section-white.flip-slider.flip-slider-reversed.flip-slider-service(
+      data-slider="flip-slider"
+    )
+      .wrapper
+        .flip-slider__wrapper
+          .flip-slider__content
+            .flip-slider__top
+              +headline('Comfort & relax', '', 'headline-white headline-lg headline-note')
+              .splide.flip-slider__list(class="flip-slider2__list")
+                .splide__track
+                  .splide__list
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Place_1
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Place_2
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Place_3
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Place_4
+                .splide__arrows
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Previous slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--next(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Next slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
+              .flip-slider__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+          .splide.flip-slider__images(class="flip-slider2__images")
+            .splide__track
+              ul.splide__list
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+          .flip-slider__text.flip-slider__text-mob Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+    section.section.section-white.gapper-small-mob.cruise-page__partner.section-padding-top
+      .wrapper-xl
+        .section__wrapper
+          +partner-block('partner-block-big partner-block-service', false, false, 'Onboard personal', 'Service', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/service.png', 'service')
+    section.gapper.section.section-white.default-slider-two(
       data-slider="default-slider"
     )
-    +flip-slider('flip-slider-reversed', 0)
-    +flip-slider('', 1)
-    +flip-slider('flip-slider-reversed', 2)
+      .wrapper
+        +headline('Amenities in your Cabin', '', '')
+        +default-slider-two('0')
+    section.gapper-small.section.section-white
+      .wrapper
+        +headline('Stateroom Types', '', 'headline-note headline-xl', '')
+        .grid.grid-two.grid__gap.grid__gap-medium.grid-offset.grid-offset-sm
+          +card-suite('0', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', '', 'Book now')
+          +card-suite('1', 'disabled', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', '', 'Book now')
+          +card-suite('2', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', '', 'Book now')
+          +card-suite('3', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', '', 'Book now')
+          +card-suite('4', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', '', 'Book now')
+    section.gapper.section.section-white.section-no-padding-top
+      .wrapper
+        +headline('CRUISE ITINERARIES', 'SH MINERVA', 'headline-note headline-xl', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. <br>Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.')
+        .grid.grid__gap.grid__gap-big.grid__gap-bottom.grid-three.grid-offset.grid-offset-sm
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+        .cruise-page__button
+          +button('button-green-transparent', '', 'View all cruises')

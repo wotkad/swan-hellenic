@@ -16,7 +16,6 @@
     }
   }
   &__description {
-    color: $text;
     @include sans-base;
     @include screen(laptop) {
       max-width: 640px;
@@ -68,7 +67,7 @@
       @include screen(laptop) {
         width: 72px;
         height: 66px;
-        margin-left: 5px;
+        margin-left: 14px;
       }
     }
   }

@@ -62,7 +62,6 @@
   }
   &__title {
     margin-top: 24px;
-    color: $text;
     @include sans-lg-medium;
     @include screen(laptop) {
       margin-top: 55px;
@@ -117,7 +116,6 @@
     align-items: center;
     gap: 5px;
     span {
-      color: $text;
       @include sans-sm;
     }
   }

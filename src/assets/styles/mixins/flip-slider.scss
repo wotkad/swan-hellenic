@@ -169,6 +169,16 @@
       }
     }
   }
+  &-service.flip-slider-reversed {
+    .flip-slider {
+      &__content {
+        padding-right: 0;
+      }
+      &__list {
+        padding-left: 0;
+      }
+    }
+  }
   &__top {
     display: flex;
     flex-direction: column;
@@ -280,6 +290,23 @@
       }
     }
   }
+  &__text {
+    color: $white;
+    display: none;
+    @include sans-base;
+    @include screen(laptop) {
+      display: block;
+      @include sans-md;
+    }
+    &-mob {
+      margin-top: 36px;
+      display: block;
+      @include screen(laptop) {
+        margin-top: 0;
+        display: none;
+      }
+    }
+  }
   &-history {
     .flip-slider {
       &__wrapper {
@@ -331,13 +358,6 @@
       &__bottom {
         padding-left: 0;
       }
-      &__text {
-        color: $white;
-        @include sans-base;
-        @include screen(laptop) {
-          @include sans-md;
-        }
-      }
       &__button {
         display: inline-block;
         border: none;
@@ -355,9 +375,18 @@
       }
     }
   }
+  &-padding {
+    &-top {
+      padding-top: 56px;
+      @include screen(laptop) {
+        padding-top: 100px;
+      }
+    }
+  }
   .splide__track--nav > .splide__list > .splide__slide {
     opacity: 0;
     border: none;
+    color: $shice;
     transition:
       opacity $transition-default,
       color $transition-default;
@@ -366,13 +395,14 @@
     }
     &.is-active {
       opacity: 1;
+      color: $white;
       .flip-slider__list__icon {
         opacity: 1;
       }
     }
     @include screen(laptop) {
       &:hover:not(.is-active) {
-        color: $green-200;
+        color: $white;
       }
     }
   }

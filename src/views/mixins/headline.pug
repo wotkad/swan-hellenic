@@ -2,8 +2,10 @@
 // if centered: +headline('', '', 'headline-centered')
 // if note: +headline('', '', 'headline-note')
 
-mixin headline(title, description, className='')
+mixin headline(title, description, className='', text)
   .headline(class="" + className)
     h2.headline__title= title
     if description
       p.headline__description !{description}
+  if text 
+    p.headline__text !{text}

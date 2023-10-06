@@ -1,9 +1,11 @@
 .ship-introducing {
+  position: relative;
   &__image {
-    position: relative;
     width: 100%;
-    height: 100vh;
     position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
     img {
       width: 100%;
       height: 100%;
@@ -31,17 +33,13 @@
   &__wrapper {
     position: relative;
     z-index: 3;
-    height: 100vh;
+    padding: 55px 0 70px;
+    @include screen(laptop) {
+      padding-top: 90px;
+      padding-bottom: 100px;
+    }
   }
   &__content {
-    align-items: center;
-    padding-top: 90px;
-    padding-bottom: 100px;
-    justify-content: center;
-    flex-wrap: nowrap;
-    position: absolute;
-    width: 100%;
-    left: 0;
     color: $white;
   }
   &__icon {
@@ -99,28 +97,74 @@
     @include sans-base-small;
   }
   &__grid {
-    @include screen(laptop) {
-      column-gap: 138px;
-    }
     &-four {
+      display: flex;
       @include screen(laptop) {
-        &:first-child {
-          padding-bottom: 36px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        column-gap: 78px;
+        display: grid;
+        row-gap: 72px;
+      }
+    }
+    &-twentyfour {
+      display: flex;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        background-color: $white;
+        opacity: 0.5;
+        width: 100%;
+        left: 0;
+        display: none;
+        @include screen(laptop) {
+          display: block;
         }
-        &:last-child {
-          padding-top: 36px;
-        }
-        .ship-introducing__data {
-          &:nth-child(3) {
-            grid-column: span 2;
-          }
-        }
+      }
+      @include screen(laptop) {
+        display: grid;
+        grid-template-columns: repeat(24, minmax(0, 1fr));
+        row-gap: 72px;
+      }
+    }
+  }
+  &__slider {
+    &.is-initialized:not(.is-active) .splide__list {
+      @include screen(laptop) {
+        display: grid;
+      }
+    }
+  }
+  &__data {
+    text-align: center;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include screen(laptop) {
+      padding: 0;
+      display: block;
+      text-align: left;
+      grid-column: span 7;
+    }
+    &-wide {
+      @include screen(laptop) {
+        grid-column: span 10;
+      }
+    }
+    &-small {
+      @include screen(laptop) {
+        grid-column: span 3;
       }
     }
   }
   &__bottom {
-    margin-top: 100px;
+    margin-top: 148px;
+    @include screen(laptop) {
+      margin-top: 100px;
+    }
   }
   &__parameter {
     @include sans-base-medium;

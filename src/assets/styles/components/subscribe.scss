@@ -11,7 +11,7 @@
     max-width: 520px;
     text-align: center;
     margin: 24px auto 0;
-    color: $text;
+
     @include sans-md;
   }
   &__form {
@@ -26,7 +26,7 @@
     border-radius: 100px;
     border: 1px solid $white-250;
     background: $white;
-    color: $text;
+
     padding: 14px 27px;
     @include sans-base;
     @include screen(tablet) {
