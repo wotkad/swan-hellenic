@@ -17,12 +17,12 @@ block content
     include ./mixins/default-slider
     include ./mixins/flip-slider
     include ./mixins/headline
-    +hero('', '', 'Travel with Swan Hellenic', 'Amet minim mollit non deserunt')
+    +hero('', '', 'Travel with Swan Hellenic', 'Amet minim mollit non deserunt', 'filter', 'index')
     section.gapper.section.section-white.default-slider(
       data-slider="default-slider"
     )
       .wrapper
-        +headline('Destinations', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.', 'headline-centered')
+        +headline('Destinations', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. <br> Velit officia consequat duis enim velit mollit.', 'headline-centered')
         +default-slider('0')
     +flip-slider('', 0)
     +flip-slider('flip-slider-reversed', 1)
@@ -31,7 +31,7 @@ block content
       data-slider="default-slider"
     )
       .wrapper
-        +headline('Partnerships', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat', '')
+        +headline('Partnerships', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Veli <br> officia consequat', '')
         +default-slider('1')
     include ./components/news-block
     include ./components/subscribe

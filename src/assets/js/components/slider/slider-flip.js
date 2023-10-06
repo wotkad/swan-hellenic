@@ -1,7 +1,7 @@
 import Splide from '@splidejs/splide';
 
 function sliderFlip() {
-  if ($('.flip-slider').length !== 0) {
+  if ($('.flip-slider__images').length !== 0) {
     const sliderContainers = document.querySelectorAll('.flip-slider');
     let i = 0;
     if (sliderContainers.length > 0) {

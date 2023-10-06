@@ -1,13 +1,13 @@
 import Splide from '@splidejs/splide';
 
-function sliderDefault() {
+function sliderDefaultTwo() {
   if ($('.default-slider-two').length !== 0) {
     const sliderContainers = document.querySelectorAll('.default-slider-two');
     let i = 0;
     if (sliderContainers.length > 0) {
       sliderContainers.forEach((container, index) => {
 
-        const mainSelector = `.${container.getAttribute('data-slider')}${i}__track`;
+        const mainSelector = `.${container.getAttribute('data-slider')}${i}-two__track`;
 
         let main = new Splide(mainSelector, {
           mediaQuery: 'min',
@@ -43,4 +43,4 @@ function sliderDefault() {
   }
 
 }
-sliderDefault();
+sliderDefaultTwo();

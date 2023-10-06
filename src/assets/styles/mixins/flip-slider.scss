@@ -280,6 +280,81 @@
       }
     }
   }
+  &-history {
+    .flip-slider {
+      &__wrapper {
+        & > .button {
+          display: none;
+          @include screen(laptop) {
+            display: inline-flex;
+          }
+        }
+      }
+      &__top {
+        gap: 0;
+        align-items: flex-start;
+        @include screen(laptop) {
+          gap: 40px;
+        }
+      }
+      &__image {
+        width: 100%;
+        background-color: $fathom;
+        @include screen(laptop) {
+          position: absolute;
+          z-index: 2;
+          order: -1;
+          right: auto;
+          left: 0;
+          width: calc(30% + 88px);
+        }
+        img {
+          max-height: 100%;
+          min-height: 100%;
+          @include screen(laptop) {
+            max-height: 563px;
+            min-height: 563px;
+          }
+        }
+      }
+      &__content {
+        padding-right: 0;
+        gap: 24px;
+        padding: 0;
+        width: 100%;
+        @include screen(laptop) {
+          padding: 88px 0 88px 208px;
+          width: 76%;
+          gap: 87px;
+        }
+      }
+      &__bottom {
+        padding-left: 0;
+      }
+      &__text {
+        color: $white;
+        @include sans-base;
+        @include screen(laptop) {
+          @include sans-md;
+        }
+      }
+      &__button {
+        display: inline-block;
+        border: none;
+        padding: 0;
+        display: inline-block;
+        width: auto;
+        border-bottom: 1px solid $white;
+        left: auto;
+        border-radius: 0;
+        margin-top: 16px;
+        transform: translateX(0);
+        @include screen(laptop) {
+          display: none;
+        }
+      }
+    }
+  }
   .splide__track--nav > .splide__list > .splide__slide {
     opacity: 0;
     border: none;

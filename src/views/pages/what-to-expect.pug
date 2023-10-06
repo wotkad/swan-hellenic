@@ -1,0 +1,59 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | What to Expect
+
+block basicSeo
+  meta(content="This page What to Expect" name="description")
+  meta(content="Page, What to Expect" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    include ../mixins/hero
+    include ../mixins/card
+    include ../mixins/headline
+    include ../mixins/button
+    include ../mixins/default-slider
+    include ../mixins/flip-slider
+    include ../mixins/default-slider-two
+    include ../mixins/partner-block
+    +hero('', '', 'What <br> to Expect', '', '', 'what-to-expect')
+    section.gapper.section.section-white
+      .wrapper-xl
+        .section__wrapper
+          .partnerships
+            .partnerships__wrapper
+              +partner-block('partner-block-big partner-block-sameheight', false, true, '', 'Culture', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ', '/assets/images/partner-block/item-1.png', 'item-1')
+    +flip-slider('flip-slider-reversed flip-slider-history', 0, '', '', 'history')
+    section.gapper.section.section-white.default-slider(
+      data-slider="default-slider"
+    )
+      .wrapper
+        +headline('Destinations', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. <br> Velit officia consequat duis enim velit mollit.', 'headline-centered')
+        +default-slider('0')
+    section.gapper.section.section-white
+      .wrapper-xl
+        .section__wrapper
+          .partnerships
+            .partnerships__wrapper
+              +partner-block('partner-block-reversed partner-block-big partner-block-sameheight', false, true, '', 'Weather', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ', '/assets/images/partner-block/item-2.png', 'item-2')
+    section.gapper.section.section-white.default-slider-two(
+      data-slider="default-slider"
+    )
+      .wrapper
+        +headline('Wildlife', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.', 'headline-centered')
+        +default-slider-two('0')
+        +button('button-green-transparent news-block__button', '', 'Explore more', '', '')
+    section.gapper.section.section-white.section-no-padding-top
+      .wrapper
+        +headline('CRUISES', 'THE MOST POPULAR', 'headline-note headline-xl')
+        .grid.grid__gap.grid__gap-big.grid__gap-bottom.grid-three.grid-offset
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+          +card('with status', 'with logos', 'sale')
+        .cruise-page__button
+          +button('button-green-transparent', '', 'View all cruises')

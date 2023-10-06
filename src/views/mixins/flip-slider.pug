@@ -1,7 +1,7 @@
 include ../mixins/headline
 include ../mixins/button
 
-mixin flip-slider(reversed, i, className='', isSubtitle)
+mixin flip-slider(reversed, i, className='', isSubtitle, isHistory)
   section.gapper-small.section.section-white.flip-slider(
     class="" + reversed + className
     data-slider="flip-slider"
@@ -12,85 +12,95 @@ mixin flip-slider(reversed, i, className='', isSubtitle)
           .flip-slider__top
             if isSubtitle
               +headline('INCLUDED', 'WHATS', 'headline-xl headline-note')
+            else if isHistory == 'history'
+              +headline('OUR HISTORY', '', 'headline-md headline-white')
             else
               +headline('Onboard Experience', '', 'headline-md headline-white')
-            .splide.flip-slider__list(class="flip-slider" + i + "__list")
-              .splide__track
-                .splide__list
-                  .flip-slider__list__item.splide__slide
-                    svg.flip-slider__list__icon(
-                      viewBox="0 0 24 24"
-                      width="24px"
-                      height="24px"
-                    )
-                      use(xlink:href="#svg-selected")
-                    span What to expect
-                  .flip-slider__list__item.splide__slide
-                    svg.flip-slider__list__icon(
-                      viewBox="0 0 24 24"
-                      width="24px"
-                      height="24px"
-                    )
-                      use(xlink:href="#svg-selected")
-                    span Restaurant and bars
-                  .flip-slider__list__item.splide__slide
-                    svg.flip-slider__list__icon(
-                      viewBox="0 0 24 24"
-                      width="24px"
-                      height="24px"
-                    )
-                      use(xlink:href="#svg-selected")
-                    span Excursions
-                  .flip-slider__list__item.splide__slide
-                    svg.flip-slider__list__icon(
-                      viewBox="0 0 24 24"
-                      width="24px"
-                      height="24px"
-                    )
-                      use(xlink:href="#svg-selected")
-                    span Fitness & Spa
-              .splide__arrows
-                button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
-                  type="button"
-                  aria-controls="splide01-track"
-                  aria-label="Previous slide"
-                )
-                  svg(viewBox="0 0 24 24" width="24px" height="24px")
-                    use(xlink:href="#svg-arrow-right")
-                button.splide__arrow.flip-slider__arrow.splide__arrow--next(
-                  type="button"
-                  aria-controls="splide01-track"
-                  aria-label="Next slide"
-                )
-                  svg(viewBox="0 0 24 24" width="24px" height="24px")
-                    use(xlink:href="#svg-arrow-right")
+            if isHistory == 'history'
+              .flip-slider__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+              +button('button-green button-no-center button-white flip-slider__button', '', 'View all', '', '')
+            else 
+              .splide.flip-slider__list(class="flip-slider" + i + "__list")
+                .splide__track
+                  .splide__list
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span What to expect
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Restaurant and bars
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Excursions
+                    .flip-slider__list__item.splide__slide
+                      svg.flip-slider__list__icon(
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-selected")
+                      span Fitness & Spa
+                .splide__arrows
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--prev(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Previous slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
+                  button.splide__arrow.flip-slider__arrow.splide__arrow--next(
+                    type="button"
+                    aria-controls="splide01-track"
+                    aria-label="Next slide"
+                  )
+                    svg(viewBox="0 0 24 24" width="24px" height="24px")
+                      use(xlink:href="#svg-arrow-right")
           .flip-slider__bottom
             +button('button-white-transparent button-no-center', '', 'Explore more', '', '')
-        .splide.flip-slider__images(class="flip-slider" + i + "__images")
-          .splide__track
-            ul.splide__list
-              .flip-slider__image.splide__slide
-                img(
-                  src="/assets/images/flip-slide.png"
-                  alt="flip-slide"
-                  loading="lazy"
-                )
-              .flip-slider__image.splide__slide
-                img(
-                  src="/assets/images/flip-slide.png"
-                  alt="flip-slide"
-                  loading="lazy"
-                )
-              .flip-slider__image.splide__slide
-                img(
-                  src="/assets/images/flip-slide.png"
-                  alt="flip-slide"
-                  loading="lazy"
-                )
-              .flip-slider__image.splide__slide
-                img(
-                  src="/assets/images/flip-slide.png"
-                  alt="flip-slide"
-                  loading="lazy"
-                )
+        if isHistory == 'history'
+          .flip-slider__image
+            img(src="/assets/images/history.png", alt="history")
+        else 
+          .splide.flip-slider__images(class="flip-slider" + i + "__images")
+            .splide__track
+              ul.splide__list
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
+                .flip-slider__image.splide__slide
+                  img(
+                    src="/assets/images/flip-slide.png"
+                    alt="flip-slide"
+                    loading="lazy"
+                  )
         +button('button-green button-no-center button-white', '', 'Explore more', '', '')

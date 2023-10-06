@@ -168,7 +168,6 @@
     color: $white;
     max-width: 877px;
     text-transform: uppercase;
-    margin: 0 0 8px;
     opacity: 0;
     transform: translateY(-20px);
     transition:
@@ -190,6 +189,7 @@
     }
   }
   &__description {
+    margin-top: 8px;
     color: $white;
     opacity: 0;
     transform: translateY(-20px);
