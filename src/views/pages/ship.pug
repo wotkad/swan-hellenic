@@ -1,0 +1,28 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Ship
+
+block basicSeo
+  meta(content="This page Cruises" name="description")
+  meta(content="Page, Cruises" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/hero
+    include ../mixins/flip-slider
+    +hero('', '', 'SH <br> vega', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint', 'no-filter')
+    section.gapper.section.section-white
+      include ../components/ship-about
+    section.section.section-white
+      include ../components/ship-introducing
+    section.gapper.section.section-white.default-slider(
+      data-slider="default-slider"
+    )
+    +flip-slider('flip-slider-reversed', 0)
+    +flip-slider('', 1)
+    +flip-slider('flip-slider-reversed', 2)

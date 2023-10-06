@@ -1,0 +1,133 @@
+.ship-introducing {
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: 25% 50%;
+      object-fit: cover;
+      @include screen(tablet) {
+        object-position: center;
+      }
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(
+        84deg,
+        rgba(33, 41, 95, 0) -21.99%,
+        rgba(22, 27, 58, 0.26) -21.99%,
+        rgba(18, 21, 40, 0.53) 115.48%
+      );
+    }
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 3;
+    height: 100vh;
+  }
+  &__content {
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 100px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color: $white;
+  }
+  &__icon {
+    svg {
+      stroke: $white;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    @include chap-base;
+    @include screen(laptop) {
+      @include chap-2lg;
+    }
+  }
+  &__description {
+    margin-top: 46px;
+    @include sans-base;
+    @include screen(tablet) {
+      margin-top: 0;
+    }
+    @include screen(laptop) {
+      @include sans-lg-medium;
+    }
+  }
+  &__items {
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+    @include screen(tablet) {
+      margin-top: 0;
+      margin-top: -58px;
+      gap: 56px;
+      justify-content: flex-start;
+    }
+  }
+  &__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__count {
+    margin-top: 16px;
+    @include chap-sm;
+  }
+  &__name {
+    @include sans-base-small;
+  }
+  &__grid {
+    @include screen(laptop) {
+      column-gap: 138px;
+    }
+    &-four {
+      @include screen(laptop) {
+        &:first-child {
+          padding-bottom: 36px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        &:last-child {
+          padding-top: 36px;
+        }
+        .ship-introducing__data {
+          &:nth-child(3) {
+            grid-column: span 2;
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    margin-top: 100px;
+  }
+  &__parameter {
+    @include sans-base-medium;
+  }
+  &__value {
+    margin-top: 8px;
+    @include sans-xl-base;
+    font-weight: 500;
+  }
+}
