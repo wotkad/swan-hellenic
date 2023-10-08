@@ -6,9 +6,7 @@ function sliderDefaultTwo() {
     let i = 0;
     if (sliderContainers.length > 0) {
       sliderContainers.forEach((container, index) => {
-
         const mainSelector = `.${container.getAttribute('data-slider')}${i}-two__track`;
-
         let main = new Splide(mainSelector, {
           mediaQuery: 'min',
           lazyLoad: 'nearby',
@@ -34,10 +32,8 @@ function sliderDefaultTwo() {
             },
           }
         });
-
         main.mount();
         i++;
-
       });
     }
   }

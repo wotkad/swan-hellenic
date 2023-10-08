@@ -5,9 +5,7 @@ function sliderPopup() {
     const sliderContainers = document.querySelectorAll('.popup-slider');
     let i = 0;
     sliderContainers.forEach((container, index) => {
-
       const mainSelector = `.${container.getAttribute('data-slider')}${i}__track`;
-
       let main = new Splide(mainSelector, {
         gap: 20,
         arrows: false,

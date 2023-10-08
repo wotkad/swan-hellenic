@@ -5,12 +5,9 @@ function sliderFlip() {
     const sliderContainers = document.querySelectorAll('.flip-slider');
     let i = 0;
     if (sliderContainers.length > 0) {
-
       sliderContainers.forEach((container) => {
-
         const mainSelector = `.${container.getAttribute('data-slider')}${i}__images`;
         const thumbnailsSelector = `.${container.getAttribute('data-slider')}${i}__list`;
-
         let main = new Splide(mainSelector, {
           arrows: false,
           pagination: false,
@@ -26,7 +23,6 @@ function sliderFlip() {
             },
           }
         });
-
         let thumbnails = new Splide(thumbnailsSelector, {
           arrows: true,
           isNavigation: true,
@@ -43,12 +39,10 @@ function sliderFlip() {
             },
           }
         });
-
         main.sync(thumbnails);
         main.mount();
         thumbnails.mount();
         i++;
-
       });
     }
   }
