@@ -99,10 +99,6 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        svg {
-          stroke: $untold-400;
-          fill: $untold-400;
-        }
         span {
           @include sans-sm;
         }
@@ -110,6 +106,24 @@
       &__input {
         position: relative;
         display: none;
+        &-location {
+          svg {
+            stroke: $untold-400;
+            fill: $untold-400;
+          }
+        }
+        &-ship {
+          svg {
+            stroke: transparent;
+            fill: $untold-400;
+          }
+        }
+        &-calendar {
+          svg {
+            stroke: transparent;
+            fill: $untold-400;
+          }
+        }
         @include screen(laptop) {
           display: flex;
         }
