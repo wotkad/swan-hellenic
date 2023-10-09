@@ -58,7 +58,10 @@
       &__decks {
         display: flex;
         align-items: center;
-        gap: 50px;
+        gap: 32px;
+        @include screen(mobile) {
+          gap: 50px;
+        }
       }
       &__deck {
         position: relative;

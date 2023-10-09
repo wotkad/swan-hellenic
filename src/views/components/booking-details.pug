@@ -43,6 +43,8 @@
         placeholder="Date of Birth"
         autocomplete="on"
         name="name"
+        max="2999-12-31"
+        onfocus="(this.type='date')"
       )
       svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
         use(xlink:href="#svg-check-small-green")
@@ -161,36 +163,37 @@
           )
             use(xlink:href="#svg-arrow-down-small")
         .booking-details__dropdown__list
-          button.booking-details__dropdown__country(
-            type="button"
-            aria-label="country"
-          )
-            span Russia
-          button.booking-details__dropdown__country(
-            type="button"
-            aria-label="country"
-          )
-            span Georgia
-          button.booking-details__dropdown__country(
-            type="button"
-            aria-label="country"
-          )
-            span Russia
-          button.booking-details__dropdown__country(
-            type="button"
-            aria-label="country"
-          )
-            span Russia
-          button.booking-details__dropdown__country(
-            type="button"
-            aria-label="country"
-          )
-            span Georgia
-          button.booking-details__dropdown__country(
-            type="button"
-            aria-label="country"
-          )
-            span Russia
+          .booking-details__dropdown__scroll.custom-scroll(data-scroll-lock-scrollable)
+            button.booking-details__dropdown__country(
+              type="button"
+              aria-label="country"
+            )
+              span Russia
+            button.booking-details__dropdown__country(
+              type="button"
+              aria-label="country"
+            )
+              span Georgia
+            button.booking-details__dropdown__country(
+              type="button"
+              aria-label="country"
+            )
+              span Russia
+            button.booking-details__dropdown__country(
+              type="button"
+              aria-label="country"
+            )
+              span Russia
+            button.booking-details__dropdown__country(
+              type="button"
+              aria-label="country"
+            )
+              span Georgia
+            button.booking-details__dropdown__country(
+              type="button"
+              aria-label="country"
+            )
+              span Russia
       input(type="text" placeholder="Country" name="country")
   label.booking-details__label
     input(
