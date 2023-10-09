@@ -24,17 +24,21 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
               img(src="/assets/images/hero-2.png" alt="hero-2" loading="lazy")
             .splide__slide
               img(src="/assets/images/hero.png" alt="hero" loading="lazy")
-    else if page == 'destination' 
+    else if page == 'destination'
       .hero__images
-        .hero__image 
+        .hero__image
           img(src="/assets/images/destination.png" alt="hero" loading="lazy")
-    else if page == 'what-to-expect' 
+    else if page == 'what-to-expect'
       .hero__images
-        .hero__image 
-          img(src="/assets/images/what-to-expect.png" alt="hero" loading="lazy")
-    else if page == 'ship' 
+        .hero__image
+          img(
+            src="/assets/images/what-to-expect.png"
+            alt="hero"
+            loading="lazy"
+          )
+    else if page == 'ship'
       .hero__images
-        .hero__image 
+        .hero__image
           img(src="/assets/images/destination.png" alt="hero" loading="lazy")
     .hero__wrapper
       .wrapper
@@ -46,7 +50,7 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
                   if isCruise == 'cruise'
                     .hero__tip
                       p Last <span>5</span> spots left
-                  h2.hero__title !{title}
+                  h2.hero__title !{ title }
                   if isCruise == 'cruise'
                     p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
                   else
@@ -55,7 +59,7 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
                   if isCruise == 'cruise'
                     .hero__tip
                       p Last 5 spots left
-                  h2.hero__title !{title}
+                  h2.hero__title !{ title }
                   if isCruise == 'cruise'
                     p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
                   else
@@ -64,7 +68,7 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
                   if isCruise == 'cruise'
                     .hero__tip
                       p Last 5 spots left
-                  h2.hero__title !{title}
+                  h2.hero__title !{ title }
                   if isCruise == 'cruise'
                     p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
                   else
@@ -73,7 +77,7 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
                   if isCruise == 'cruise'
                     .hero__tip
                       p Last 5 spots left
-                  h2.hero__title !{title}
+                  h2.hero__title !{ title }
                   if isCruise == 'cruise'
                     p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
                   else
@@ -97,10 +101,10 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
                 h6.splide__number.splide__number-current 1
                 span /
                 h6.splide__number.splide__number-total
-        else 
+        else
           .hero__content
             .hero__content__container
-              h2.hero__title !{title}
+              h2.hero__title !{ title }
               if description
                 p.hero__description !{ description }
         if isFilter == 'filter'

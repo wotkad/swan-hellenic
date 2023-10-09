@@ -42,8 +42,8 @@
         type="text"
         placeholder="Date of Birth"
         autocomplete="on"
-        name="name"
         max="2999-12-31"
+        name="name"
         onfocus="(this.type='date')"
       )
       svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
@@ -163,7 +163,9 @@
           )
             use(xlink:href="#svg-arrow-down-small")
         .booking-details__dropdown__list
-          .booking-details__dropdown__scroll.custom-scroll(data-scroll-lock-scrollable)
+          .booking-details__dropdown__scroll.custom-scroll(
+            data-scroll-lock-scrollable
+          )
             button.booking-details__dropdown__country(
               type="button"
               aria-label="country"

@@ -1,7 +1,12 @@
 .no-results
-  form.no-results__form(action="#") 
+  form.no-results__form(action="#")
     label.no-results__label
-      input.no-results__input(type="search" placeholder="Search..." name="search" required)
-    button(type="submit").no-results__button
+      input.no-results__input(
+        type="search"
+        placeholder="Search..."
+        name="search"
+        required
+      )
+    button.no-results__button(type="submit")
       svg.no-results__icon(viewBox="0 0 24 24" width="24px" height="24px")
         use(xlink:href="#svg-search")

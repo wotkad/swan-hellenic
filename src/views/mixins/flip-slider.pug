@@ -19,7 +19,7 @@ mixin flip-slider(reversed, i, className='', isSubtitle, isHistory)
             if isHistory == 'history'
               .flip-slider__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
               +button('button-green button-no-center button-white flip-slider__button', '', 'View all', '', '')
-            else 
+            else
               .splide.flip-slider__list(class="flip-slider" + i + "__list")
                 .splide__track
                   .splide__list
@@ -74,8 +74,8 @@ mixin flip-slider(reversed, i, className='', isSubtitle, isHistory)
             +button('button-white-transparent button-no-center', '', 'Explore more', '', '')
         if isHistory == 'history'
           .flip-slider__image
-            img(src="/assets/images/history.png", alt="history")
-        else 
+            img(src="/assets/images/history.png" alt="history")
+        else
           .splide.flip-slider__images(class="flip-slider" + i + "__images")
             .splide__track
               .splide__list
