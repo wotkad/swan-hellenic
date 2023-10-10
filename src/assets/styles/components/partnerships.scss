@@ -13,6 +13,12 @@
     @include screen(laptop) {
       gap: 124px;
     }
+    &-sm {
+      gap: 24px;
+      @include screen(laptop) {
+        gap: 80px;
+      }
+    }
   }
   &__button {
     margin-top: 40px;

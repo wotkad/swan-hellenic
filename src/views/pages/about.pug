@@ -1,0 +1,57 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | About
+
+block basicSeo
+  meta(content="This page About" name="description")
+  meta(content="Page, About" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    include ../mixins/hero
+    include ../mixins/partner-block
+    include ../mixins/default-slider-two
+    include ../mixins/flip-slider
+    include ../mixins/headline
+    include ../mixins/icon-block
+    +hero('', '', 'About <br> SWAN HELLENIC', '', '', 'about')
+    section.section.section-white.gapper-small-mob.section-padding-top
+      .wrapper-xl
+        .section__wrapper
+          +partner-block('partner-block-unreversed partner-block-big partner-block-sameheight', false, false, 'See What Others Don\'t With', 'Swan Hellenic', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/about-img.png', 'about-img')
+    section.section.section-white.gapper
+      .wrapper-xl
+        +headline('To Be The World Leader <br> In Cultural Expedition Cruising', 'OUR VISION IS SIMPLE', 'headline-note headline-centered headline-sm')
+        .section__wrapper
+          .partnerships
+            .partnerships__wrapper.partnerships__wrapper-sm
+              +partner-block('partner-block-unreversed partner-block-sm', false, false, '', '', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '/assets/images/partner-block/item-1.png', 'item-1')
+              +partner-block('partner-block-reversed partner-block-sm', false, false, '', '', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '/assets/images/partner-block/item-2.png', 'item-2')
+              +partner-block('partner-block-unreversed partner-block-sm', false, false, '', '', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '/assets/images/partner-block/item-3.png', 'item-3')
+              +partner-block('partner-block-reversed partner-block-sm', false, false, '', '', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.', '/assets/images/partner-block/item-2.png', 'item-2')
+    section.gapper.section.section-green
+      .wrapper
+        +headline('Ship features', '', 'headline-note headline-white')
+        include ../components/features
+    section.gapper.section.section-white
+      .wrapper
+        +headline('Swan Hellenic', 'Why book with', 'headline-note headline-centered')
+        .splide.icons-block
+          .splide__track
+            .icons-block__wrapper.splide__list
+              +icon-block('/assets/images/icons-block/compass.svg', 'compass', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat')
+              +icon-block('/assets/images/icons-block/ship.svg', 'travel', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat')
+              +icon-block('/assets/images/icons-block/helm.svg', 'leaf', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat')
+              +icon-block('/assets/images/icons-block/sunset.svg', 'maps', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat')
+    +flip-slider('flip-slider flip-slider-history', 0, '', '', 'history', '')
+    section.gapper.section.section-white.default-slider-two(
+      data-slider="default-slider"
+    )
+      .wrapper
+        +headline('Sustainability', '', '')
+        +default-slider-two('0', '', 'text')

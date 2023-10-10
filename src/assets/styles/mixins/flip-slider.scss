@@ -172,9 +172,15 @@
   &__top {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    align-items: flex-start;
     @include screen(laptop) {
       gap: 54px;
+    }
+    .headline {
+      margin-bottom: 24px;
+      @include screen(laptop) {
+        margin-bottom: 0;
+      }
     }
   }
   &__arrow {
@@ -203,8 +209,8 @@
   }
   &__text {
     color: $white;
-    display: none;
     @include sans-base;
+    @include line-clamp-8;
     @include screen(laptop) {
       display: block;
       @include sans-md;
@@ -299,19 +305,14 @@
   }
   &-history {
     .flip-slider {
-      &__wrapper {
-        & > .button {
-          display: none;
-          @include screen(laptop) {
-            display: inline-flex;
-          }
-        }
-      }
-      &__top {
-        gap: 0;
-        align-items: flex-start;
+      &__content {
+        gap: 24px;
+        padding: 0;
+        width: 100%;
         @include screen(laptop) {
-          gap: 40px;
+          padding: 88px 208px 88px 0;
+          width: 76%;
+          gap: 87px;
         }
       }
       &__image {
@@ -321,8 +322,8 @@
           position: absolute;
           z-index: 2;
           order: -1;
-          right: auto;
-          left: 0;
+          right: 0;
+          left: auto;
           width: calc(30% + 88px);
         }
         img {
@@ -333,19 +334,6 @@
             min-height: 563px;
           }
         }
-      }
-      &__content {
-        gap: 24px;
-        padding: 0;
-        width: 100%;
-        @include screen(laptop) {
-          padding: 88px 0 88px 208px;
-          width: 76%;
-          gap: 87px;
-        }
-      }
-      &__bottom {
-        padding-left: 0;
       }
       &__button {
         border: none;
@@ -359,6 +347,72 @@
         transform: translateX(0);
         @include screen(laptop) {
           display: none;
+        }
+      }
+    }
+    &.flip-slider-reversed {
+      .flip-slider {
+        &__wrapper {
+          & > .button {
+            display: none;
+            @include screen(laptop) {
+              display: inline-flex;
+            }
+          }
+        }
+        &__top {
+          gap: 0;
+          align-items: flex-start;
+          @include screen(laptop) {
+            gap: 40px;
+          }
+        }
+        &__image {
+          width: 100%;
+          background-color: $fathom;
+          @include screen(laptop) {
+            position: absolute;
+            z-index: 2;
+            order: -1;
+            right: auto;
+            left: 0;
+            width: calc(30% + 88px);
+          }
+          img {
+            max-height: 100%;
+            min-height: 100%;
+            @include screen(laptop) {
+              max-height: 563px;
+              min-height: 563px;
+            }
+          }
+        }
+        &__content {
+          gap: 24px;
+          padding: 0;
+          width: 100%;
+          @include screen(laptop) {
+            padding: 88px 0 88px 208px;
+            width: 76%;
+            gap: 87px;
+          }
+        }
+        &__bottom {
+          padding-left: 0;
+        }
+        &__button {
+          border: none;
+          padding: 0;
+          display: inline-block;
+          width: auto;
+          border-bottom: 1px solid $white;
+          left: auto;
+          border-radius: 0;
+          margin-top: 16px;
+          transform: translateX(0);
+          @include screen(laptop) {
+            display: none;
+          }
         }
       }
     }

@@ -18,17 +18,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 90px;
+    margin-bottom: 32px;
   }
   &__title {
     text-align: center;
-    margin-top: 32px;
-
+    margin-bottom: 16px;
     @include sans-lg-medium;
   }
   &__text {
     text-align: center;
-    margin-top: 16px;
-
     max-width: 200px;
   }
 }

@@ -200,6 +200,9 @@ svg {
 
 .section {
   overflow: hidden;
+  &-green {
+    background-color: $fathom;
+  }
   &-white {
     background-color: $white;
   }

@@ -55,8 +55,27 @@
   }
   &__text {
     color: $white;
+    transition:
+      max-height $transition-default ease-in-out,
+      opacity $transition-default;
+    color: $white;
+    position: relative;
+    z-index: 3;
     @include sans-base;
     @include line-clamp-2;
+    @include screen(laptop) {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+  }
+  @include screen(laptop) {
+    &:hover {
+      .article__text {
+        max-height: 100%;
+        opacity: 1;
+      }
+    }
   }
   &__link {
     margin-top: 12px;

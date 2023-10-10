@@ -2,5 +2,6 @@ mixin icon-block(src, alt, title, text)
   .icon-block.splide__slide
     .icon-block__icon
       img(src="" + src alt="" + alt)
-    .icon-block__title= title
+    if title
+      .icon-block__title= title
     .icon-block__text= text

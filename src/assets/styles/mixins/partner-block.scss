@@ -70,16 +70,17 @@
   &__title {
     color: $fathom;
     text-transform: uppercase;
+    margin-bottom: 24px;
     @include chap-sm;
+    @include screen(laptop) {
+      margin-top: 48px;
+    }
   }
   &__text {
-    margin-top: 24px;
     margin-bottom: 24px;
-
     @include line-clamp-12;
     @include sans-base;
     @include screen(laptop) {
-      margin-top: 48px;
       margin-bottom: 48px;
       @include sans-lg-medium;
     }
@@ -130,13 +131,38 @@
       align-items: flex-start;
     }
   }
-  &-sameheight,
   &-service {
     .partner-block__title {
       order: -1;
     }
     .partner-block__subtitle {
       order: -1;
+    }
+  }
+  &-sameheight {
+    .partner-block__title {
+      order: -1;
+    }
+    .partner-block__subtitle {
+      order: -1;
+    }
+    .partner-block__content {
+      padding: 0;
+    }
+  }
+  &-sm {
+    .partner-block__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .partner-block__image {
+      order: 0;
+    }
+    .partner-block__text {
+      order: -1;
+      margin-bottom: 0;
+      @include line-clamp-8;
     }
   }
 }

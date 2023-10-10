@@ -28,6 +28,10 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
       .hero__images
         .hero__image
           img(src="/assets/images/destination.png" alt="hero" loading="lazy")
+    else if page == 'about'
+      .hero__images
+        .hero__image
+          img(src="/assets/images/about.png" alt="hero" loading="lazy")
     else if page == 'what-to-expect'
       .hero__images
         .hero__image

@@ -1,7 +1,7 @@
 include ../mixins/headline
 include ../mixins/button
 
-mixin flip-slider(reversed, i, className='', isSubtitle, isHistory)
+mixin flip-slider(reversed, i, className='', isSubtitle, isHistory, isButton)
   section.gapper-small.section.section-white.flip-slider(
     class="" + reversed + className
     data-slider="flip-slider"
@@ -71,7 +71,8 @@ mixin flip-slider(reversed, i, className='', isSubtitle, isHistory)
                     svg(viewBox="0 0 24 24" width="24px" height="24px")
                       use(xlink:href="#svg-arrow-right")
           .flip-slider__bottom
-            +button('button-white-transparent button-no-center', '', 'Explore more', '', '')
+            if isButton == 'button'
+              +button('button-white-transparent button-no-center', '', 'Explore more', '', '')
         if isHistory == 'history'
           .flip-slider__image
             img(src="/assets/images/history.png" alt="history")
@@ -103,4 +104,5 @@ mixin flip-slider(reversed, i, className='', isSubtitle, isHistory)
                     alt="flip-slide"
                     loading="lazy"
                   )
-        +button('button-green button-no-center button-white', '', 'Explore more', '', '')
+        if isButton == 'button'
+          +button('button-green button-no-center button-white', '', 'Explore more', '', '')

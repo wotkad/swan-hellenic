@@ -46,7 +46,24 @@
       }
     }
   }
+  &-note {
+    gap: 24px;
+    flex-direction: column-reverse;
+    @include screen(laptop) {
+      gap: 40px;
+    }
+    .headline__description {
+      text-transform: uppercase;
+      margin-top: 0;
+      color: $green-200;
+      @include sans-sm-med;
+      @include screen(laptop) {
+        @include sans-base-medium;
+      }
+    }
+  }
   &-sm {
+    gap: 30px;
     .headline__title {
       @include chap-sm;
     }
@@ -73,22 +90,6 @@
       @include chap-sm;
       @include screen(laptop) {
         @include chap-2lg;
-      }
-    }
-  }
-  &-note {
-    gap: 24px;
-    flex-direction: column-reverse;
-    @include screen(laptop) {
-      gap: 40px;
-    }
-    .headline__description {
-      text-transform: uppercase;
-      margin-top: 0;
-      color: $green-200;
-      @include sans-sm-med;
-      @include screen(laptop) {
-        @include sans-base-medium;
       }
     }
   }
