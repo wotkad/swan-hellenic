@@ -87,6 +87,7 @@
       }
       @include screen(tablet) {
         flex-wrap: nowrap;
+        min-height: 66px;
       }
       &-justify {
         display: grid;
@@ -94,17 +95,16 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
         border-bottom: none;
         padding-bottom: 0;
-        @include screen(laptop) {
-          padding-bottom: 24px;
-        }
       }
       &-top {
         grid-column: span 2;
         margin-top: 48px;
         margin-bottom: 24px;
         @include screen(tablet) {
-          margin-top: 0;
           margin-bottom: 0;
+        }
+        @include screen(laptop) {
+          margin-top: 0;
         }
       }
     }

@@ -31,7 +31,11 @@
     gap: 12px;
     flex-wrap: wrap;
     @include screen(mobile) {
+      justify-content: space-between;
+    }
+    @include screen(tablet) {
       gap: 32px;
+      justify-content: start;
     }
     @include screen(laptop) {
       gap: 46px;

@@ -59,14 +59,8 @@
     }
     &__email {
       color: $fathom;
-      border-bottom: 1px solid transparent;
-      transition: border-color $transition-default;
+      border-bottom: 1px solid $fathom;
       @include sans-xs-v2;
-      @include screen(laptop) {
-        &:hover {
-          border-color: $fathom;
-        }
-      }
     }
   }
 }
