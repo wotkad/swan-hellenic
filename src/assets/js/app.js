@@ -30,6 +30,7 @@ import "./components/toggle/toggle-suite-type";
 import "./components/toggle/toggle-cookie";
 import "./components/toggle/toggle-ship-suite.js";
 import "./components/toggle/toggle-country";
+import "./components/toggle/toggle-tags";
 
 import "./components/mailer/sendForm";
 import "./components/mailer/sendMail";

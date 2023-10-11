@@ -1,0 +1,12 @@
+.popup {
+  &.popup-tags {
+    .popup__container {
+      align-items: center;
+      .tags__clear {
+        display: inline-block;
+        position: static;
+        margin-top: 20px;
+      }
+    }
+  }
+}
