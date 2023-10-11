@@ -52,3 +52,5 @@ import "./components/scroll/scroll-header";
 import "./components/scroll/scroll-sidebar-booking";
 
 import "./components/mousemove/card-cursor";
+
+import "./components/date-input.js";
