@@ -161,8 +161,7 @@ function filterCalendar() {
         });
         picker.on('clear', () => {
           setTimeout(function() {
-            picker.hide();
-            $('#datepicker').removeClass('selected');
+            $('#datepicker').addClass('selected');
             $('.easepick-wrapper').removeClass('active');
             $('.hero-filter__label-calendar .hero-filter__container').removeClass('active');
           }, 0);

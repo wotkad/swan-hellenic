@@ -249,16 +249,10 @@
   &__contacts {
     color: $white;
     text-transform: uppercase;
-    border-bottom: 1px solid transparent;
-    transition: border-color $transition-default;
+    border-bottom: 1px solid $white;
     @include sans-2xs;
     line-height: 14px;
     font-weight: 500;
-    @include screen(laptop) {
-      &:hover {
-        border-color: $white;
-      }
-    }
     @include screen(tablet) {
       @include sans-sm-med;
     }
