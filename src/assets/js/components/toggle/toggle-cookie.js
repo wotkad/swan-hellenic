@@ -36,13 +36,13 @@ function toggleCookie() {
 
   function closeCookie() {
     if ($(window).width() > 768) {
-      gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
+      gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
         popup.removeClass('active');
         bg.removeClass('active');
         popupCookie.fadeOut(300);
       }});
     } else {
-      gsap.to(wrapper, { y: container.outerHeight(), duration: 0.4, ease: "power2.out", onComplete: () => {
+      gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
         popup.removeClass('active');
         bg.removeClass('active');
         popupCookie.fadeOut(300);

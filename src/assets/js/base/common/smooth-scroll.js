@@ -6,6 +6,7 @@ function smoothScroll() {
     after: function () {
       $("body").css("overflow", "");
     },
+    offset: 100
   });
 }
 smoothScroll();

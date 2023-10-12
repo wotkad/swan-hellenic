@@ -17,7 +17,7 @@
     }
     .popup__close {
       display: none;
-      @include screen(laptop) {
+      @include screen(tablet) {
         display: flex;
       }
     }

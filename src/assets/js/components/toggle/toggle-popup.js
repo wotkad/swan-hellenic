@@ -31,7 +31,11 @@ function togglePopup() {
 
       if (wrapper.length > 0) {
         if ($(window).width() > 768) {
-          gsap.to(wrapper, { x: 0, duration: 0.4, ease: "power2.out" });
+          if (popup.hasClass('popup-faq')) {
+            gsap.to(wrapper, { y: 0, duration: 0.4, ease: "power2.out" });
+          } else {
+            gsap.to(wrapper, { x: 0, duration: 0.4, ease: "power2.out" });
+          }
         } else {
           gsap.to(wrapper, { y: 0, duration: 0.4, ease: "power2.out" });
         }
@@ -42,13 +46,20 @@ function togglePopup() {
       close.off('click');
       close.on('click', function() {
         if ($(window).width() > 768) {
-          gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
-            popup.removeClass('active');
-            bg.removeClass('active');
-          }});
+          if (popup.hasClass('popup-faq')) {
+            gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+              popup.removeClass('active');
+              bg.removeClass('active');
+            }});
+          } else {
+            gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+              popup.removeClass('active');
+              bg.removeClass('active');
+            }});
+          }
           clearQueueScrollLocks();
         } else {
-          gsap.to(wrapper, { y: container.outerHeight(), duration: 0.4, ease: "power2.out", onComplete: () => {
+          gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
             popup.removeClass('active');
             bg.removeClass('active');
           }});
@@ -75,11 +86,18 @@ function togglePopup() {
       bg.off('click');
       bg.on('click', function() {
         if ($(window).width() > 768) {
-          gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out"});
-          popup.removeClass('active');
-          bg.removeClass('active');
+          if (popup.hasClass('popup-faq')) {
+            gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+              popup.removeClass('active');
+              bg.removeClass('active');
+            }});
+          } else {
+            gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out"});
+            popup.removeClass('active');
+            bg.removeClass('active');
+          }
         } else {
-          gsap.to(wrapper, { y: container.outerHeight(), duration: 0.4, ease: "power2.out", onComplete: () => {
+          gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
             popup.removeClass('active');
             bg.removeClass('active');
           }});
@@ -100,14 +118,12 @@ function togglePopup() {
             const endY = event.originalEvent.changedTouches[0].clientY;
             const deltaY = endY - startY;
             if (deltaY > 200) {
-              if ($(window).width() < 768) {
-                gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
-                  popup.removeClass('active');
-                  bg.removeClass('active');
-                }});
-                enablePageScroll();
-                $('.popup-select__button').find('.button__input').attr('data-selected', '');
-              }
+              gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+                popup.removeClass('active');
+                bg.removeClass('active');
+              }});
+              enablePageScroll();
+              $('.popup-select__button').find('.button__input').attr('data-selected', '');
             }
             startY = null;
           }
@@ -116,16 +132,27 @@ function togglePopup() {
       closePopupByTouch();
 
       function handleKeyDown(e) {
-        if ($(window).width() > 768) {
-            if (e.key == 'Escape' && wrapper.length !== 0) {
-                gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease: "power2.out", onComplete: () => {
-                    popup.removeClass('active');
-                    bg.removeClass('active');
-                }});
-                enablePageScroll();
-                $('.popup-select__button').find('.button__input').attr('data-selected', '');
-                document.removeEventListener('keydown', handleKeyDown);
-            }
+        if ($(window).width() > 768 && !popup.hasClass('popup-faq')) {
+          if (e.key == 'Escape' && wrapper.length !== 0) {
+              gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+                  popup.removeClass('active');
+                  bg.removeClass('active');
+              }});
+              enablePageScroll();
+              $('.popup-select__button').find('.button__input').attr('data-selected', '');
+              document.removeEventListener('keydown', handleKeyDown);
+          }
+        }
+        if ($(window).width() > 768 && popup.hasClass('popup-faq')) {
+          if (e.key == 'Escape' && wrapper.length !== 0) {
+              gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+                  popup.removeClass('active');
+                  bg.removeClass('active');
+              }});
+              enablePageScroll();
+              $('.popup-select__button').find('.button__input').attr('data-selected', '');
+              document.removeEventListener('keydown', handleKeyDown);
+          }
         }
       }
       document.addEventListener('keydown', handleKeyDown);
@@ -142,6 +169,7 @@ function togglePopup() {
       openPopup();
     }
   });
+
 }
 
 togglePopup();

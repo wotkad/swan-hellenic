@@ -62,9 +62,9 @@ function toggleShipSuite() {
     };
 
     if (width > 768) {
-      gsap.to(wrapper, { x: container.outerWidth(), duration: 0.4, ease, onComplete });
+      gsap.to(wrapper, { x: '100%', duration: 0.4, ease });
     } else {
-      gsap.to(wrapper, { y: container.outerHeight(), duration: 0.4, ease, onComplete });
+      gsap.to(wrapper, { y: '100%', duration: 0.4, ease });
     }
 
     $('.popup-select__suite, .popup-select__type, .popup-select__deck, .popup-select__ship').removeClass('active');

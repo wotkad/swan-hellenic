@@ -217,6 +217,9 @@ svg {
 
 .section {
   overflow: hidden;
+  &-has-sticky {
+    overflow: visible;
+  }
   &-green {
     background-color: $fathom;
   }

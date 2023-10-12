@@ -80,6 +80,7 @@
       color: $white;
       @include sans-lg-medium;
       svg {
+        stroke: transparent;
         margin-top: -10px;
         display: none;
         min-width: 24px;
