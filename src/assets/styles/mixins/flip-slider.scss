@@ -138,7 +138,7 @@
       &__content {
         @include screen(laptop) {
           order: 2;
-          padding-left: 147px;
+          padding-left: 110px;
         }
         &:before {
           content: "";
