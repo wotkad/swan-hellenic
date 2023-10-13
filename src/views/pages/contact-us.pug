@@ -1,0 +1,22 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Contact Us
+
+block basicSeo
+  meta(content="This page Contact Us" name="description")
+  meta(content="Page, Contact Us" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([{type: 'span', title: 'Contact Us'}])
+        +heading('Contact Us','heading-sm', '')
+        include ../components/contact-us
