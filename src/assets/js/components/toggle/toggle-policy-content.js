@@ -1,16 +1,8 @@
 import gsap from "gsap";
 import { clearQueueScrollLocks, enablePageScroll } from "scroll-lock";
 
-function toggleFaqContent() {
-  let button = $('.faq__header');
-  button.on('click', function() {
-    $(this).parent().toggleClass('active');
-  });
-}
-toggleFaqContent();
-
-function toggleFaqAsideContent() {
-  let button = $('.faq__link');
+function togglePolicyAsideContent() {
+  let button = $('.privacy-policy__link');
   let popup = $('.popup');
   let bg = $('.popup__overlay');
   let wrapper = $('.popup__wrapper');
@@ -20,7 +12,7 @@ function toggleFaqAsideContent() {
     let block = $('.privacy-policy__link[href="' + id + '"]');
     $(block).attr('href', $(this).attr('href')).addClass('active');
     if ($(window).width() <= 1240) {
-      if (popup.hasClass('popup-faq')) {
+      if (popup.hasClass('popup-privacy-policy')) {
         gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
           popup.removeClass('active');
           bg.removeClass('active');
@@ -31,4 +23,4 @@ function toggleFaqAsideContent() {
     }
   });
 }
-toggleFaqAsideContent();
+togglePolicyAsideContent();

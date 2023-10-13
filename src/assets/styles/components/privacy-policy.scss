@@ -1,4 +1,4 @@
-.faq {
+.privacy-policy {
   margin-top: 52px;
   @include screen(laptop) {
     margin-top: 90px;
@@ -11,7 +11,7 @@
   }
   &__sidebar {
     position: relative;
-    min-width: 312px;
+    min-width: 324px;
     display: none;
     @include screen(laptop) {
       display: block;
@@ -43,7 +43,7 @@
       span {
         color: $text;
       }
-      .faq__link__icon {
+      .privacy-policy__link__icon {
         opacity: 1;
       }
     }
@@ -51,7 +51,7 @@
       span {
         color: $text;
       }
-      .faq__link__icon {
+      .privacy-policy__link__icon {
         opacity: 1;
       }
     }
@@ -61,7 +61,7 @@
     flex-direction: column;
     display: flex;
     align-items: flex-start;
-    gap: 28px;
+    gap: 48px;
     @include screen(tablet) {
       gap: 34px;
     }
@@ -84,49 +84,16 @@
     }
   }
   &__item {
-    padding: 20px 0 0;
+    padding: 16px 0 0;
     width: 100%;
-    border-bottom: 1px solid $green-200;
     @include screen(tablet) {
       padding: 26px 0 0;
     }
-    &:last-child {
-      border-bottom: none;
-    }
-    &.active {
-      .faq__button {
-        transform: rotate(180deg);
-      }
-      .faq__body {
-        display: block;
-      }
-    }
-  }
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    cursor: pointer;
-    @include screen(tablet) {
-      padding-bottom: 26px;
-    }
-  }
-  &__button {
-    transition: transform $transition-default;
-  }
-  &__arrow {
-    stroke: $green-200;
   }
   &__body {
-    display: none;
-    padding-bottom: 20px;
-    @include screen(tablet) {
-      padding-bottom: 26px;
-    }
     p {
       margin-top: 8px;
-      @include sans-sm;
+      @include sans-2xs;
       &:first-child {
         margin-top: 0;
       }
@@ -134,12 +101,19 @@
         @include sans-md;
       }
     }
-  }
-  &__name {
-    padding-right: 16px;
-    @include sans-base;
-    @include screen(tablet) {
-      @include sans-2xl-1;
+    ul {
+      padding-left: 16px;
+      list-style-type: disc;
+      @include screen(tablet) {
+        padding-left: 24px;
+      }
+      li {
+        margin-top: 8px;
+        @include sans-2xs;
+        @include screen(tablet) {
+          @include sans-md;
+        }
+      }
     }
   }
 }

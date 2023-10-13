@@ -9,3 +9,7 @@ mixin heading(title, className='', type, iconClass)
       button.heading__icon.popup-trigger(data-popup-button="faq" type="button" aria-label="filter" class="" + iconClass)
         svg(viewBox="0 0 32 32" width="32px" height="32px")
           use(xlink:href="#svg-filter")
+    if type == "privacy-policy"
+      button.heading__icon.popup-trigger(data-popup-button="privacy-policy" type="button" aria-label="filter" class="" + iconClass)
+        svg(viewBox="0 0 32 32" width="32px" height="32px")
+          use(xlink:href="#svg-filter")

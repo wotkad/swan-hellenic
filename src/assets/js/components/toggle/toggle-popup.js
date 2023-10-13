@@ -31,7 +31,7 @@ function togglePopup() {
 
       if (wrapper.length > 0) {
         if ($(window).width() > 768) {
-          if (popup.hasClass('popup-faq')) {
+          if (popup.hasClass('popup-faq') || popup.hasClass('popup-privacy-policy')) {
             gsap.to(wrapper, { y: 0, duration: 0.4, ease: "power2.out" });
           } else {
             gsap.to(wrapper, { x: 0, duration: 0.4, ease: "power2.out" });
@@ -46,7 +46,7 @@ function togglePopup() {
       close.off('click');
       close.on('click', function() {
         if ($(window).width() > 768) {
-          if (popup.hasClass('popup-faq')) {
+          if (popup.hasClass('popup-faq') || popup.hasClass('popup-privacy-policy')) {
             gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
               popup.removeClass('active');
               bg.removeClass('active');
@@ -86,7 +86,7 @@ function togglePopup() {
       bg.off('click');
       bg.on('click', function() {
         if ($(window).width() > 768) {
-          if (popup.hasClass('popup-faq')) {
+          if (popup.hasClass('popup-faq') || popup.hasClass('popup-privacy-policy')) {
             gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
               popup.removeClass('active');
               bg.removeClass('active');
@@ -132,7 +132,7 @@ function togglePopup() {
       closePopupByTouch();
 
       function handleKeyDown(e) {
-        if ($(window).width() > 768 && !popup.hasClass('popup-faq')) {
+        if ($(window).width() > 1240) {
           if (e.key == 'Escape' && wrapper.length !== 0) {
               gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
                   popup.removeClass('active');
@@ -143,7 +143,7 @@ function togglePopup() {
               document.removeEventListener('keydown', handleKeyDown);
           }
         }
-        if ($(window).width() > 768 && popup.hasClass('popup-faq')) {
+        if ($(window).width() > 1240) {
           if (e.key == 'Escape' && wrapper.length !== 0) {
               gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
                   popup.removeClass('active');
