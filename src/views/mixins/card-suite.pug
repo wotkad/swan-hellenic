@@ -19,17 +19,18 @@ mixin card-suite(i, type, title, description, footer, buttonText)
             .splide__slide
               img(src="/assets/images/cruise-page/item-6.png" alt="")
       .card-suite__content
-        h3.card-suite__title= title
-        .card-suite__options
-          .card-suite__date
-            svg(viewBox="0 0 24 24" width="24px" height="24px")
-              use(xlink:href="#svg-arrows-out")
-            span 19 m2
-          .card-suite__date
-            svg(viewBox="0 0 24 24" width="24px" height="24px")
-              use(xlink:href="#svg-user")
-            span 2
-        .card-suite__description= description
+        .card-suite__inner
+          h3.card-suite__title= title
+          .card-suite__options
+            .card-suite__date
+              svg(viewBox="0 0 24 24" width="24px" height="24px")
+                use(xlink:href="#svg-arrows-out")
+              span 19 m2
+            .card-suite__date
+              svg(viewBox="0 0 24 24" width="24px" height="24px")
+                use(xlink:href="#svg-user")
+              span 2
+          .card-suite__description= description
         if footer == 'showFooter'
           .card__footer
             .card__prices

@@ -1,4 +1,9 @@
 .card-suite {
+  display: flex;
+  flex-direction: column;
+  &__wrapper {
+    height: 100%;
+  }
   .splide {
     &__pagination {
       bottom: 20px;
@@ -38,6 +43,13 @@
   }
   &__content {
     padding-top: 32px;
+    display: grid;
+    @include screen(tablet) {
+      grid-template-rows: 277px 1fr;
+    }
+  }
+  &__inner {
+    height: 100%;
   }
   &__title {
     @include sans-xl-medium;
@@ -64,6 +76,7 @@
   }
   &__description {
     color: $fathom;
+    @include line-clamp-6;
     @include sans-md;
   }
   .card {
