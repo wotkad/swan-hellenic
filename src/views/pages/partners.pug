@@ -1,0 +1,21 @@
+extends ../layouts/master
+
+block title
+  title Swan Hellenic | Partners
+
+block basicSeo
+  meta(content="This page Partners" name="description")
+  meta(content="Page, Partners" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main.section-not-green
+    include ../mixins/breadcrumbs
+    include ../mixins/heading
+    section.gapper.section.section-white
+      .wrapper
+        +breadcrumbs([{type: 'span', title: 'Partners'}])
+        +heading('Partners','heading-sm', '')
