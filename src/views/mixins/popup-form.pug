@@ -62,62 +62,78 @@ mixin popup-form(popupType, className='')
                     height="16px"
                   )
                     use(xlink:href="#svg-arrow-down-small")
-                .popup__dropdown__list
-                  button.popup__dropdown__country(
-                    type="button"
-                    aria-label="country"
-                  )
-                    svg.popup__dropdown__flag(
-                      viewBox="0 0 28 20"
-                      width="24px"
-                      height="24px"
+                .popup__dropdown__container
+                  .popup__dropdown__search
+                    input.popup__dropdown__input(type="search" name="seatch" required placeholder="Search...")
+                    button(type="submit").popup__dropdown__submit
+                      svg(viewBox="0 0 24 24" width="24px" height="24px")
+                        use(xlink:href="#svg-search")
+                  .popup__dropdown__list(data-scroll-lock-scrollable)
+                    button.popup__dropdown__country(
+                      type="button"
+                      aria-label="country"
                     )
-                      use(xlink:href="#svg-flag-ru")
-                    span +7
-                  button.popup__dropdown__country(
-                    type="button"
-                    aria-label="country"
-                  )
-                    svg.popup__dropdown__flag(
-                      viewBox="0 0 28 20"
-                      width="24px"
-                      height="24px"
+                      svg.popup__dropdown__flag(
+                        viewBox="0 0 28 20"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-flag-ru")
+                      span Russian (+7)
+                      svg.popup__dropdown__check(viewBox="0 0 12 12" width="12px" height="12px")
+                        use(xlink:href="#svg-check-small-green")
+                    button.popup__dropdown__country(
+                      type="button"
+                      aria-label="country"
                     )
-                      use(xlink:href="#svg-flag-ge")
-                    span +995
-                  button.popup__dropdown__country(
-                    type="button"
-                    aria-label="country"
-                  )
-                    svg.popup__dropdown__flag(
-                      viewBox="0 0 28 20"
-                      width="24px"
-                      height="24px"
+                      svg.popup__dropdown__flag(
+                        viewBox="0 0 28 20"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-flag-ge")
+                      span Russian (+7)
+                      svg.popup__dropdown__check(viewBox="0 0 12 12" width="12px" height="12px")
+                        use(xlink:href="#svg-check-small-green")
+                    button.popup__dropdown__country(
+                      type="button"
+                      aria-label="country"
                     )
-                      use(xlink:href="#svg-flag-ru")
-                    span +7
-                  button.popup__dropdown__country(
-                    type="button"
-                    aria-label="country"
-                  )
-                    svg.popup__dropdown__flag(
-                      viewBox="0 0 28 20"
-                      width="24px"
-                      height="24px"
+                      svg.popup__dropdown__flag(
+                        viewBox="0 0 28 20"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-flag-ru")
+                      span Russian (+7)
+                      svg.popup__dropdown__check(viewBox="0 0 12 12" width="12px" height="12px")
+                        use(xlink:href="#svg-check-small-green")
+                    button.popup__dropdown__country(
+                      type="button"
+                      aria-label="country"
                     )
-                      use(xlink:href="#svg-flag-ge")
-                    span +995
-                  button.popup__dropdown__country(
-                    type="button"
-                    aria-label="country"
-                  )
-                    svg.popup__dropdown__flag(
-                      viewBox="0 0 28 20"
-                      width="24px"
-                      height="24px"
+                      svg.popup__dropdown__flag(
+                        viewBox="0 0 28 20"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-flag-ge")
+                      span Russian (+7)
+                      svg.popup__dropdown__check(viewBox="0 0 12 12" width="12px" height="12px")
+                        use(xlink:href="#svg-check-small-green")
+                    button.popup__dropdown__country(
+                      type="button"
+                      aria-label="country"
                     )
-                      use(xlink:href="#svg-flag-ru")
-                    span +7
+                      svg.popup__dropdown__flag(
+                        viewBox="0 0 28 20"
+                        width="24px"
+                        height="24px"
+                      )
+                        use(xlink:href="#svg-flag-ru")
+                      span Russian (+7)
+                      svg.popup__dropdown__check(viewBox="0 0 12 12" width="12px" height="12px")
+                        use(xlink:href="#svg-check-small-green")
               input(
                 type="tel"
                 placeholder="+7 *"

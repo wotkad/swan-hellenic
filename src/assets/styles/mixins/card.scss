@@ -21,8 +21,8 @@
   }
   &__price {
     display: flex;
-    align-items: flex-end;
-    gap: 4px;
+    align-items: flex-start;
+    flex-direction: column;
     margin-top: 6px;
     @include sans-xl;
     line-height: 28px;
@@ -142,6 +142,9 @@
   &__title {
     @include line-clamp-2;
     @include sans-lg-medium;
+    @include screen(tablet) {
+      min-height: 64px;
+    }
   }
   &__uid {
     color: $white-400;

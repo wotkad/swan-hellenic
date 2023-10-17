@@ -244,33 +244,57 @@
       align-items: center;
       cursor: pointer;
       position: absolute;
-      &__list {
-        max-height: 104px;
-        overflow-y: auto;
+      &__container {
         position: absolute;
-        padding: 4px 0;
         top: 32px;
         left: 0;
-        background-color: #ffffff;
+        padding: 0 0 8px;
+        background-color: $white;
         border-radius: 4px;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
         opacity: 0;
         visibility: hidden;
+        min-width: 178px;
         z-index: -1;
-        transition:
-          opacity $transition-default,
-          visibility $transition-default,
-          z-index $transition-default;
-        @include screen(tablet) {
-          top: 32px;
-        }
-        &::-webkit-scrollbar {
-          width: 0;
-        }
         &.active {
           opacity: 1;
           visibility: visible;
           z-index: 3;
+        }
+      }
+      &__list {
+        max-height: 144px;
+        width: 100%;
+        overflow-y: auto;
+        transition:
+          opacity $transition-default,
+          visibility $transition-default,
+          z-index $transition-default;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+      &__search {
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+      }
+      input {
+        padding: 0px 0 0 20px;
+        border: none;
+        width: 104px;
+        @include sans-base;
+      }
+      &__submit {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          stroke: $fathom;
         }
       }
       &__current {
@@ -285,18 +309,28 @@
           }
         }
       }
+      &__check {
+        opacity: 0;
+        margin-left: 10px;
+        stroke: $fathom;
+        transition: opacity $transition-default;
+      }
       &__flag {
         stroke: transparent;
         max-width: 24px;
         max-height: 24px;
       }
       &__country {
+        position: relative;
         width: 100%;
         display: flex;
         align-items: center;
         gap: 8px;
         transition: background-color $transition-default;
-        padding: 4px 8px;
+        padding: 6px 20px;
+        span {
+          white-space: nowrap;
+        }
         @include screen(laptop) {
           &:hover {
             background-color: $white-300;
@@ -304,6 +338,9 @@
         }
         &.active {
           background-color: $white-300;
+          .popup__dropdown__check {
+            opacity: 1;
+          }
         }
       }
     }

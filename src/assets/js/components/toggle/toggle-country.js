@@ -1,6 +1,6 @@
 function toggleCountry() {
   let button = $('.booking-details__dropdown__current');
-  let menu = $('.booking-details__dropdown__list');
+  let menu = $('.booking-details__dropdown__container');
   let items = $('.booking-details__dropdown__country');
   let input = $('.booking-details__input-country input');
   button.on('click', function(e) {

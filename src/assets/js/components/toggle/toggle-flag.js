@@ -1,6 +1,6 @@
 function toggleFlag() {
   let button = $('.popup__dropdown__current');
-  let menu = $('.popup__dropdown__list');
+  let menu = $('.popup__dropdown__container');
   let items = $('.popup__dropdown__country');
   button.on('click', function() {
     $(this).toggleClass('active');
@@ -23,7 +23,7 @@ function toggleFlag() {
     });
   }
   $(document).mouseup(function(e) {
-    if (!menu.is(e.target) && !button.is(e.target) && button.has(e.target).length === 0) {
+    if (!menu.is(e.target) && menu.has(e.target).length === 0 && !button.is(e.target) && button.has(e.target).length === 0) {
       menu.removeClass('active');
       button.removeClass('active');
     }
