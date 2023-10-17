@@ -73,7 +73,7 @@
     }
     &__item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 8px;
       cursor: pointer;
@@ -81,7 +81,6 @@
       @include sans-lg-medium;
       svg {
         stroke: transparent;
-        margin-top: -10px;
         display: none;
         min-width: 24px;
         min-height: 24px;
