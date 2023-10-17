@@ -89,6 +89,13 @@
       grid-template-columns: 350px 1fr;
     }
   }
+  &-partners {
+    gap: 20px;
+    @include screen(laptop) {
+      grid-template-columns: 1fr 336px;
+      gap: 93px;
+    }
+  }
   &-booking {
     grid-template-columns: 1fr;
     margin-top: 18px;

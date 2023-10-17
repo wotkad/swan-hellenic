@@ -6,8 +6,10 @@
       font-weight: 500;
       border-bottom: 1px solid transparent;
       transition: $transition-default;
-      &:hover {
-        border-bottom: 1px solid $text;
+      @include screen(laptop) {
+        &:hover {
+          border-bottom: 1px solid $text;
+        }
       }
     }
   }

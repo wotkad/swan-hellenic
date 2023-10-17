@@ -182,9 +182,11 @@
         transition:
           color $transition-default,
           border-color $transition-default;
-        &:hover {
-          color: $fathom;
-          border-color: $fathom;
+        @include screen(laptop) {
+          &:hover {
+            color: $fathom;
+            border-color: $fathom;
+          }
         }
       }
     }
@@ -204,10 +206,12 @@
         }
       }
     }
-    &:hover {
-      span {
-        &:before {
-          border-color: $green-200;
+    @include screen(laptop) {
+      &:hover {
+        span {
+          &:before {
+            border-color: $green-200;
+          }
         }
       }
     }

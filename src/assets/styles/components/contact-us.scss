@@ -59,8 +59,10 @@
     }
     a {
       transition: color $transition-default;
-      &:hover {
-        color: $fathom;
+      @include screen(laptop) {
+        &:hover {
+          color: $fathom;
+        }
       }
     }
   }

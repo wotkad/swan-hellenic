@@ -75,10 +75,12 @@
           opacity: 0;
         }
       }
-      &:hover {
-        h3 {
-          &:before {
-            border-color: $green-200;
+      @include screen(laptop) {
+        &:hover {
+          h3 {
+            &:before {
+              border-color: $green-200;
+            }
           }
         }
       }
@@ -102,8 +104,10 @@
         border-bottom: 1px solid transparent;
         font-weight: 500;
         transition: border-color $transition-default;
-        &:hover {
-          border-color: $fathom;
+        @include screen(laptop) {
+          &:hover {
+            border-color: $fathom;
+          }
         }
       }
     }

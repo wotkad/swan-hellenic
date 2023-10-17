@@ -70,9 +70,11 @@
       margin-top: 12px;
       transition: color $transition-default;
       @include sans-lg;
-      &:hover {
-        @include screen(laptop) {
-          color: $fathom;
+      @include screen(laptop) {
+        &:hover {
+          @include screen(laptop) {
+            color: $fathom;
+          }
         }
       }
     }

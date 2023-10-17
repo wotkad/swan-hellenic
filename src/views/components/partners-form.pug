@@ -1,0 +1,221 @@
+include ../mixins/subheading
+include ../mixins/button
+.partners-form
+  +subheading('Travel Partners Form', '', '')
+  form.partners-form__form(action="#")
+    .partners-form__inputs
+      .partners-form__input
+        input.success(
+          type="text"
+          placeholder="Company / Medium *"
+          autocomplete="on"
+          name="company"
+          required
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+      .partners-form__input
+        input.error(
+          type="text"
+          placeholder="Agency / IATA Number *"
+          autocomplete="on"
+          required
+          class=""
+          name="agency"
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+      .partners-form__input
+        input(
+          type="text"
+          placeholder="First name *"
+          autocomplete="on"
+          name="surname"
+          required
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+      .partners-form__input
+        input(
+          type="text"
+          placeholder="Last name *"
+          autocomplete="on"
+          name="surname"
+          required
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+      .partners-form__input
+        input(
+          type="text"
+          placeholder="Position *"
+          autocomplete="on"
+          name="surname"
+          required
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+    .partners-form__inputs.partners-form__inputs-one.partners-form__inputs-mt
+      .partners-form__input
+        input(
+          type="text"
+          placeholder="Street Address 1"
+          autocomplete="on"
+          name="Street Address 1"
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+      .partners-form__input
+        input(
+          type="text"
+          placeholder="Street Address 2"
+          autocomplete="on"
+          name="Street Address 2"
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+      .partners-form__inputs.partners-form__inputs-third
+        .partners-form__input.partners-form__input-small
+          input(
+            type="text"
+            placeholder="ZIP/Postal code"
+            autocomplete="on"
+            name="ZIP/Postal code"
+          )
+          svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+            use(xlink:href="#svg-check-small-green")
+        .partners-form__input.partners-form__input-big
+          input(type="text" placeholder="City" autocomplete="on" name="City")
+          svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+            use(xlink:href="#svg-check-small-green")
+    .partners-form__inputs.partners-form__inputs-basic
+      .partners-form__input
+        input(
+          type="text"
+          placeholder="Region/State"
+          autocomplete="on"
+          name="Region/State"
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+      .booking-details__input.booking-details__input.booking-details__input-country.booking-details__input-country
+        .booking-details__dropdown
+          button.booking-details__dropdown__current(
+            type="button"
+            aria-label="country"
+          )
+            svg.booking-details__arrow(
+              viewBox="0 0 16 16"
+              width="16px"
+              height="16px"
+            )
+              use(xlink:href="#svg-arrow-down-small")
+          .booking-details__dropdown__list
+            .booking-details__dropdown__scroll.custom-scroll(
+              data-scroll-lock-scrollable
+            )
+              button.booking-details__dropdown__country(
+                type="button"
+                aria-label="country"
+              )
+                span Russia
+              button.booking-details__dropdown__country(
+                type="button"
+                aria-label="country"
+              )
+                span Georgia
+              button.booking-details__dropdown__country(
+                type="button"
+                aria-label="country"
+              )
+                span Russia
+              button.booking-details__dropdown__country(
+                type="button"
+                aria-label="country"
+              )
+                span Russia
+              button.booking-details__dropdown__country(
+                type="button"
+                aria-label="country"
+              )
+                span Georgia
+              button.booking-details__dropdown__country(
+                type="button"
+                aria-label="country"
+              )
+                span Russia
+        input(type="text" placeholder="Country" name="country" autocomplete="on")
+      .partners-form__input.partners-form__input-email
+        input(type="email" placeholder="E-mail *" autocomplete="on" name="email")
+      .booking-details__input.popup__input.popup__input-phone
+        .popup__dropdown
+          button.popup__dropdown__current(type="button" aria-label="country")
+            svg.popup__dropdown__flag(
+              viewBox="0 0 28 20"
+              width="24px"
+              height="24px"
+            )
+              use(xlink:href="#svg-flag-ru")
+            svg.popup__arrow(viewBox="0 0 16 16" width="16px" height="16px")
+              use(xlink:href="#svg-arrow-down-small")
+          .popup__dropdown__list
+            button.popup__dropdown__country(type="button" aria-label="country")
+              svg.popup__dropdown__flag(
+                viewBox="0 0 28 20"
+                width="24px"
+                height="24px"
+              )
+                use(xlink:href="#svg-flag-ru")
+              span +7
+            button.popup__dropdown__country(type="button" aria-label="country")
+              svg.popup__dropdown__flag(
+                viewBox="0 0 28 20"
+                width="24px"
+                height="24px"
+              )
+                use(xlink:href="#svg-flag-ge")
+              span +995
+            button.popup__dropdown__country(type="button" aria-label="country")
+              svg.popup__dropdown__flag(
+                viewBox="0 0 28 20"
+                width="24px"
+                height="24px"
+              )
+                use(xlink:href="#svg-flag-ru")
+              span +7
+            button.popup__dropdown__country(type="button" aria-label="country")
+              svg.popup__dropdown__flag(
+                viewBox="0 0 28 20"
+                width="24px"
+                height="24px"
+              )
+                use(xlink:href="#svg-flag-ge")
+              span +995
+            button.popup__dropdown__country(type="button" aria-label="country")
+              svg.popup__dropdown__flag(
+                viewBox="0 0 28 20"
+                width="24px"
+                height="24px"
+              )
+                use(xlink:href="#svg-flag-ru")
+              span +7
+        input(type="tel" placeholder="+7 *" autocomplete="on" name="phone")
+      .partners-form__input
+        input(
+          type="text"
+          placeholder="Fax"
+          autocomplete="on"
+          class=""
+          name="faq"
+        )
+        svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+          use(xlink:href="#svg-check-small-green")
+    label.partners-form__label
+      input(
+        type="checkbox"
+        name="policy"
+        value="approved"
+      )
+      .partners-form__approved
+        span Your data belongs to you. We collect your data to provide you with the products and services that you have asked to receive. Please check here to indicate that you have read our <a href="#">Privacy Policy*</a>
+    +button('button-green button-no-center', 'submit', 'Submit', '')

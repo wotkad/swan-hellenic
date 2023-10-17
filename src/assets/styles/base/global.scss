@@ -161,6 +161,12 @@ main {
 
 .subtext {
   @include sans-lg-medium;
+  &-sm {
+    p {
+      margin-top: 16px;
+      @include sans-md;
+    }
+  }
 }
 
 .render {

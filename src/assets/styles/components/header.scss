@@ -280,8 +280,10 @@
           color: $green-200;
           transition: color $transition-default;
           @include sans-sm-medium;
-          &:hover {
-            color: $white;
+          @include screen(laptop) {
+            &:hover {
+              color: $white;
+            }
           }
         }
         &__years {
@@ -295,8 +297,10 @@
           border-bottom: 1px solid transparent;
           transition: border-color $transition-default;
           @include sans-sm-medium;
-          &:hover {
-            border-color: $white;
+          @include screen(laptop) {
+            &:hover {
+              border-color: $white;
+            }
           }
         }
       }

@@ -47,12 +47,14 @@
         opacity: 1;
       }
     }
-    &:hover {
-      span {
-        color: $text;
-      }
-      .privacy-policy__link__icon {
-        opacity: 1;
+    @include screen(laptop) {
+      &:hover {
+        span {
+          color: $text;
+        }
+        .privacy-policy__link__icon {
+          opacity: 1;
+        }
       }
     }
   }

@@ -21,9 +21,14 @@
   }
   @include screen(laptop) {
     &:hover {
-      .promo__image {
-        img {
-          transform: scale(1.1);
+      .promo {
+        &__link {
+          border-color: $white;
+        }
+        &__image {
+          img {
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -64,13 +69,6 @@
     @include sans-sm-med;
     @include screen(tablet) {
       display: inline-block;
-    }
-  }
-  &:hover {
-    .promo {
-      &__link {
-        border-color: $white;
-      }
     }
   }
   &__date {

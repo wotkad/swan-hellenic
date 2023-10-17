@@ -128,9 +128,11 @@
         &--prev {
           left: 55px;
         }
-        &:hover {
-          svg {
-            fill: $fathom;
+        @include screen(laptop) {
+          &:hover {
+            svg {
+              fill: $fathom;
+            }
           }
         }
       }
