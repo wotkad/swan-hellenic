@@ -19,7 +19,10 @@ include ../../mixins/button
       .popup-select__scroll(data-scroll-lock-scrollable)
         .popup-select__wrap
           .popup-select__container
-            .popup-select__types(data-scroll-lock-scrollable data-types="deck_4").custom-scroll-horizontal
+            .popup-select__types.custom-scroll-horizontal(
+              data-scroll-lock-scrollable
+              data-types="deck_4"
+            )
               .popup-select__type.popup-select__type-oceanview(
                 data-type="oceanview-d4"
               )
@@ -76,7 +79,10 @@ include ../../mixins/button
                 svg(viewBox="0 0 24 24" width="24px" height="24px")
                   use(xlink:href="#svg-check")
                 p Unavailable <br> stateroom
-            .popup-select__types.custom-scroll-horizontal(data-scroll-lock-scrollable data-types="deck_6")
+            .popup-select__types.custom-scroll-horizontal(
+              data-scroll-lock-scrollable
+              data-types="deck_6"
+            )
               .popup-select__type.popup-select__type-balcony(
                 data-type="balcony-d6"
               )
@@ -97,7 +103,9 @@ include ../../mixins/button
                 .popup-select__type__content
                   p Junior Suite
                   span € 33,871
-              .popup-select__type.popup-select__type-premium(data-type="premium")
+              .popup-select__type.popup-select__type-premium(
+                data-type="premium"
+              )
                 svg(viewBox="0 0 24 24" width="24px" height="24px")
                   use(xlink:href="#svg-check")
                 .popup-select__type__content
@@ -107,7 +115,7 @@ include ../../mixins/button
                 svg(viewBox="0 0 24 24" width="24px" height="24px")
                   use(xlink:href="#svg-check")
                 p Unavailable <br> stateroom
-          .popup-select__suites(data-scroll-lock-scrollable).custom-scroll-horizontal
+          .popup-select__suites.custom-scroll-horizontal(data-scroll-lock-scrollable)
             .popup-select__ship(data-ship="deck_4")
               include deck_5.pug
             .popup-select__ship.active(data-ship="deck_5")

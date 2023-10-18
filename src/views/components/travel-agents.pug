@@ -1,10 +1,14 @@
 .travel-agents
   .travel-agents__wrapper
-    form(action="#").travel-agents__form
+    form.travel-agents__form(action="#")
       label.travel-agents__label
-        input(type="text" name="search" placeholder="Search...").travel-agents__input
-        button(type="submit").travel-agents__button
-          svg.travel-agents__icon(viewBox="0 0 24 24" width="24px" height="24px")
+        input.travel-agents__input(type="text" placeholder="Search..." name="search")
+        button.travel-agents__button(type="submit")
+          svg.travel-agents__icon(
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px"
+          )
             use(xlink:href="#svg-search")
       .travel-agents__result 190 results
       .travel-agents__list.custom-scroll

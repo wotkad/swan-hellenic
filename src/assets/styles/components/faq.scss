@@ -9,6 +9,26 @@
     align-items: stretch;
     column-gap: 115px;
   }
+  &__button {
+    transition: transform $transition-default;
+  }
+  &__body {
+    display: none;
+    padding-bottom: 20px;
+    @include screen(tablet) {
+      padding-bottom: 26px;
+    }
+    p {
+      margin-top: 8px;
+      @include sans-sm;
+      &:first-child {
+        margin-top: 0;
+      }
+      @include screen(tablet) {
+        @include sans-md;
+      }
+    }
+  }
   &__sidebar {
     position: relative;
     min-width: 312px;
@@ -114,28 +134,8 @@
       padding-bottom: 26px;
     }
   }
-  &__button {
-    transition: transform $transition-default;
-  }
   &__arrow {
     stroke: $green-200;
-  }
-  &__body {
-    display: none;
-    padding-bottom: 20px;
-    @include screen(tablet) {
-      padding-bottom: 26px;
-    }
-    p {
-      margin-top: 8px;
-      @include sans-sm;
-      &:first-child {
-        margin-top: 0;
-      }
-      @include screen(tablet) {
-        @include sans-md;
-      }
-    }
   }
   &__name {
     padding-right: 16px;
