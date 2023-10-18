@@ -115,7 +115,9 @@ include ../../mixins/button
                 svg(viewBox="0 0 24 24" width="24px" height="24px")
                   use(xlink:href="#svg-check")
                 p Unavailable <br> stateroom
-          .popup-select__suites.custom-scroll-horizontal(data-scroll-lock-scrollable)
+          .popup-select__suites.custom-scroll-horizontal(
+            data-scroll-lock-scrollable
+          )
             .popup-select__ship(data-ship="deck_4")
               include deck_5.pug
             .popup-select__ship.active(data-ship="deck_5")
