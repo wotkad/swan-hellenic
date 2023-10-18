@@ -131,6 +131,10 @@
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    padding-right: 10px;
+    @include screen(laptop) {
+      padding-right: 0;
+    }
   }
   &__contact {
     border: 1px solid $white;
@@ -147,7 +151,7 @@
     }
   }
   &__block {
-    margin-top: 80px;
+    padding-top: 80px;
     opacity: 0;
     z-index: -1;
     position: relative;
