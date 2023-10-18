@@ -1,7 +1,6 @@
 
 import { easepick } from "@easepick/bundle";
 import { AmpPlugin } from '@easepick/amp-plugin';
-import { RangePlugin } from '@easepick/range-plugin';
 
 let container = $('.hero-filter__list');
 
@@ -130,10 +129,7 @@ function filterCalendar() {
         '/src/datepicker.min.css',
         '/src/datepicker.css',
       ],
-      plugins: [AmpPlugin, RangePlugin],
-      RangePlugin: {
-        tooltip: false
-      },
+      plugins: [AmpPlugin],
       format: "DD.MM.YYYY",
       AmpPlugin: {
         resetButton: true,

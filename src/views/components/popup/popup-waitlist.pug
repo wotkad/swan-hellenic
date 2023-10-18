@@ -1,0 +1,43 @@
+include ../../mixins/button
+.popup.popup-waitlist(data-popup="waitlist")
+  .popup__wrapper
+    .popup__close
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="36px" height="36px")
+          use(xlink:href="#svg-arrow-right")
+    .popup__close-mob
+      button.popup__icon(type="button" aria-label="close")
+        svg(viewBox="0 0 24 24" width="24px" height="24px")
+          use(xlink:href="#svg-x-mark")
+    .popup__container
+      .popup__heading
+        h2.popup__title.popup__title-small Add to waiting list
+      form.popup__form(action="#")
+        .popup__inputs
+          .popup__input
+            input(
+              type="text"
+              placeholder="First Name *"
+              autocomplete="on"
+              name="name"
+            )
+            svg.svg__check(viewBox="0 0 12 12" width="12px" height="12px")
+              use(xlink:href="#svg-check-small-green")
+          .popup__input
+            input(
+              type="text"
+              placeholder="Last Name *"
+              autocomplete="on"
+              name="surname"
+            )
+          .popup__input(data-input="email")
+            input(
+              type="email"
+              placeholder="E-mail *"
+              autocomplete="on"
+              name="email"
+            )
+          .popup__button
+            +button('button-green', 'submit', 'Submit', '', '')
+          .popup__policy
+            span Fields with an asterisk (*) are required. By clicking “SUBMIT”, you are agreeing to our <a href="#">privacy policy</a>

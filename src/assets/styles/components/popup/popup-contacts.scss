@@ -1,7 +1,8 @@
 .popup {
   &.popup-contacts,
   &.popup-callback,
-  &.popup-contact-info {
+  &.popup-contact-info,
+  &.popup-waitlist {
     @include screen(laptop) {
       max-width: 50%;
     }
@@ -23,9 +24,13 @@
       }
       &__title {
         color: $fathom;
+        text-transform: uppercase;
         @include chap-base;
         @include screen(tablet) {
           @include chap-xl;
+        }
+        &-small {
+          @include chap-base;
         }
       }
       &__description {

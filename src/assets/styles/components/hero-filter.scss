@@ -67,10 +67,7 @@
           width: 282px;
         }
         &.selected {
-          @include sans-xs;
-          @include screen(tablet) {
-            @include sans-base;
-          }
+          @include sans-base;
         }
       }
     }
@@ -401,7 +398,7 @@
               }
               &.selected {
                 padding: 10px 32px 8px 0;
-                @include screen(tablet) {
+                @include screen(mobile) {
                   padding: 0 32px;
                 }
               }
