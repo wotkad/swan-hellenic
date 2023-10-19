@@ -20,6 +20,7 @@ block content
     include ../mixins/card
     include ../mixins/button
     include ../mixins/flip-slider
+    include ../mixins/card-suite
     +hero('hero-cruises', 'cruise', 'WEDDEL SEA & ANTARCTIC PENINSULA', '11 Nights Antarctica Exploration Cruise', 'filter', 'cruise-page')
     section.section.section-white.gapper-small-mob.cruise-page__partner
       .wrapper-xl
@@ -43,7 +44,26 @@ block content
               +partner-block('partner-block-big', false, true, 'YOUR SHIP', 'SH VEGA', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-3.png', 'item-3')
               +partner-block('partner-block-big partner-block-reversed', false, false, 'YOUR', 'Lecturer', 'Name Surname', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/cruise-page/item-4.png', 'item-4')
               +flip-slider('', 0, 'flip-slider-transparent', true, '', 'button')
-    include ../components/suites
+    section.section.section-white.gapper-small
+      .wrapper
+        +headline('YOUR SUITE TYPE', 'CHOOSE', 'headline-note')
+        .suites.suites-big
+          .suites__wrapper
+            .suites__nav
+              .suites__title Number of Guests:
+              .suites__buttons
+                +button('suites__nav__button button-green-transparent active', 'button', '1', '', '', '1')
+                +button('suites__nav__button button-green-transparent', 'button', '2', '', '', '2')
+            .grid.grid-two.suites__container.active(data-id="1")
+              +card-suite('0', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
+              +card-suite('1', 'disabled', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
+              +card-suite('2', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
+              +card-suite('3', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
+              +card-suite('4', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
+              +card-suite('5', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
+            .grid.grid-two.suites__container(data-id="2")
+              +card-suite('6', 'sale', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
+              +card-suite('7', '', 'Oceanview D4', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco', 'showFooter', 'Book now')
     section.gapper.section.section-white
       .wrapper
         +headline('RELATED CRUISES', 'See also', 'headline-note headline-centered headline-xl')

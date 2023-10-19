@@ -22,6 +22,26 @@
       }
     }
   }
+  &-big {
+    .card-suite {
+      .splide {
+        &__slide {
+          min-height: 276px;
+          height: 276px;
+          @include screen(laptop) {
+            min-height: 456px;
+            height: 456px;
+          }
+        }
+      }
+      &__content {
+        grid-template-rows: 176px 1fr;
+      }
+      &__description {
+        @include line-clamp-3;
+      }
+    }
+  }
   &__title {
     text-transform: uppercase;
     @include sans-base-medium;
