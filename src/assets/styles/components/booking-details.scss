@@ -282,7 +282,8 @@
       input {
         padding: 0px 0 0 20px;
         border: none;
-        width: 104px;
+        width: 148px;
+        background-color: $white;
         @include sans-base;
       }
       &__submit {

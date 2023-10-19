@@ -99,7 +99,7 @@
     margin-bottom: 12px;
     text-transform: uppercase;
     color: $white-400;
-    @include sans-md;
+    @include sans-base-medium;
   }
   &__information {
     margin-top: 12px;

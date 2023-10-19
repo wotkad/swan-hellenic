@@ -1,9 +1,10 @@
 .booking-steps {
   margin-top: 60px;
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     position: relative;
+    gap: 20px;
   }
   &__title {
     color: $fathom;
@@ -67,8 +68,6 @@
     }
   }
   &__name {
-    padding-left: 20px;
-
     display: none;
     @include sans-base;
     @include screen(tablet) {

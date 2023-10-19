@@ -74,9 +74,11 @@ function toggleFilter() {
       }
 
       if (!$('.easepick-wrapper').hasClass('active')) {
-        let easepickCalendar = $('.easepick-wrapper')[0].shadowRoot;
-        let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
-        easepickCalendarContainer.removeClass('show');
+        if ($('.easepick-wrapper')[0] !== undefined) {
+          let easepickCalendar = $('.easepick-wrapper')[0].shadowRoot;
+          let easepickCalendarContainer = $(easepickCalendar).find('.container.amp-plugin');
+          easepickCalendarContainer.removeClass('show');
+        }
       }
     });
 

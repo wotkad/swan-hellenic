@@ -26,6 +26,7 @@
   &__image {
     order: -1;
     height: 200px;
+    margin-bottom: 16px;
     &-mob {
       display: block;
       width: 100%;
@@ -36,21 +37,20 @@
     }
     &-pc {
       display: none;
-      height: auto;
       order: 2;
       @include screen(tablet) {
         display: block;
+        height: 484px;
       }
-    }
-    @include screen(laptop) {
-      height: 100%;
+      @include screen(laptop) {
+        height: 734px;
+      }
     }
     @include screen(laptop) {
       position: absolute;
       order: 1;
       right: 0;
       max-width: 50%;
-      width: 100%;
     }
     img {
       width: 100%;
@@ -99,11 +99,17 @@
   }
   &-unreversed {
     .partner-block__image {
-      order: 1;
+      margin-top: 0;
+      order: -1;
+      @include screen(tablet) {
+        order: 1;
+      }
     }
   }
   &-reversed {
     .partner-block__image {
+      margin-top: 0;
+      order: -1;
       @include screen(tablet) {
         order: -1;
       }
@@ -157,7 +163,15 @@
       align-items: flex-start;
     }
     .partner-block__image {
-      order: 0;
+      @include screen(tablet) {
+        height: 200px;
+      }
+      @include screen(laptop) {
+        width: 100%;
+        img {
+          height: 394px;
+        }
+      }
     }
     .partner-block__text {
       order: -1;

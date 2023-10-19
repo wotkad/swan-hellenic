@@ -71,6 +71,11 @@
         }
       }
     }
+    .card__price {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 4px;
+    }
     span {
       user-select: none;
       &.selected {
@@ -199,7 +204,7 @@
     }
   }
   &__label {
-    padding: 0 30px;
+    padding: 0 24px;
     position: relative;
     position: absolute;
     width: 100%;
@@ -247,7 +252,7 @@
         padding: 0 68px;
       }
       @include screen(laptop) {
-        padding: 0 30px;
+        padding: 0 24px;
       }
       .hero-filter {
         &__input {
@@ -270,7 +275,7 @@
         padding: 0 68px;
       }
       @include screen(laptop) {
-        padding: 0 30px;
+        padding: 0 24px;
       }
       .hero-filter {
         &__input {
@@ -320,7 +325,7 @@
         padding: 0 68px;
       }
       @include screen(laptop) {
-        padding: 0 30px;
+        padding: 0 24px;
       }
       .hero-filter {
         &__input {
@@ -343,7 +348,7 @@
         padding: 0 68px;
       }
       @include screen(laptop) {
-        padding: 0 30px;
+        padding: 0 24px;
       }
       .hero-filter {
         &__input {
