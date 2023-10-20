@@ -254,7 +254,9 @@
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
         opacity: 0;
         visibility: hidden;
-        min-width: 178px;
+        min-width: 200px;
+        width: 100%;
+        max-width: 200px;
         z-index: -1;
         &.active {
           opacity: 1;
@@ -355,9 +357,7 @@
     cursor: pointer;
     position: absolute;
     &__scroll {
-      left: 0;
       width: 100%;
-      position: absolute;
       max-height: 120px;
       overflow-y: auto;
       top: 8px;
@@ -372,7 +372,8 @@
       background-color: $white;
       visibility: hidden;
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-      height: 136px;
+      max-height: 136px;
+      min-height: 52px;
       padding: 8px 0;
       width: 100%;
       position: absolute;

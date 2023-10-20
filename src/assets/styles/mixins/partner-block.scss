@@ -82,7 +82,7 @@
     @include sans-base;
     @include screen(laptop) {
       margin-bottom: 48px;
-      @include sans-lg-medium;
+      @include sans-lg;
     }
   }
   &__content {
