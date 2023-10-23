@@ -20,7 +20,6 @@ function togglePopup() {
       const popup = $(`.popup[data-popup="${popupId}"]`);
       const bg = $('.popup__overlay');
       const wrapper = popup.find('.popup__wrapper');
-      const container = popup.find('.popup__container');
       const close = $('.popup__close, .popup__close-mob');
       const scrollableElement = document.querySelectorAll('.popup__form, .popup__labels, .popup__block')
 
@@ -134,24 +133,13 @@ function togglePopup() {
       function handleKeyDown(e) {
         if ($(window).width() > 1240) {
           if (e.key == 'Escape' && wrapper.length !== 0) {
-              gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
-                  popup.removeClass('active');
-                  bg.removeClass('active');
-              }});
-              enablePageScroll();
-              $('.popup-select__button').find('.button__input').attr('data-selected', '');
-              document.removeEventListener('keydown', handleKeyDown);
-          }
-        }
-        if ($(window).width() > 1240) {
-          if (e.key == 'Escape' && wrapper.length !== 0) {
-              gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
-                  popup.removeClass('active');
-                  bg.removeClass('active');
-              }});
-              enablePageScroll();
-              $('.popup-select__button').find('.button__input').attr('data-selected', '');
-              document.removeEventListener('keydown', handleKeyDown);
+            gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+                popup.removeClass('active');
+                bg.removeClass('active');
+            }});
+            enablePageScroll();
+            $('.popup-select__button').find('.button__input').attr('data-selected', '');
+            document.removeEventListener('keydown', handleKeyDown);
           }
         }
       }

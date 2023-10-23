@@ -38,7 +38,6 @@ import "./components/toggle/toggle-contact-us-blocks";
 import "./components/mailer/sendForm";
 import "./components/mailer/sendMail";
 
-
 import "./components/slider/slider-news";
 import "./components/slider/slider-flip";
 import "./components/slider/slider-icons";

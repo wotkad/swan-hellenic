@@ -766,6 +766,7 @@
             }
           }
           &-dropdown {
+            transition-delay: 500ms;
             visibility: visible;
             opacity: 1;
           }

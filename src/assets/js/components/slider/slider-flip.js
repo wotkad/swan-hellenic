@@ -15,7 +15,7 @@ function sliderFlip() {
           lazyLoad: 'nearby',
           drag: true,
           gap: 20,
-          speed: 800,
+          speed: 2000,
           breakpoints: {
             1240: {
               drag: false,
@@ -30,7 +30,7 @@ function sliderFlip() {
           mediaQuery: 'min',
           drag: true,
           perPage: 1,
-          speed: 800,
+          speed: 2000,
           breakpoints: {
             1240: {
               arrows: false,
@@ -42,9 +42,18 @@ function sliderFlip() {
         main.sync(thumbnails);
         main.mount();
         thumbnails.mount();
+
+        const thumbnailItems = document.querySelectorAll(`.${container.getAttribute('data-slider')}${i}__list .flip-slider__list__item`);
+        thumbnailItems.forEach((item, index) => {
+          item.addEventListener('mouseenter', () => {
+            main.go(index);
+          });
+        });
+
         i++;
       });
     }
   }
 }
+
 sliderFlip();

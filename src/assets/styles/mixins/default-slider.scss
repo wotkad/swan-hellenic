@@ -12,6 +12,17 @@
         }
       }
     }
+    &__item {
+      @include screen(laptop) {
+        &:hover {
+          .default-slider__image {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
   }
   &__text {
     margin-top: 12px;
@@ -31,6 +42,7 @@
       max-height: 480px;
     }
     img {
+      transition: transform $transition-default;
       width: 100%;
       height: 100%;
       object-fit: cover;
