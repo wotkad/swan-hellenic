@@ -16,6 +16,7 @@ function toggleFaqAsideContent() {
   let wrapper = $('.popup__wrapper');
   button.on('click', function() {
     button.removeClass('active');
+    $(this).addClass('active');
     let id = $(this).attr('href');
     let block = $('.privacy-policy__link[href="' + id + '"]');
     $(block).attr('href', $(this).attr('href')).addClass('active');

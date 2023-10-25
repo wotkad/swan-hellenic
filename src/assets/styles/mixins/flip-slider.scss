@@ -172,9 +172,8 @@
   &__top {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     @include screen(laptop) {
-      align-items: flex-start;
       gap: 54px;
     }
     .headline {

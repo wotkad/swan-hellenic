@@ -12,14 +12,14 @@
     }
     @include screen(laptop) {
       gap: 106px;
+      column-gap: 0;
     }
   }
   &__surname {
     color: $fathom;
-    margin-top: 24px;
+    margin: 16px 0 24px;
     @include sans-md;
     @include screen(tablet) {
-      margin-top: 54px;
       @include sans-3xl;
     }
   }
@@ -31,8 +31,10 @@
       display: block;
       width: 100%;
       margin-top: 24px;
+      order: -1;
       @include screen(tablet) {
         display: none;
+        order: none;
       }
     }
     &-pc {
@@ -43,7 +45,7 @@
         height: 484px;
       }
       @include screen(laptop) {
-        height: 734px;
+        height: 764px;
       }
     }
     @include screen(laptop) {
@@ -61,47 +63,46 @@
   }
   &__subtitle {
     color: $green-200;
-    margin-bottom: 24px;
     text-transform: uppercase;
     @include sans-base-medium;
-    @include screen(laptop) {
-      margin-bottom: 40px;
-    }
   }
   &__title {
     color: $fathom;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin: 24px 0;
     @include chap-sm;
     @include screen(laptop) {
-      margin-top: 48px;
+      margin: 36px 0 42px;
     }
   }
   &__text {
-    margin-bottom: 24px;
-    @include line-clamp-12;
+    max-width: 548px;
+    @include line-clamp-10;
     @include sans-base;
     @include screen(laptop) {
-      margin-bottom: 48px;
       @include sans-lg;
     }
   }
   &__content {
     @include screen(laptop) {
-      max-width: 535px;
       padding: 65px 0;
     }
   }
   &__button {
+    order: 4;
     width: 100%;
+    margin-top: 24px;
     @include screen(tablet) {
       width: auto;
+    }
+    @include screen(laptop) {
+      margin-top: 48px;
     }
   }
   &-unreversed {
     .partner-block__image {
-      margin-top: 0;
-      order: -1;
+      order: 1;
+      margin-bottom: 0;
       @include screen(tablet) {
         order: 1;
       }
@@ -109,8 +110,8 @@
   }
   &-reversed {
     .partner-block__image {
-      margin-top: 0;
-      order: -1;
+      order: 1;
+      margin-bottom: 0;
       @include screen(tablet) {
         order: -1;
       }
@@ -122,6 +123,15 @@
     .partner-block__content {
       @include screen(laptop) {
         grid-column-start: 2;
+      }
+    }
+  }
+  &-cruise-page {
+    .partner-block__image-mob {
+      order: 0;
+      margin-top: 0;
+      @include screen(laptop) {
+        order: 1;
       }
     }
   }
@@ -138,6 +148,20 @@
       align-items: flex-start;
     }
   }
+  &-what {
+    .partner-block__title {
+      order: -1;
+    }
+    .partner-block__text {
+      order: 1;
+    }
+    .partner-block__image-mob {
+      order: 2;
+    }
+    .partner-block__button {
+      order: 3;
+    }
+  }
   &-service {
     .partner-block__title {
       order: -1;
@@ -148,6 +172,7 @@
   }
   &-sameheight {
     .partner-block__title {
+      margin-top: 0;
       order: -1;
     }
     .partner-block__subtitle {
@@ -155,6 +180,15 @@
     }
     .partner-block__content {
       padding: 0;
+    }
+  }
+  &-destination {
+    .partner-block__content {
+      display: flex;
+      flex-direction: column;
+    }
+    .partner-block__image-mob {
+      order: 2;
     }
   }
   &-sm {

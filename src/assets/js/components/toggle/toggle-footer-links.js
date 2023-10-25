@@ -17,7 +17,7 @@ function toggleFooterLinks() {
 }
 
 function activateScript() {
-  if ($(window).width() < 768) {
+  if ($(window).outerWidth() < 768) {
     if (!isScriptActive) {
       toggleFooterLinks();
       gsap.to($('.footer__links'), {height: 0, duration: 0});

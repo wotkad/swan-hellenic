@@ -22,9 +22,6 @@
   @include screen(laptop) {
     &:hover {
       .promo {
-        &__link {
-          border-color: $white;
-        }
         &__image {
           img {
             transform: scale(1.1);
@@ -63,8 +60,7 @@
     margin-top: 12px;
     text-transform: uppercase;
     color: $white;
-    border-bottom: 1px solid transparent;
-    transition: border-color $transition-default;
+    border-bottom: 1px solid $white;
     display: none;
     @include sans-sm-med;
     @include screen(tablet) {

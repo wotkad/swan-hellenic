@@ -1,10 +1,13 @@
 .popup {
   &.popup-tags {
     .popup__container {
-      align-items: center;
+      align-items: flex-start;
       .tags__clear {
         display: inline-block;
-        position: static;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         margin-top: 20px;
       }
     }

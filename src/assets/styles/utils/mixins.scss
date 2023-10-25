@@ -80,6 +80,13 @@
   overflow: hidden;
 }
 
+@mixin line-clamp-10 {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin line-clamp-12 {
   display: -webkit-box;
   -webkit-line-clamp: 12;

@@ -78,7 +78,7 @@
     width: 100%;
     @include screen(tablet) {
       width: auto;
-      margin-top: 25px;
+      margin-top: auto;
     }
   }
 }

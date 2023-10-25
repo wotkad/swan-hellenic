@@ -1,5 +1,8 @@
 .partnerships {
   padding-top: 48px;
+  @include screen(laptop) {
+    padding-top: 84px;
+  }
   &-no-padding {
     padding-top: 0;
   }
@@ -60,6 +63,7 @@
       }
       .headline {
         position: absolute;
+        width: 100%;
         top: 0;
         @include screen(laptop) {
           position: static;

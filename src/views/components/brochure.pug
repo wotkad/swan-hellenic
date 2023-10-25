@@ -1,0 +1,10 @@
+include ../mixins/button
+.brochure
+  .brochure__image
+    img(src="/assets/images/brochure.png" alt="brochure" loading="lazy")
+  .brochure__content
+    h3.brochure__title Antarctica 2023-24
+    p.brochure__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+    .brochure__buttons
+      +button('button-green button-no-center', '', 'View Brochure', '', '')
+      +button('button-green-transparent button-no-center popup-trigger', 'button', 'Printed Version', '', '', '', 'contact-info')

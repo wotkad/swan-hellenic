@@ -11,8 +11,14 @@
   }
   &__list {
     display: flex;
+    padding-right: 16px;
     gap: 8px;
     flex-wrap: wrap;
+    max-height: 100%;
+    overflow-y: auto;
+    @include screen(laptop) {
+      padding-right: 0;
+    }
   }
   &__clear {
     display: none;

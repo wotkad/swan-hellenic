@@ -16,7 +16,10 @@
       }
       &__title {
         text-transform: uppercase;
-        @include chap-base;
+        @include chap-sm;
+        @include screen(mobile) {
+          @include chap-base;
+        }
         @include screen(tablet) {
           @include chap-md;
         }
