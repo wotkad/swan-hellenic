@@ -10,6 +10,12 @@
   font-weight: 500;
 }
 
+@mixin chap-3lg {
+  font-size: 80px;
+  line-height: 70px;
+  font-weight: 500;
+}
+
 @mixin chap-2lg {
   font-size: 74px;
   line-height: 80px;

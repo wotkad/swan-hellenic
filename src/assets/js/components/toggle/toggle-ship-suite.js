@@ -54,7 +54,7 @@ function toggleShipSuite() {
   const container = popup.find('.popup__container');
 
   select.on('click', function () {
-    const width = $(window).width();
+    const width = $(window).outerWidth();
     const ease = "power2.out";
     const onComplete = () => {
       popup.removeClass('active');

@@ -21,7 +21,7 @@ block content
     include ../mixins/flip-slider
     include ../mixins/default-slider-two
     include ../mixins/partner-block
-    +hero('', '', 'SH <br> vega', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint', '', 'ship')
+    +hero('hero-ship', '', 'SH <br> vega', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint', '', 'ship')
     section.gapper.section.section-white
       include ../components/ship-about
     include ../components/ship-introducing
@@ -329,7 +329,10 @@ block content
     section.section.section-white.gapper-small-mob.cruise-page__partner.section-padding-top
       .wrapper-xl
         .section__wrapper
-          +partner-block('partner-block-big partner-block-service', false, false, 'Onboard personal', 'Service', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/service.png', 'service')
+          .partnerships
+            .partnerships__wrapper
+              +partner-block('partner-block-big partner-block-service', false, false, 'Onboard personal', 'Service', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/service.png', 'service')
+              +partner-block('partner-block-big partner-block-reversed partner-block-service', false, false, 'Onboard personal', 'Service', '', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. <br><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ', '/assets/images/service.png', 'service')
     section.gapper.section.section-white.default-slider-two(
       data-slider="default-slider"
     )

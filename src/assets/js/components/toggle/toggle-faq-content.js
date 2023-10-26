@@ -20,7 +20,19 @@ function toggleFaqAsideContent() {
     let id = $(this).attr('href');
     let block = $('.privacy-policy__link[href="' + id + '"]');
     $(block).attr('href', $(this).attr('href')).addClass('active');
-    if ($(window).width() <= 1240) {
+    if ($(window).outerWidth() <= 1240) {
+      if (popup.hasClass('popup-faq')) {
+        gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
+          popup.removeClass('active');
+          bg.removeClass('active');
+        }});
+      }
+      clearQueueScrollLocks();
+      enablePageScroll();
+    }
+  });
+  $(window).on('resize', function() {
+    if ($(window).outerWidth() >= 1240) {
       if (popup.hasClass('popup-faq')) {
         gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
           popup.removeClass('active');

@@ -35,7 +35,7 @@ function toggleCookie() {
   });
 
   function closeCookie() {
-    if ($(window).width() > 768) {
+    if ($(window).outerWidth() > 768) {
       gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
         popup.removeClass('active');
         bg.removeClass('active');

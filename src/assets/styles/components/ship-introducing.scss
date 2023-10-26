@@ -56,7 +56,10 @@
   }
   &__title {
     text-transform: uppercase;
-    @include chap-base;
+    @include chap-sm;
+    @include screen(laptop) {
+      @include chap-base;
+    }
     @include screen(laptop) {
       @include chap-2lg;
     }

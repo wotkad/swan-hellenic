@@ -6,8 +6,12 @@
   }
   .splide {
     &__slide {
-      min-height: 276px;
-      height: 276px;
+      min-height: 290px;
+      height: 290px;
+      @include screen(laptop) {
+        min-height: 456px;
+        height: 456px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -30,6 +34,14 @@
             }
           }
         }
+      }
+    }
+  }
+  &-booking {
+    .splide {
+      &__slide {
+        min-height: 276px;
+        height: 276px;
       }
     }
   }

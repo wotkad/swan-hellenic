@@ -17,7 +17,7 @@ function scrollSidebarBooking() {
   let lastScrollY = 0;
   $(window).scroll(addActiveClass);
 }
-if ($(window).width() <= 1240) {
+if ($(window).outerWidth() <= 1240) {
   scrollSidebarBooking();
   $(window).on('resize', function() {
     scrollSidebarBooking();

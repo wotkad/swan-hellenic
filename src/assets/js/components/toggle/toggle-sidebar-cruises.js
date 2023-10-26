@@ -8,7 +8,7 @@ function toggleSidebarCruises() {
   let close = $('.popup__close-mob');
   let scrollableElement = document.querySelector('.sidebar__blocks');
   button.on('click', function() {
-    if ($(window).width() <= 1240) {
+    if ($(window).outerWidth() <= 1240) {
       bg.addClass('active');
       gsap.to(sidebar, {y: 0, bottom: 0, opacity: 1, duration: 0.4, ease: "power2.out"});
     }
@@ -21,13 +21,13 @@ function toggleSidebarCruises() {
   });
   if (sidebar.length > 0) {
     $(window).on('resize', function() {
-      if ($(window).width() >= 1240) {
+      if ($(window).outerWidth() >= 1240) {
         gsap.to(sidebar, {y: 0, opacity: 1, bottom: '-100%', duration: 0});
         bg.removeClass('active');
         enablePageScroll();
       }
     });
-    if ($(window).width() < 1240) {
+    if ($(window).outerWidth() < 1240) {
       gsap.to(sidebar, {y: '100%', opacity: 1, bottom: '-100%', duration: 0});
       bg.removeClass('active');
       enablePageScroll();
@@ -43,7 +43,7 @@ function toggleSidebarCruises() {
         const endY = event.originalEvent.changedTouches[0].clientY;
         const deltaY = endY - startY;
         if (deltaY > 200) {
-          if ($(window).width() <= 1240) {
+          if ($(window).outerWidth() <= 1240) {
             bg.removeClass('active');
             gsap.to(sidebar, {y: '100%', opacity: 1, bottom: '-100%', duration: 0.4, ease: "power2.out"});
             enablePageScroll();
@@ -58,7 +58,7 @@ function toggleSidebarCruises() {
   bg.on('click', function() {
     bg.removeClass('active');
     if (sidebar.length > 0) {
-      if ($(window).width() <= 768) {
+      if ($(window).outerWidth() <= 768) {
         gsap.to(sidebar, {y: '100%', opacity: 1, bottom: '-100%', duration: 0.4, ease: "power2.out"});
       }
     }

@@ -188,6 +188,6 @@ function toggleFilterMob() {
     });
   }
 }
-if ($(window).width() <= 1240) {
+if ($(window).outerWidth() <= 1240) {
   toggleFilterMob();
 }

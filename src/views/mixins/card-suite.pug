@@ -1,11 +1,11 @@
-mixin card-suite(i, type, title, description, footer, buttonText)
+mixin card-suite(i, type, title, description, footer, buttonText, isBooking)
   - className = "";
   case type
     when type = "sale"
       - className = "card-sale";
     when disabled = "disabled"
       - className = "card-suite-disabled";
-  .card-suite(class="" + className)
+  .card-suite(class="" + className + isBooking ? 'card-suite-booking' : '')
     .card-suite__wrapper(data-slider="card-suite-slider")
       .splide.card-suite__slider(class="card-suite-slider" + i + "__track")
         .splide__track

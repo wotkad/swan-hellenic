@@ -6,7 +6,7 @@ function togglePopup() {
   const popupWrappers = $('.popup__wrapper');
   const cardButtons = $('.card-suite__button');
   $(window).on('resize', function() {
-    if ($(window).width() > 768) {
+    if ($(window).outerWidth() > 768) {
       gsap.to(popupWrappers, { y: 0, duration: 0});
     } else {
       gsap.to(popupWrappers, { x: 0, duration: 0});
@@ -29,7 +29,7 @@ function togglePopup() {
       bg.addClass('active');
 
       if (wrapper.length > 0) {
-        if ($(window).width() > 768) {
+        if ($(window).outerWidth() > 768) {
           if (popup.hasClass('popup-faq') || popup.hasClass('popup-privacy-policy')) {
             gsap.to(wrapper, { y: 0, duration: 0.4, ease: "power2.out" });
           } else {
@@ -44,7 +44,7 @@ function togglePopup() {
 
       close.off('click');
       close.on('click', function() {
-        if ($(window).width() > 768) {
+        if ($(window).outerWidth() > 768) {
           if (popup.hasClass('popup-faq') || popup.hasClass('popup-privacy-policy')) {
             gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
               popup.removeClass('active');
@@ -84,7 +84,7 @@ function togglePopup() {
 
       bg.off('click');
       bg.on('click', function() {
-        if ($(window).width() > 768) {
+        if ($(window).outerWidth() > 768) {
           if (popup.hasClass('popup-faq') || popup.hasClass('popup-privacy-policy')) {
             gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
               popup.removeClass('active');
@@ -131,7 +131,7 @@ function togglePopup() {
       closePopupByTouch();
 
       function handleKeyDown(e) {
-        if ($(window).width() > 1240) {
+        if ($(window).outerWidth() > 1240) {
           if (e.key == 'Escape' && wrapper.length !== 0) {
             gsap.to(wrapper, { x: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
                 popup.removeClass('active');

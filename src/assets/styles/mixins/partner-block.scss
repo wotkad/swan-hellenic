@@ -139,7 +139,8 @@
     .partner-block__title {
       @include chap-base;
       @include screen(laptop) {
-        @include chap-2lg;
+        @include chap-3lg;
+        margin-bottom: 72px;
       }
     }
     .partner-block__content {

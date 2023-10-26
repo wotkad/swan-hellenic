@@ -214,7 +214,9 @@
     color: $white;
     @include sans-base;
     @include line-clamp-8;
+    display: none;
     @include screen(laptop) {
+      padding-left: 32px;
       display: block;
       @include sans-md;
     }

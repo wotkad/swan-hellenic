@@ -259,6 +259,15 @@
       @include sans-sm-med;
     }
   }
+  &-ship {
+    .hero__title {
+      max-width: 1040px;
+      margin-bottom: 16px;
+      @include screen(laptop) {
+        margin-bottom: 32px;
+      }
+    }
+  }
   &-cruises {
     .hero__title {
       max-width: 1040px;
