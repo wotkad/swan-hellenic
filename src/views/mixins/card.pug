@@ -11,7 +11,8 @@ mixin card(status, logos, type)
   .card(class="" + className)
     .card__image
       //- a.card__bubble(href="#") Explore
-      img(src="/assets/images/card.png" alt="card")
+      a(href="#")
+        img(src="/assets/images/card.png" alt="card")
       if status == "with status"
       .card__status
         p Last <span>5</span> spots left

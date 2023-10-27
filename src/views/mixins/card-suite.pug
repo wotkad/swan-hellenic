@@ -1,40 +1,77 @@
-mixin card-suite(i, type, title, description, footer, buttonText, isBooking)
+mixin card-suite(i, type, title, description, footer, buttonText, isBooking, isShip)
   - className = "";
   case type
     when type = "sale"
       - className = "card-sale";
     when disabled = "disabled"
       - className = "card-suite-disabled";
-  .card-suite(class="" + className + isBooking ? "card-suite-booking" : "")
-    .card-suite__wrapper(data-slider="card-suite-slider")
-      .splide.card-suite__slider(class="card-suite-slider" + i + "__track")
-        .splide__track
-          .splide__list
-            .splide__slide
-              img(src="/assets/images/cruise-page/item-6.png" alt="")
-            .splide__slide
-              img(src="/assets/images/cruise-page/item-6.png" alt="")
-            .splide__slide
-              img(src="/assets/images/cruise-page/item-6.png" alt="")
-            .splide__slide
-              img(src="/assets/images/cruise-page/item-6.png" alt="")
-      .card-suite__content
-        .card-suite__inner
-          h3.card-suite__title= title
-          .card-suite__options
-            .card-suite__date
-              svg(viewBox="0 0 24 24" width="24px" height="24px")
-                use(xlink:href="#svg-arrows-out")
-              span 19 m2
-            .card-suite__date
-              svg(viewBox="0 0 24 24" width="24px" height="24px")
-                use(xlink:href="#svg-user")
-              span 2
-          .card-suite__description= description
-        if footer == 'showFooter'
-          .card__footer
-            .card__prices
-              .card__label FROM
-              .card__oldprice € 15.095
-              .card__price € 15.095
-            +button('button-brown button-no-center card__button', 'button', buttonText, '', '', i, 'select', 'select')
+  if isShip
+    .card-suite.card-suite-ship
+      .card-suite__wrapper(data-slider="card-suite-slider")
+        .splide.card-suite__slider(class="card-suite-slider" + i + "__track")
+          .splide__track
+            .splide__list
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+        .card-suite__content
+          .card-suite__inner
+            a(href="#")
+              h3.card-suite__title= title
+            .card-suite__options
+              .card-suite__date
+                svg(viewBox="0 0 24 24" width="24px" height="24px")
+                  use(xlink:href="#svg-arrows-out")
+                span 19 m2
+              .card-suite__date
+                svg(viewBox="0 0 24 24" width="24px" height="24px")
+                  use(xlink:href="#svg-user")
+                span 2
+            .card-suite__description= description
+          if footer == 'showFooter'
+            .card__footer
+              .card__prices
+                .card__label FROM
+                .card__oldprice € 15.095
+                .card__price € 15.095
+              +button('button-brown button-no-center card__button', 'button', buttonText, '', '', i, 'select', 'select')
+  else
+    .card-suite(class="" + className + isBooking ? "card-suite-booking" : "")
+      .card-suite__wrapper(data-slider="card-suite-slider")
+        .splide.card-suite__slider(class="card-suite-slider" + i + "__track")
+          .splide__track
+            .splide__list
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+              a(href="#").splide__slide
+                img(src="/assets/images/cruise-page/item-6.png" alt="")
+        .card-suite__content
+          .card-suite__inner
+            a(href="#")
+              h3.card-suite__title= title
+            .card-suite__options
+              .card-suite__date
+                svg(viewBox="0 0 24 24" width="24px" height="24px")
+                  use(xlink:href="#svg-arrows-out")
+                span 19 m2
+              .card-suite__date
+                svg(viewBox="0 0 24 24" width="24px" height="24px")
+                  use(xlink:href="#svg-user")
+                span 2
+            .card-suite__description= description
+          if footer == 'showFooter'
+            .card__footer
+              .card__prices
+                .card__label FROM
+                .card__oldprice € 15.095
+                .card__price € 15.095
+              +button('button-brown button-no-center card__button', 'button', buttonText, '', '', i, 'select', 'select')
