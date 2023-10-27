@@ -5,13 +5,13 @@ function togglePopup() {
   const buttons = $('.popup-trigger');
   const popupWrappers = $('.popup__wrapper');
   const cardButtons = $('.card-suite__button');
-  $(window).on('resize', function() {
-    if ($(window).outerWidth() > 768) {
-      gsap.to(popupWrappers, { y: 0, duration: 0});
-    } else {
-      gsap.to(popupWrappers, { x: 0, duration: 0});
-    }
-  });
+  // $(window).on('resize', function() {
+  //   if ($(window).outerWidth() > 768) {
+  //     gsap.to(popupWrappers, { y: 0, duration: 0});
+  //   } else {
+  //     gsap.to(popupWrappers, { x: 0, duration: 0});
+  //   }
+  // });
 
   buttons.on('click', function() {
     let that = $(this);

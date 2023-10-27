@@ -15,11 +15,14 @@ function scrollSidebarBooking() {
     }
   }
   let lastScrollY = 0;
-  $(window).scroll(addActiveClass);
+  $(window).on('scroll', addActiveClass);
 }
 if ($(window).outerWidth() <= 1240) {
   scrollSidebarBooking();
-  $(window).on('resize', function() {
-    scrollSidebarBooking();
-  });
 }
+
+$(window).on('resize', function() {
+  if ($(window).outerWidth() <= 1240) {
+  scrollSidebarBooking();
+  }
+});

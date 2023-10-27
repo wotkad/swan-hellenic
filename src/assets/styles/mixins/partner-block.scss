@@ -9,10 +9,12 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 80px;
+      min-height: 484px;
     }
     @include screen(laptop) {
       gap: 106px;
       column-gap: 0;
+      min-height: 506px;
     }
   }
   &__surname {
@@ -40,12 +42,9 @@
     &-pc {
       display: none;
       order: 2;
+      height: 100%;
       @include screen(tablet) {
         display: block;
-        height: 484px;
-      }
-      @include screen(laptop) {
-        height: 764px;
       }
     }
     @include screen(laptop) {
@@ -127,6 +126,11 @@
     }
   }
   &-cruise-page {
+    .partner-block__title {
+      @include screen(laptop) {
+        margin-bottom: 42px;
+      }
+    }
     .partner-block__image-mob {
       order: 0;
       margin-top: 0;
@@ -136,11 +140,16 @@
     }
   }
   &-big {
+    .partner-block__wrapper {
+      @include screen(laptop) {
+        min-height: 630px;
+      }
+    }
     .partner-block__title {
       @include chap-base;
       @include screen(laptop) {
         @include chap-3lg;
-        margin-bottom: 72px;
+        margin-bottom: 42px;
       }
     }
     .partner-block__content {
@@ -165,13 +174,23 @@
   }
   &-service {
     .partner-block__title {
+      margin-top: 0;
       order: -1;
     }
     .partner-block__subtitle {
       order: -1;
+      margin-bottom: 28px;
+      @include screen(laptop) {
+        margin-bottom: 36px;
+      }
     }
   }
   &-about {
+    .partner-block__wrapper {
+      @include screen(laptop) {
+        min-height: 506px;
+      }
+    }
     .partner-block__title {
       margin-top: 0;
       order: -1;
@@ -203,6 +222,11 @@
     }
     .partner-block__content {
       padding: 0;
+    }
+    .partner-block__wrapper {
+      @include screen(tablet) {
+        min-height: 396px;
+      }
     }
   }
   &-destination {

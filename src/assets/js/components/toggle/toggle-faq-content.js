@@ -33,7 +33,7 @@ function toggleFaqAsideContent() {
   });
   $(window).on('resize', function() {
     if ($(window).outerWidth() >= 1240) {
-      if (popup.hasClass('popup-faq')) {
+      if (popup.hasClass('popup-faq active')) {
         gsap.to(wrapper, { y: '100%', duration: 0.4, ease: "power2.out", onComplete: () => {
           popup.removeClass('active');
           bg.removeClass('active');

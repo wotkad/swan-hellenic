@@ -316,7 +316,7 @@
         width: 100%;
         @include screen(laptop) {
           padding: 88px 208px 88px 0;
-          width: 76%;
+          max-width: 76%;
           gap: 87px;
         }
       }
@@ -326,15 +326,23 @@
         @include screen(laptop) {
           position: absolute;
           z-index: 2;
-          order: -1;
           right: 0;
           left: auto;
           width: calc(30% + 88px);
+          min-width: 523px;
+          max-height: 563px;
+          min-height: 563px;
+        }
+        @include screen(desktop) {
+          position: relative;
+          margin-left: -116px;
         }
         img {
           max-height: 100%;
           min-height: 100%;
+          object-position: top;
           @include screen(laptop) {
+            min-width: 523px;
             max-height: 563px;
             min-height: 563px;
           }
@@ -364,9 +372,6 @@
         &__wrapper {
           & > .button {
             display: none;
-            @include screen(laptop) {
-              display: inline-flex;
-            }
           }
         }
         &__top {
@@ -387,6 +392,10 @@
             left: 0;
             width: calc(30% + 88px);
           }
+          @include screen(desktop) {
+            position: relative;
+            margin-right: -116px;
+          }
           img {
             max-height: 100%;
             min-height: 100%;
@@ -401,8 +410,8 @@
           padding: 0;
           width: 100%;
           @include screen(laptop) {
-            padding: 88px 0 88px 208px;
-            width: 76%;
+            padding: 88px 0 88px 228px;
+            max-width: 76%;
             gap: 87px;
           }
         }
