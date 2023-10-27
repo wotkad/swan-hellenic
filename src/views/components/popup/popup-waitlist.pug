@@ -50,7 +50,9 @@ include ../../mixins/button
                   button.popup__dropdown__submit(type="submit")
                     svg(viewBox="0 0 24 24" width="24px" height="24px")
                       use(xlink:href="#svg-search")
-                .popup__dropdown__list.custom-scroll(data-scroll-lock-scrollable)
+                .popup__dropdown__list.custom-scroll(
+                  data-scroll-lock-scrollable
+                )
                   button.popup__dropdown__country(
                     type="button"
                     aria-label="country"
