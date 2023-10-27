@@ -171,15 +171,35 @@
       order: -1;
     }
   }
+  &-about {
+    .partner-block__title {
+      margin-top: 0;
+      order: -1;
+      margin-bottom: 28px;
+      @include screen(laptop) {
+        margin-bottom: 42px;
+        white-space: nowrap;
+        @include chap-3lg;
+      }
+    }
+    .partner-block__subtitle {
+      order: -1;
+      margin-bottom: 28px;
+      @include screen(laptop) {
+        margin-bottom: 36px;
+      }
+    }
+    .partner-block__content {
+      padding: 0;
+    }
+  }
   &-sameheight {
     .partner-block__title {
       margin-top: 0;
       order: -1;
-      margin-bottom: 42px;
     }
     .partner-block__subtitle {
       order: -1;
-      margin-bottom: 36px;
     }
     .partner-block__content {
       padding: 0;

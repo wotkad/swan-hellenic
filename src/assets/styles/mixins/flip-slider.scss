@@ -340,6 +340,10 @@
           }
         }
       }
+      &__text {
+        display: -webkit-box;
+        padding-left: 0;
+      }
       &__button {
         border: none;
         padding: 0;

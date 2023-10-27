@@ -9,9 +9,7 @@
   &__title {
     text-transform: uppercase;
     color: $fathom;
-    @include screen(mobile) {
-      @include chap-sm;
-    }
+    @include chap-sm;
     @include screen(tablet) {
       @include chap-base;
     }
