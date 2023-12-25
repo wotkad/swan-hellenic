@@ -119,6 +119,9 @@
     .partner-block__image {
       order: 1;
       margin-bottom: 16px;
+      img {
+        object-position: top left;
+      }
       @include screen(tablet) {
         margin-bottom: 0;
         order: -1;
@@ -250,6 +253,11 @@
     }
     .partner-block__image-mob {
       order: 2;
+    }
+    .partner-block__wrapper {
+      @include screen(laptop) {
+        min-height: 630px;
+      }
     }
   }
   &-sm {

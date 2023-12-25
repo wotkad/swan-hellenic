@@ -332,6 +332,9 @@
           min-width: 523px;
           max-height: 563px;
           min-height: 563px;
+          @include screen(desktop) {
+            width: calc(35% + 88px);
+          }
         }
         @include screen(desktop) {
           position: relative;

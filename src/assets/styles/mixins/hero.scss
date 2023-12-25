@@ -272,6 +272,16 @@
     .hero__title {
       max-width: 1040px;
       margin-bottom: 16px;
+      &.absolute {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & ~ .hero__content .splide__pagination {
+          margin-bottom: 140px;
+        }
+      }
       @include screen(desktop) {
         margin-bottom: 32px;
       }
