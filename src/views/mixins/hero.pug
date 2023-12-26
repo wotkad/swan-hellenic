@@ -47,46 +47,18 @@ mixin hero(className='', isCruise, title, description, isFilter, page)
     .hero__wrapper
       .wrapper
         if isFilter == 'filter'
-          h1.hero__title.absolute Heading
+          .hero__absolute
+            .hero__tip
+              p Last <span>5</span> spots left
+            h2.hero__title !{ title }
+            .hero__description <div class="card__logo"><img src="/assets/images/cruise-icon.svg" alt="cruise-icon"></div> <div class="card__logo"><img src="/assets/images/cruise-icon.svg" alt="cruise-icon"></div> !{ description }
           .hero__content.splide
             .splide__track
               .splide__list
                 .splide__slide
-                  //- if isCruise == 'cruise'
-                  //-   .hero__tip
-                  //-     p Last <span>5</span> spots left
-                  //- h2.hero__title !{ title }
-                  //- if isCruise == 'cruise'
-                  //-   .hero__description <div class="card__logo"><img src="/assets/images/cruise-icon.svg" alt="cruise-icon"></div> <div class="card__logo"><img src="/assets/images/cruise-icon.svg" alt="cruise-icon"></div> !{ description }
-                  //- else
-                  //-   .hero__description !{ description }
                 .splide__slide
-                  //- if isCruise == 'cruise'
-                  //-   .hero__tip
-                  //-     p Last 5 spots left
-                  //- h2.hero__title !{ title }
-                  //- if isCruise == 'cruise'
-                  //-   p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
-                  //- else
-                  //-   p.hero__description !{ description }
                 .splide__slide
-                  //- if isCruise == 'cruise'
-                  //-   .hero__tip
-                  //-     p Last 5 spots left
-                  //- h2.hero__title !{ title }
-                  //- if isCruise == 'cruise'
-                  //-   p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
-                  //- else
-                  //-   p.hero__description !{ description }
                 .splide__slide
-                  //- if isCruise == 'cruise'
-                  //-   .hero__tip
-                  //-     p Last 5 spots left
-                  //- h2.hero__title !{ title }
-                  //- if isCruise == 'cruise'
-                  //-   p.hero__description <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> <img src="/assets/images/cruise-icon.svg" alt="cruise-icon"> !{ description }
-                  //- else
-                  //-   p.hero__description !{ description }
             .splide__arrows
               button.splide__arrow.hero__arrow.splide__arrow--prev(
                 type="button"

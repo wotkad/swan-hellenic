@@ -75,6 +75,7 @@
   }
   &__content {
     display: flex;
+    z-index: 2;
     height: 100vh;
     flex-wrap: wrap;
     @include screen(laptop) {
@@ -198,6 +199,8 @@
     transform: translateY(-20px);
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
     transition:
       opacity $transition-default,
@@ -210,7 +213,6 @@
     @include sans-md;
     line-height: 24px;
     @include screen(laptop) {
-      justify-content: center;
       @include sans-2xl-1;
     }
   }
@@ -268,20 +270,25 @@
       }
     }
   }
+  &__absolute {
+    z-index: 3;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & ~ .hero__content .splide__pagination {
+      margin-bottom: 140px;
+    }
+  }
   &-cruises {
     .hero__title {
       max-width: 1040px;
       margin-bottom: 16px;
-      &.absolute {
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        & ~ .hero__content .splide__pagination {
-          margin-bottom: 140px;
-        }
-      }
       @include screen(desktop) {
         margin-bottom: 32px;
       }
