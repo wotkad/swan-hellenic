@@ -3,7 +3,6 @@ function togglePartnerText() {
   button.on('click', function() {
     $(this).prev().addClass('active');
     $(this).hide();
-    
   });
 }
 togglePartnerText();
