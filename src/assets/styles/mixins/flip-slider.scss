@@ -18,6 +18,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
     & > .button {
       border: none;
       padding: 0;
@@ -110,22 +112,22 @@
     @include screen(laptop) {
       gap: 60px;
       width: 50%;
-      padding: 84px 180px 120px 0;
+      padding: 84px 180px 120px 40px;
     }
-    &:before {
-      content: "";
-      position: absolute;
-      left: -999px;
-      top: 0;
-      width: 999px;
-      right: 0;
-      height: 100%;
-      background-color: $fathom;
-      display: none;
-      @include screen(laptop) {
-        display: block;
-      }
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   left: -999px;
+    //   top: 0;
+    //   width: 999px;
+    //   right: 0;
+    //   height: 100%;
+    //   background-color: $fathom;
+    //   display: none;
+    //   @include screen(laptop) {
+    //     display: block;
+    //   }
+    // }
   }
   &-reversed {
     .flip-slider {
@@ -139,25 +141,25 @@
           order: 2;
           padding-left: 110px;
         }
-        &:before {
-          content: "";
-          position: absolute;
-          right: -999px;
-          top: 0;
-          width: 999px;
-          left: auto;
-          height: 100%;
-          display: none;
-          background-color: $fathom;
-          @include screen(laptop) {
-            display: block;
-          }
-        }
+        // &:before {
+        //   content: "";
+        //   position: absolute;
+        //   right: -999px;
+        //   top: 0;
+        //   width: 999px;
+        //   left: auto;
+        //   height: 100%;
+        //   display: none;
+        //   background-color: $fathom;
+        //   @include screen(laptop) {
+        //     display: block;
+        //   }
+        // }
       }
       &__list,
       &__bottom {
         @include screen(laptop) {
-          padding-left: 71px;
+          // padding-left: 71px;
         }
       }
       &__images {
@@ -315,10 +317,24 @@
         padding: 0;
         width: 100%;
         @include screen(laptop) {
-          padding: 88px 208px 88px 0;
+          padding: 88px 256px 88px 40px;
           max-width: 76%;
           gap: 87px;
         }
+        // &:before {
+        //   content: "";
+        //   position: absolute;
+        //   left: -999px;
+        //   top: 0;
+        //   width: 999px;
+        //   right: 0;
+        //   height: 100%;
+        //   background-color: $fathom;
+        //   display: none;
+        //   @include screen(laptop) {
+        //     display: block;
+        //   }
+        // }
       }
       &__image {
         width: 100%;
@@ -413,7 +429,7 @@
           padding: 0;
           width: 100%;
           @include screen(laptop) {
-            padding: 88px 0 88px 228px;
+            padding: 88px 32px 88px 256px;
             max-width: 76%;
             gap: 87px;
           }

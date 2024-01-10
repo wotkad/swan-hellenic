@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    position: relative;
     @include screen(tablet) {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -43,6 +44,10 @@
       display: none;
       order: 2;
       height: 100%;
+      img {
+        max-height: 744px;
+        height: 100%;
+      }
       @include screen(tablet) {
         display: block;
       }
@@ -60,8 +65,8 @@
       aspect-ratio: 1/1;
       height: 100%;
       @include screen(laptop) {
-        object-fit: contain;
-        object-position: top right;
+        object-fit: cover;
+        object-position: center right;
       }
       @include screen(desktop) {
         object-position: top;
@@ -89,6 +94,9 @@
     @include screen(laptop) {
       @include sans-lg;
     }
+    &.active {
+      @include line-clamp-auto;
+    }
   }
   &__content {
     @include screen(laptop) {
@@ -109,7 +117,7 @@
   &-unreversed {
     .partner-block__image {
       order: 1;
-      margin-bottom: 0;
+      margin-bottom: 16px;
       @include screen(tablet) {
         order: 1;
       }
@@ -120,7 +128,7 @@
       order: 1;
       margin-bottom: 16px;
       img {
-        object-position: top left;
+        object-position: center left;
       }
       @include screen(tablet) {
         margin-bottom: 0;
@@ -156,10 +164,39 @@
       }
     }
   }
+  &-sameheight {
+    .partner-block__title {
+      margin-top: 0;
+      order: -1;
+    }
+    .partner-block__subtitle {
+      order: -1;
+    }
+    .partner-block__content {
+      padding: 0;
+      @include screen(laptop) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+    .partner-block__wrapper {
+      @include screen(tablet) {
+        min-height: 396px;
+        .partner-block__image {
+          max-height: 396px;
+        }
+      }
+    }
+  }
   &-big {
     .partner-block__wrapper {
       @include screen(laptop) {
         min-height: 630px;
+        .partner-block__image {
+          max-height: 754px;
+        }
       }
     }
     .partner-block__title {
@@ -206,6 +243,9 @@
     .partner-block__wrapper {
       @include screen(laptop) {
         min-height: 506px;
+        .partner-block__image {
+          max-height: 506px;
+        }
       }
     }
     .partner-block__title {
@@ -229,27 +269,11 @@
       padding: 0;
     }
   }
-  &-sameheight {
-    .partner-block__title {
-      margin-top: 0;
-      order: -1;
-    }
-    .partner-block__subtitle {
-      order: -1;
-    }
-    .partner-block__content {
-      padding: 0;
-    }
-    .partner-block__wrapper {
-      @include screen(tablet) {
-        min-height: 396px;
-      }
-    }
-  }
   &-destination {
     .partner-block__content {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
     .partner-block__image-mob {
       order: 2;
@@ -257,6 +281,9 @@
     .partner-block__wrapper {
       @include screen(laptop) {
         min-height: 630px;
+        .partner-block__image {
+          max-height: 630px;
+        }
       }
     }
   }

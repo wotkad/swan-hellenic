@@ -1,6 +1,6 @@
 include ../mixins/button
 include ../mixins/flip-slider
-mixin partner-block(className='', buttonGreen, buttonWhite, subtitle, title, surname, text, src, alt)
+mixin partner-block(className='', buttonGreen, buttonWhite, subtitle, title, surname, text, src, alt, toggleButton)
   .partner-block(class="" + className)
     .wrapper
       .partner-block__wrapper
@@ -20,5 +20,7 @@ mixin partner-block(className='', buttonGreen, buttonWhite, subtitle, title, sur
             +button('button-no-center button-green partner-block__button', '', 'Learn more', '', '')
           if buttonWhite
             +button('button-no-center button-green-transparent partner-block__button', '', 'Explore more', '', '')
+          if toggleButton
+            +button('button-no-center button-green-transparent partner-block__button partner-block__toggle', 'button', 'Show more', '', '')
         .partner-block__image.partner-block__image-pc
           img(src="" + src alt="" + alt loading="lazy")

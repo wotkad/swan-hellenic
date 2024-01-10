@@ -9,4 +9,14 @@
       }
     }
   }
+  .flip-slider-transparent {
+    min-height: auto;
+  }
+  .flip-slider__images {
+    order: 2;
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: auto;
+  }
 }

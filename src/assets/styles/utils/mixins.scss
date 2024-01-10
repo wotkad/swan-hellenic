@@ -24,6 +24,12 @@
   }
 }
 
+@mixin line-clamp-auto {
+  display: block;
+  -webkit-line-clamp: auto;
+  overflow: visible;
+}
+
 @mixin line-clamp-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;

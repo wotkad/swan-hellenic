@@ -34,6 +34,7 @@ import "./components/toggle/toggle-tags";
 import "./components/toggle/toggle-faq-content";
 import "./components/toggle/toggle-policy-content";
 import "./components/toggle/toggle-contact-us-blocks";
+import "./components/toggle/toggle-partner-text";
 
 import "./components/mailer/sendForm";
 import "./components/mailer/sendMail";
