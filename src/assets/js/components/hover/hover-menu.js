@@ -16,12 +16,12 @@ function hoverMenu() {
       $(this).addClass('active');
     });
   }
-  header.on('mouseenter', function () {
-    $(this).addClass('header-colorizer');
-  });
-  header.on('mouseleave', function () {
-    $(this).removeClass('header-colorizer');
-  });
+  // header.on('mouseenter', function () {
+  //   $(this).addClass('header-colorizer');
+  // });
+  // header.on('mouseleave', function () {
+  //   $(this).removeClass('header-colorizer');
+  // });
 }
 hoverMenu();
 

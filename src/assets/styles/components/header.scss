@@ -15,7 +15,7 @@
   &.scrolled {
     background-color: $fathom;
     @include screen(laptop) {
-      transform: translateY(-90px);
+      transform: translateY(-70px);
     }
   }
   &__top {
@@ -26,11 +26,11 @@
     justify-content: space-between;
     z-index: 2;
     @include screen(laptop) {
-      height: 90px;
+      height: 70px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 22px 0;
+      // padding: 22px 0;
       opacity: 0;
       transform: translateY(-20px);
       transition:
@@ -227,7 +227,7 @@
     z-index: 20;
   }
   &-dropdown {
-    top: 153px;
+    top: 133px;
     position: absolute;
     left: 0;
     background-color: $fathom;
